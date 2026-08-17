@@ -20,8 +20,8 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
           
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-3">
-            <div className="bg-white/10 p-2.5 rounded-xl inline-block">
-              <BrandLogo size="md" />
+            <div className="inline-block py-1">
+              <BrandLogo size="md" variant="white" withTagline={true} />
             </div>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
               {t.footerBio}
