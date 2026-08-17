@@ -89,6 +89,10 @@ export const App: React.FC = () => {
     setSavedFavorites(updated);
   };
 
+  const handleWorkoutCompleted = (_minutes: number) => {
+    // Workout completed
+  };
+
   const handleLogout = () => {
     setUser(null);
     try {
@@ -171,6 +175,8 @@ export const App: React.FC = () => {
               language={language}
               savedFavorites={savedFavorites}
               onToggleFavorite={handleToggleFavorite}
+              onWorkoutCompleted={handleWorkoutCompleted}
+              onSelectTab={setActiveTab}
               searchQuery={searchQuery}
             />
           </div>
