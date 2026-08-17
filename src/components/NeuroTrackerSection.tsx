@@ -81,7 +81,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
   ];
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="tracker">
+    <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="tracker">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
@@ -92,14 +92,14 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
           <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
             {t.trackerSectionTitle}
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
+          <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
             {t.trackerSectionDesc}
           </p>
         </div>
 
         {/* Streak Counter */}
-        <div className="flex items-center gap-2.5 bg-brand-50 dark:bg-slate-800 border border-brand-200 dark:border-slate-700 px-4 py-2 rounded-lg text-brand-800 dark:text-brand-300">
-          <Flame className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+        <div className="flex items-center gap-2.5 bg-brand-50 dark:bg-slate-800 border border-brand-200 dark:border-slate-700 px-4 py-2 rounded-xl text-brand-800 dark:text-brand-300 w-fit">
+          <Flame className="w-5 h-5 text-brand-600 dark:text-brand-400 shrink-0" />
           <div className="text-xs">
             <span className="font-semibold text-slate-500 block">{t.streakCount}:</span>
             <span className="font-bold text-sm text-navy-800 dark:text-white">{streak} {t.streakDaysUnit}</span>
@@ -110,18 +110,18 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* Main Tracker Form */}
-        <div className="lg:col-span-8 bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
-          <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+        <div className="lg:col-span-8 bg-white dark:bg-slate-900 rounded-2xl p-5 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3 gap-2">
             <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-bold text-xs">
               <Calendar className="w-4 h-4 text-brand-600" />
               <span>{t.todayDate} {new Date().toLocaleDateString(language === 'uz' ? 'uz-UZ' : language === 'ru' ? 'ru-RU' : 'en-US')}</span>
             </div>
-            <span className="text-xs text-slate-400">
+            <span className="text-[11px] text-slate-400">
               {t.autoSaved}
             </span>
           </div>
 
-          {/* 1. Water Intake */}
+          {/* 1. Water Intake: Responsive 4 cols on mobile, 8 cols on tablet/desktop */}
           <div>
             <div className="flex items-center justify-between mb-2">
               <label className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
@@ -132,15 +132,15 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                 {waterGlasses} / 8 ({waterGlasses * 250} ml)
               </span>
             </div>
-            <div className="grid grid-cols-8 gap-2">
+            <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
               {Array.from({ length: 8 }).map((_, i) => (
                 <button
                   key={i}
                   type="button"
                   onClick={() => setWaterGlasses(i + 1)}
-                  className={`h-10 rounded-lg flex items-center justify-center transition-colors text-xs font-bold ${
+                  className={`h-11 rounded-xl flex items-center justify-center transition-all text-xs font-bold ${
                     i < waterGlasses
-                      ? 'bg-brand-600 text-white'
+                      ? 'bg-brand-600 text-white shadow-sm'
                       : 'bg-slate-100 dark:bg-slate-800 text-slate-400 hover:bg-slate-200'
                   }`}
                 >
@@ -152,8 +152,8 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
 
           {/* 2. Exercise & Sleep */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <div className="flex items-center justify-between mb-1.5">
+            <div className="p-3.5 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-slate-750">
+              <div className="flex items-center justify-between mb-2">
                 <label className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                   <Dumbbell className="w-3.5 h-3.5 text-brand-600" />
                   {t.exerciseTime}
@@ -167,12 +167,12 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                 step="5"
                 value={exerciseMinutes}
                 onChange={(e) => setExerciseMinutes(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded appearance-none cursor-pointer accent-brand-600"
+                className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-600"
               />
             </div>
 
-            <div>
-              <div className="flex items-center justify-between mb-1.5">
+            <div className="p-3.5 bg-slate-50 dark:bg-slate-850 rounded-xl border border-slate-200 dark:border-slate-750">
+              <div className="flex items-center justify-between mb-2">
                 <label className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                   <Moon className="w-3.5 h-3.5 text-brand-600" />
                   {t.sleepHours}
@@ -186,31 +186,31 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                 step="0.5"
                 value={sleepHours}
                 onChange={(e) => setSleepHours(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded appearance-none cursor-pointer accent-brand-600"
+                className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-600"
               />
             </div>
           </div>
 
-          {/* 3. Mood Rating */}
+          {/* 3. Mood Rating: Responsive grid */}
           <div>
             <label className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5 mb-2">
               <Smile className="w-3.5 h-3.5 text-brand-600" />
               {t.moodRating}
             </label>
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
               {moods.map((m) => (
                 <button
                   key={m.id}
                   type="button"
                   onClick={() => setMood(m.id)}
-                  className={`p-2.5 rounded-lg border text-center transition-colors flex flex-col items-center gap-1 ${
+                  className={`p-2.5 sm:p-3 rounded-xl border text-center transition-all flex flex-col items-center gap-1 ${
                     mood === m.id
-                      ? 'bg-brand-50 dark:bg-slate-800 border-brand-500 text-brand-700 dark:text-brand-300 font-bold'
+                      ? 'bg-brand-50 dark:bg-slate-800 border-brand-500 text-brand-700 dark:text-brand-300 font-bold shadow-sm'
                       : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-600 hover:border-slate-300'
                   }`}
                 >
-                  <span className="text-xl">{m.emoji}</span>
-                  <span className="text-[11px]">{m.label}</span>
+                  <span className="text-xl sm:text-2xl">{m.emoji}</span>
+                  <span className="text-[11px] truncate w-full">{m.label}</span>
                 </button>
               ))}
             </div>
@@ -226,12 +226,12 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder={t.notesPlaceholder}
-              className="w-full p-2.5 rounded-lg bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-xs focus:outline-none focus:border-brand-500"
+              className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-xs focus:outline-none focus:border-brand-500"
             />
           </div>
 
           {/* Save Button */}
-          <div className="flex items-center justify-end gap-3 pt-1">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-end gap-3 pt-1">
             {savedSuccess && (
               <span className="text-xs font-bold text-brand-600 flex items-center gap-1">
                 <Check className="w-4 h-4" /> {t.savedSuccess}
@@ -239,9 +239,9 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
             )}
             <button
               onClick={handleSave}
-              className="px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center gap-2 transition-colors shadow-sm"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
             >
-              <Save className="w-3.5 h-3.5" />
+              <Save className="w-4 h-4" />
               {t.saveDay}
             </button>
           </div>
@@ -249,21 +249,21 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
 
         {/* Right Info Box */}
         <div className="lg:col-span-4 space-y-4">
-          <div className="bg-navy-800 text-white rounded-xl p-5 space-y-3 shadow-sm">
+          <div className="bg-navy-800 text-white rounded-2xl p-5 sm:p-6 space-y-3 shadow-sm">
             <h3 className="font-bold text-sm flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-brand-400" />
+              <Sparkles className="w-4 h-4 text-brand-400 shrink-0" />
               {t.neuroplasticityTitle}
             </h3>
-            <p className="text-slate-300 text-xs leading-relaxed">
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
               {t.neuroplasticityText}
             </p>
           </div>
 
-          <div className="bg-white dark:bg-slate-900 rounded-xl p-5 border border-slate-200 dark:border-slate-800 space-y-2">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 space-y-2.5">
             <h4 className="font-bold text-xs text-navy-800 dark:text-white uppercase tracking-wider">
               {t.weeklyTipsTitle}
             </h4>
-            <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside">
+            <ul className="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 list-disc list-inside">
               <li>{t.tip1}</li>
               <li>{t.tip2}</li>
               <li>{t.tip3}</li>

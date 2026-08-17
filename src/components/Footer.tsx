@@ -14,26 +14,28 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
   const t = translations[language];
 
   return (
-    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-14 pb-10">
+    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-12 sm:pt-14 pb-8 sm:pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-800">
+        
+        {/* Main Footer Grid: 1 col on mobile, 2 on tablet, 5 on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-800">
           
           {/* Col 1: Brand & Bio */}
-          <div className="lg:col-span-2 space-y-3">
+          <div className="sm:col-span-2 space-y-3.5">
             <div className="inline-block py-1">
               <BrandLogo size="md" variant="white" withTagline={true} />
             </div>
-            <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
               {t.footerBio}
             </p>
           </div>
 
           {/* Col 2: Navigation */}
-          <div className="space-y-2.5">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+          <div className="space-y-3">
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
               {t.footerNavTitle}
             </h4>
-            <ul className="space-y-1.5 text-xs">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <button onClick={() => onSelectTab('eat-well')} className="hover:text-white transition-colors">
                   {t.eatWell}
@@ -63,57 +65,61 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
           </div>
 
           {/* Col 3: References */}
-          <div className="space-y-2.5">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+          <div className="space-y-3">
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
               {t.footerInspirationTitle}
             </h4>
-            <ul className="space-y-1.5 text-xs">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="https://irebound.enableme.org.au/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  i-REBOUND (EnableMe) <ExternalLink className="w-3 h-3 text-slate-500" />
+                <a href="https://irebound.enableme.org.au/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>i-REBOUND (EnableMe)</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                 </a>
               </li>
               <li>
-                <a href="https://strokefoundation.org.au" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  Stroke Foundation <ExternalLink className="w-3 h-3 text-slate-500" />
+                <a href="https://strokefoundation.org.au" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>Stroke Foundation</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                 </a>
               </li>
               <li>
-                <a href="https://www.who.int" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  World Health Organization <ExternalLink className="w-3 h-3 text-slate-500" />
+                <a href="https://www.who.int" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>World Health Organization</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Col 4: Emergency */}
-          <div className="space-y-2.5">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+          <div className="space-y-3 sm:col-span-2 lg:col-span-1">
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
               {t.footerEmergencyTitle}
             </h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
               {t.footerEmergencyNotice}
             </p>
             <button
               onClick={onOpenFastModal}
-              className="w-full px-3 py-2 rounded-lg bg-red-600/20 hover:bg-red-600/30 border border-red-500/30 text-red-400 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
+              className="w-full px-4 py-2.5 rounded-xl bg-red-600/20 hover:bg-red-600/30 border border-red-500/30 text-red-400 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-red-500" />
-              {t.emergencyFast}
+              <ShieldCheck className="w-4 h-4 text-red-500 shrink-0" />
+              <span>{t.emergencyFast}</span>
             </button>
           </div>
 
         </div>
 
         {/* Medical Disclaimer & Copyright */}
-        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-          <p className="max-w-2xl text-center md:text-left leading-relaxed">
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left">
+          <p className="max-w-2xl leading-relaxed">
             {t.disclaimer}
           </p>
-          <div className="flex items-center gap-1 text-slate-400 shrink-0">
+          <div className="text-slate-400 shrink-0">
             <span>© {new Date().getFullYear()} {t.copyright}</span>
           </div>
         </div>
+
       </div>
     </footer>
   );
