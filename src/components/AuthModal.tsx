@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
-import { translations } from '../data/translations';
 import { BrandLogo } from './BrandLogo';
 import { 
   X, 
@@ -8,10 +7,8 @@ import {
   Lock, 
   User, 
   ArrowRight, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Sparkles,
-  Heart
+  Heart,
+  Sparkles
 } from 'lucide-react';
 
 export interface UserProfile {
@@ -62,7 +59,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
     setIsLoading(true);
 
-    // Simulate authentication and save to LocalStorage
     setTimeout(() => {
       setIsLoading(false);
       const userProfile: UserProfile = {
@@ -80,7 +76,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
       onLoginSuccess(userProfile);
       onClose();
-    }, 600);
+    }, 400);
   };
 
   const handleQuickDemoLogin = (demoRole: 'survivor' | 'caregiver') => {
@@ -100,40 +96,40 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 flex items-center justify-center animate-fadeIn">
-      <div className="relative bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/60 backdrop-blur-sm p-4 flex items-center justify-center animate-fadeIn">
+      <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-md w-full p-6 sm:p-7 shadow-xl border border-slate-200 dark:border-slate-800">
         
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors"
+          className="absolute top-4 right-4 p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
         {/* Brand Header */}
-        <div className="text-center mb-6">
-          <div className="inline-block mb-3">
+        <div className="text-center mb-5">
+          <div className="inline-block mb-2">
             <BrandLogo size="md" />
           </div>
-          <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+          <h3 className="text-xl font-bold text-navy-800 dark:text-white">
             {mode === 'login' ? 'Tizimga kirish' : 'Ro\'yxatdan o\'tish'}
           </h3>
-          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-0.5">
             {mode === 'login'
-              ? 'Shaxsiy tiklanish rejangiz va saqlangan mashqlaringizga kiring'
-              : 'Reabilitatsiya kundaligi va shaxsiy tavsiyalarga ega bo\'ling'}
+              ? 'Shaxsiy reja va saqlangan mashqlaringizga kiring'
+              : 'Reabilitatsiya kundaligiga ega bo\'ling'}
           </p>
         </div>
 
-        {/* Tab switch */}
-        <div className="grid grid-cols-2 gap-1 p-1 bg-slate-100 dark:bg-slate-800 rounded-2xl mb-6 border border-slate-200 dark:border-slate-700">
+        {/* Mode switch */}
+        <div className="grid grid-cols-2 gap-1 p-1 bg-slate-100 dark:bg-slate-800 rounded-lg mb-5 border border-slate-200 dark:border-slate-700">
           <button
             type="button"
             onClick={() => { setMode('login'); setError(''); }}
-            className={`py-2 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+            className={`py-1.5 text-xs font-bold rounded transition-colors ${
               mode === 'login'
-                ? 'bg-white dark:bg-slate-700 text-[#162276] dark:text-white shadow-sm'
+                ? 'bg-white dark:bg-slate-700 text-navy-800 dark:text-white shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
@@ -142,9 +138,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <button
             type="button"
             onClick={() => { setMode('signup'); setError(''); }}
-            className={`py-2 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+            className={`py-1.5 text-xs font-bold rounded transition-colors ${
               mode === 'signup'
-                ? 'bg-[#2b917d] text-white shadow-sm'
+                ? 'bg-brand-600 text-white shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
@@ -153,9 +149,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3.5">
           {error && (
-            <div className="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-xs font-semibold">
+            <div className="p-2.5 rounded-lg bg-red-50 dark:bg-red-950/50 border border-red-200 text-red-700 text-xs font-semibold">
               {error}
             </div>
           )}
@@ -166,13 +162,13 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 Ism va familiya
               </label>
               <div className="relative">
-                <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                <User className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Jasur Aliyev"
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
+                  className="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
                 />
               </div>
             </div>
@@ -180,16 +176,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
           <div>
             <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-              Elektron pochta (Email)
+              Email pochta
             </label>
             <div className="relative">
-              <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+              <Mail className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="misol@pochta.uz"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
+                className="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
               />
             </div>
           </div>
@@ -199,55 +195,55 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               Parol
             </label>
             <div className="relative">
-              <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+              <Lock className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
+                className="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
               />
             </div>
           </div>
 
           {mode === 'signup' && (
             <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
-                Siz kimsiz? (Reabilitatsiya roli)
+              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                Reabilitatsiya roli
               </label>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-1.5">
                 <button
                   type="button"
                   onClick={() => setRole('survivor')}
-                  className={`p-2 rounded-xl text-xs font-bold border transition-all text-center ${
+                  className={`p-1.5 rounded-lg text-xs font-bold border transition-colors text-center ${
                     role === 'survivor'
-                      ? 'bg-brand-50 dark:bg-brand-950 border-brand-500 text-brand-700 dark:text-brand-300 shadow-sm'
-                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600'
+                      ? 'bg-brand-50 border-brand-500 text-brand-700'
+                      : 'bg-white dark:bg-slate-800 border-slate-200 text-slate-600'
                   }`}
                 >
-                  Insultdan tiklanuvchi
+                  Bemor
                 </button>
                 <button
                   type="button"
                   onClick={() => setRole('caregiver')}
-                  className={`p-2 rounded-xl text-xs font-bold border transition-all text-center ${
+                  className={`p-1.5 rounded-lg text-xs font-bold border transition-colors text-center ${
                     role === 'caregiver'
-                      ? 'bg-brand-50 dark:bg-brand-950 border-brand-500 text-brand-700 dark:text-brand-300 shadow-sm'
-                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600'
+                      ? 'bg-brand-50 border-brand-500 text-brand-700'
+                      : 'bg-white dark:bg-slate-800 border-slate-200 text-slate-600'
                   }`}
                 >
-                  Oila a'zosi / Parvarishlovchi
+                  Parvarishlovchi
                 </button>
                 <button
                   type="button"
                   onClick={() => setRole('therapist')}
-                  className={`p-2 rounded-xl text-xs font-bold border transition-all text-center ${
+                  className={`p-1.5 rounded-lg text-xs font-bold border transition-colors text-center ${
                     role === 'therapist'
-                      ? 'bg-brand-50 dark:bg-brand-950 border-brand-500 text-brand-700 dark:text-brand-300 shadow-sm'
-                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600'
+                      ? 'bg-brand-50 border-brand-500 text-brand-700'
+                      : 'bg-white dark:bg-slate-800 border-slate-200 text-slate-600'
                   }`}
                 >
-                  Shifokor / Terapevt
+                  Shifokor
                 </button>
               </div>
             </div>
@@ -256,46 +252,34 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 rounded-2xl bg-gradient-to-r from-[#162276] to-[#2b917d] hover:opacity-95 text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all active:scale-95 disabled:opacity-50"
+            className="w-full py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-1"
           >
-            {isLoading ? (
-              <span>Tekshirilmoqda...</span>
-            ) : (
-              <>
-                <span>{mode === 'login' ? 'Tizimga kirish' : 'Ro\'yxatdan o\'tish'}</span>
-                <ArrowRight className="w-4 h-4" />
-              </>
-            )}
+            <span>{mode === 'login' ? 'Tizimga kirish' : 'Ro\'yxatdan o\'tish'}</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </form>
 
         {/* Demo Fast Login */}
-        <div className="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-          <div className="text-center text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-2.5">
-            Tezkor test kirish (1 marta bosishda)
+        <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+          <div className="text-[11px] text-slate-400 text-center font-semibold mb-2">
+            Tezkor test kirish
           </div>
           <div className="grid grid-cols-2 gap-2">
             <button
               onClick={() => handleQuickDemoLogin('survivor')}
-              className="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-1.5"
+              className="px-2 py-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-1"
             >
-              <User className="w-3.5 h-3.5 text-[#162276]" />
-              <span>Tiklanuvchi profili</span>
+              <User className="w-3 h-3 text-brand-600" />
+              <span>Tiklanuvchi</span>
             </button>
             <button
               onClick={() => handleQuickDemoLogin('caregiver')}
-              className="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-1.5"
+              className="px-2 py-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-1"
             >
-              <Heart className="w-3.5 h-3.5 text-rose-500" />
+              <Heart className="w-3 h-3 text-brand-600" />
               <span>Parvarishlovchi</span>
             </button>
           </div>
-        </div>
-
-        {/* Why sign up benefits */}
-        <div className="mt-4 p-3 rounded-2xl bg-teal-50/70 dark:bg-teal-950/30 border border-teal-200 dark:border-teal-900 text-xs text-teal-900 dark:text-teal-300 flex items-start gap-2">
-          <Sparkles className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
-          <span>A'zolik bepul! Retsept va mashqlaringiz barcha qurilmalaringizda sinxronlanadi.</span>
         </div>
 
       </div>

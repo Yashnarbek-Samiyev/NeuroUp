@@ -61,31 +61,31 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="eat-well">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      {/* Header (i-REBOUND section style) */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
-          <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-sm uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
             <Utensils className="w-4 h-4" />
-            <span>Eat Well — Sog'lom Oziqlanish</span>
+            <span>Eat Well</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
-            Insultdan so'ng to'g'ri va xavfsiz ovqatlanish
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
+            Insultdan so'ng to'g'ri ovqatlanish
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-1 max-w-2xl">
-            O'rta yer dengizi parhezi, kam natriyli taomlar va yutish oson bo'lgan vitaminlarga boy retseptlar.
+          <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
+            O'rta yer dengizi parhezi, kam tuzli taomlar va yutish oson bo'lgan vitaminli retseptlar.
           </p>
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-700">
-          <Filter className="w-4 h-4 text-slate-400 ml-2 mr-1 hidden sm:inline" />
+        <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg border border-slate-200 dark:border-slate-700">
+          <Filter className="w-3.5 h-3.5 text-slate-400 ml-2 mr-1 hidden sm:inline" />
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+              className={`px-3 py-1.5 rounded text-xs font-bold transition-colors ${
                 selectedCategory === cat.id
-                  ? 'bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-400 shadow-sm'
+                  ? 'bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-300 shadow-sm'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -97,13 +97,13 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
       {/* Recipe Cards Grid */}
       {filteredRecipes.length === 0 ? (
-        <div className="text-center py-16 bg-white dark:bg-slate-850 rounded-3xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
-          <Utensils className="w-12 h-12 mx-auto text-slate-400 mb-3" />
-          <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200">Hech qanday retsept topilmadi</h3>
-          <p className="text-sm text-slate-500 mt-1">Qidiruv so'zini o'zgartirib ko'ring yoki boshqa toifani tanlang.</p>
+        <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
+          <Utensils className="w-10 h-10 mx-auto text-slate-400 mb-2" />
+          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">Retsept topilmadi</h3>
+          <p className="text-xs text-slate-500 mt-1">Boshqa toifani tanlab ko'ring.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredRecipes.map((recipe) => {
             const title = recipe.title[language] || recipe.title.en;
             const desc = recipe.description[language] || recipe.description.en;
@@ -113,85 +113,74 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               <div
                 key={recipe.id}
                 onClick={() => setActiveRecipe(recipe)}
-                className="group bg-white dark:bg-slate-850 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col"
+                className="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
               >
-                {/* Image & Badges */}
-                <div className="relative h-52 w-full overflow-hidden">
-                  <img
-                    src={recipe.image}
-                    alt={title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-black/20"></div>
+                {/* Image */}
+                <div>
+                  <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={recipe.image}
+                      alt={title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-navy-800/90 text-white">
+                      {recipe.category}
+                    </span>
 
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider bg-brand-600/90 text-white backdrop-blur-md">
-                    {recipe.category}
-                  </span>
+                    <div className="absolute top-3 right-3 flex items-center gap-1">
+                      <button
+                        onClick={(e) => handleSpeakShort(e, recipe)}
+                        className="p-1.5 rounded-md bg-black/50 hover:bg-black/70 text-white transition-colors"
+                        title={t.listenAudio}
+                      >
+                        <Volume2 className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onToggleFavorite(recipe.id);
+                        }}
+                        className={`p-1.5 rounded-md transition-colors ${
+                          isSaved ? 'bg-brand-600 text-white' : 'bg-black/50 hover:bg-black/70 text-white'
+                        }`}
+                        title={isSaved ? t.savedToFav : t.saveToFav}
+                      >
+                        <Bookmark className={`w-3.5 h-3.5 ${isSaved ? 'fill-white' : ''}`} />
+                      </button>
+                    </div>
 
-                  <div className="absolute top-3 right-3 flex items-center gap-1.5">
-                    <button
-                      onClick={(e) => handleSpeakShort(e, recipe)}
-                      className="p-2 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md transition-colors"
-                      title={t.listenAudio}
-                    >
-                      <Volume2 className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onToggleFavorite(recipe.id);
-                      }}
-                      className={`p-2 rounded-full backdrop-blur-md transition-colors ${
-                        isSaved
-                          ? 'bg-rose-500 text-white'
-                          : 'bg-black/40 hover:bg-black/60 text-white'
-                      }`}
-                      title={isSaved ? t.savedToFav : t.saveToFav}
-                    >
-                      <Bookmark className={`w-4 h-4 ${isSaved ? 'fill-white' : ''}`} />
-                    </button>
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold">
+                      <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
+                        <Clock className="w-3 h-3" />
+                        {recipe.prepTime + recipe.cookTime} daq
+                      </span>
+                      <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
+                        <Flame className="w-3 h-3 text-amber-400" />
+                        {recipe.calories} kkal
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold">
-                    <span className="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-md">
-                      <Clock className="w-3.5 h-3.5" />
-                      {recipe.prepTime + recipe.cookTime} daqiqa
-                    </span>
-                    <span className="flex items-center gap-1 bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-md">
-                      <Flame className="w-3.5 h-3.5 text-orange-400" />
-                      {recipe.calories} kkal
-                    </span>
-                  </div>
-                </div>
-
-                {/* Body Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <div>
-                    <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-1">
+                  {/* Body */}
+                  <div className="p-4 space-y-2">
+                    <h3 className="font-bold text-base text-navy-800 dark:text-white group-hover:text-brand-600 transition-colors line-clamp-1">
                       {title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm mt-1.5 line-clamp-2 leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-400 text-xs line-clamp-2 leading-relaxed">
                       {desc}
                     </p>
                   </div>
+                </div>
 
-                  {/* Tags & Action Link */}
-                  <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                    <div className="flex flex-wrap gap-1">
-                      {recipe.tags.slice(0, 2).map((tag, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-400"
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      Ko'rish <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
+                {/* Footer Link */}
+                <div className="p-4 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                  <span className="text-xs font-semibold text-slate-500">
+                    {recipe.steps.uz.length} qadamli retsept
+                  </span>
+                  <span className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1">
+                    Ko'rish <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
               </div>
             );
@@ -199,7 +188,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
         </div>
       )}
 
-      {/* Modal Detail View */}
+      {/* Detail Modal */}
       {activeRecipe && (
         <RecipeDetailModal
           recipe={activeRecipe}

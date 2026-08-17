@@ -10,8 +10,7 @@ import {
   Bookmark, 
   Volume2, 
   Filter, 
-  Award,
-  Sparkles
+  ArrowRight
 } from 'lucide-react';
 import { speechService } from '../utils/speech';
 
@@ -63,30 +62,30 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="move-more">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
-          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-sm uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
             <Dumbbell className="w-4 h-4" />
-            <span>Move More — Harakat va Tiklanish</span>
+            <span>Move More</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
-            Insultdan so'ng xavfsiz harakat va tiklanish mashqlari
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
+            Insultdan so'ng xavfsiz harakat mashqlari
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-1 max-w-2xl">
-            O'tirgan holda, muvozanatni tiklash va barmoq motorikasini rivojlantirishga mo'ljallangan qulay mashg'ulotlar.
+          <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
+            O'tirgan holda, muvozanat va barmoq motorikasini rivojlantirishga qaratilgan amaliy mashg'ulotlar.
           </p>
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-700">
-          <Filter className="w-4 h-4 text-slate-400 ml-2 mr-1 hidden sm:inline" />
+        <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg border border-slate-200 dark:border-slate-700">
+          <Filter className="w-3.5 h-3.5 text-slate-400 ml-2 mr-1 hidden sm:inline" />
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+              className={`px-3 py-1.5 rounded text-xs font-bold transition-colors ${
                 selectedCategory === cat.id
-                  ? 'bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 shadow-sm'
+                  ? 'bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-300 shadow-sm'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -98,13 +97,13 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
 
       {/* Exercise Cards Grid */}
       {filteredExercises.length === 0 ? (
-        <div className="text-center py-16 bg-white dark:bg-slate-850 rounded-3xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
-          <Dumbbell className="w-12 h-12 mx-auto text-slate-400 mb-3" />
-          <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200">Hech qanday mashq topilmadi</h3>
-          <p className="text-sm text-slate-500 mt-1">Qidiruv so'zini o'zgartirib ko'ring yoki boshqa toifani tanlang.</p>
+        <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
+          <Dumbbell className="w-10 h-10 mx-auto text-slate-400 mb-2" />
+          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">Mashq topilmadi</h3>
+          <p className="text-xs text-slate-500 mt-1">Boshqa toifani tanlab ko'ring.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredExercises.map((exercise) => {
             const title = exercise.title[language] || exercise.title.en;
             const desc = exercise.description[language] || exercise.description.en;
@@ -114,84 +113,80 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
               <div
                 key={exercise.id}
                 onClick={() => setActiveExercise(exercise)}
-                className="group bg-white dark:bg-slate-850 rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col"
+                className="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
               >
-                {/* Thumbnail & Video Play Icon */}
-                <div className="relative h-52 w-full overflow-hidden">
-                  <img
-                    src={exercise.thumbnail}
-                    alt={title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-black/30"></div>
+                {/* Thumbnail */}
+                <div>
+                  <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={exercise.thumbnail}
+                      alt={title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-navy-800/90 text-white">
+                      {exercise.category}
+                    </span>
 
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider bg-blue-600/90 text-white backdrop-blur-md">
-                    {exercise.category}
-                  </span>
+                    <div className="absolute top-3 right-3 flex items-center gap-1">
+                      <button
+                        onClick={(e) => handleSpeakShort(e, exercise)}
+                        className="p-1.5 rounded-md bg-black/50 hover:bg-black/70 text-white transition-colors"
+                        title={t.listenAudio}
+                      >
+                        <Volume2 className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onToggleFavorite(exercise.id);
+                        }}
+                        className={`p-1.5 rounded-md transition-colors ${
+                          isSaved ? 'bg-brand-600 text-white' : 'bg-black/50 hover:bg-black/70 text-white'
+                        }`}
+                        title={isSaved ? t.savedToFav : t.saveToFav}
+                      >
+                        <Bookmark className={`w-3.5 h-3.5 ${isSaved ? 'fill-white' : ''}`} />
+                      </button>
+                    </div>
 
-                  <div className="absolute top-3 right-3 flex items-center gap-1.5">
-                    <button
-                      onClick={(e) => handleSpeakShort(e, exercise)}
-                      className="p-2 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md transition-colors"
-                      title={t.listenAudio}
-                    >
-                      <Volume2 className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onToggleFavorite(exercise.id);
-                      }}
-                      className={`p-2 rounded-full backdrop-blur-md transition-colors ${
-                        isSaved
-                          ? 'bg-rose-500 text-white'
-                          : 'bg-black/40 hover:bg-black/60 text-white'
-                      }`}
-                      title={isSaved ? t.savedToFav : t.saveToFav}
-                    >
-                      <Bookmark className={`w-4 h-4 ${isSaved ? 'fill-white' : ''}`} />
-                    </button>
-                  </div>
+                    {/* Centered Play Button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-full bg-white/90 text-navy-800 flex items-center justify-center shadow group-hover:scale-110 transition-transform">
+                        <Play className="w-4 h-4 ml-0.5 fill-navy-800" />
+                      </div>
+                    </div>
 
-                  {/* Big Play Button Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-12 h-12 rounded-full bg-white/90 group-hover:bg-blue-600 text-slate-900 group-hover:text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-all">
-                      <Play className="w-5 h-5 ml-0.5 fill-current" />
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold">
+                      <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
+                        <Clock className="w-3 h-3" />
+                        {exercise.durationMinutes} daq
+                      </span>
+                      <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
+                        {exercise.difficulty}
+                      </span>
                     </div>
                   </div>
 
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold">
-                    <span className="flex items-center gap-1 bg-black/50 backdrop-blur-md px-2.5 py-0.5 rounded-md">
-                      <Clock className="w-3.5 h-3.5" />
-                      {exercise.durationMinutes} daqiqa
-                    </span>
-                    <span className="flex items-center gap-1 bg-blue-600/80 backdrop-blur-md px-2 py-0.5 rounded-md">
-                      <Sparkles className="w-3.5 h-3.5" />
-                      {exercise.difficulty}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <div>
-                    <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+                  {/* Body */}
+                  <div className="p-4 space-y-2">
+                    <h3 className="font-bold text-base text-navy-800 dark:text-white group-hover:text-brand-600 transition-colors line-clamp-1">
                       {title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm mt-1.5 line-clamp-2 leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-400 text-xs line-clamp-2 leading-relaxed">
                       {desc}
                     </p>
                   </div>
+                </div>
 
-                  <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                    <span className="text-xs text-slate-500 dark:text-slate-400 truncate max-w-[180px]">
-                      🎯 {exercise.targetArea[language] || exercise.targetArea.en}
-                    </span>
-                    <button className="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-bold text-xs group-hover:bg-blue-600 group-hover:text-white transition-colors flex items-center gap-1">
-                      Boshlash <Play className="w-3 h-3 fill-current" />
-                    </button>
-                  </div>
+                {/* Footer */}
+                <div className="p-4 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                  <span className="text-xs text-slate-500 truncate max-w-[170px]">
+                    {exercise.targetArea[language] || exercise.targetArea.en}
+                  </span>
+                  <span className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1">
+                    Boshlash <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
               </div>
             );
