@@ -113,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => { setActiveTab('all'); setMobileMenuOpen(false); }}
             className="cursor-pointer group py-1"
           >
-            <BrandLogo size="md" withTagline={false} />
+            <BrandLogo size="md" withTagline={true} />
           </div>
 
           {/* Navigation Links */}

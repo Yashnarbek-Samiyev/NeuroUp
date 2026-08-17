@@ -12,19 +12,19 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   className = '',
   size = 'md',
   showText = true,
-  withTagline = false,
+  withTagline = true,
   variant = 'default'
 }) => {
   const iconSizes = {
-    sm: 'w-8 h-8',
+    sm: 'w-7 h-7',
     md: 'w-10 h-10',
     lg: 'w-12 h-12'
   };
 
   const textSizes = {
-    sm: { neuro: 'text-xl', up: 'text-sm' },
-    md: { neuro: 'text-2xl', up: 'text-base' },
-    lg: { neuro: 'text-3xl', up: 'text-xl' }
+    sm: { neuro: 'text-lg', up: 'text-base', tagline: 'text-[9px]' },
+    md: { neuro: 'text-2xl', up: 'text-xl', tagline: 'text-[10px]' },
+    lg: { neuro: 'text-3xl', up: 'text-2xl', tagline: 'text-xs' }
   };
 
   const isWhite = variant === 'white';
@@ -75,30 +75,30 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         </svg>
       </div>
 
-      {/* Typography */}
+      {/* Typography: "NeuroUp" + "Rebuild Your Path" */}
       {showText && (
-        <div className="flex flex-col leading-none">
-          <div className="flex items-baseline gap-1">
+        <div className="flex flex-col leading-tight">
+          <div className="flex items-baseline gap-0.5">
             <span className={`font-black tracking-tight ${
               isWhite 
-                ? 'text-white drop-shadow-sm' 
+                ? 'text-white' 
                 : 'text-[#162276] dark:text-[#60a5fa]'
             } ${textSizes[size].neuro}`}>
               Neuro
             </span>
             <span className={`font-black tracking-tight ${
               isWhite 
-                ? 'text-[#38d4b3] drop-shadow-sm' 
+                ? 'text-[#38d4b3]' 
                 : 'text-[#2b917d] dark:text-[#2dd4bf]'
             } ${textSizes[size].up}`}>
               Up
             </span>
           </div>
           {withTagline && (
-            <span className={`text-[10px] font-medium tracking-wide mt-0.5 ${
-              isWhite ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'
+            <span className={`font-bold tracking-wider uppercase ${textSizes[size].tagline} ${
+              isWhite ? 'text-[#38d4b3]/90' : 'text-[#2b917d] dark:text-[#2dd4bf]'
             }`}>
-              Reabilitatsiya platformasi
+              Rebuild Your Path
             </span>
           )}
         </div>
