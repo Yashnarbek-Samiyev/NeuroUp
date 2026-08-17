@@ -226,17 +226,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   title={t.videoOverviewTitle}
                 />
 
-                {/* Video Overlays: Floating Header */}
-                <div className="absolute top-7 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
-                  <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-bold text-white uppercase tracking-wider flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                    Reels Video
-                  </span>
-
+                {/* Video Overlays: Top Volume Control */}
+                <div className="absolute top-7 right-3 z-10">
                   <button
                     type="button"
                     onClick={(e) => { e.stopPropagation(); toggleMute(); }}
-                    className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white pointer-events-auto hover:bg-black/80 transition-colors"
+                    className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-black/80 transition-colors shadow-sm"
+                    title={isMuted ? "Ovozni yoqish" : "Ovozni o'chirish"}
                   >
                     {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5 text-brand-400" />}
                   </button>
