@@ -1,6 +1,7 @@
 import React from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
+import { BrandLogo } from './BrandLogo';
 import { 
   Activity, 
   Utensils, 
@@ -77,24 +78,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Logo */}
           <div 
             onClick={() => { setActiveTab('all'); setMobileMenuOpen(false); }}
-            className="flex items-center gap-3 cursor-pointer group"
+            className="cursor-pointer group"
           >
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-teal-400 p-2 text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform flex items-center justify-center">
-              <Activity className="w-6 h-6" />
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
-                  Neuro<span className="text-brand-600 dark:text-brand-400">UP</span>
-                </span>
-                <span className="px-1.5 py-0.5 text-[10px] font-bold uppercase bg-brand-100 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 rounded">
-                  Pro
-                </span>
-              </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:block">
-                {t.brandTagline}
-              </p>
-            </div>
+            <BrandLogo size="md" withTagline={true} />
           </div>
 
           {/* Desktop Nav Items */}

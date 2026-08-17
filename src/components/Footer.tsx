@@ -1,7 +1,8 @@
 import React from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
-import { Activity, ShieldCheck, Heart, Code2, ExternalLink } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
+import { ShieldCheck, Heart, Code2, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
   language: Language;
@@ -19,13 +20,8 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
           
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-teal-400 p-2 text-white flex items-center justify-center shadow-lg">
-                <Activity className="w-6 h-6" />
-              </div>
-              <span className="text-2xl font-black text-white">
-                Neuro<span className="text-brand-400">UP</span>
-              </span>
+            <div className="bg-white/10 p-3 rounded-2xl inline-block">
+              <BrandLogo size="lg" />
             </div>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
               Insultdan keyingi reabilitatsiya, O'rta yer dengizi sog'lom taomlari (Eat Well), tiklovchi mashqlar (Move More) va kundalik layfhaklar platformasi.

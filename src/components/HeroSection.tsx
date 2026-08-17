@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
 import { speechService } from '../utils/speech';
+import { BrandLogo } from './BrandLogo';
 import { 
   Play, 
   Search, 
@@ -49,9 +50,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           
           {/* Left Column: Headline, Voice trigger, CTA, Search */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-950/80 border border-brand-300 dark:border-brand-800 text-brand-800 dark:text-brand-300 text-xs font-bold tracking-wide uppercase">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Neyro-Reabilitatsiya va Tiklanish Dasturi</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="bg-white/80 dark:bg-slate-850 px-3 py-1 rounded-2xl border border-slate-200/80 dark:border-slate-700 shadow-sm">
+                <BrandLogo size="sm" showText={false} />
+              </div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-950/80 border border-brand-300 dark:border-brand-800 text-brand-800 dark:text-brand-300 text-xs font-bold tracking-wide uppercase">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Neyro-Reabilitatsiya va Tiklanish Dasturi</span>
+              </div>
             </div>
 
             <div className="space-y-3">

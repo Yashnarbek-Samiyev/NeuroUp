@@ -1,6 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 2a4 4 0 0 0-4 4v1a3 3 0 0 0-3 3v2a3 3 0 0 0 2 2.83V16a5 5 0 0 0 5 5h0a5 5 0 0 0 5-5v-1.17A3 3 0 0 0 19 12v-2a3 3 0 0 0-3-3V6a4 4 0 0 0-4-4z"></path>
-  <path d="M12 8v8"></path>
-  <path d="M8 12h8"></path>
-  <circle cx="12" cy="12" r="2" fill="#0d9488"></circle>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 200" fill="none">
+  <!-- Geometric Low-Poly Brain Icon -->
+  <g transform="translate(250, 15) scale(0.95)">
+    <!-- Teal Geometric Facets -->
+    <polygon points="50,20 20,45 60,60" fill="#38a38f" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="50,20 60,60 100,25" fill="#42b29c" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="100,25 60,60 110,65" fill="#329783" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="100,25 110,65 145,45" fill="#58c6b0" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="145,45 110,65 155,80" fill="#3ea995" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="145,45 155,80 180,70" fill="#4cbda7" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="180,70 155,80 170,110" fill="#329783" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Left frontal & temporal facets -->
+    <polygon points="20,45 5,75 40,85" fill="#2d8c79" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="20,45 40,85 60,60" fill="#38a38f" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="5,75 25,115 55,100" fill="#247866" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="5,75 55,100 40,85" fill="#2d8c79" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="40,85 55,100 85,90" fill="#38a38f" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="60,60 40,85 85,90" fill="#42b29c" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="60,60 85,90 110,65" fill="#50c0a9" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="25,115 75,130 55,100" fill="#247866" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="55,100 75,130 110,115" fill="#2d8c79" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="55,100 110,115 85,90" fill="#38a38f" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="85,90 110,115 130,85" fill="#42b29c" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="110,65 85,90 130,85" fill="#58c6b0" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="110,65 130,85 155,80" fill="#50c0a9" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Purple / Violet Accent Facet -->
+    <polygon points="130,85 110,145 150,120" fill="#554a9d" stroke="#362f6b" stroke-width="1.8" stroke-linejoin="round"/>
+    <polygon points="130,85 150,120 155,80" fill="#4a408e" stroke="#362f6b" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Lower cerebellum & brainstem facets -->
+    <polygon points="150,120 135,175 160,135" fill="#2d8c79" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="110,145 135,175 150,120" fill="#38a38f" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="155,80 150,120 170,110" fill="#3ea995" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="170,110 150,120 160,135" fill="#2d8c79" stroke="#1d6657" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Typography -->
+  <!-- "Neuro" in deep royal navy blue -->
+  <text x="15" y="125" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="900" font-size="82" fill="#1b2578" letter-spacing="-2">Neuro</text>
+  
+  <!-- "Up" in Teal Green -->
+  <text x="210" y="185" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="700" font-size="64" fill="#2b917d" letter-spacing="-1">Up</text>
 </svg>
