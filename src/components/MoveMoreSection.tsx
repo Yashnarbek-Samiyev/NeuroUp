@@ -74,52 +74,52 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
       
       {/* 1. Move More Dedicated Hero Banner */}
       {showHeroBanner && (
-        <div className="mb-10 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+        <div className="mb-10 bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
             
-            {/* Left Content Column: Rich, Large Typography */}
-            <div className="lg:col-span-7 space-y-5">
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 space-y-4">
               
               {/* Badges */}
               <div className="flex flex-wrap items-center gap-2">
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 text-xs sm:text-sm font-bold border border-brand-200 dark:border-slate-700 shadow-sm">
-                  <Sparkles className="w-4 h-4 text-brand-600" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 text-xs font-bold border border-brand-200 dark:border-slate-700 shadow-sm">
+                  <Sparkles className="w-3.5 h-3.5 text-brand-600" />
                   <span>Move More • Qayta Tiklanish Dasturi</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs sm:text-sm font-semibold">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
                   <span>Rebuild Your Path</span>
                 </div>
               </div>
 
-              {/* Main Heading: Bold and Prominent */}
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-800 dark:text-white leading-tight tracking-tight">
+              {/* Main Heading: Moderate & Balanced */}
+              <h1 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-navy-800 dark:text-white leading-snug tracking-tight">
                 🏃 Insultdan keyin <br className="hidden sm:inline" />
                 <span className="text-brand-600 dark:text-brand-400">ko'proq harakat qiling</span>
               </h1>
 
-              {/* Paragraph 1: Strong Lead text */}
-              <p className="text-lg sm:text-xl font-bold text-slate-800 dark:text-slate-100 leading-relaxed">
+              {/* Paragraph 1 */}
+              <p className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 leading-relaxed">
                 Insultdan keyin ko'proq harakat qilish qayta insult xavfini kamaytirishi mumkin.
               </p>
 
-              {/* Paragraph 2: Comprehensive Explanation */}
-              <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
+              {/* Paragraph 2 */}
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                 Ushbu sahifada siz insult o'tkazgan bemorlar bilan birgalikda ishlab chiqilgan mashqlar to'plamini topasiz. Ko'pchilik mashqlar qo'l yoki oyog'i shikastlangan insult bemorlari uchun mos.
               </p>
 
-              {/* Paragraph 3: Interactive Clinical Guideline Card */}
-              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 space-y-3.5 shadow-sm">
+              {/* Paragraph 3: Interactive Guideline Box */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 space-y-3 shadow-sm">
                 
                 {/* 2 Quick Interactive Action Buttons */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <button
                     onClick={() => setShowPreExerciseModal(true)}
                     className="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
                   >
-                    <div className="flex items-center gap-2.5">
-                      <HelpCircle className="w-5 h-5 text-brand-600 shrink-0" />
-                      <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
+                    <div className="flex items-center gap-2">
+                      <HelpCircle className="w-4 h-4 text-brand-600 shrink-0" />
+                      <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
                         Mashqdan oldin nimalarni bilish kerak?
                       </span>
                     </div>
@@ -130,9 +130,9 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
                     onClick={() => setShowWhenNotToExerciseModal(true)}
                     className="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-red-500 text-left transition-all group flex items-center justify-between"
                   >
-                    <div className="flex items-center gap-2.5">
-                      <ShieldAlert className="w-5 h-5 text-red-600 shrink-0" />
-                      <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white group-hover:text-red-600">
+                    <div className="flex items-center gap-2">
+                      <ShieldAlert className="w-4 h-4 text-red-600 shrink-0" />
+                      <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-red-600">
                         Qachon mashq qilmaslik kerak?
                       </span>
                     </div>
@@ -142,16 +142,16 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
 
                 {/* Tracker Link */}
                 <div className="pt-2 flex items-center justify-between border-t border-slate-200/80 dark:border-slate-800">
-                  <span className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-brand-600 shrink-0" />
+                  <span className="text-xs font-medium text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                    <HeartPulse className="w-3.5 h-3.5 text-brand-600 shrink-0" />
                     <span>Faoliyatingizni kunlik kuzatib boring:</span>
                   </span>
                   <button
                     onClick={() => onSelectTab && onSelectTab('tracker')}
-                    className="px-3.5 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors shadow-sm"
+                    className="px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center gap-1 transition-colors shadow-sm"
                   >
-                    <span>Kuzatuv jadvaliga o'tish</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <span>Kuzatuv jadvali</span>
+                    <ArrowRight className="w-3 h-3" />
                   </button>
                 </div>
 
@@ -163,41 +163,41 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
             <div className="lg:col-span-5 flex flex-col items-center justify-center">
               
               {/* Smartphone Frame Slot */}
-              <div className="relative w-full max-w-[280px] sm:max-w-[310px] bg-slate-900 rounded-[2.8rem] p-3.5 shadow-2xl border-[5px] border-slate-800 dark:border-slate-700">
+              <div className="relative w-full max-w-[270px] sm:max-w-[290px] bg-slate-900 rounded-[2.5rem] p-3 shadow-2xl border-[4px] border-slate-800 dark:border-slate-700">
                 
                 {/* Speaker Notch */}
-                <div className="absolute top-5 left-1/2 -translate-x-1/2 w-18 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-slate-950 rounded-full z-20 flex items-center justify-center">
                   <div className="w-2.5 h-2.5 rounded-full bg-slate-800 mr-2"></div>
-                  <div className="w-8 h-1 bg-slate-800 rounded-full"></div>
+                  <div className="w-6 h-1 bg-slate-800 rounded-full"></div>
                 </div>
 
                 {/* 9:16 Video Slot Area */}
-                <div className="relative aspect-[9/16] w-full rounded-[2.2rem] overflow-hidden bg-slate-950 border-2 border-dashed border-slate-700 flex flex-col items-center justify-center p-6 text-center group">
+                <div className="relative aspect-[9/16] w-full rounded-[2rem] overflow-hidden bg-slate-950 border-2 border-dashed border-slate-700 flex flex-col items-center justify-center p-6 text-center group">
                   
-                  <div className="w-16 h-16 rounded-2xl bg-brand-600/20 border border-brand-500/30 text-brand-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Video className="w-8 h-8" />
+                  <div className="w-14 h-14 rounded-2xl bg-brand-600/20 border border-brand-500/30 text-brand-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    <Video className="w-7 h-7" />
                   </div>
 
-                  <span className="font-bold text-white text-sm block mb-1">
+                  <span className="font-bold text-white text-xs block mb-1">
                     Reels Video Maydoni
                   </span>
                   
-                  <span className="text-xs text-slate-400 font-medium">
+                  <span className="text-[11px] text-slate-400 font-medium">
                     9:16 vertikal video formati
                   </span>
 
-                  <div className="mt-5 px-3.5 py-1.5 rounded-full bg-slate-800 text-xs font-semibold text-brand-300 border border-slate-700">
+                  <div className="mt-4 px-3 py-1 rounded-full bg-slate-800/80 text-[10px] font-semibold text-brand-300 border border-slate-700">
                     Video joylash uchun tayyor
                   </div>
                 </div>
 
                 {/* Home Indicator */}
-                <div className="w-28 h-1 bg-slate-700 rounded-full mx-auto mt-2.5"></div>
+                <div className="w-24 h-1 bg-slate-700 rounded-full mx-auto mt-2"></div>
               </div>
 
-              <div className="mt-3 text-center text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center justify-center gap-1.5">
-                <Smartphone className="w-4 h-4 text-brand-600" />
-                <span>9:16 Reels Video maydoni</span>
+              <div className="mt-2.5 text-center text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center justify-center gap-1.5">
+                <Smartphone className="w-3.5 h-3.5 text-brand-600" />
+                <span>9:16 Reels Video joyi</span>
               </div>
 
             </div>
