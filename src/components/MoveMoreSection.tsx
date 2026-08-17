@@ -66,13 +66,13 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
         <div>
           <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
             <Dumbbell className="w-4 h-4" />
-            <span>Move More</span>
+            <span>{t.moveMore}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
-            Insultdan so'ng xavfsiz harakat mashqlari
+            {t.moveMoreSectionTitle}
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
-            O'tirgan holda, muvozanat va barmoq motorikasini rivojlantirishga qaratilgan amaliy mashg'ulotlar.
+            {t.moveMoreSectionDesc}
           </p>
         </div>
 
@@ -99,14 +99,15 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
       {filteredExercises.length === 0 ? (
         <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
           <Dumbbell className="w-10 h-10 mx-auto text-slate-400 mb-2" />
-          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">Mashq topilmadi</h3>
-          <p className="text-xs text-slate-500 mt-1">Boshqa toifani tanlab ko'ring.</p>
+          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">{t.noExercisesFound}</h3>
+          <p className="text-xs text-slate-500 mt-1">{t.searchPlaceholder}</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredExercises.map((exercise) => {
             const title = exercise.title[language] || exercise.title.en;
             const desc = exercise.description[language] || exercise.description.en;
+            const targetArea = exercise.targetArea[language] || exercise.targetArea.en;
             const isSaved = savedFavorites.includes(exercise.id);
 
             return (
@@ -160,7 +161,7 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold">
                       <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
                         <Clock className="w-3 h-3" />
-                        {exercise.durationMinutes} daq
+                        {exercise.durationMinutes} {t.minutesUnit}
                       </span>
                       <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
                         {exercise.difficulty}
@@ -182,10 +183,10 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
                 {/* Footer */}
                 <div className="p-4 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                   <span className="text-xs text-slate-500 truncate max-w-[170px]">
-                    {exercise.targetArea[language] || exercise.targetArea.en}
+                    {targetArea}
                   </span>
                   <span className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1">
-                    Boshlash <ArrowRight className="w-3.5 h-3.5" />
+                    {t.startWorkoutBtn} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </div>

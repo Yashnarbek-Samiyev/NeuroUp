@@ -51,7 +51,7 @@ export const HintsSection: React.FC<HintsSectionProps> = ({
     const title = hint.title[language] || hint.title.en;
     const summary = hint.summary[language] || hint.summary.en;
     const tips = hint.tips[language] || hint.tips.en;
-    const fullText = `${title}. ${summary}. Maslahatlar: ${tips.join('. ')}`;
+    const fullText = `${title}. ${summary}. ${tips.join('. ')}`;
     speechService.speak(fullText, language);
   };
 
@@ -62,13 +62,13 @@ export const HintsSection: React.FC<HintsSectionProps> = ({
         <div>
           <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
             <Lightbulb className="w-4 h-4" />
-            <span>Hints & Hacks</span>
+            <span>{t.hintsHacks}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
-            Kundalik hayotni osonlashtiruvchi amaliy tavsiyalar
+            {t.hintsHacksSectionTitle}
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
-            Kiyinish, oshxonada bir qo'l bilan ishlash, xotirani chiniqtirish va mustaqillikni oshirish usullari.
+            {t.hintsHacksSectionDesc}
           </p>
         </div>
 
@@ -92,78 +92,86 @@ export const HintsSection: React.FC<HintsSectionProps> = ({
       </div>
 
       {/* Hints Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredHints.map((hint) => {
-          const title = hint.title[language] || hint.title.en;
-          const summary = hint.summary[language] || hint.summary.en;
-          const tips = hint.tips[language] || hint.tips.en;
-          const quote = hint.expertQuote ? (hint.expertQuote[language] || hint.expertQuote.en) : null;
-          const isSaved = savedFavorites.includes(hint.id);
+      {filteredHints.length === 0 ? (
+        <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
+          <Lightbulb className="w-10 h-10 mx-auto text-slate-400 mb-2" />
+          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">{t.noHintsFound}</h3>
+          <p className="text-xs text-slate-500 mt-1">{t.searchPlaceholder}</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredHints.map((hint) => {
+            const title = hint.title[language] || hint.title.en;
+            const summary = hint.summary[language] || hint.summary.en;
+            const tips = hint.tips[language] || hint.tips.en;
+            const quote = hint.expertQuote ? (hint.expertQuote[language] || hint.expertQuote.en) : null;
+            const isSaved = savedFavorites.includes(hint.id);
 
-          return (
-            <div
-              key={hint.id}
-              className="bg-white dark:bg-slate-900 rounded-xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between"
-            >
-              <div className="space-y-3">
-                {/* Header Actions */}
-                <div className="flex items-center justify-between">
-                  <span className="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                    {hint.category}
-                  </span>
+            return (
+              <div
+                key={hint.id}
+                className="bg-white dark:bg-slate-900 rounded-xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  {/* Header Actions */}
+                  <div className="flex items-center justify-between">
+                    <span className="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                      {hint.category}
+                    </span>
 
-                  <div className="flex items-center gap-1">
-                    <button
-                      onClick={() => handleSpeakHint(hint)}
-                      className="p-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
-                      title={t.listenAudio}
-                    >
-                      <Volume2 className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      onClick={() => onToggleFavorite(hint.id)}
-                      className={`p-1.5 rounded transition-colors ${
-                        isSaved ? 'bg-brand-600 text-white' : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
-                      }`}
-                      title={isSaved ? t.savedToFav : t.saveToFav}
-                    >
-                      <Bookmark className={`w-3.5 h-3.5 ${isSaved ? 'fill-white' : ''}`} />
-                    </button>
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => handleSpeakHint(hint)}
+                        className="p-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+                        title={t.listenAudio}
+                      >
+                        <Volume2 className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => onToggleFavorite(hint.id)}
+                        className={`p-1.5 rounded transition-colors ${
+                          isSaved ? 'bg-brand-600 text-white' : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+                        }`}
+                        title={isSaved ? t.savedToFav : t.saveToFav}
+                      >
+                        <Bookmark className={`w-3.5 h-3.5 ${isSaved ? 'fill-white' : ''}`} />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Title & Summary */}
+                  <div>
+                    <h3 className="font-bold text-base text-navy-800 dark:text-white leading-snug">
+                      {title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-xs mt-1 leading-relaxed">
+                      {summary}
+                    </p>
+                  </div>
+
+                  {/* Tips */}
+                  <div className="space-y-2 pt-2">
+                    {tips.map((tip, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
+                        <Check className="w-3.5 h-3.5 text-brand-600 shrink-0 mt-0.5" />
+                        <span className="leading-snug">{tip}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Title & Summary */}
-                <div>
-                  <h3 className="font-bold text-base text-navy-800 dark:text-white leading-snug">
-                    {title}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-xs mt-1 leading-relaxed">
-                    {summary}
-                  </p>
-                </div>
-
-                {/* Tips */}
-                <div className="space-y-2 pt-2">
-                  {tips.map((tip, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-                      <Check className="w-3.5 h-3.5 text-brand-600 shrink-0 mt-0.5" />
-                      <span className="leading-snug">{tip}</span>
-                    </div>
-                  ))}
-                </div>
+                {/* Quote */}
+                {quote && (
+                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-start gap-2 text-xs italic text-slate-500 bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg">
+                    <Quote className="w-3.5 h-3.5 text-brand-600 shrink-0" />
+                    <span>{quote}</span>
+                  </div>
+                )}
               </div>
-
-              {/* Quote */}
-              {quote && (
-                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-start gap-2 text-xs italic text-slate-500 bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg">
-                  <Quote className="w-3.5 h-3.5 text-brand-600 shrink-0" />
-                  <span>{quote}</span>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 };

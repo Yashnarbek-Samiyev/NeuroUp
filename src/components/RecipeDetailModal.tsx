@@ -11,8 +11,7 @@ import {
   Bookmark, 
   CheckCircle2, 
   Sparkles, 
-  ChevronRight,
-  Heart
+  ChevronRight
 } from 'lucide-react';
 
 interface RecipeDetailModalProps {
@@ -47,37 +46,37 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
   };
 
   const handleSpeakRecipe = () => {
-    const textToSpeak = `${title}. ${description}. Masalliqlar: ${ingredients.join(', ')}. Tayyorlash: ${steps.join('. ')}. Foydasi: ${benefits}`;
+    const textToSpeak = `${title}. ${description}. ${t.ingredients}: ${ingredients.join(', ')}. ${t.stepByStep}: ${steps.join('. ')}. ${t.benefits}: ${benefits}`;
     speechService.speak(textToSpeak, language);
   };
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center animate-fadeIn">
-      <div className="relative bg-white dark:bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-800">
+      <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl border border-slate-200 dark:border-slate-800">
         
-        {/* Header Image & Close */}
-        <div className="relative h-64 sm:h-72 w-full overflow-hidden rounded-t-3xl">
+        {/* Header Image */}
+        <div className="relative h-60 sm:h-64 w-full overflow-hidden rounded-t-2xl bg-slate-100">
           <img 
             src={recipe.image} 
             alt={title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
           
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md flex items-center justify-center transition-colors"
+            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
 
           <div className="absolute top-4 left-4 flex gap-2">
             <button
               onClick={() => onToggleSaved(recipe.id)}
-              className={`px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 backdrop-blur-md transition-colors ${
+              className={`px-3 py-1 rounded text-xs font-bold flex items-center gap-1.5 transition-colors ${
                 isSaved
-                  ? 'bg-rose-500 text-white'
-                  : 'bg-white/20 hover:bg-white/40 text-white'
+                  ? 'bg-brand-600 text-white'
+                  : 'bg-black/50 hover:bg-black/70 text-white'
               }`}
             >
               <Bookmark className={`w-3.5 h-3.5 ${isSaved ? 'fill-white' : ''}`} />
@@ -86,7 +85,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
             
             <button
               onClick={handleSpeakRecipe}
-              className="px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 bg-brand-500/90 hover:bg-brand-500 text-white backdrop-blur-md shadow"
+              className="px-3 py-1 rounded text-xs font-bold flex items-center gap-1.5 bg-black/50 hover:bg-black/70 text-white"
             >
               <Volume2 className="w-3.5 h-3.5" />
               {t.listenAudio}
@@ -94,57 +93,55 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
           </div>
 
           <div className="absolute bottom-4 left-4 right-4 text-white">
-            <span className="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase bg-brand-600 tracking-wider">
+            <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-brand-600 tracking-wider">
               {recipe.category}
             </span>
-            <h2 className="text-xl sm:text-2xl font-bold mt-1.5 leading-tight">
+            <h2 className="text-xl sm:text-2xl font-bold mt-1 leading-tight">
               {title}
             </h2>
           </div>
         </div>
 
         {/* Modal Content */}
-        <div className="p-6 sm:p-8 space-y-6">
+        <div className="p-6 space-y-6">
           
           {/* Quick Metrics */}
-          <div className="grid grid-cols-4 gap-2 sm:gap-4 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-center">
+          <div className="grid grid-cols-4 gap-2 sm:gap-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 text-center">
             <div className="space-y-0.5">
-              <Clock className="w-4 h-4 mx-auto text-brand-600 dark:text-brand-400" />
-              <div className="text-xs text-slate-500 dark:text-slate-400">{t.prepTime}</div>
-              <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">{recipe.prepTime} daq</div>
+              <Clock className="w-4 h-4 mx-auto text-brand-600" />
+              <div className="text-[11px] text-slate-500">{t.prepTime}</div>
+              <div className="font-bold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.prepTime} {t.minutesUnit}</div>
             </div>
             <div className="space-y-0.5">
-              <Clock className="w-4 h-4 mx-auto text-amber-500" />
-              <div className="text-xs text-slate-500 dark:text-slate-400">{t.cookTime}</div>
-              <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">{recipe.cookTime} daq</div>
+              <Clock className="w-4 h-4 mx-auto text-slate-500" />
+              <div className="text-[11px] text-slate-500">{t.cookTime}</div>
+              <div className="font-bold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.cookTime} {t.minutesUnit}</div>
             </div>
             <div className="space-y-0.5">
-              <Flame className="w-4 h-4 mx-auto text-rose-500" />
-              <div className="text-xs text-slate-500 dark:text-slate-400">{t.calories}</div>
-              <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">{recipe.calories} kkal</div>
+              <Flame className="w-4 h-4 mx-auto text-amber-500" />
+              <div className="text-[11px] text-slate-500">{t.calories}</div>
+              <div className="font-bold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.calories} {t.caloriesUnit}</div>
             </div>
             <div className="space-y-0.5">
-              <Users className="w-4 h-4 mx-auto text-blue-500" />
-              <div className="text-xs text-slate-500 dark:text-slate-400">{t.servings}</div>
-              <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">{recipe.servings} kishi</div>
+              <Users className="w-4 h-4 mx-auto text-brand-600" />
+              <div className="text-[11px] text-slate-500">{t.servings}</div>
+              <div className="font-bold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.servings} {t.personsUnit}</div>
             </div>
           </div>
 
           {/* Description */}
-          <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
             {description}
           </p>
 
-          {/* Stroke Recovery Benefit Alert */}
-          <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 flex items-start gap-3">
-            <div className="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 shrink-0">
-              <Sparkles className="w-5 h-5" />
-            </div>
+          {/* Benefits Alert */}
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex items-start gap-3">
+            <Sparkles className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-bold text-sm text-emerald-900 dark:text-emerald-200">
+              <h4 className="font-bold text-xs uppercase tracking-wider text-brand-700 dark:text-brand-400">
                 {t.benefits}
               </h4>
-              <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 mt-0.5">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 mt-0.5">
                 {benefits}
               </p>
             </div>
@@ -152,20 +149,20 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
 
           {/* Ingredients Checklist */}
           <div>
-            <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-brand-600" />
+            <h3 className="font-bold text-sm text-navy-800 dark:text-white mb-3 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-brand-600" />
               {t.ingredients} ({checkedIngredients.length}/{ingredients.length})
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               {ingredients.map((ing, idx) => {
                 const isChecked = checkedIngredients.includes(idx);
                 return (
                   <label
                     key={idx}
                     onClick={() => toggleIngredient(idx)}
-                    className={`flex items-center gap-3 p-3 rounded-xl border transition-all cursor-pointer select-none text-sm ${
+                    className={`flex items-center gap-3 p-2.5 rounded-lg border transition-colors cursor-pointer select-none text-xs ${
                       isChecked
-                        ? 'bg-slate-100 dark:bg-slate-800/80 border-slate-300 dark:border-slate-700 line-through text-slate-400 dark:text-slate-500'
+                        ? 'bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 line-through text-slate-400'
                         : 'bg-white dark:bg-slate-850 border-slate-200 dark:border-slate-750 text-slate-800 dark:text-slate-200 hover:border-brand-300'
                     }`}
                   >
@@ -173,7 +170,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
                       type="checkbox"
                       checked={isChecked}
                       onChange={() => {}}
-                      className="rounded text-brand-600 focus:ring-brand-500 w-4 h-4 cursor-pointer"
+                      className="rounded text-brand-600 focus:ring-brand-500 w-3.5 h-3.5 cursor-pointer"
                     />
                     <span>{ing}</span>
                   </label>
@@ -182,32 +179,32 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
             </div>
           </div>
 
-          {/* Step-by-Step Cooking Guide */}
+          {/* Step-by-Step Instructions */}
           <div>
-            <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-              <ChevronRight className="w-5 h-5 text-brand-600" />
+            <h3 className="font-bold text-sm text-navy-800 dark:text-white mb-3 flex items-center gap-2">
+              <ChevronRight className="w-4 h-4 text-brand-600" />
               {t.stepByStep}
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {steps.map((step, idx) => (
                 <div
                   key={idx}
                   onClick={() => setActiveStep(idx)}
-                  className={`p-4 rounded-2xl border transition-all cursor-pointer ${
+                  className={`p-3.5 rounded-xl border transition-colors cursor-pointer ${
                     activeStep === idx
-                      ? 'bg-brand-50/70 dark:bg-brand-950/60 border-brand-400 dark:border-brand-700 shadow-sm'
-                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-slate-300'
+                      ? 'bg-brand-50 dark:bg-slate-800 border-brand-500'
+                      : 'bg-white dark:bg-slate-850 border-slate-200 dark:border-slate-750'
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0 ${
+                    <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
                       activeStep === idx
-                        ? 'bg-brand-600 text-white shadow'
+                        ? 'bg-brand-600 text-white'
                         : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
                     }`}>
                       {idx + 1}
                     </span>
-                    <p className="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed">
                       {step}
                     </p>
                   </div>
@@ -218,13 +215,13 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
 
         </div>
 
-        {/* Footer Button */}
-        <div className="p-4 bg-slate-50 dark:bg-slate-800/80 border-t border-slate-200 dark:border-slate-700 rounded-b-3xl flex justify-end">
+        {/* Footer */}
+        <div className="p-4 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 rounded-b-2xl flex justify-end">
           <button
             onClick={onClose}
-            className="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 text-white font-semibold text-sm transition-colors"
+            className="px-5 py-2 rounded-lg bg-navy-800 hover:bg-navy-900 text-white font-semibold text-xs transition-colors"
           >
-            Yopish
+            {t.closeBtn}
           </button>
         </div>
       </div>

@@ -87,13 +87,13 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
         <div>
           <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
             <HeartPulse className="w-4 h-4" />
-            <span>NeuroTracker</span>
+            <span>{t.tracker}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
-            Kunlik tiklanish kundaligi
+            {t.trackerSectionTitle}
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
-            Suv ichish, kunlik harakat, uyqu va kayfiyatingizni qayd etib boring.
+            {t.trackerSectionDesc}
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
           <Flame className="w-5 h-5 text-brand-600 dark:text-brand-400" />
           <div className="text-xs">
             <span className="font-semibold text-slate-500 block">{t.streakCount}:</span>
-            <span className="font-bold text-sm text-navy-800 dark:text-white">{streak} kun ketma-ket</span>
+            <span className="font-bold text-sm text-navy-800 dark:text-white">{streak} {t.streakDaysUnit}</span>
           </div>
         </div>
       </div>
@@ -114,10 +114,10 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
             <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 font-bold text-xs">
               <Calendar className="w-4 h-4 text-brand-600" />
-              <span>Sana: {new Date().toLocaleDateString()}</span>
+              <span>{t.todayDate} {new Date().toLocaleDateString(language === 'uz' ? 'uz-UZ' : language === 'ru' ? 'ru-RU' : 'en-US')}</span>
             </div>
             <span className="text-xs text-slate-400">
-              Avtomatik saqlanadi
+              {t.autoSaved}
             </span>
           </div>
 
@@ -129,7 +129,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                 {t.waterIntake}
               </label>
               <span className="text-xs font-bold text-brand-700 dark:text-brand-400">
-                {waterGlasses} / 8 stakan ({waterGlasses * 250} ml)
+                {waterGlasses} / 8 ({waterGlasses * 250} ml)
               </span>
             </div>
             <div className="grid grid-cols-8 gap-2">
@@ -158,7 +158,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                   <Dumbbell className="w-3.5 h-3.5 text-brand-600" />
                   {t.exerciseTime}
                 </label>
-                <span className="text-xs font-bold text-brand-700 dark:text-brand-400">{exerciseMinutes} daq</span>
+                <span className="text-xs font-bold text-brand-700 dark:text-brand-400">{exerciseMinutes} {t.minutesUnit}</span>
               </div>
               <input
                 type="range"
@@ -177,7 +177,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                   <Moon className="w-3.5 h-3.5 text-brand-600" />
                   {t.sleepHours}
                 </label>
-                <span className="text-xs font-bold text-brand-700 dark:text-brand-400">{sleepHours} soat</span>
+                <span className="text-xs font-bold text-brand-700 dark:text-brand-400">{sleepHours} {language === 'en' ? 'hrs' : language === 'ru' ? 'ч' : 'soat'}</span>
               </div>
               <input
                 type="range"
@@ -225,7 +225,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
               rows={2}
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              placeholder="Bugungi holat, yutuqlar yoki shaxsiy eslatmalaringiz..."
+              placeholder={t.notesPlaceholder}
               className="w-full p-2.5 rounded-lg bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-xs focus:outline-none focus:border-brand-500"
             />
           </div>
@@ -234,7 +234,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
           <div className="flex items-center justify-end gap-3 pt-1">
             {savedSuccess && (
               <span className="text-xs font-bold text-brand-600 flex items-center gap-1">
-                <Check className="w-4 h-4" /> Saqlandi!
+                <Check className="w-4 h-4" /> {t.savedSuccess}
               </span>
             )}
             <button
@@ -252,21 +252,21 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
           <div className="bg-navy-800 text-white rounded-xl p-5 space-y-3 shadow-sm">
             <h3 className="font-bold text-sm flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-brand-400" />
-              Neyroplastiklik qoidasi
+              {t.neuroplasticityTitle}
             </h3>
             <p className="text-slate-300 text-xs leading-relaxed">
-              Miya qayta tiklanishi uchun har kungi muntazamlik juda muhim. Kichik harakatlar miyangizda yangi neyron yo'llarini hosil qiladi.
+              {t.neuroplasticityText}
             </p>
           </div>
 
           <div className="bg-white dark:bg-slate-900 rounded-xl p-5 border border-slate-200 dark:border-slate-800 space-y-2">
             <h4 className="font-bold text-xs text-navy-800 dark:text-white uppercase tracking-wider">
-              Haftalik tavsiya
+              {t.weeklyTipsTitle}
             </h4>
             <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside">
-              <li>Kuniga kamida 1.5 - 2 litr suv</li>
-              <li>Kunlik 15 daqiqa yengil mashq</li>
-              <li>7-8 soat sifatli uyqu</li>
+              <li>{t.tip1}</li>
+              <li>{t.tip2}</li>
+              <li>{t.tip3}</li>
             </ul>
           </div>
         </div>

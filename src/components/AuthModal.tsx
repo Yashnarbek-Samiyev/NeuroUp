@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
+import { translations } from '../data/translations';
 import { BrandLogo } from './BrandLogo';
 import { 
   X, 
@@ -7,8 +8,7 @@ import {
   Lock, 
   User, 
   ArrowRight, 
-  Heart,
-  Sparkles
+  Heart
 } from 'lucide-react';
 
 export interface UserProfile {
@@ -41,6 +41,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const t = translations[language];
+
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -48,12 +50,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     setError('');
 
     if (!email || !password) {
-      setError(language === 'uz' ? 'Iltimos, barcha maydonlarni to\'ldiring' : 'Please fill in all fields');
+      setError(language === 'uz' ? 'Iltimos, barcha maydonlarni to\'ldiring' : language === 'ru' ? 'Пожалуйста, заполните все поля' : 'Please fill in all fields');
       return;
     }
 
     if (mode === 'signup' && !name) {
-      setError(language === 'uz' ? 'Iltimos, ismingizni kiriting' : 'Please enter your name');
+      setError(language === 'uz' ? 'Iltimos, ismingizni kiriting' : language === 'ru' ? 'Пожалуйста, введите ваше имя' : 'Please enter your name');
       return;
     }
 
@@ -62,7 +64,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     setTimeout(() => {
       setIsLoading(false);
       const userProfile: UserProfile = {
-        name: mode === 'signup' ? name : (email.split('@')[0] || 'Foydalanuvchi'),
+        name: mode === 'signup' ? name : (email.split('@')[0] || 'User'),
         email,
         role,
         isLoggedIn: true
@@ -81,8 +83,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
   const handleQuickDemoLogin = (demoRole: 'survivor' | 'caregiver') => {
     const demoUser: UserProfile = {
-      name: demoRole === 'survivor' ? 'Jasur Aliyev' : 'Dilnoza Karimova',
-      email: demoRole === 'survivor' ? 'jasur@neuroup.uz' : 'dilnoza@neuroup.uz',
+      name: demoRole === 'survivor' 
+        ? (language === 'en' ? 'John Doe' : language === 'ru' ? 'Иван Смирнов' : 'Jasur Aliyev')
+        : (language === 'en' ? 'Sarah Jenkins' : language === 'ru' ? 'Анна Павлова' : 'Dilnoza Karimova'),
+      email: demoRole === 'survivor' ? 'patient@neuroup.org' : 'caregiver@neuroup.org',
       role: demoRole,
       isLoggedIn: true
     };
@@ -113,12 +117,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             <BrandLogo size="md" />
           </div>
           <h3 className="text-xl font-bold text-navy-800 dark:text-white">
-            {mode === 'login' ? 'Tizimga kirish' : 'Ro\'yxatdan o\'tish'}
+            {mode === 'login' ? t.loginTitle : t.signupTitle}
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
-            {mode === 'login'
-              ? 'Shaxsiy reja va saqlangan mashqlaringizga kiring'
-              : 'Reabilitatsiya kundaligiga ega bo\'ling'}
+            {mode === 'login' ? t.loginDesc : t.signupDesc}
           </p>
         </div>
 
@@ -133,7 +135,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
-            Log In (Kirish)
+            {t.logIn}
           </button>
           <button
             type="button"
@@ -144,7 +146,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
-            Sign Up (A'zo bo'lish)
+            {t.signUp}
           </button>
         </div>
 
@@ -159,7 +161,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           {mode === 'signup' && (
             <div>
               <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                Ism va familiya
+                {t.fullName}
               </label>
               <div className="relative">
                 <User className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
@@ -176,7 +178,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
           <div>
             <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-              Email pochta
+              {t.email}
             </label>
             <div className="relative">
               <Mail className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
@@ -184,7 +186,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="misol@pochta.uz"
+                placeholder="name@example.com"
                 className="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
               />
             </div>
@@ -192,7 +194,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
           <div>
             <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-              Parol
+              {t.password}
             </label>
             <div className="relative">
               <Lock className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
@@ -209,7 +211,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           {mode === 'signup' && (
             <div>
               <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                Reabilitatsiya roli
+                {t.roleLabel}
               </label>
               <div className="grid grid-cols-3 gap-1.5">
                 <button
@@ -221,7 +223,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       : 'bg-white dark:bg-slate-800 border-slate-200 text-slate-600'
                   }`}
                 >
-                  Bemor
+                  {t.roleSurvivor}
                 </button>
                 <button
                   type="button"
@@ -232,7 +234,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       : 'bg-white dark:bg-slate-800 border-slate-200 text-slate-600'
                   }`}
                 >
-                  Parvarishlovchi
+                  {t.roleCaregiver}
                 </button>
                 <button
                   type="button"
@@ -243,7 +245,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       : 'bg-white dark:bg-slate-800 border-slate-200 text-slate-600'
                   }`}
                 >
-                  Shifokor
+                  {t.roleTherapist}
                 </button>
               </div>
             </div>
@@ -254,7 +256,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             disabled={isLoading}
             className="w-full py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-1"
           >
-            <span>{mode === 'login' ? 'Tizimga kirish' : 'Ro\'yxatdan o\'tish'}</span>
+            <span>{mode === 'login' ? t.loginTitle : t.signupTitle}</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </form>
@@ -262,7 +264,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         {/* Demo Fast Login */}
         <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
           <div className="text-[11px] text-slate-400 text-center font-semibold mb-2">
-            Tezkor test kirish
+            {t.quickDemoLogin}
           </div>
           <div className="grid grid-cols-2 gap-2">
             <button
@@ -270,14 +272,14 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               className="px-2 py-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-1"
             >
               <User className="w-3 h-3 text-brand-600" />
-              <span>Tiklanuvchi</span>
+              <span>{t.demoSurvivor}</span>
             </button>
             <button
               onClick={() => handleQuickDemoLogin('caregiver')}
               className="px-2 py-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-1"
             >
               <Heart className="w-3 h-3 text-brand-600" />
-              <span>Parvarishlovchi</span>
+              <span>{t.demoCaregiver}</span>
             </button>
           </div>
         </div>

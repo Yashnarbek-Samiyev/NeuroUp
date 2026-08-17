@@ -8,7 +8,6 @@ import {
   Play, 
   Pause, 
   RotateCcw, 
-  CheckCircle2, 
   AlertTriangle, 
   Volume2, 
   Bookmark, 
@@ -47,7 +46,6 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
   const targetArea = exercise.targetArea[language] || exercise.targetArea.en;
   const equipment = exercise.equipment[language] || exercise.equipment.en;
 
-  // Countdown timer logic
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     if (isTimerRunning && timerSeconds > 0) {
@@ -67,8 +65,8 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
 
   const triggerCelebration = () => {
     confetti({
-      particleCount: 100,
-      spread: 70,
+      particleCount: 80,
+      spread: 60,
       origin: { y: 0.6 }
     });
   };
@@ -89,16 +87,16 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
   };
 
   const handleSpeakExercise = () => {
-    const textToSpeak = `${title}. ${description}. Maqsadli soha: ${targetArea}. Qadamlar: ${steps.join('. ')}. Xavfsizlik: ${safety.join('. ')}`;
+    const textToSpeak = `${title}. ${description}. ${t.targetArea}: ${targetArea}. ${t.stepByStep}: ${steps.join('. ')}. ${t.safetyWarning}: ${safety.join('. ')}`;
     speechService.speak(textToSpeak, language);
   };
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center animate-fadeIn">
-      <div className="relative bg-white dark:bg-slate-900 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-800">
+      <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-xl border border-slate-200 dark:border-slate-800">
         
         {/* Top Video Header */}
-        <div className="relative aspect-video w-full bg-black rounded-t-3xl overflow-hidden">
+        <div className="relative aspect-video w-full bg-black rounded-t-2xl overflow-hidden">
           <iframe
             className="w-full h-full"
             src={`https://www.youtube.com/embed/${exercise.youtubeId}?rel=0&enablejsapi=1`}
@@ -109,27 +107,27 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
 
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black/80 text-white backdrop-blur-md flex items-center justify-center transition-colors border border-white/20"
+            className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 hover:bg-black/80 text-white flex items-center justify-center transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Action Toolbar */}
         <div className="px-6 py-3 bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+            <span className="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200">
               {exercise.category}
             </span>
             <span className="text-xs text-slate-500 font-medium">
-              {exercise.durationMinutes} daqiqa mashg'ulot
+              {exercise.durationMinutes} {t.minutesUnit}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={handleSpeakExercise}
-              className="px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100"
+              className="px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100"
             >
               <Volume2 className="w-3.5 h-3.5 text-brand-600" />
               {t.listenAudio}
@@ -137,9 +135,9 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
 
             <button
               onClick={() => onToggleSaved(exercise.id)}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors ${
                 isSaved
-                  ? 'bg-rose-500 text-white'
+                  ? 'bg-brand-600 text-white'
                   : 'bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200'
               }`}
             >
@@ -150,27 +148,27 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
         </div>
 
         {/* Content Body */}
-        <div className="p-6 sm:p-8 space-y-6">
+        <div className="p-6 space-y-6">
           <div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white">
+            <h2 className="text-xl font-bold text-navy-800 dark:text-white">
               {title}
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-sm mt-1.5 leading-relaxed">
               {description}
             </p>
           </div>
 
           {/* Interactive Live Workout Timer Box */}
-          <div className="p-5 rounded-3xl bg-gradient-to-r from-teal-500/10 via-brand-500/10 to-blue-500/10 dark:from-teal-950/40 dark:to-blue-950/40 border border-brand-200 dark:border-brand-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-brand-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/30">
-                <Timer className="w-7 h-7" />
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center">
+                <Timer className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-xs font-bold uppercase tracking-wider text-brand-700 dark:text-brand-300">
-                  Mashq Taymeri
+                <div className="text-xs font-semibold text-slate-500">
+                  {t.timerBoxTitle}
                 </div>
-                <div className="text-3xl font-black tracking-tight text-slate-900 dark:text-white font-mono">
+                <div className="text-2xl font-bold tracking-tight text-navy-800 dark:text-white font-mono">
                   {formatTime(timerSeconds)}
                 </div>
               </div>
@@ -181,14 +179,10 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
                 <>
                   <button
                     onClick={() => setIsTimerRunning(!isTimerRunning)}
-                    className={`px-5 py-2.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow transition-transform active:scale-95 ${
-                      isTimerRunning
-                        ? 'bg-amber-500 hover:bg-amber-600 text-white'
-                        : 'bg-brand-600 hover:bg-brand-700 text-white'
-                    }`}
+                    className="px-4 py-2 rounded-lg font-bold text-xs flex items-center gap-1.5 bg-brand-600 hover:bg-brand-700 text-white transition-colors"
                   >
-                    {isTimerRunning ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
-                    {isTimerRunning ? 'Pauza' : 'Taymerni boshlash'}
+                    {isTimerRunning ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 fill-white" />}
+                    {isTimerRunning ? t.timerPause : t.timerStart}
                   </button>
 
                   <button
@@ -196,23 +190,23 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
                       setIsTimerRunning(false);
                       setTimerSeconds(exercise.durationMinutes * 60);
                     }}
-                    className="p-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100"
-                    title="Qayta o'rnatish"
+                    className="p-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 hover:bg-slate-100"
+                    title={t.timerReset}
                   >
-                    <RotateCcw className="w-4 h-4" />
+                    <RotateCcw className="w-3.5 h-3.5" />
                   </button>
 
                   <button
                     onClick={handleFinishEarly}
-                    className="px-3 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold"
+                    className="px-3 py-2 rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold"
                   >
-                    Tugatdim
+                    {t.timerFinished}
                   </button>
                 </>
               ) : (
-                <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 text-white font-bold text-sm animate-bounce">
-                  <Award className="w-5 h-5" />
-                  Ajoyib! Mashq muvaffaqiyatli yakunlandi 🎉
+                <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 text-white font-bold text-xs">
+                  <Award className="w-4 h-4" />
+                  {t.workoutCompletedToast}
                 </div>
               )}
             </div>
@@ -220,20 +214,20 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
 
           {/* Target Area & Equipment */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-              <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-1">
+            <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">
                 {t.targetArea}
               </span>
-              <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+              <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
                 {targetArea}
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
-              <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-1">
+            <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">
                 {t.equipment}
               </span>
-              <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+              <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
                 {equipment.join(', ')}
               </p>
             </div>
@@ -241,30 +235,30 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
 
           {/* Exercise Steps */}
           <div>
-            <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-              <ChevronRight className="w-5 h-5 text-brand-600" />
+            <h3 className="font-bold text-sm text-navy-800 dark:text-white mb-3 flex items-center gap-2">
+              <ChevronRight className="w-4 h-4 text-brand-600" />
               {t.stepByStep}
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {steps.map((step, idx) => (
                 <div
                   key={idx}
                   onClick={() => setActiveStep(idx)}
-                  className={`p-4 rounded-2xl border transition-all cursor-pointer ${
+                  className={`p-3.5 rounded-xl border transition-colors cursor-pointer ${
                     activeStep === idx
-                      ? 'bg-brand-50/70 dark:bg-brand-950/60 border-brand-400 dark:border-brand-700 shadow-sm'
-                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'
+                      ? 'bg-brand-50 dark:bg-slate-800 border-brand-500'
+                      : 'bg-white dark:bg-slate-850 border-slate-200 dark:border-slate-750'
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0 ${
+                    <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
                       activeStep === idx
-                        ? 'bg-brand-600 text-white shadow'
+                        ? 'bg-brand-600 text-white'
                         : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
                     }`}>
                       {idx + 1}
                     </span>
-                    <p className="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed">
                       {step}
                     </p>
                   </div>
@@ -274,12 +268,12 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
           </div>
 
           {/* Safety & Precautions */}
-          <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800">
-            <h4 className="font-bold text-sm text-amber-900 dark:text-amber-200 flex items-center gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600" />
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+            <h4 className="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-2 mb-2">
+              <AlertTriangle className="w-4 h-4 text-brand-600" />
               {t.safetyWarning}
             </h4>
-            <ul className="space-y-1 text-xs sm:text-sm text-amber-800 dark:text-amber-300 list-disc list-inside">
+            <ul className="space-y-1 text-xs text-slate-600 dark:text-slate-400 list-disc list-inside">
               {safety.map((tip, idx) => (
                 <li key={idx}>{tip}</li>
               ))}
@@ -289,12 +283,12 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 bg-slate-50 dark:bg-slate-800/80 border-t border-slate-200 dark:border-slate-700 rounded-b-3xl flex justify-end">
+        <div className="p-4 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 rounded-b-2xl flex justify-end">
           <button
             onClick={onClose}
-            className="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 text-white font-semibold text-sm transition-colors"
+            className="px-5 py-2 rounded-lg bg-navy-800 hover:bg-navy-900 text-white font-semibold text-xs transition-colors"
           >
-            Yopish
+            {t.closeBtn}
           </button>
         </div>
       </div>

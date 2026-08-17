@@ -33,7 +33,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const t = translations[language];
 
   const handleSpeakHero = () => {
-    const text = "Eat well. Move more. Rebound after stroke. To'g'ri ovqatlanish va muntazam harakat qilish qayta insult xavfini kamaytiradi. Bemorlar va mutaxassislar hamkorligida yaratilgan ushbu platformada siz video mashqlar, retseptlar va amaliy tavsiyalarni topasiz.";
+    const text = `${t.heroTitlePrefix} ${t.heroTitleSuffix}. ${t.heroSubtitle} ${t.heroDescription}`;
     speechService.speak(text, language);
   };
 
@@ -50,22 +50,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Partnership Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
               <Users className="w-3.5 h-3.5 text-brand-600" />
-              <span>Insultdan tiklanuvchilar va shifokorlar hamkorligida</span>
+              <span>{t.partnershipText}</span>
             </div>
 
             {/* Title & Description */}
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 dark:text-white leading-tight tracking-tight">
-                Eat well. Move more. <br />
-                <span className="text-brand-600 dark:text-brand-400">Rebound after stroke</span>
+                {t.heroTitlePrefix} <br />
+                <span className="text-brand-600 dark:text-brand-400">{t.heroTitleSuffix}</span>
               </h1>
               
               <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
-                To'g'ri ovqatlanish va faol harakatlanish qayta insult xavfini kamaytirishi isbotlangan.
+                {t.heroSubtitle}
               </p>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-                Ushbu veb-saytda siz insultdan tiklanayotgan insonlar ishtirokidagi video mashg'ulotlar, 
-                O'rta yer dengizi parhezi va bosqichma-bosqich retseptlar hamda kundalik hayotni yengillashtiruvchi amaliy tavsiyalarni topasiz.
+                {t.heroDescription}
               </p>
             </div>
 
@@ -79,8 +78,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t.searchPlaceholder}
-                className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 text-sm shadow-sm"
+                className="w-full pl-10 pr-16 py-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 text-sm shadow-sm"
               />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-600"
+                >
+                  {t.clearSearch}
+                </button>
+              )}
             </div>
 
             {/* Action Buttons */}
@@ -89,7 +96,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 onClick={() => onSelectTab('eat-well')}
                 className="px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm flex items-center gap-2 transition-colors shadow-sm"
               >
-                <span>Retseptlarni ko'rish</span>
+                <span>{t.browseRecipes}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -97,7 +104,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 onClick={() => onSelectTab('move-more')}
                 className="px-5 py-2.5 rounded-lg bg-navy-800 hover:bg-navy-900 text-white font-bold text-sm flex items-center gap-2 transition-colors shadow-sm"
               >
-                <span>Mashqlarni boshlash</span>
+                <span>{t.startExercises}</span>
                 <Play className="w-3.5 h-3.5 fill-white" />
               </button>
 
@@ -118,9 +125,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               >
                 <div className="flex items-center gap-2 mb-1">
                   <Utensils className="w-4 h-4 text-brand-600" />
-                  <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Eat Well</span>
+                  <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">{t.eatWell}</span>
                 </div>
-                <div className="text-[11px] text-slate-500">Parhez retseptlar</div>
+                <div className="text-[11px] text-slate-500">{t.eatWellSub}</div>
               </div>
 
               <div 
@@ -129,9 +136,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               >
                 <div className="flex items-center gap-2 mb-1">
                   <Dumbbell className="w-4 h-4 text-brand-600" />
-                  <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Move More</span>
+                  <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">{t.moveMore}</span>
                 </div>
-                <div className="text-[11px] text-slate-500">Video mashg'ulotlar</div>
+                <div className="text-[11px] text-slate-500">{t.moveMoreSub}</div>
               </div>
 
               <div 
@@ -140,9 +147,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               >
                 <div className="flex items-center gap-2 mb-1">
                   <Lightbulb className="w-4 h-4 text-brand-600" />
-                  <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Hints & Hacks</span>
+                  <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">{t.hintsHacks}</span>
                 </div>
-                <div className="text-[11px] text-slate-500">Kundalik maslahatlar</div>
+                <div className="text-[11px] text-slate-500">{t.hintsHacksSub}</div>
               </div>
             </div>
 
@@ -155,7 +162,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/2zyCIZ3huGI?rel=0"
-                  title="i-REBOUND / NeuroUP Overview Video"
+                  title={t.videoOverviewTitle}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
@@ -163,14 +170,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <div className="pt-3 px-1 flex items-center justify-between text-xs">
                 <span className="font-bold text-slate-800 dark:text-slate-200">
-                  Insultdan so'ng tiklanish dasturi
+                  {t.videoOverviewTitle}
                 </span>
                 {onOpenAuthModal && (
                   <button
                     onClick={() => onOpenAuthModal('signup')}
                     className="font-bold text-brand-600 hover:underline"
                   >
-                    A'zo bo'lish →
+                    {t.whySignUp}
                   </button>
                 )}
               </div>

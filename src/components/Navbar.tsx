@@ -9,12 +9,12 @@ import {
   Lightbulb, 
   HeartPulse, 
   Bookmark, 
-  AlertCircle,
-  Globe,
-  Menu,
-  X,
-  LogOut,
-  ExternalLink
+  AlertCircle, 
+  Globe, 
+  Menu, 
+  X, 
+  LogOut, 
+  ExternalLink 
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -45,10 +45,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   const t = translations[language];
 
   const navItems = [
-    { id: 'eat-well' as CategoryTab, label: 'Eat Well', icon: Utensils },
-    { id: 'move-more' as CategoryTab, label: 'Move More', icon: Dumbbell },
-    { id: 'hints-hacks' as CategoryTab, label: 'Hints & Hacks', icon: Lightbulb },
-    { id: 'tracker' as CategoryTab, label: 'Tracker', icon: HeartPulse },
+    { id: 'eat-well' as CategoryTab, label: t.eatWell, icon: Utensils },
+    { id: 'move-more' as CategoryTab, label: t.moveMore, icon: Dumbbell },
+    { id: 'hints-hacks' as CategoryTab, label: t.hintsHacks, icon: Lightbulb },
+    { id: 'tracker' as CategoryTab, label: t.tracker, icon: HeartPulse },
     { id: 'saved' as CategoryTab, label: `${t.saved} (${savedCount})`, icon: Bookmark },
   ];
 
@@ -61,11 +61,11 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors">
       
-      {/* 1. Top Network Bar (Clean neutral i-REBOUND style) */}
+      {/* 1. Top Network Bar */}
       <div className="bg-slate-100 dark:bg-slate-950 text-slate-600 dark:text-slate-400 text-xs py-2 px-4 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4 text-xs">
-            <span className="font-medium hidden sm:inline text-slate-500">Platformalar:</span>
+            <span className="font-medium hidden sm:inline text-slate-500">{t.platformsLabel}</span>
             <div className="flex items-center gap-3">
               <a 
                 href="https://irebound.enableme.org.au" 
@@ -98,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="text-red-600 dark:text-red-400 hover:underline font-bold flex items-center gap-1 text-xs"
             >
               <AlertCircle className="w-3.5 h-3.5" />
-              <span>F.A.S.T. Belgilari (103)</span>
+              <span>{t.emergencyFast}</span>
             </button>
           </div>
         </div>
@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <BrandLogo size="md" withTagline={false} />
           </div>
 
-          {/* Center Clean Unified Navigation Links */}
+          {/* Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -186,7 +186,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       className="w-full text-left px-4 py-2 text-xs font-bold text-red-600 hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center gap-2"
                     >
                       <LogOut className="w-3.5 h-3.5" />
-                      <span>Chiqish</span>
+                      <span>{t.logOut}</span>
                     </button>
                   </div>
                 )}
@@ -197,13 +197,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => onOpenAuthModal('login')}
                   className="px-4 py-2 rounded-lg text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700 transition-colors"
                 >
-                  Log in
+                  {t.logIn}
                 </button>
                 <button
                   onClick={() => onOpenAuthModal('signup')}
                   className="px-4 py-2 rounded-lg text-xs sm:text-sm font-bold text-white bg-brand-600 hover:bg-brand-700 transition-colors shadow-sm"
                 >
-                  Sign up
+                  {t.signUp}
                 </button>
               </div>
             )}
@@ -219,7 +219,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Drawer */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-slate-200 dark:border-slate-800 space-y-1 animate-fadeIn">
             {navItems.map((item) => {

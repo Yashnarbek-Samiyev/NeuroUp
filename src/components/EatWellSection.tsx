@@ -61,18 +61,18 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="eat-well">
-      {/* Header (i-REBOUND section style) */}
+      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
           <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
             <Utensils className="w-4 h-4" />
-            <span>Eat Well</span>
+            <span>{t.eatWell}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
-            Insultdan so'ng to'g'ri ovqatlanish
+            {t.eatWellSectionTitle}
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
-            O'rta yer dengizi parhezi, kam tuzli taomlar va yutish oson bo'lgan vitaminli retseptlar.
+            {t.eatWellSectionDesc}
           </p>
         </div>
 
@@ -99,14 +99,15 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
       {filteredRecipes.length === 0 ? (
         <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
           <Utensils className="w-10 h-10 mx-auto text-slate-400 mb-2" />
-          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">Retsept topilmadi</h3>
-          <p className="text-xs text-slate-500 mt-1">Boshqa toifani tanlab ko'ring.</p>
+          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">{t.noRecipesFound}</h3>
+          <p className="text-xs text-slate-500 mt-1">{t.searchPlaceholder}</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredRecipes.map((recipe) => {
             const title = recipe.title[language] || recipe.title.en;
             const desc = recipe.description[language] || recipe.description.en;
+            const steps = recipe.steps[language] || recipe.steps.en;
             const isSaved = savedFavorites.includes(recipe.id);
 
             return (
@@ -153,11 +154,11 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold">
                       <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
                         <Clock className="w-3 h-3" />
-                        {recipe.prepTime + recipe.cookTime} daq
+                        {recipe.prepTime + recipe.cookTime} {t.minutesUnit}
                       </span>
                       <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded">
                         <Flame className="w-3 h-3 text-amber-400" />
-                        {recipe.calories} kkal
+                        {recipe.calories} {t.caloriesUnit}
                       </span>
                     </div>
                   </div>
@@ -176,10 +177,10 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 {/* Footer Link */}
                 <div className="p-4 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                   <span className="text-xs font-semibold text-slate-500">
-                    {recipe.steps.uz.length} qadamli retsept
+                    {steps.length} {t.stepRecipeBadge}
                   </span>
                   <span className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1">
-                    Ko'rish <ArrowRight className="w-3.5 h-3.5" />
+                    {t.viewDetails} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </div>
