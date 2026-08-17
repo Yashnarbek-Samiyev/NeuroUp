@@ -2,7 +2,7 @@ import React from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
 import { BrandLogo } from './BrandLogo';
-import { ShieldCheck, Heart, Code2, ExternalLink } from 'lucide-react';
+import { ShieldCheck, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
   language: Language;
@@ -26,18 +26,6 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
               {t.footerBio}
             </p>
-            <div className="flex items-center gap-2 pt-1">
-              <a
-                href="https://github.com/Yashnarbek-Samiyev/NeuroUp"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition-colors border border-slate-700"
-              >
-                <Code2 className="w-3.5 h-3.5 text-brand-400" />
-                <span>GitHub Repository</span>
-                <ExternalLink className="w-3 h-3 text-slate-400" />
-              </a>
-            </div>
           </div>
 
           {/* Col 2: Navigation */}
