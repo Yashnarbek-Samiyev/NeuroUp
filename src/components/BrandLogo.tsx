@@ -16,17 +16,17 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   const isWhite = variant === 'white';
 
   const heightClasses = {
-    sm: 'h-8 sm:h-9',
-    md: 'h-11 sm:h-12',
-    lg: 'h-14 sm:h-16'
+    sm: 'h-10 sm:h-11',
+    md: 'h-14 sm:h-16',
+    lg: 'h-18 sm:h-20'
   };
 
   return (
     <div className={`inline-flex items-center select-none group cursor-pointer ${className}`}>
       <img
         src={isWhite ? '/logo-white.png' : '/logo.png'}
-        alt="NeuroUp"
-        className={`${heightClasses[size]} w-auto object-contain transition-transform duration-200 group-hover:scale-105`}
+        alt="NeuroUp — Rebuild Your Path"
+        className={`${heightClasses[size]} w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-sm`}
         loading="eager"
       />
     </div>
