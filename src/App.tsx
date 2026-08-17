@@ -159,7 +159,7 @@ export const App: React.FC = () => {
         )}
 
         {activeTab === 'eat-well' && (
-          <div className="pt-6">
+          <div className="pt-1 sm:pt-2">
             <EatWellSection
               language={language}
               savedFavorites={savedFavorites}
@@ -170,7 +170,7 @@ export const App: React.FC = () => {
         )}
 
         {activeTab === 'move-more' && (
-          <div className="pt-6">
+          <div className="pt-1 sm:pt-2">
             <MoveMoreSection
               language={language}
               savedFavorites={savedFavorites}
@@ -183,7 +183,7 @@ export const App: React.FC = () => {
         )}
 
         {activeTab === 'hints-hacks' && (
-          <div className="pt-6">
+          <div className="pt-1 sm:pt-2">
             <HintsSection
               language={language}
               savedFavorites={savedFavorites}

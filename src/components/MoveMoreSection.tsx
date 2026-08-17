@@ -68,16 +68,16 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
   });
 
   return (
-    <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="move-more">
+    <section className="pt-2 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="move-more">
       
       {/* 1. Move More Dedicated Hero Banner */}
       {showHeroBanner && (
-        <div className="mb-12 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+        <div className="mb-10 bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start relative z-10">
             
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-4">
+            {/* Left Content Column: Lifted upwards */}
+            <div className="lg:col-span-7 space-y-3.5 pt-0">
               
               {/* Badges */}
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 text-xs font-bold border border-brand-200 dark:border-slate-700">
