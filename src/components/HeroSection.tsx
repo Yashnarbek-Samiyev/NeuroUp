@@ -10,7 +10,8 @@ import {
   Users,
   Utensils,
   Dumbbell,
-  Lightbulb
+  Lightbulb,
+  Sparkles
 } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -33,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const t = translations[language];
 
   const handleSpeakHero = () => {
-    const text = `${t.heroTitlePrefix} ${t.heroTitleSuffix}. ${t.heroSubtitle} ${t.heroDescription}`;
+    const text = `${t.heroTitlePrefix} ${t.heroTitleSuffix}. ${t.heroSubtitle} ${t.heroDescription1} ${t.heroDescription2}`;
     speechService.speak(text, language);
   };
 
@@ -45,26 +46,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-5">
             
-            {/* Partnership Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
-              <Users className="w-3.5 h-3.5 text-brand-600" />
-              <span>{t.partnershipText}</span>
+            {/* Partnership Badge & Tagline */}
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 text-xs font-bold border border-brand-200 dark:border-slate-700">
+                <Sparkles className="w-3.5 h-3.5 text-brand-600" />
+                <span>{t.heroTagline}</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
+                <Users className="w-3.5 h-3.5 text-slate-500" />
+                <span>{t.partnershipText}</span>
+              </div>
             </div>
 
             {/* Title & Description */}
-            <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 dark:text-white leading-tight tracking-tight">
-                {t.heroTitlePrefix} <br />
+            <div className="space-y-3.5">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800 dark:text-white leading-snug tracking-tight">
+                {t.heroTitlePrefix} <br className="hidden sm:inline" />
                 <span className="text-brand-600 dark:text-brand-400">{t.heroTitleSuffix}</span>
               </h1>
               
-              <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
+              {/* Paragraph 1: Strong subtitle */}
+              <p className="text-sm sm:text-base text-slate-800 dark:text-slate-200 font-semibold leading-relaxed">
                 {t.heroSubtitle}
               </p>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-                {t.heroDescription}
+              
+              {/* Paragraph 2: Neurologist collaboration */}
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                {t.heroDescription1}
+              </p>
+
+              {/* Paragraph 3: App features description */}
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed bg-slate-100/70 dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-800">
+                {t.heroDescription2}
               </p>
             </div>
 
