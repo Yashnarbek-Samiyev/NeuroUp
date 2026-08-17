@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Accessibility Modes */
+body.font-large {
+  font-size: 112%;
+}
+
+body.font-extra-large {
+  font-size: 125%;
+}
+
+body.dyslexic {
+  font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+body.high-contrast {
+  --tw-bg-opacity: 1;
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+body.high-contrast * {
+  border-color: #ffff00 !important;
+}
+
+body.high-contrast button,
+body.high-contrast a {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+}
+
+body.high-contrast button:hover,
+body.high-contrast a:hover {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
