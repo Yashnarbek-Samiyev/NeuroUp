@@ -170,17 +170,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           </div>
 
-          {/* Right Column: Video Box */}
+          {/* Right Column: Local Dashboard Video Player */}
           <div className="lg:col-span-5">
             <div className="bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
-              <div className="aspect-video rounded-xl overflow-hidden bg-black">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/2zyCIZ3huGI?rel=0"
+              <div className="aspect-video rounded-xl overflow-hidden bg-black flex items-center justify-center">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-contain rounded-xl"
                   title={t.videoOverviewTitle}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                >
+                  <source src="/videolar/dashboard.mp4" type="video/mp4" />
+                  <source src="/dashboard.mp4" type="video/mp4" />
+                  Sizning brauzeringiz videoni qo'llab-quvvatlamaydi.
+                </video>
               </div>
 
               <div className="pt-3 px-1 flex items-center justify-between text-xs">
