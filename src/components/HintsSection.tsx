@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { Hint, Language } from '../types';
 import { translations } from '../data/translations';
 import { hints } from '../data/hints';
-import { speechService } from '../utils/speech';
 import { 
   Lightbulb, 
-  Volume2, 
   Bookmark, 
   Check, 
   Quote,
@@ -46,14 +44,6 @@ export const HintsSection: React.FC<HintsSectionProps> = ({
 
     return matchesSearch && matchesCategory;
   });
-
-  const handleSpeakHint = (hint: Hint) => {
-    const title = hint.title[language] || hint.title.en;
-    const summary = hint.summary[language] || hint.summary.en;
-    const tips = hint.tips[language] || hint.tips.en;
-    const fullText = `${title}. ${summary}. ${tips.join('. ')}`;
-    speechService.speak(fullText, language);
-  };
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="hints-hacks">
@@ -121,13 +111,6 @@ export const HintsSection: React.FC<HintsSectionProps> = ({
 
                     <div className="flex items-center gap-1">
                       <button
-                        onClick={() => handleSpeakHint(hint)}
-                        className="p-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
-                        title={t.listenAudio}
-                      >
-                        <Volume2 className="w-3.5 h-3.5" />
-                      </button>
-                      <button
                         onClick={() => onToggleFavorite(hint.id)}
                         className={`p-1.5 rounded transition-colors ${
                           isSaved ? 'bg-brand-600 text-white' : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
@@ -162,7 +145,7 @@ export const HintsSection: React.FC<HintsSectionProps> = ({
 
                 {/* Quote */}
                 {quote && (
-                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-start gap-2 text-xs italic text-slate-500 bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg">
+                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-start gap-2 text-xs italic text-slate-500 bg-slate-50 dark:bg-slate-850 p-2.5 rounded-lg">
                     <Quote className="w-3.5 h-3.5 text-brand-600 shrink-0" />
                     <span>{quote}</span>
                   </div>

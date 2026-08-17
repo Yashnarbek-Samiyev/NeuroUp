@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Exercise, Language } from '../types';
 import { translations } from '../data/translations';
-import { speechService } from '../utils/speech';
 import confetti from 'canvas-confetti';
 import { 
   X, 
@@ -9,7 +8,6 @@ import {
   Pause, 
   RotateCcw, 
   AlertTriangle, 
-  Volume2, 
   Bookmark, 
   Timer, 
   Award,
@@ -86,11 +84,6 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const handleSpeakExercise = () => {
-    const textToSpeak = `${title}. ${description}. ${t.targetArea}: ${targetArea}. ${t.stepByStep}: ${steps.join('. ')}. ${t.safetyWarning}: ${safety.join('. ')}`;
-    speechService.speak(textToSpeak, language);
-  };
-
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center animate-fadeIn">
       <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-xl border border-slate-200 dark:border-slate-800">
@@ -125,14 +118,6 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
           </div>
 
           <div className="flex items-center gap-2">
-            <button
-              onClick={handleSpeakExercise}
-              className="px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100"
-            >
-              <Volume2 className="w-3.5 h-3.5 text-brand-600" />
-              {t.listenAudio}
-            </button>
-
             <button
               onClick={() => onToggleSaved(exercise.id)}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors ${

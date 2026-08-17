@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
-import { speechService } from '../utils/speech';
 import { 
   Play, 
   Pause,
@@ -14,7 +13,6 @@ import {
   Dumbbell,
   Lightbulb,
   Sparkles,
-  ShieldCheck,
   Smartphone
 } from 'lucide-react';
 
@@ -55,11 +53,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     if (!videoRef.current) return;
     videoRef.current.muted = !videoRef.current.muted;
     setIsMuted(videoRef.current.muted);
-  };
-
-  const handleSpeakHero = () => {
-    const text = `${t.heroTitlePrefix} ${t.heroTitleSuffix}. ${t.heroSubtitle} ${t.heroDescription1} ${t.heroDescription2}`;
-    speechService.speak(text, language);
   };
 
   return (
@@ -150,14 +143,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <span>{t.startExercises}</span>
                 <Play className="w-3.5 h-3.5 fill-white" />
               </button>
-
-              <button
-                onClick={handleSpeakHero}
-                className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 transition-colors shadow-sm"
-                title={t.listenAudio}
-              >
-                <Volume2 className="w-4 h-4 text-brand-600" />
-              </button>
             </div>
 
             {/* Category Quick Links */}
@@ -198,7 +183,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           </div>
 
-          {/* Right Column: Vertical Reels / Smartphone Mockup Design */}
+          {/* Right Column: Vertical Reels Video Mockup Design */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center">
             
             {/* Smartphone Mockup Frame */}

@@ -5,13 +5,8 @@ import {
   X, 
   PhoneCall, 
   AlertOctagon, 
-  Smile, 
-  Hand, 
-  MessageSquare, 
-  Clock, 
   ShieldAlert
 } from 'lucide-react';
-import { speechService } from '../utils/speech';
 
 interface EmergencyFASTModalProps {
   onClose: () => void;
@@ -91,11 +86,6 @@ export const EmergencyFASTModal: React.FC<EmergencyFASTModalProps> = ({ onClose,
   };
 
   const currentFAST = fastContent[language] || fastContent.en;
-
-  const handleSpeakFAST = () => {
-    const text = currentFAST.map(f => `${f.letter}: ${f.title}. ${f.desc}`).join('. ');
-    speechService.speak(text, language);
-  };
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-md p-4 sm:p-6 flex items-center justify-center animate-fadeIn">

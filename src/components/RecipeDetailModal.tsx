@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Language, Recipe } from '../types';
 import { translations } from '../data/translations';
-import { speechService } from '../utils/speech';
 import { 
   X, 
   Clock, 
   Flame, 
   Users, 
-  Volume2, 
   Bookmark, 
   CheckCircle2, 
   Sparkles, 
@@ -45,11 +43,6 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
     );
   };
 
-  const handleSpeakRecipe = () => {
-    const textToSpeak = `${title}. ${description}. ${t.ingredients}: ${ingredients.join(', ')}. ${t.stepByStep}: ${steps.join('. ')}. ${t.benefits}: ${benefits}`;
-    speechService.speak(textToSpeak, language);
-  };
-
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center animate-fadeIn">
       <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl border border-slate-200 dark:border-slate-800">
@@ -73,7 +66,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
           <div className="absolute top-4 left-4 flex gap-2">
             <button
               onClick={() => onToggleSaved(recipe.id)}
-              className={`px-3 py-1 rounded text-xs font-bold flex items-center gap-1.5 transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors ${
                 isSaved
                   ? 'bg-brand-600 text-white'
                   : 'bg-black/50 hover:bg-black/70 text-white'
@@ -81,14 +74,6 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
             >
               <Bookmark className={`w-3.5 h-3.5 ${isSaved ? 'fill-white' : ''}`} />
               {isSaved ? t.savedToFav : t.saveToFav}
-            </button>
-            
-            <button
-              onClick={handleSpeakRecipe}
-              className="px-3 py-1 rounded text-xs font-bold flex items-center gap-1.5 bg-black/50 hover:bg-black/70 text-white"
-            >
-              <Volume2 className="w-3.5 h-3.5" />
-              {t.listenAudio}
             </button>
           </div>
 

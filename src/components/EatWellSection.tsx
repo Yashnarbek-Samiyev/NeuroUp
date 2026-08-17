@@ -8,11 +8,9 @@ import {
   Clock, 
   Flame, 
   Bookmark, 
-  Volume2, 
   ArrowRight,
   Filter
 } from 'lucide-react';
-import { speechService } from '../utils/speech';
 
 interface EatWellSectionProps {
   language: Language;
@@ -51,13 +49,6 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
     return matchesSearch && matchesCategory;
   });
-
-  const handleSpeakShort = (e: React.MouseEvent, recipe: Recipe) => {
-    e.stopPropagation();
-    const title = recipe.title[language] || recipe.title.en;
-    const desc = recipe.description[language] || recipe.description.en;
-    speechService.speak(`${title}. ${desc}`, language);
-  };
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="eat-well">
@@ -130,13 +121,6 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                     </span>
 
                     <div className="absolute top-3 right-3 flex items-center gap-1">
-                      <button
-                        onClick={(e) => handleSpeakShort(e, recipe)}
-                        className="p-1.5 rounded-md bg-black/50 hover:bg-black/70 text-white transition-colors"
-                        title={t.listenAudio}
-                      >
-                        <Volume2 className="w-3.5 h-3.5" />
-                      </button>
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
