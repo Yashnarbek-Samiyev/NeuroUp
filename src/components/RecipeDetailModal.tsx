@@ -57,6 +57,9 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
             src={recipe.image} 
             alt={title}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80';
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
           

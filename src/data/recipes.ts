@@ -954,7 +954,7 @@ export const recipes: Recipe[] = [
     calories: 170,
     servings: 2,
     difficulty: 'easy',
-    image: 'https://images.unsplash.com/photo-1514944298350-0a1e3895e69e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?auto=format&fit=crop&w=800&q=80',
     equipment: {
       uz: ["Gril tova", "Pichoq"],
       ru: ["Сковорода-гриль", "Нож"],
