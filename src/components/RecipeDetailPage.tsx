@@ -50,10 +50,9 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
   const t = translations[language];
   const title = recipe.title[language] || recipe.title.en;
   const description = recipe.description[language] || recipe.description.en;
-  const ingredients = recipe.ingredients[language] || recipe.ingredients.en;
-  const steps = recipe.steps[language] || recipe.steps.en;
+  const rawIngredients = recipe.detailedIngredients || [];
+  const detailedSteps = recipe.detailedSteps || [];
   const benefits = recipe.strokeBenefits[language] || recipe.strokeBenefits.en;
-  const equipment = recipe.equipment ? (recipe.equipment[language] || recipe.equipment.en) : null;
   const isSaved = savedFavorites.includes(recipe.id);
 
   const toggleIngredient = (idx: number) => {
@@ -98,7 +97,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
           <div className="flex items-center gap-2">
             <button
               onClick={handleShare}
-              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Ulashish"
             >
               <Share2 className="w-4 h-4" />
@@ -107,7 +106,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
 
             <button
               onClick={handlePrint}
-              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors no-print"
+              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors no-print cursor-pointer"
               title="Chop etish"
             >
               <Printer className="w-4 h-4" />
@@ -116,7 +115,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
 
             <button
               onClick={() => onToggleFavorite(recipe.id)}
-              className={`px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-sm ${
+              className={`px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-sm cursor-pointer ${
                 isSaved
                   ? 'bg-brand-600 text-white shadow-brand-500/20'
                   : 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-brand-500'
@@ -185,7 +184,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
             </div>
 
             {/* Right Image Column */}
-            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-auto min-h-[300px] overflow-hidden bg-slate-100">
+            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-auto min-h-[320px] overflow-hidden bg-slate-100">
               <img
                 src={recipe.image}
                 alt={title}
@@ -202,7 +201,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
         {/* 2 Columns: Left = Ingredients & Equipment, Right = Step Guide & Stroke Benefits */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
-          {/* Left Sticky Sidebar: Ingredients & Equipment */}
+          {/* Left Sidebar: What You Need (Ingredients & Equipment) */}
           <div className="lg:col-span-5 space-y-6">
             
             {/* Ingredients Card */}
@@ -210,18 +209,19 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
               <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
                 <h3 className="font-extrabold text-base sm:text-lg text-navy-800 dark:text-white flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-brand-600" />
-                  <span>Kerakli Masalliqlar</span>
+                  <span>Nimalar Kerak (What you need)</span>
                 </h3>
                 <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300">
-                  {checkedIngredients.length}/{ingredients.length}
+                  {checkedIngredients.length}/{rawIngredients.length}
                 </span>
               </div>
 
               <p className="text-xs text-slate-500">Tayyorlagan masalliqlaringizni belgilab boring:</p>
 
-              <div className="space-y-2">
-                {ingredients.map((ing, idx) => {
+              <div className="space-y-2.5">
+                {rawIngredients.map((ing, idx) => {
                   const isChecked = checkedIngredients.includes(idx);
+                  const ingName = ing.name[language] || ing.name.en;
                   return (
                     <label
                       key={idx}
@@ -238,32 +238,26 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                         onChange={() => {}}
                         className="rounded text-brand-600 focus:ring-brand-500 w-4 h-4 cursor-pointer shrink-0"
                       />
-                      <span className="font-semibold leading-snug">{ing}</span>
+                      
+                      {ing.image && (
+                        <div className="w-8 h-8 rounded-lg overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-0.5 shrink-0 flex items-center justify-center">
+                          <img
+                            src={ing.image}
+                            alt={ingName}
+                            className="w-full h-full object-contain"
+                            onError={(e) => {
+                              (e.target as HTMLElement).style.display = 'none';
+                            }}
+                          />
+                        </div>
+                      )}
+
+                      <span className="font-semibold leading-snug flex-grow">{ingName}</span>
                     </label>
                   );
                 })}
               </div>
             </div>
-
-            {/* Equipment Card */}
-            {equipment && equipment.length > 0 && (
-              <div className="bg-white dark:bg-slate-850 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
-                <h3 className="font-extrabold text-sm sm:text-base text-navy-800 dark:text-white flex items-center gap-2">
-                  <Wrench className="w-4 h-4 text-brand-600" />
-                  <span>Kerakli Oshxona Jihozlari</span>
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {equipment.map((item, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
 
             {/* Stroke Health Benefit Box */}
             <div className="bg-brand-50 dark:bg-slate-850 rounded-3xl p-6 border border-brand-200 dark:border-slate-750 space-y-3">
@@ -282,7 +276,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
 
           </div>
 
-          {/* Right Column: Step-by-Step Cooking Guide */}
+          {/* Right Column: Step-by-Step Cooking Guide (with i-REBOUND images & instructions) */}
           <div className="lg:col-span-7 space-y-6">
             
             <div className="bg-white dark:bg-slate-850 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
@@ -293,46 +287,74 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                     <ChefHat className="w-5 h-5 text-brand-600" />
                     <span>Bosqichma-bosqich Tayyorlash Yo'riqnomasi</span>
                   </h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Jami {steps.length} ta qadam</p>
+                  <p className="text-xs text-slate-500 mt-0.5">Jami {detailedSteps.length} ta qadam</p>
                 </div>
               </div>
 
-              {/* Steps List */}
-              <div className="space-y-4">
-                {steps.map((step, idx) => {
+              {/* Detailed Steps List */}
+              <div className="space-y-6">
+                {detailedSteps.map((step, idx) => {
                   const isCurrent = activeStep === idx;
+                  const stepTitle = step.title[language] || step.title.en;
+                  const stepDesc = step.description ? (step.description[language] || step.description.en) : '';
+
                   return (
                     <div
                       key={idx}
                       onClick={() => setActiveStep(idx)}
-                      className={`p-5 rounded-2xl border transition-all cursor-pointer ${
+                      className={`p-5 sm:p-6 rounded-2xl border transition-all cursor-pointer ${
                         isCurrent
-                          ? 'bg-brand-50/70 dark:bg-slate-800 border-brand-500 shadow-md ring-1 ring-brand-500'
+                          ? 'bg-brand-50/50 dark:bg-slate-800 border-brand-500 shadow-md ring-1 ring-brand-500'
                           : 'bg-slate-50/60 dark:bg-slate-900/60 border-slate-200 dark:border-slate-750 hover:border-slate-300'
                       }`}
                     >
-                      <div className="flex items-start gap-4">
-                        <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-extrabold shrink-0 shadow-sm ${
-                          isCurrent
-                            ? 'bg-brand-600 text-white'
-                            : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
-                        }`}>
-                          {idx + 1}
-                        </span>
+                      <div className="space-y-4">
+                        
+                        {/* Step Header */}
+                        <div className="flex items-start gap-3.5">
+                          <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-extrabold shrink-0 shadow-sm ${
+                            isCurrent
+                              ? 'bg-brand-600 text-white'
+                              : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
+                          }`}>
+                            {step.stepNumber}
+                          </span>
 
-                        <div className="space-y-2 flex-grow">
-                          <p className="text-sm sm:text-base text-slate-800 dark:text-slate-100 font-semibold leading-relaxed">
-                            {step}
-                          </p>
-
-                          {/* Adaptive tip for stroke recovery */}
-                          {isCurrent && (
-                            <div className="mt-3 pt-3 border-t border-brand-200/60 dark:border-slate-700 flex items-center gap-2 text-xs text-brand-800 dark:text-brand-300 font-medium">
-                              <Lightbulb className="w-4 h-4 text-amber-500 shrink-0" />
-                              <span>Qulaylik: Mahsulotlarni kesishda toymaydigan taxtakachdan foydalaning va shoshilmasdan bajaring.</span>
-                            </div>
-                          )}
+                          <div className="flex-grow">
+                            <h4 className="text-sm sm:text-base text-slate-900 dark:text-white font-bold leading-snug">
+                              {stepTitle}
+                            </h4>
+                          </div>
                         </div>
+
+                        {/* Step Illustration Image from i-REBOUND */}
+                        {step.image && (
+                          <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-xs max-h-80 flex items-center justify-center">
+                            <img
+                              src={step.image}
+                              alt={`Qadam ${step.stepNumber}`}
+                              className="w-full h-auto max-h-72 object-contain"
+                              loading="lazy"
+                              onError={(e) => {
+                                (e.target as HTMLElement).style.display = 'none';
+                              }}
+                            />
+                          </div>
+                        )}
+
+                        {/* Adaptive Stroke Survivor Tip / Step Description */}
+                        {stepDesc && (
+                          <div className="p-3.5 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                            <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                            <div className="space-y-0.5">
+                              <strong className="text-amber-900 dark:text-amber-300 font-bold block">
+                                Qulaylik & Maslahat:
+                              </strong>
+                              <span className="leading-relaxed">{stepDesc}</span>
+                            </div>
+                          </div>
+                        )}
+
                       </div>
                     </div>
                   );
@@ -357,7 +379,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
 
             <button
               onClick={onBack}
-              className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1 hover:underline"
+              className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1 hover:underline cursor-pointer"
             >
               Barcha 24 taomni ko'rish <ArrowRight className="w-3.5 h-3.5" />
             </button>

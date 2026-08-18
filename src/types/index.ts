@@ -10,6 +10,11 @@ export interface AccessibilitySettings {
   dyslexicFont: boolean;
 }
 
+export interface IngredientItem {
+  name: Record<Language, string>;
+  image?: string;
+}
+
 export interface DetailedStep {
   stepNumber: number;
   title: Record<Language, string>;
@@ -32,6 +37,7 @@ export interface Recipe {
   image: string;
   equipment?: Record<Language, string[]>;
   ingredients: Record<Language, string[]>;
+  detailedIngredients?: IngredientItem[];
   steps: Record<Language, string[]>;
   detailedSteps?: DetailedStep[];
   strokeBenefits: Record<Language, string>;
