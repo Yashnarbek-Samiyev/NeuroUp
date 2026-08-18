@@ -104,23 +104,23 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-4 gap-2 sm:gap-4 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 text-center shadow-sm">
             <div className="space-y-0.5">
-              <Clock className="w-4 h-4 mx-auto text-brand-600" />
-              <div className="text-[11px] text-slate-500 font-medium">{t.prepTime}</div>
+              <Clock className="w-4 h-4 mx-auto text-brand-600 dark:text-brand-400" />
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">{t.prepTime}</div>
               <div className="font-extrabold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.prepTime} {t.minutesUnit}</div>
             </div>
             <div className="space-y-0.5">
-              <Clock className="w-4 h-4 mx-auto text-slate-400" />
-              <div className="text-[11px] text-slate-500 font-medium">{t.cookTime}</div>
+              <Clock className="w-4 h-4 mx-auto text-slate-400 dark:text-slate-400" />
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">{t.cookTime}</div>
               <div className="font-extrabold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.cookTime} {t.minutesUnit}</div>
             </div>
             <div className="space-y-0.5">
               <Flame className="w-4 h-4 mx-auto text-amber-500" />
-              <div className="text-[11px] text-slate-500 font-medium">{t.calories}</div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">{t.calories}</div>
               <div className="font-extrabold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.calories} {t.caloriesUnit}</div>
             </div>
             <div className="space-y-0.5">
-              <Users className="w-4 h-4 mx-auto text-brand-600" />
-              <div className="text-[11px] text-slate-500 font-medium">{t.servings}</div>
+              <Users className="w-4 h-4 mx-auto text-brand-600 dark:text-brand-400" />
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">{t.servings}</div>
               <div className="font-extrabold text-xs sm:text-sm text-navy-800 dark:text-white">{recipe.servings} {t.personsUnit}</div>
             </div>
           </div>
