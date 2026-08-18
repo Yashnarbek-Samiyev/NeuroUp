@@ -2,7 +2,7 @@ import React from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
 import { BrandLogo } from './BrandLogo';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
   language: Language;
@@ -17,11 +17,11 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-12 sm:pt-14 pb-8 sm:pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Footer Grid: Clean 3-Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
+        {/* Main Footer Grid: Clean 4-Column Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
           
-          {/* Col 1: Brand & Bio (6 cols) */}
-          <div className="md:col-span-6 space-y-3.5">
+          {/* Col 1: Brand & Bio (5 cols) */}
+          <div className="lg:col-span-5 space-y-3.5">
             <div className="inline-block py-1">
               <BrandLogo size="md" variant="white" withTagline={true} />
             </div>
@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
           </div>
 
           {/* Col 2: Navigation (3 cols) */}
-          <div className="md:col-span-3 space-y-3">
+          <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
               {t.footerNavTitle}
             </h4>
@@ -64,8 +64,28 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
             </ul>
           </div>
 
-          {/* Col 3: Emergency FAST (3 cols) */}
-          <div className="md:col-span-3 space-y-3">
+          {/* Col 3: References with ONLY i-REBOUND (2 cols) */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
+              {t.footerInspirationTitle}
+            </h4>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li>
+                <a 
+                  href="https://irebound.enableme.org.au/" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="hover:text-white transition-colors flex items-center gap-1.5 font-medium"
+                >
+                  <span>i-REBOUND</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 4: Emergency FAST (3 cols) */}
+          <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
               {t.footerEmergencyTitle}
             </h4>
