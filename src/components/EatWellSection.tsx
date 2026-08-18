@@ -125,7 +125,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               href="/docs/haftalik-xaridlar-royxati-neuropath.docx"
               download="haftalik-xaridlar-royxati-neuropath.docx"
               className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-sm"
-              title="Haftalik xaridlar ro'yxatini yuklab olish (.docx)"
+              title="Haftalik xaridlar ro'yxati (.docx)"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center shrink-0">
@@ -133,9 +133,8 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
-                    Haftalik Xaridlar Ro'yxati Andozasi
+                    Haftalik Xaridlar Ro'yxati
                   </div>
-                  <div className="text-[11px] text-slate-500">O'rta yer dengizi parhezi uchun zarur mahsulotlar</div>
                 </div>
               </div>
             </a>
