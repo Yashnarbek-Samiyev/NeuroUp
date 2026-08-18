@@ -12,8 +12,7 @@ import {
   Utensils,
   Dumbbell,
   Lightbulb,
-  Sparkles,
-  Smartphone
+  Sparkles
 } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -145,7 +144,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </button>
             </div>
 
-            {/* Category Quick Links: Responsive 1 col on mobile, 3 cols on tablet/desktop */}
+            {/* Category Quick Links */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-1 max-w-xl">
               <div 
                 onClick={() => onSelectTab('eat-well')}
@@ -183,93 +182,72 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           </div>
 
-          {/* Right Column: Vertical Reels Video Mockup */}
+          {/* Right Column: Clean Video Player (Without phone mockup frame) */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center mt-4 lg:mt-0">
             
-            {/* Smartphone Mockup Frame */}
-            <div className="relative w-full max-w-[260px] sm:max-w-[280px] lg:max-w-[300px] mx-auto bg-slate-900 rounded-[2.5rem] p-3 shadow-2xl border-[4px] border-slate-800 dark:border-slate-700">
-              
-              {/* Speaker notch */}
-              <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-slate-950 rounded-full z-20 flex items-center justify-center">
-                <div className="w-2.5 h-2.5 rounded-full bg-slate-800 mr-2"></div>
-                <div className="w-6 h-1 bg-slate-800 rounded-full"></div>
-              </div>
+            {/* Clean Video Container */}
+            <div className="relative w-full max-w-[280px] sm:max-w-[310px] lg:max-w-[330px] aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-xl border border-slate-200 dark:border-slate-800 group">
+              <video
+                ref={videoRef}
+                src="/videolar/dashboard.mp4"
+                playsInline
+                loop
+                muted={isMuted}
+                preload="auto"
+                onClick={togglePlay}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                className="w-full h-full object-cover cursor-pointer"
+                title={t.videoOverviewTitle}
+              />
 
-              {/* Video Screen (9:16 Reels Format) */}
-              <div className="relative aspect-[9/16] w-full rounded-[2rem] overflow-hidden bg-black flex items-center justify-center shadow-inner group">
-                <video
-                  ref={videoRef}
-                  src="/videolar/dashboard.mp4"
-                  playsInline
-                  loop
-                  muted={isMuted}
-                  preload="auto"
-                  onClick={togglePlay}
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
-                  className="w-full h-full object-cover cursor-pointer"
-                  title={t.videoOverviewTitle}
-                />
-
-                {/* Video Overlays: Top Volume Control */}
-                <div className="absolute top-6 right-3 z-10">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); toggleMute(); }}
-                    className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-black/80 transition-colors shadow-sm"
-                    title={isMuted ? "Ovozni yoqish" : "Ovozni o'chirish"}
-                  >
-                    {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5 text-brand-400" />}
-                  </button>
-                </div>
-
-                {/* Big Center Play / Pause Button Overlay */}
+              {/* Volume Button Overlay */}
+              <div className="absolute top-3.5 right-3.5 z-10">
                 <button
                   type="button"
-                  onClick={togglePlay}
-                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-                    isPlaying ? 'opacity-0 group-hover:opacity-100 bg-black/20' : 'opacity-100 bg-black/40'
-                  }`}
-                  aria-label="Play video"
+                  onClick={(e) => { e.stopPropagation(); toggleMute(); }}
+                  className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-black/80 transition-colors shadow-sm"
+                  title={isMuted ? "Ovozni yoqish" : "Ovozni o'chirish"}
                 >
-                  <div className="w-12 h-12 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
-                    {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5 fill-white" />}
-                  </div>
+                  {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-brand-400" />}
                 </button>
-
-                {/* Video Bottom Caption Bar */}
-                <div className="absolute bottom-3 left-3 right-3 p-2 rounded-xl bg-black/60 backdrop-blur-md text-white z-10">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="font-bold truncate max-w-[150px]">
-                      {t.videoOverviewTitle}
-                    </span>
-                    <span className="text-[10px] text-brand-300 font-semibold">
-                      HD 9:16
-                    </span>
-                  </div>
-                </div>
-
               </div>
 
-              {/* Home indicator bar at bottom */}
-              <div className="w-24 h-1 bg-slate-700 rounded-full mx-auto mt-2"></div>
+              {/* Center Play / Pause Button Overlay */}
+              <button
+                type="button"
+                onClick={togglePlay}
+                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+                  isPlaying ? 'opacity-0 group-hover:opacity-100 bg-black/20' : 'opacity-100 bg-black/40'
+                }`}
+                aria-label="Play video"
+              >
+                <div className="w-14 h-14 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+                  {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5 fill-white" />}
+                </div>
+              </button>
+
+              {/* Bottom Caption Bar */}
+              <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-black/60 backdrop-blur-md text-white z-10 flex items-center justify-between text-xs">
+                <span className="font-bold truncate max-w-[170px]">
+                  {t.videoOverviewTitle}
+                </span>
+                <span className="text-[11px] text-brand-300 font-semibold">
+                  HD 9:16
+                </span>
+              </div>
             </div>
 
-            {/* Quick Helper below phone */}
-            <div className="mt-2.5 text-center space-y-1">
-              <p className="text-xs font-semibold text-slate-600 dark:text-slate-400 flex items-center justify-center gap-1.5">
-                <Smartphone className="w-3.5 h-3.5 text-brand-600" />
-                <span>Videoni tomosha qilish uchun ustiga bosing</span>
-              </p>
-              {onOpenAuthModal && (
+            {onOpenAuthModal && (
+              <div className="mt-3 text-center">
                 <button
                   onClick={() => onOpenAuthModal('signup')}
-                  className="text-xs font-bold text-brand-600 hover:underline inline-block"
+                  className="text-xs font-bold text-brand-600 hover:underline"
                 >
                   {t.whySignUp}
                 </button>
-              )}
-            </div>
+              </div>
+            )}
 
           </div>
 
