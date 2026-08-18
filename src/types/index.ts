@@ -78,4 +78,6 @@ export interface DailyLog {
   mealsLogged: number;
   notes: string;
   completedTasks: string[];
+  bloodPressure?: string; // e.g. "120/80"
+  pulse?: number; // e.g. 72
 }

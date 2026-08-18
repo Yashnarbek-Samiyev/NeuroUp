@@ -79,25 +79,30 @@ export const getDailyLogs = (): Record<string, DailyLog> => {
   }
 };
 
-export const saveTodayLog = (log: DailyLog) => {
+export const saveLogForDate = (log: DailyLog) => {
   try {
     const logs = getDailyLogs();
     logs[log.date] = log;
     localStorage.setItem(STORAGE_KEYS.DAILY_LOGS, JSON.stringify(logs));
 
-    // Update streak
-    const lastDate = localStorage.getItem(STORAGE_KEYS.LAST_LOG_DATE);
     const today = new Date().toISOString().split('T')[0];
-    let streak = parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '0', 10);
+    if (log.date === today) {
+      const lastDate = localStorage.getItem(STORAGE_KEYS.LAST_LOG_DATE);
+      let streak = parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '0', 10);
 
-    if (lastDate !== today) {
-      streak += 1;
-      localStorage.setItem(STORAGE_KEYS.STREAK, streak.toString());
-      localStorage.setItem(STORAGE_KEYS.LAST_LOG_DATE, today);
+      if (lastDate !== today) {
+        streak += 1;
+        localStorage.setItem(STORAGE_KEYS.STREAK, streak.toString());
+        localStorage.setItem(STORAGE_KEYS.LAST_LOG_DATE, today);
+      }
     }
   } catch (e) {
     console.error(e);
   }
+};
+
+export const saveTodayLog = (log: DailyLog) => {
+  saveLogForDate(log);
 };
 
 export const getStreakCount = (): number => {
@@ -105,5 +110,25 @@ export const getStreakCount = (): number => {
     return parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '1', 10);
   } catch {
     return 1;
+  }
+};
+
+export const exportDailyLogs = (): string => {
+  const logs = getDailyLogs();
+  return JSON.stringify(logs, null, 2);
+};
+
+export const importDailyLogs = (jsonString: string): boolean => {
+  try {
+    const data = JSON.parse(jsonString);
+    if (typeof data === 'object' && data !== null) {
+      const existing = getDailyLogs();
+      const merged = { ...existing, ...data };
+      localStorage.setItem(STORAGE_KEYS.DAILY_LOGS, JSON.stringify(merged));
+      return true;
+    }
+    return false;
+  } catch {
+    return false;
   }
 };
