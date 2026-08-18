@@ -72,16 +72,16 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "1 clove sarimsoq, minced",
-          "ru": "1 clove чеснок, minced",
+          "uz": "1 clove Garlic, minced",
+          "ru": "1 clove Garlic, minced",
           "en": "1 clove Garlic, minced"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
       },
       {
         "name": {
-          "uz": "Extra Virgin zaytun moyi",
-          "ru": "Extra Virgin оливковое масло",
+          "uz": "Extra Virgin Olive Oil",
+          "ru": "Extra Virgin Olive Oil",
           "en": "Extra Virgin Olive Oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -143,8 +143,8 @@ export const recipes: Recipe[] = [
         "1 x Lime - Zest and juice",
         "200g of Feta",
         "1/4 cup of Milk",
-        "1 clove sarimsoq, minced",
-        "Extra Virgin zaytun moyi",
+        "1 clove Garlic, minced",
+        "Extra Virgin Olive Oil",
         "1/2 cup of Basil leaves, roughly torn to top",
         "Oven",
         "Food processor",
@@ -159,8 +159,8 @@ export const recipes: Recipe[] = [
         "1 x Lime - Zest and juice",
         "200g of Feta",
         "1/4 cup of Milk",
-        "1 clove чеснок, minced",
-        "Extra Virgin оливковое масло",
+        "1 clove Garlic, minced",
+        "Extra Virgin Olive Oil",
         "1/2 cup of Basil leaves, roughly torn to top",
         "Oven",
         "Food processor",
@@ -203,8 +203,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "1 ta avokado mag'zini va 1 ta laym (yoki limon) sharbatini idishga soling",
-          "ru": "Выложите мякоть 1 авокадо и сок 1 лайма (или лимона) в миску",
+          "uz": "1 ta avokado mag'zini va 1 ta laym sharbati hamda po'stlog'ini idishga soling",
+          "ru": "Выложите мякоть 1 авокадо, выжмите сок и натрите цедру 1 лайма в миску",
           "en": "Scoop 1 Avocado into a small bowl. Squeeze juice and lime zest from 1 lime into the bowl"
         },
         "description": {
@@ -217,8 +217,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Avokado aralashmasini vilka yoki kartoshka ezgich bilan yaxshilab ezing",
-          "ru": "Разминайте авокадо вилкой или толкушкой до однородности",
+          "uz": "Avokado aralashmasini vilka yoki kartoshka ezgich bilan ezing",
+          "ru": "Разминайте авокадо вилкой или толкушкой",
           "en": "Mash avocado mixture with a fork or potato masher"
         },
         "description": {
@@ -231,8 +231,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Crumble 200g of fetta into a bowl and Qo'shing ¼ stakan of milk",
-          "ru": "Crumble 200g of fetta into a bowl and Добавьте ¼ стакана of milk",
+          "uz": "200g feta pishlog'ini uvoqlab idishga soling va ¼ stakan sut qo'shing",
+          "ru": "Раскрошите 200г феты в миску и добавьте ¼ стакана молока",
           "en": "Crumble 200g of fetta into a bowl and add ¼ cup of milk"
         },
         "description": {
@@ -245,8 +245,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Non bo'laklari ustiga zaytun moyidan quying",
-          "ru": "Сбрызните ломтики хлеба оливковым маслом",
+          "uz": "Non bo'laklari ustiga zaytun moyidan quying.",
+          "ru": "Сбрызните ломтики хлеба оливковым маслом.",
           "en": "Drizzle Olive Oil on bread pieces."
         },
         "description": {
@@ -259,8 +259,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "1 tish sarimsoqni teng ikkiga kesib, non bo'laklariga ishqalang",
-          "ru": "Разрежьте 1 зубчик чеснока пополам и натрите ломтики хлеба",
+          "uz": "1 tish sarimsoqni teng ikkiga kesib, non bo'laklariga ishqalang.",
+          "ru": "Разрежьте 1 зубчик чеснока пополам и натрите ломтики хлеба.",
           "en": "Slice one garlic clove in half and rub onto each bread piece."
         },
         "description": {
@@ -273,8 +273,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Nonni pechga qo'yib, ikki tarafini bir oz qizartirib oling",
-          "ru": "Поместите хлеб в духовку и подсушите с обеих сторон",
+          "uz": "Nonni pechga qo'yib, ikki tarafini qizartirib oling.",
+          "ru": "Поместите хлеб в духовку и подсушите с обеих сторон.",
           "en": "Put bread in the oven to toast on both sides."
         },
         "description": {
@@ -287,8 +287,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Nonni pechdan oling. Sovugach, ustiga avokadoli aralashmani surting",
-          "ru": "Достаньте хлеб из духовки. Остудите и намажьте смесью из авокадо",
+          "uz": "Nonni pechdan oling. Sovugach, ustiga avokado aralashmasini surting.",
+          "ru": "Достаньте хлеб из духовки. Остудите и намажьте смесью из авокадо.",
           "en": "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread."
         },
         "description": {
@@ -301,8 +301,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Avokado ustidan feta pishlog'i aralashmasini tekis surting",
-          "ru": "Выложите смесь из феты поверх авокадо",
+          "uz": "Avokado ustidan feta pishloqli aralashmani tekis surting",
+          "ru": "Выложите смесь из сыра фета поверх авокадо",
           "en": "Spread feta mixture on top of the avocado"
         },
         "description": {
@@ -329,8 +329,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 11,
         "title": {
-          "uz": "Pomidorlar ustiga to'g'ralgan barra rayhon barglarini seping",
-          "ru": "Посыпьте томаты измельченными листьями свежего базилика",
+          "uz": "Pomidorlar ustiga to'g'ralgan barra rayhon barglarini seping.",
+          "ru": "Посыпьте томаты листиками свежего базилика.",
           "en": "Sprinkle torn basil leaves on the sliced tomatoes."
         },
         "description": {
@@ -344,29 +344,29 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Pechni 200°C ga oldindan qizdiring",
-        "1 ta avokado mag'zini va 1 ta laym (yoki limon) sharbatini idishga soling",
-        "Avokado aralashmasini vilka yoki kartoshka ezgich bilan yaxshilab ezing",
-        "Crumble 200g of fetta into a bowl and Qo'shing ¼ stakan of milk",
-        "Non bo'laklari ustiga zaytun moyidan quying",
-        "1 tish sarimsoqni teng ikkiga kesib, non bo'laklariga ishqalang",
-        "Nonni pechga qo'yib, ikki tarafini bir oz qizartirib oling",
-        "Nonni pechdan oling. Sovugach, ustiga avokadoli aralashmani surting",
-        "Avokado ustidan feta pishlog'i aralashmasini tekis surting",
+        "1 ta avokado mag'zini va 1 ta laym sharbati hamda po'stlog'ini idishga soling",
+        "Avokado aralashmasini vilka yoki kartoshka ezgich bilan ezing",
+        "200g feta pishlog'ini uvoqlab idishga soling va ¼ stakan sut qo'shing",
+        "Non bo'laklari ustiga zaytun moyidan quying.",
+        "1 tish sarimsoqni teng ikkiga kesib, non bo'laklariga ishqalang.",
+        "Nonni pechga qo'yib, ikki tarafini qizartirib oling.",
+        "Nonni pechdan oling. Sovugach, ustiga avokado aralashmasini surting.",
+        "Avokado ustidan feta pishloqli aralashmani tekis surting",
         "Feta pishlog'i ustiga to'g'ralgan pomidor bo'laklarini tering",
-        "Pomidorlar ustiga to'g'ralgan barra rayhon barglarini seping"
+        "Pomidorlar ustiga to'g'ralgan barra rayhon barglarini seping."
       ],
       "ru": [
         "Разогрейте духовку до 200°C",
-        "Выложите мякоть 1 авокадо и сок 1 лайма (или лимона) в миску",
-        "Разминайте авокадо вилкой или толкушкой до однородности",
-        "Crumble 200g of fetta into a bowl and Добавьте ¼ стакана of milk",
-        "Сбрызните ломтики хлеба оливковым маслом",
-        "Разрежьте 1 зубчик чеснока пополам и натрите ломтики хлеба",
-        "Поместите хлеб в духовку и подсушите с обеих сторон",
-        "Достаньте хлеб из духовки. Остудите и намажьте смесью из авокадо",
-        "Выложите смесь из феты поверх авокадо",
+        "Выложите мякоть 1 авокадо, выжмите сок и натрите цедру 1 лайма в миску",
+        "Разминайте авокадо вилкой или толкушкой",
+        "Раскрошите 200г феты в миску и добавьте ¼ стакана молока",
+        "Сбрызните ломтики хлеба оливковым маслом.",
+        "Разрежьте 1 зубчик чеснока пополам и натрите ломтики хлеба.",
+        "Поместите хлеб в духовку и подсушите с обеих сторон.",
+        "Достаньте хлеб из духовки. Остудите и намажьте смесью из авокадо.",
+        "Выложите смесь из сыра фета поверх авокадо",
         "Выложите ломтики свежих томатов поверх феты",
-        "Посыпьте томаты измельченными листьями свежего базилика"
+        "Посыпьте томаты листиками свежего базилика."
       ],
       "en": [
         "Pre-heat oven to 200°",
@@ -431,8 +431,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "2 cloves sarimsoq, crushed",
-          "ru": "2 cloves чеснок, crushed",
+          "uz": "2 cloves garlic, crushed",
+          "ru": "2 cloves garlic, crushed",
           "en": "2 cloves garlic, crushed"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
@@ -455,8 +455,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "1 can 4-bean Aralashtiring",
-          "ru": "1 can 4-bean Перемешайте",
+          "uz": "1 can 4-bean mix",
+          "ru": "1 can 4-bean mix",
           "en": "1 can 4-bean mix"
         },
         "image": "https://irebound.enableme.org.au/media/gz0gcvh4/beans.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015961212700000"
@@ -488,7 +488,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "2 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "2 ст. л. Extra virgin оливковое масло",
+          "ru": "2 ст. л. Extra virgin оливкового масла",
           "en": "2 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -570,10 +570,10 @@ export const recipes: Recipe[] = [
       "uz": [
         "2x 3-4 cutlet, Frenched Lamb racks",
         "½ stakan Mint, very finely chopped",
-        "2 cloves sarimsoq, crushed",
+        "2 cloves garlic, crushed",
         "2 osh qoshiq Parmesan cheese, finely grated",
         "¼ stakan breadcrumbs",
-        "1 can 4-bean Aralashtiring",
+        "1 can 4-bean mix",
         "½ stakan Parsley, chopped",
         "¼ stakan balsalmic vinegar",
         "2 tsp Dijon mustard",
@@ -591,14 +591,14 @@ export const recipes: Recipe[] = [
       "ru": [
         "2x 3-4 cutlet, Frenched Lamb racks",
         "½ стакана Mint, very finely chopped",
-        "2 cloves чеснок, crushed",
+        "2 cloves garlic, crushed",
         "2 ст. л. Parmesan cheese, finely grated",
         "¼ стакана breadcrumbs",
-        "1 can 4-bean Перемешайте",
+        "1 can 4-bean mix",
         "½ стакана Parsley, chopped",
         "¼ стакана balsalmic vinegar",
         "2 tsp Dijon mustard",
-        "2 ст. л. Extra virgin оливковое масло",
+        "2 ст. л. Extra virgin оливкового масла",
         "vegetables for a side (optional)",
         "knife",
         "chopping board",
@@ -649,8 +649,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying",
-          "ru": "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла",
+          "uz": "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying.",
+          "ru": "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла.",
           "en": "Heat frypan to medium, add 1 tablespoon olive oil."
         },
         "description": {
@@ -663,8 +663,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Brown 2 lamb racks on all sides in pan.",
-          "ru": "Brown 2 lamb racks on all sides in pan.",
+          "uz": "2 ta qo'zichoq qovurg'asini tavada har tarafini qizartirib qovuring.",
+          "ru": "Обжарьте 2 корейки ягненка со всех сторон на сковороде до золотистой корочки.",
           "en": "Brown 2 lamb racks on all sides in pan."
         },
         "description": {
@@ -677,8 +677,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Transfer lamb to a roasting dish.",
-          "ru": "Transfer lamb to a roasting dish.",
+          "uz": "Qo'zichoq go'shtini pech patnisiga oling.",
+          "ru": "Переложите мясо ягненка в форму для запекания.",
           "en": "Transfer lamb to a roasting dish."
         },
         "description": {
@@ -696,8 +696,8 @@ export const recipes: Recipe[] = [
           "en": "In small bowl, combine:"
         },
         "description": {
-          "uz": "½ stakan chopped mint,\n2 cloves crushed sarimsoq,\n2 tablespoon grated parmesan\n¼ stakan bread crumbs",
-          "ru": "½ стакана chopped mint,\n2 cloves crushed чеснок,\n2 tablespoon grated parmesan\n¼ стакана bread crumbs",
+          "uz": "½ stakan chopped mint,\n2 cloves ezilgan sarimsoq,\n2 tablespoon grated parmesan\n¼ stakan bread crumbs",
+          "ru": "½ стакана chopped mint,\n2 cloves измельченный чеснок,\n2 tablespoon grated parmesan\n¼ стакана bread crumbs",
           "en": "½ cup chopped mint,\n2 cloves crushed garlic,\n2 tablespoon grated parmesan\n¼ cup bread crumbs"
         },
         "image": "https://irebound.enableme.org.au/media/2cac3pxi/combined.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133010080127200000"
@@ -733,8 +733,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Pechda pishiring in oven (15 minutes = rare, 30 minutes = well done)",
-          "ru": "Выпекайте in oven (15 minutes = rare, 30 minutes = well done)",
+          "uz": "Bake in oven (15 minutes = rare, 30 minutes = well done)",
+          "ru": "Bake in oven (15 minutes = rare, 30 minutes = well done)",
           "en": "Bake in oven (15 minutes = rare, 30 minutes = well done)"
         },
         "description": {
@@ -747,8 +747,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Drain and rinse the 1 can 4-bean Aralashtiring in a colander.",
-          "ru": "Drain and rinse the 1 can 4-bean Перемешайте in a colander.",
+          "uz": "Drain and rinse the 1 can 4-bean mix in a colander.",
+          "ru": "Drain and rinse the 1 can 4-bean mix in a colander.",
           "en": "Drain and rinse the 1 can 4-bean mix in a colander."
         },
         "description": {
@@ -766,8 +766,8 @@ export const recipes: Recipe[] = [
           "en": "For bean casserole, combine ingredients:"
         },
         "description": {
-          "uz": "1 can 4-bean Aralashtiring\n½ stakan Parsley, chopped\n¼ stakan Balsamic vinegar\n2 tsp Dijon mustard\n2 osh qoshiq Extra virgin zaytun moyi\n\nInto frypan, warm and Aralashtiring.",
-          "ru": "1 can 4-bean Перемешайте\n½ стакана Parsley, chopped\n¼ стакана Balsamic vinegar\n2 tsp Dijon mustard\n2 ст. л. Extra virgin оливковое масло\n\nInto frypan, warm and Перемешайте.",
+          "uz": "1 can 4-bean mix\n½ stakan Parsley, chopped\n¼ stakan Balsamic vinegar\n2 tsp Dijon mustard\n2 osh qoshiq Extra virgin zaytun moyi\n\nInto frypan, warm and mix.",
+          "ru": "1 can 4-bean mix\n½ стакана Parsley, chopped\n¼ стакана Balsamic vinegar\n2 tsp Dijon mustard\n2 ст. л. Extra virgin оливкового масла\n\nInto frypan, warm and mix.",
           "en": "1 can 4-bean mix\n½ cup Parsley, chopped\n¼ cup Balsamic vinegar\n2 tsp Dijon mustard\n2 tbsp Extra virgin olive oil\n\nInto frypan, warm and mix."
         },
         "image": "https://irebound.enableme.org.au/media/hbtd0dru/frypanmix.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133010083365770000"
@@ -775,8 +775,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 11,
         "title": {
-          "uz": "Dasturxonga torting lamb on top of bean casserole with a side of vegetables.",
-          "ru": "Подавайте lamb on top of bean casserole with a side of vegetables.",
+          "uz": "Serve lamb on top of bean casserole with a side of vegetables.",
+          "ru": "Serve lamb on top of bean casserole with a side of vegetables.",
           "en": "Serve lamb on top of bean casserole with a side of vegetables."
         },
         "description": {
@@ -790,29 +790,29 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Pechni 180°C ga oldindan qizdiring",
-        "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying",
-        "Brown 2 lamb racks on all sides in pan.",
-        "Transfer lamb to a roasting dish.",
+        "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying.",
+        "2 ta qo'zichoq qovurg'asini tavada har tarafini qizartirib qovuring.",
+        "Qo'zichoq go'shtini pech patnisiga oling.",
         "In small bowl, combine:",
         "Spread 1 osh qoshiq Dijon mustard on top and on sides of lamb.",
         "Using a teaspoon, stick bread crumb mixture on top of mustard to form a crust.",
-        "Pechda pishiring in oven (15 minutes = rare, 30 minutes = well done)",
-        "Drain and rinse the 1 can 4-bean Aralashtiring in a colander.",
+        "Bake in oven (15 minutes = rare, 30 minutes = well done)",
+        "Drain and rinse the 1 can 4-bean mix in a colander.",
         "For bean casserole, combine ingredients:",
-        "Dasturxonga torting lamb on top of bean casserole with a side of vegetables."
+        "Serve lamb on top of bean casserole with a side of vegetables."
       ],
       "ru": [
         "Разогрейте духовку до 180°C",
-        "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла",
-        "Brown 2 lamb racks on all sides in pan.",
-        "Transfer lamb to a roasting dish.",
+        "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла.",
+        "Обжарьте 2 корейки ягненка со всех сторон на сковороде до золотистой корочки.",
+        "Переложите мясо ягненка в форму для запекания.",
         "In small bowl, combine:",
         "Spread 1 ст. л. Dijon mustard on top and on sides of lamb.",
         "Using a teaspoon, stick bread crumb mixture on top of mustard to form a crust.",
-        "Выпекайте in oven (15 minutes = rare, 30 minutes = well done)",
-        "Drain and rinse the 1 can 4-bean Перемешайте in a colander.",
+        "Bake in oven (15 minutes = rare, 30 minutes = well done)",
+        "Drain and rinse the 1 can 4-bean mix in a colander.",
         "For bean casserole, combine ingredients:",
-        "Подавайте lamb on top of bean casserole with a side of vegetables."
+        "Serve lamb on top of bean casserole with a side of vegetables."
       ],
       "en": [
         "Preheat oven to 180°C.",
@@ -993,8 +993,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Barcha quruq masalliqlarni idishga solib yaxshilab aralashtiring",
-          "ru": "Сложите все сухие ингредиенты в миску и тщательно перемешайте",
+          "uz": "Barcha quruq masalliqlarni idishga solib yaxshilab aralashtiring:",
+          "ru": "Сложите все сухие ингредиенты в миску и тщательно перемешайте:",
           "en": "Place all dry ingredients into a bowl and mix:"
         },
         "description": {
@@ -1007,8 +1007,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Seping ¼ teaspoon Cinnamon on top.",
-          "ru": "Посыпьте ¼ teaspoon Cinnamon on top.",
+          "uz": "Ustiga ¼ choy qoshiq dolchin seping.",
+          "ru": "Посыпать сверху ¼ ч. л. корицы.",
           "en": "Sprinkle ¼ teaspoon Cinnamon on top."
         },
         "description": {
@@ -1021,8 +1021,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'shing ½ stakan milk",
-          "ru": "Добавьте ½ стакана milk",
+          "uz": "½ stakan sut qo'shing",
+          "ru": "Добавьте ½ стакана молока",
           "en": "Add ½ cup milk"
         },
         "description": {
@@ -1035,8 +1035,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Dasturxonga torting va rohatlaning",
-          "ru": "Подавайте к столу",
+          "uz": "Yogurt qo'shib dasturxonga torting",
+          "ru": "Добавьте йогурт и подавайте к столу",
           "en": "Add yoghurt and serve"
         },
         "description": {
@@ -1049,16 +1049,16 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Barcha quruq masalliqlarni idishga solib yaxshilab aralashtiring",
-        "Seping ¼ teaspoon Cinnamon on top.",
-        "Qo'shing ½ stakan milk",
-        "Dasturxonga torting va rohatlaning"
+        "Barcha quruq masalliqlarni idishga solib yaxshilab aralashtiring:",
+        "Ustiga ¼ choy qoshiq dolchin seping.",
+        "½ stakan sut qo'shing",
+        "Yogurt qo'shib dasturxonga torting"
       ],
       "ru": [
-        "Сложите все сухие ингредиенты в миску и тщательно перемешайте",
-        "Посыпьте ¼ teaspoon Cinnamon on top.",
-        "Добавьте ½ стакана milk",
-        "Подавайте к столу"
+        "Сложите все сухие ингредиенты в миску и тщательно перемешайте:",
+        "Посыпать сверху ¼ ч. л. корицы.",
+        "Добавьте ½ стакана молока",
+        "Добавьте йогурт и подавайте к столу"
       ],
       "en": [
         "Place all dry ingredients into a bowl and mix:",
@@ -1109,23 +1109,23 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "2 osh qoshiq Extra virgin zaytun moyi (light)",
-          "ru": "2 ст. л. Extra virgin оливковое масло (light)",
+          "ru": "2 ст. л. Extra virgin оливкового масла (light)",
           "en": "2 tbsp Extra virgin olive oil (light)"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
       },
       {
         "name": {
-          "uz": "1 piyoz, thinly sliced",
-          "ru": "1 лук, thinly sliced",
+          "uz": "1 Onion, thinly sliced",
+          "ru": "1 Onion, thinly sliced",
           "en": "1 Onion, thinly sliced"
         },
         "image": "https://irebound.enableme.org.au/media/jmlpnxkn/onion.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133018888261170000"
       },
       {
         "name": {
-          "uz": "2 cloves sarimsoq, crushed",
-          "ru": "2 cloves чеснок, crushed",
+          "uz": "2 cloves Garlic, crushed",
+          "ru": "2 cloves Garlic, crushed",
           "en": "2 cloves Garlic, crushed"
         },
         "image": "https://irebound.enableme.org.au/media/wztlxwab/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019313034100000"
@@ -1175,8 +1175,8 @@ export const recipes: Recipe[] = [
       "uz": [
         "2 Snapper Fillets, skin on",
         "2 osh qoshiq Extra virgin zaytun moyi (light)",
-        "1 piyoz, thinly sliced",
-        "2 cloves sarimsoq, crushed",
+        "1 Onion, thinly sliced",
+        "2 cloves Garlic, crushed",
         "2 osh qoshiq Fennel seeds",
         "1 can crushed Tomatoes",
         "2 cups Green beans",
@@ -1185,9 +1185,9 @@ export const recipes: Recipe[] = [
       ],
       "ru": [
         "2 Snapper Fillets, skin on",
-        "2 ст. л. Extra virgin оливковое масло (light)",
-        "1 лук, thinly sliced",
-        "2 cloves чеснок, crushed",
+        "2 ст. л. Extra virgin оливкового масла (light)",
+        "1 Onion, thinly sliced",
+        "2 cloves Garlic, crushed",
         "2 ст. л. Fennel seeds",
         "1 can crushed Tomatoes",
         "2 cups Green beans",
@@ -1210,8 +1210,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Qizdiring 1 osh qoshiq zaytun moyi in large fry pan (with a lid) to medium.",
-          "ru": "Разогрейте 1 ст. л. оливковое масло in large fry pan (with a lid) to medium.",
+          "uz": "Katta tavada 1 osh qoshiq zaytun moyini o'rtacha alovda qizdiring.",
+          "ru": "Разогрейте 1 ст. л. оливкового масла в большой сковороде на среднем огне.",
           "en": "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium."
         },
         "description": {
@@ -1224,8 +1224,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Qo'ying 1 thinly sliced piyoz in pan, Pishiring until soft.",
-          "ru": "Выложите 1 thinly sliced лук in pan, Готовьте until soft.",
+          "uz": "Yupqa to'g'ralgan 1 ta piyozni tavaga solib, yumshaguncha dimlang.",
+          "ru": "Выложите тонко нарезанный лук на сковороду и обжаривайте до мягкости.",
           "en": "Place 1 thinly sliced onion in pan, cook until soft."
         },
         "description": {
@@ -1238,8 +1238,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'shing the 2 cloves crushed sarimsoq and 2 tablespoon fennel seeds and Pishiring for one minute extra.",
-          "ru": "Добавьте the 2 cloves crushed чеснок and 2 tablespoon fennel seeds and Готовьте for one minute extra.",
+          "uz": "2 tish ezilgan sarimsoq va 2 osh qoshiq ukrop urug'ini qo'shib, 1 daqiqa qovuring.",
+          "ru": "Добавьте 2 измельченных зубчика чеснока и 2 ст. л. семян фенхеля и обжаривайте 1 минуту.",
           "en": "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra."
         },
         "description": {
@@ -1252,8 +1252,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Qo'shing 1 tin crushed tomatoes and 2 cup green beans to pan, Aralashtiring then Qopqog'ini yoping with lid.",
-          "ru": "Добавьте 1 tin crushed tomatoes and 2 cup green beans to pan, Перемешайте then Накройте крышкой with lid.",
+          "uz": "1 banka ezilgan pomidor va 2 stakan ko'k loviyani tavaga solib aralashtiring va qopqog'ini yoping.",
+          "ru": "Добавьте 1 баночку измельченных томатов и 2 стакана стручковой фасоли, перемешайте и накройте крышкой.",
           "en": "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid."
         },
         "description": {
@@ -1266,8 +1266,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Lower Qizdiring to simmer for 10 minutes.",
-          "ru": "Lower Разогрейте to simmer for 10 minutes.",
+          "uz": "Lower heat to simmer for 10 minutes.",
+          "ru": "Lower heat to simmer for 10 minutes.",
           "en": "Lower heat to simmer for 10 minutes."
         },
         "description": {
@@ -1280,8 +1280,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Meanwhile, Qizdiring remaining oil in a fry pan to medium Qizdiring.",
-          "ru": "Meanwhile, Разогрейте remaining oil in a fry pan to medium Разогрейте.",
+          "uz": "Meanwhile, heat remaining oil in a fry pan to medium heat.",
+          "ru": "Meanwhile, heat remaining oil in a fry pan to medium heat.",
           "en": "Meanwhile, heat remaining oil in a fry pan to medium heat."
         },
         "description": {
@@ -1308,8 +1308,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Turn fillets over and Pishiring further 2 minutes until cooked through.",
-          "ru": "Turn fillets over and Готовьте further 2 minutes until cooked through.",
+          "uz": "Turn fillets over and cook further 2 minutes until cooked through.",
+          "ru": "Turn fillets over and cook further 2 minutes until cooked through.",
           "en": "Turn fillets over and cook further 2 minutes until cooked through."
         },
         "description": {
@@ -1322,13 +1322,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "To Dasturxonga torting, Aralashtiring ½ stakan roughly chopped parsley through the beans Aralashtiring.",
-          "ru": "To Подавайте, Перемешайте ½ стакана roughly chopped parsley through the beans Перемешайте.",
+          "uz": "To serve, stir ½ stakan roughly chopped parsley through the beans mix.",
+          "ru": "To serve, stir ½ стакана roughly chopped parsley through the beans mix.",
           "en": "To serve, stir ½ cup roughly chopped parsley through the beans mix."
         },
         "description": {
-          "uz": "Divide bean Aralashtiring onto 2 plates.\nScatter ¼ stakan shaved parmesan over and Qo'ying a snapper on top of each plate.",
-          "ru": "Divide bean Перемешайте onto 2 plates.\nScatter ¼ стакана shaved parmesan over and Выложите a snapper on top of each plate.",
+          "uz": "Divide bean mix onto 2 plates.\nScatter ¼ stakan shaved parmesan over and place a snapper on top of each plate.",
+          "ru": "Divide bean mix onto 2 plates.\nScatter ¼ стакана shaved parmesan over and place a snapper on top of each plate.",
           "en": "Divide bean mix onto 2 plates.\nScatter ¼ cup shaved parmesan over and place a snapper on top of each plate."
         },
         "image": "https://irebound.enableme.org.au/media/afzjhyck/1.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133036683664400000"
@@ -1336,26 +1336,26 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Qizdiring 1 osh qoshiq zaytun moyi in large fry pan (with a lid) to medium.",
-        "Qo'ying 1 thinly sliced piyoz in pan, Pishiring until soft.",
-        "Qo'shing the 2 cloves crushed sarimsoq and 2 tablespoon fennel seeds and Pishiring for one minute extra.",
-        "Qo'shing 1 tin crushed tomatoes and 2 cup green beans to pan, Aralashtiring then Qopqog'ini yoping with lid.",
-        "Lower Qizdiring to simmer for 10 minutes.",
-        "Meanwhile, Qizdiring remaining oil in a fry pan to medium Qizdiring.",
+        "Katta tavada 1 osh qoshiq zaytun moyini o'rtacha alovda qizdiring.",
+        "Yupqa to'g'ralgan 1 ta piyozni tavaga solib, yumshaguncha dimlang.",
+        "2 tish ezilgan sarimsoq va 2 osh qoshiq ukrop urug'ini qo'shib, 1 daqiqa qovuring.",
+        "1 banka ezilgan pomidor va 2 stakan ko'k loviyani tavaga solib aralashtiring va qopqog'ini yoping.",
+        "Lower heat to simmer for 10 minutes.",
+        "Meanwhile, heat remaining oil in a fry pan to medium heat.",
         "Qo'ying 2 snapper fillets into the pan, skin down. Pishiring 4 minutes until skin crispy.",
-        "Turn fillets over and Pishiring further 2 minutes until cooked through.",
-        "To Dasturxonga torting, Aralashtiring ½ stakan roughly chopped parsley through the beans Aralashtiring."
+        "Turn fillets over and cook further 2 minutes until cooked through.",
+        "To serve, stir ½ stakan roughly chopped parsley through the beans mix."
       ],
       "ru": [
-        "Разогрейте 1 ст. л. оливковое масло in large fry pan (with a lid) to medium.",
-        "Выложите 1 thinly sliced лук in pan, Готовьте until soft.",
-        "Добавьте the 2 cloves crushed чеснок and 2 tablespoon fennel seeds and Готовьте for one minute extra.",
-        "Добавьте 1 tin crushed tomatoes and 2 cup green beans to pan, Перемешайте then Накройте крышкой with lid.",
-        "Lower Разогрейте to simmer for 10 minutes.",
-        "Meanwhile, Разогрейте remaining oil in a fry pan to medium Разогрейте.",
+        "Разогрейте 1 ст. л. оливкового масла в большой сковороде на среднем огне.",
+        "Выложите тонко нарезанный лук на сковороду и обжаривайте до мягкости.",
+        "Добавьте 2 измельченных зубчика чеснока и 2 ст. л. семян фенхеля и обжаривайте 1 минуту.",
+        "Добавьте 1 баночку измельченных томатов и 2 стакана стручковой фасоли, перемешайте и накройте крышкой.",
+        "Lower heat to simmer for 10 minutes.",
+        "Meanwhile, heat remaining oil in a fry pan to medium heat.",
         "Выложите 2 snapper fillets into the pan, skin down. Готовьте 4 minutes until skin crispy.",
-        "Turn fillets over and Готовьте further 2 minutes until cooked through.",
-        "To Подавайте, Перемешайте ½ стакана roughly chopped parsley through the beans Перемешайте."
+        "Turn fillets over and cook further 2 minutes until cooked through.",
+        "To serve, stir ½ стакана roughly chopped parsley through the beans mix."
       ],
       "en": [
         "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium.",
@@ -1498,8 +1498,8 @@ export const recipes: Recipe[] = [
           "en": "Place into large bowl:"
         },
         "description": {
-          "uz": "3 eggs,\n250g frozen spinach,\n250g ricotta,\n200g crumbled feta and\n1 lemon (juice)\n\nAralashtiring ingredients",
-          "ru": "3 eggs,\n250g frozen spinach,\n250g ricotta,\n200g crumbled feta and\n1 lemon (juice)\n\nПеремешайте ingredients",
+          "uz": "3 eggs,\n250g frozen spinach,\n250g ricotta,\n200g crumbled feta and\n1 lemon (juice)\n\nmix ingredients",
+          "ru": "3 eggs,\n250g frozen spinach,\n250g ricotta,\n200g crumbled feta and\n1 lemon (juice)\n\nmix ingredients",
           "en": "3 eggs,\n250g frozen spinach,\n250g ricotta,\n200g crumbled feta and\n1 lemon (juice)\n\nmix ingredients"
         },
         "image": "https://irebound.enableme.org.au/media/wndfepnm/sp4.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133036672917470000"
@@ -1605,8 +1605,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 10,
         "title": {
-          "uz": "Pechda pishiring 15-20 minutes until golden. Then Dasturxonga torting!",
-          "ru": "Выпекайте 15-20 minutes until golden. Then Подавайте!",
+          "uz": "Bake 15-20 minutes until golden. Then serve!",
+          "ru": "Bake 15-20 minutes until golden. Then serve!",
           "en": "Bake 15-20 minutes until golden. Then serve!"
         },
         "description": {
@@ -1628,7 +1628,7 @@ export const recipes: Recipe[] = [
         "Repeat process until all mixture used. Makes 10 triangles.",
         "Line baking tray with baking paper.",
         "Qo'ying triangles on tray 2-3 cm apart.",
-        "Pechda pishiring 15-20 minutes until golden. Then Dasturxonga torting!"
+        "Bake 15-20 minutes until golden. Then serve!"
       ],
       "ru": [
         "Разогрейте духовку до 190°C",
@@ -1640,7 +1640,7 @@ export const recipes: Recipe[] = [
         "Repeat process until all mixture used. Makes 10 triangles.",
         "Line baking tray with baking paper.",
         "Выложите triangles on tray 2-3 cm apart.",
-        "Выпекайте 15-20 minutes until golden. Then Подавайте!"
+        "Bake 15-20 minutes until golden. Then serve!"
       ],
       "en": [
         "Preheat oven to 190°C.",
@@ -1712,8 +1712,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "1 Brown piyoz (diced)",
-          "ru": "1 Brown лук (diced)",
+          "uz": "1 Brown Onion (diced)",
+          "ru": "1 Brown Onion (diced)",
           "en": "1 Brown Onion (diced)"
         },
         "image": "https://irebound.enableme.org.au/media/ufndppyb/onion.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298308500000"
@@ -1760,8 +1760,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "4 tbsp Extra Virgin zaytun moyi",
-          "ru": "4 tbsp Extra Virgin оливковое масло",
+          "uz": "4 tbsp Extra Virgin Olive oil",
+          "ru": "4 tbsp Extra Virgin Olive oil",
           "en": "4 tbsp Extra Virgin Olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -1844,13 +1844,13 @@ export const recipes: Recipe[] = [
         "2 Zucchinis",
         "1 egg (for zucchini fritters)",
         "4 eggs (for the poached eggs)",
-        "1 Brown piyoz (diced)",
+        "1 Brown Onion (diced)",
         "½ stakan corn kernels",
         "½ stakan parsley (chopped)",
         "2x tbsp mint (chopped)",
         "2 osh qoshiq Self raising flour",
         "1 stakan English Spinach",
-        "4 tbsp Extra Virgin zaytun moyi",
+        "4 tbsp Extra Virgin Olive oil",
         "cooking bowl",
         "grater",
         "frying pan",
@@ -1865,13 +1865,13 @@ export const recipes: Recipe[] = [
         "2 Zucchinis",
         "1 egg (for zucchini fritters)",
         "4 eggs (for the poached eggs)",
-        "1 Brown лук (diced)",
+        "1 Brown Onion (diced)",
         "½ стакана corn kernels",
         "½ стакана parsley (chopped)",
         "2x tbsp mint (chopped)",
         "2 ст. л. Self raising flour",
         "1 стакан English Spinach",
-        "4 tbsp Extra Virgin оливковое масло",
+        "4 tbsp Extra Virgin Olive oil",
         "cooking bowl",
         "grater",
         "frying pan",
@@ -1908,13 +1908,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Sabzavotlarni to'g'rashdan boshlang:",
-          "ru": "Начните с нарезки овощей:",
+          "uz": "Start by chopping:",
+          "ru": "Start by chopping:",
           "en": "Start by chopping:"
         },
         "description": {
-          "uz": "1x piyoz,\n2x tbsp mint.",
-          "ru": "1x лук,\n2x tbsp mint.",
+          "uz": "1x onion,\n2x tbsp mint.",
+          "ru": "1x onion,\n2x tbsp mint.",
           "en": "1x onion,\n2x tbsp mint."
         },
         "image": "https://irebound.enableme.org.au/media/qdingypx/z1.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050557026970000"
@@ -1936,8 +1936,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'ying fry pan on medium Qizdiring,",
-          "ru": "Выложите fry pan on medium Разогрейте,",
+          "uz": "Qo'ying fry pan on medium heat,",
+          "ru": "Выложите fry pan on medium heat,",
           "en": "Place fry pan on medium heat,"
         },
         "description": {
@@ -1950,8 +1950,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Qo'shing 1 choy qoshiq zaytun moyi and diced piyoz into pan,",
-          "ru": "Добавьте 1 ч. л. оливковое масло and diced лук into pan,",
+          "uz": "Qo'shing 1 choy qoshiq zaytun moyi and diced onion into pan,",
+          "ru": "Добавьте 1 ч. л. оливкового масла and diced onion into pan,",
           "en": "Add 1 teaspoon olive oil and diced onion into pan,"
         },
         "description": {
@@ -1964,13 +1964,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Pishiring piyoz until soft,",
-          "ru": "Готовьте лук until soft,",
+          "uz": "Pishiring onion until soft,",
+          "ru": "Готовьте onion until soft,",
           "en": "Cook onion until soft,"
         },
         "description": {
-          "uz": "Turn Qizdiring off.",
-          "ru": "Turn Разогрейте off.",
+          "uz": "Turn heat off.",
+          "ru": "Turn heat off.",
           "en": "Turn heat off."
         },
         "image": "https://irebound.enableme.org.au/media/devn1ykq/b3.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050558260000000"
@@ -1978,8 +1978,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Qo'ying cooked piyoz into bowl with:",
-          "ru": "Выложите cooked лук into bowl with:",
+          "uz": "Qo'ying cooked onion into bowl with:",
+          "ru": "Выложите cooked onion into bowl with:",
           "en": "Place cooked onion into bowl with:"
         },
         "description": {
@@ -2006,8 +2006,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Turn pan Qizdiring to medium,",
-          "ru": "Turn pan Разогрейте to medium,",
+          "uz": "Turn pan heat to medium,",
+          "ru": "Turn pan heat to medium,",
           "en": "Turn pan heat to medium,"
         },
         "description": {
@@ -2021,7 +2021,7 @@ export const recipes: Recipe[] = [
         "stepNumber": 9,
         "title": {
           "uz": "Qo'shing 1 osh qoshiq zaytun moyi to pan,",
-          "ru": "Добавьте 1 ст. л. оливковое масло to pan,",
+          "ru": "Добавьте 1 ст. л. оливкового масла to pan,",
           "en": "Add 1 tablespoon olive oil to pan,"
         },
         "description": {
@@ -2034,8 +2034,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 10,
         "title": {
-          "uz": "Put 2 osh qoshiq of fritter Aralashtiring into pan and flatten with back of spoon,",
-          "ru": "Put 2 ст. л. of fritter Перемешайте into pan and flatten with back of spoon,",
+          "uz": "Put 2 osh qoshiq of fritter mix into pan and flatten with back of spoon,",
+          "ru": "Put 2 ст. л. of fritter mix into pan and flatten with back of spoon,",
           "en": "Put 2 tablespoons of fritter mix into pan and flatten with back of spoon,"
         },
         "description": {
@@ -2062,8 +2062,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 12,
         "title": {
-          "uz": "Qizdiring pan until boiling, then lower Qizdiring to simmer. Aralashtiring water with spoon to make a whirlpool,",
-          "ru": "Разогрейте pan until boiling, then lower Разогрейте to simmer. Перемешайте water with spoon to make a whirlpool,",
+          "uz": "Qizdiring pan until boiling, then lower heat to simmer. Aralashtiring water with spoon to make a whirlpool,",
+          "ru": "Разогрейте pan until boiling, then lower heat to simmer. Перемешайте water with spoon to make a whirlpool,",
           "en": "Heat pan until boiling, then lower heat to simmer. Stir water with spoon to make a whirlpool,"
         },
         "description": {
@@ -2076,8 +2076,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 13,
         "title": {
-          "uz": "Crack eggs into the water to Pishiring for 3 minutes, repeat for 4 eggs total.",
-          "ru": "Crack eggs into the water to Готовьте for 3 minutes, repeat for 4 eggs total.",
+          "uz": "Crack eggs into the water to cook for 3 minutes, repeat for 4 eggs total.",
+          "ru": "Crack eggs into the water to cook for 3 minutes, repeat for 4 eggs total.",
           "en": "Crack eggs into the water to cook for 3 minutes, repeat for 4 eggs total."
         },
         "description": {
@@ -2090,8 +2090,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 14,
         "title": {
-          "uz": "To Dasturxonga torting, divide fritters between 2 plates, top with poached eggs and spinach.",
-          "ru": "To Подавайте, divide fritters between 2 plates, top with poached eggs and spinach.",
+          "uz": "To serve, divide fritters between 2 plates, top with poached eggs and spinach.",
+          "ru": "To serve, divide fritters between 2 plates, top with poached eggs and spinach.",
           "en": "To serve, divide fritters between 2 plates, top with poached eggs and spinach."
         },
         "description": {
@@ -2104,36 +2104,36 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Sabzavotlarni to'g'rashdan boshlang:",
+        "Start by chopping:",
         "Grate:",
-        "Qo'ying fry pan on medium Qizdiring,",
-        "Qo'shing 1 choy qoshiq zaytun moyi and diced piyoz into pan,",
-        "Pishiring piyoz until soft,",
-        "Qo'ying cooked piyoz into bowl with:",
+        "Qo'ying fry pan on medium heat,",
+        "Qo'shing 1 choy qoshiq zaytun moyi and diced onion into pan,",
+        "Pishiring onion until soft,",
+        "Qo'ying cooked onion into bowl with:",
         "Crack 1 egg into a cup, and whisk egg with fork.",
-        "Turn pan Qizdiring to medium,",
+        "Turn pan heat to medium,",
         "Qo'shing 1 osh qoshiq zaytun moyi to pan,",
-        "Put 2 osh qoshiq of fritter Aralashtiring into pan and flatten with back of spoon,",
+        "Put 2 osh qoshiq of fritter mix into pan and flatten with back of spoon,",
         "Pishiring fritters 2 minutes each side until golden,",
-        "Qizdiring pan until boiling, then lower Qizdiring to simmer. Aralashtiring water with spoon to make a whirlpool,",
-        "Crack eggs into the water to Pishiring for 3 minutes, repeat for 4 eggs total.",
-        "To Dasturxonga torting, divide fritters between 2 plates, top with poached eggs and spinach."
+        "Qizdiring pan until boiling, then lower heat to simmer. Aralashtiring water with spoon to make a whirlpool,",
+        "Crack eggs into the water to cook for 3 minutes, repeat for 4 eggs total.",
+        "To serve, divide fritters between 2 plates, top with poached eggs and spinach."
       ],
       "ru": [
-        "Начните с нарезки овощей:",
+        "Start by chopping:",
         "Grate:",
-        "Выложите fry pan on medium Разогрейте,",
-        "Добавьте 1 ч. л. оливковое масло and diced лук into pan,",
-        "Готовьте лук until soft,",
-        "Выложите cooked лук into bowl with:",
+        "Выложите fry pan on medium heat,",
+        "Добавьте 1 ч. л. оливкового масла and diced onion into pan,",
+        "Готовьте onion until soft,",
+        "Выложите cooked onion into bowl with:",
         "Crack 1 egg into a cup, and whisk egg with fork.",
-        "Turn pan Разогрейте to medium,",
-        "Добавьте 1 ст. л. оливковое масло to pan,",
-        "Put 2 ст. л. of fritter Перемешайте into pan and flatten with back of spoon,",
+        "Turn pan heat to medium,",
+        "Добавьте 1 ст. л. оливкового масла to pan,",
+        "Put 2 ст. л. of fritter mix into pan and flatten with back of spoon,",
         "Готовьте fritters 2 minutes each side until golden,",
-        "Разогрейте pan until boiling, then lower Разогрейте to simmer. Перемешайте water with spoon to make a whirlpool,",
-        "Crack eggs into the water to Готовьте for 3 minutes, repeat for 4 eggs total.",
-        "To Подавайте, divide fritters between 2 plates, top with poached eggs and spinach."
+        "Разогрейте pan until boiling, then lower heat to simmer. Перемешайте water with spoon to make a whirlpool,",
+        "Crack eggs into the water to cook for 3 minutes, repeat for 4 eggs total.",
+        "To serve, divide fritters between 2 plates, top with poached eggs and spinach."
       ],
       "en": [
         "Start by chopping:",
@@ -2225,8 +2225,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "1 can 4-bean Aralashtiring",
-          "ru": "1 can 4-bean Перемешайте",
+          "uz": "1 can 4-bean mix",
+          "ru": "1 can 4-bean mix",
           "en": "1 can 4-bean mix"
         },
         "image": "https://irebound.enableme.org.au/media/gz0gcvh4/beans.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015961212700000"
@@ -2311,7 +2311,7 @@ export const recipes: Recipe[] = [
         "1 choy qoshiq Smoked Paprika",
         "1 choy qoshiq Cumin",
         "½ tsp White Pepper",
-        "1 can 4-bean Aralashtiring",
+        "1 can 4-bean mix",
         "2 tsp Dijon Mustard",
         "¼ stakan Balsamic Vinegar",
         "1 stakan Parsley",
@@ -2328,7 +2328,7 @@ export const recipes: Recipe[] = [
         "1 ч. л. Smoked Paprika",
         "1 ч. л. Cumin",
         "½ tsp White Pepper",
-        "1 can 4-bean Перемешайте",
+        "1 can 4-bean mix",
         "2 tsp Dijon Mustard",
         "¼ стакана Balsamic Vinegar",
         "1 стакан Parsley",
@@ -2389,13 +2389,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Spray baking dish with oil and Qo'ying coated chicken drumsticks in.",
-          "ru": "Spray baking dish with oil and Выложите coated chicken drumsticks in.",
+          "uz": "Spray baking dish with oil and place coated chicken drumsticks in.",
+          "ru": "Spray baking dish with oil and place coated chicken drumsticks in.",
           "en": "Spray baking dish with oil and place coated chicken drumsticks in."
         },
         "description": {
-          "uz": "Pechda pishiring for 40mins until chicken cooked through",
-          "ru": "Выпекайте for 40mins until chicken cooked through",
+          "uz": "Bake for 40mins until chicken cooked through",
+          "ru": "Bake for 40mins until chicken cooked through",
           "en": "Bake for 40mins until chicken cooked through"
         },
         "image": "https://irebound.enableme.org.au/media/husflmri/sc2.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050574379730000"
@@ -2417,8 +2417,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Drain and rinse 4-bean Aralashtiring in a colander",
-          "ru": "Drain and rinse 4-bean Перемешайте in a colander",
+          "uz": "Drain and rinse 4-bean mix in a colander",
+          "ru": "Drain and rinse 4-bean mix in a colander",
           "en": "Drain and rinse 4-bean mix in a colander"
         },
         "description": {
@@ -2436,8 +2436,8 @@ export const recipes: Recipe[] = [
           "en": "Add to pan:"
         },
         "description": {
-          "uz": "1 can 4-bean Aralashtiring,\n2 teaspoon Dijon mustard\n¼ stakan Balsamic Vinegar\n\nPishiring until bubbling.",
-          "ru": "1 can 4-bean Перемешайте,\n2 teaspoon Dijon mustard\n¼ стакана Balsamic Vinegar\n\nГотовьте until bubbling.",
+          "uz": "1 can 4-bean mix,\n2 teaspoon Dijon mustard\n¼ stakan Balsamic Vinegar\n\nPishiring until bubbling.",
+          "ru": "1 can 4-bean mix,\n2 teaspoon Dijon mustard\n¼ стакана Balsamic Vinegar\n\nГотовьте until bubbling.",
           "en": "1 can 4-bean mix,\n2 teaspoon Dijon mustard\n¼ cup Balsamic Vinegar\n\nCook until bubbling."
         },
         "image": "https://irebound.enableme.org.au/media/nr2jorhg/sc4.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050579275730000"
@@ -2445,8 +2445,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Remove from the Qizdiring and Aralashtiring through the parsley.",
-          "ru": "Remove from the Разогрейте and Перемешайте through the parsley.",
+          "uz": "Remove from the heat and stir through the parsley.",
+          "ru": "Remove from the heat and stir through the parsley.",
           "en": "Remove from the heat and stir through the parsley."
         },
         "description": {
@@ -2464,8 +2464,8 @@ export const recipes: Recipe[] = [
           "en": "Divide the bean casserole mixture between two plates."
         },
         "description": {
-          "uz": "Top with chicken\nDasturxonga torting with a side of vegetables.",
-          "ru": "Top with chicken\nПодавайте with a side of vegetables.",
+          "uz": "Top with chicken\nServe with a side of vegetables.",
+          "ru": "Top with chicken\nServe with a side of vegetables.",
           "en": "Top with chicken\nServe with a side of vegetables."
         },
         "image": "https://irebound.enableme.org.au/media/srnj3s4l/southern-friedchickendrumsticks.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133014270421600000"
@@ -2475,21 +2475,21 @@ export const recipes: Recipe[] = [
       "uz": [
         "Pechni 180°C ga oldindan qizdiring",
         "Qo'ying into zip-lock bag:",
-        "Spray baking dish with oil and Qo'ying coated chicken drumsticks in.",
+        "Spray baking dish with oil and place coated chicken drumsticks in.",
         "Qizdiring a saucepan to medium.",
-        "Drain and rinse 4-bean Aralashtiring in a colander",
+        "Drain and rinse 4-bean mix in a colander",
         "Qo'shing to pan:",
-        "Remove from the Qizdiring and Aralashtiring through the parsley.",
+        "Remove from the heat and stir through the parsley.",
         "Divide the bean casserole mixture between two plates."
       ],
       "ru": [
         "Разогрейте духовку до 180°C",
         "Выложите into zip-lock bag:",
-        "Spray baking dish with oil and Выложите coated chicken drumsticks in.",
+        "Spray baking dish with oil and place coated chicken drumsticks in.",
         "Разогрейте a saucepan to medium.",
-        "Drain and rinse 4-bean Перемешайте in a colander",
+        "Drain and rinse 4-bean mix in a colander",
         "Добавьте to pan:",
-        "Remove from the Разогрейте and Перемешайте through the parsley.",
+        "Remove from the heat and stir through the parsley.",
         "Divide the bean casserole mixture between two plates."
       ],
       "en": [
@@ -2536,16 +2536,16 @@ export const recipes: Recipe[] = [
     "detailedIngredients": [
       {
         "name": {
-          "uz": "1 piyoz, diced",
-          "ru": "1 лук, diced",
+          "uz": "1 Onion, diced",
+          "ru": "1 Onion, diced",
           "en": "1 Onion, diced"
         },
         "image": "https://irebound.enableme.org.au/media/jmlpnxkn/onion.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133018888261170000"
       },
       {
         "name": {
-          "uz": "2 cloves sarimsoq, crushed",
-          "ru": "2 cloves чеснок, crushed",
+          "uz": "2 cloves Garlic, crushed",
+          "ru": "2 cloves Garlic, crushed",
           "en": "2 cloves Garlic, crushed"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
@@ -2553,7 +2553,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "2 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "2 ст. л. Extra virgin оливковое масло",
+          "ru": "2 ст. л. Extra virgin оливкового масла",
           "en": "2 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -2592,8 +2592,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "300g Seafood Marinara Aralashtiring",
-          "ru": "300g Seafood Marinara Перемешайте",
+          "uz": "300g Seafood Marinara mix",
+          "ru": "300g Seafood Marinara mix",
           "en": "300g Seafood Marinara mix"
         },
         "image": "https://irebound.enableme.org.au/media/n25jc0s3/paper-bag.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019318344830000"
@@ -2656,8 +2656,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "sarimsoq press",
-          "ru": "чеснок press",
+          "uz": "garlic press",
+          "ru": "garlic press",
           "en": "garlic press"
         },
         "image": "https://irebound.enableme.org.au/media/wztlxwab/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019313034100000"
@@ -2697,14 +2697,14 @@ export const recipes: Recipe[] = [
     ],
     "ingredients": {
       "uz": [
-        "1 piyoz, diced",
-        "2 cloves sarimsoq, crushed",
+        "1 Onion, diced",
+        "2 cloves Garlic, crushed",
         "2 osh qoshiq Extra virgin zaytun moyi",
         "½ Red Capsicum, diced",
         "1 can crushed Tomatoes",
         "1 stakan Chicken Stock",
         "¼ stakan White Wine",
-        "300g Seafood Marinara Aralashtiring",
+        "300g Seafood Marinara mix",
         "6 Mussels in shell",
         "6 Raw Prawns",
         "¼ stakan Parmesan, shaved",
@@ -2712,21 +2712,21 @@ export const recipes: Recipe[] = [
         "2 slices bread (optional)",
         "Fry pan",
         "wooden spoon",
-        "sarimsoq press",
+        "garlic press",
         "measuring cup",
         "chopping board",
         "knife",
         "toaster (for bread)"
       ],
       "ru": [
-        "1 лук, diced",
-        "2 cloves чеснок, crushed",
-        "2 ст. л. Extra virgin оливковое масло",
+        "1 Onion, diced",
+        "2 cloves Garlic, crushed",
+        "2 ст. л. Extra virgin оливкового масла",
         "½ Red Capsicum, diced",
         "1 can crushed Tomatoes",
         "1 стакан Chicken Stock",
         "¼ стакана White Wine",
-        "300g Seafood Marinara Перемешайте",
+        "300g Seafood Marinara mix",
         "6 Mussels in shell",
         "6 Raw Prawns",
         "¼ стакана Parmesan, shaved",
@@ -2734,7 +2734,7 @@ export const recipes: Recipe[] = [
         "2 slices bread (optional)",
         "Fry pan",
         "wooden spoon",
-        "чеснок press",
+        "garlic press",
         "measuring cup",
         "chopping board",
         "knife",
@@ -2767,8 +2767,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Qizdiring large, saucepan over medium Qizdiring.",
-          "ru": "Разогрейте large, saucepan over medium Разогрейте.",
+          "uz": "Qizdiring large, saucepan over medium heat.",
+          "ru": "Разогрейте large, saucepan over medium heat.",
           "en": "Heat large, saucepan over medium heat."
         },
         "description": {
@@ -2781,8 +2781,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Qo'shing the 1 osh qoshiq zaytun moyi and Pishiring the 1 diced piyoz until soft.",
-          "ru": "Добавьте the 1 ст. л. оливковое масло and Готовьте the 1 diced лук until soft.",
+          "uz": "Qo'shing the 1 osh qoshiq zaytun moyi and cook the 1 diced onion until soft.",
+          "ru": "Добавьте the 1 ст. л. оливкового масла and cook the 1 diced onion until soft.",
           "en": "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft."
         },
         "description": {
@@ -2795,8 +2795,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'shing the 2 cloves crushed sarimsoq, Pishiring one minute longer.",
-          "ru": "Добавьте the 2 cloves crushed чеснок, Готовьте one minute longer.",
+          "uz": "Qo'shing the 2 cloves ezilgan sarimsoq, cook one minute longer.",
+          "ru": "Добавьте the 2 cloves измельченный чеснок, cook one minute longer.",
           "en": "Add the 2 cloves crushed garlic, cook one minute longer."
         },
         "description": {
@@ -2809,8 +2809,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Qo'shing ½ diced red capsicum, Pishiring and Aralashtiring for 2 minutes.",
-          "ru": "Добавьте ½ diced red capsicum, Готовьте and Перемешайте for 2 minutes.",
+          "uz": "Qo'shing ½ diced red capsicum, cook and stir for 2 minutes.",
+          "ru": "Добавьте ½ diced red capsicum, cook and stir for 2 minutes.",
           "en": "Add ½ diced red capsicum, cook and stir for 2 minutes."
         },
         "description": {
@@ -2823,8 +2823,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Pour in ¼ stakan white wine, Pishiring off the alcohol for one minute, then Qo'shing:",
-          "ru": "Pour in ¼ стакана white wine, Готовьте off the alcohol for one minute, then Добавьте:",
+          "uz": "Pour in ¼ stakan white wine, cook off the alcohol for one minute, then add:",
+          "ru": "Pour in ¼ стакана white wine, cook off the alcohol for one minute, then add:",
           "en": "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add:"
         },
         "description": {
@@ -2851,8 +2851,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Qo'shing 300g seafood marinara Aralashtiring and 6 prawns.",
-          "ru": "Добавьте 300g seafood marinara Перемешайте and 6 prawns.",
+          "uz": "Qo'shing 300g seafood marinara mix and 6 prawns.",
+          "ru": "Добавьте 300g seafood marinara mix and 6 prawns.",
           "en": "Add 300g seafood marinara mix and 6 prawns."
         },
         "description": {
@@ -2865,8 +2865,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Qopqog'ini yoping and lower Qizdiring to simmer 10 mins.",
-          "ru": "Накройте крышкой and lower Разогрейте to simmer 10 mins.",
+          "uz": "Qopqog'ini yoping and lower heat to simmer 10 mins.",
+          "ru": "Накройте крышкой and lower heat to simmer 10 mins.",
           "en": "Cover and lower heat to simmer 10 mins."
         },
         "description": {
@@ -2898,8 +2898,8 @@ export const recipes: Recipe[] = [
           "en": "Divide seafood stew between 2 large bowls. Top with  ½ cup parsley and  ¼ cup parmesan."
         },
         "description": {
-          "uz": "(optional) Dasturxonga torting with some bread drizzled in zaytun moyi.",
-          "ru": "(optional) Подавайте with some bread drizzled in оливковое масло.",
+          "uz": "(optional) Serve with some bread drizzled in zaytun moyi.",
+          "ru": "(optional) Serve with some bread drizzled in оливкового масла.",
           "en": "(optional) Serve with some bread drizzled in olive oil."
         },
         "image": "https://irebound.enableme.org.au/media/sjcd1022/seafoodstew.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133010090140900000"
@@ -2907,26 +2907,26 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Qizdiring large, saucepan over medium Qizdiring.",
-        "Qo'shing the 1 osh qoshiq zaytun moyi and Pishiring the 1 diced piyoz until soft.",
-        "Qo'shing the 2 cloves crushed sarimsoq, Pishiring one minute longer.",
-        "Qo'shing ½ diced red capsicum, Pishiring and Aralashtiring for 2 minutes.",
-        "Pour in ¼ stakan white wine, Pishiring off the alcohol for one minute, then Qo'shing:",
+        "Qizdiring large, saucepan over medium heat.",
+        "Qo'shing the 1 osh qoshiq zaytun moyi and cook the 1 diced onion until soft.",
+        "Qo'shing the 2 cloves ezilgan sarimsoq, cook one minute longer.",
+        "Qo'shing ½ diced red capsicum, cook and stir for 2 minutes.",
+        "Pour in ¼ stakan white wine, cook off the alcohol for one minute, then add:",
         "Bring to the boil.",
-        "Qo'shing 300g seafood marinara Aralashtiring and 6 prawns.",
-        "Qopqog'ini yoping and lower Qizdiring to simmer 10 mins.",
+        "Qo'shing 300g seafood marinara mix and 6 prawns.",
+        "Qopqog'ini yoping and lower heat to simmer 10 mins.",
         "Qo'shing 6 raw mussels in their shells,",
         "Divide seafood stew between 2 large bowls. Top with  ½ stakan parsley and  ¼ stakan parmesan."
       ],
       "ru": [
-        "Разогрейте large, saucepan over medium Разогрейте.",
-        "Добавьте the 1 ст. л. оливковое масло and Готовьте the 1 diced лук until soft.",
-        "Добавьте the 2 cloves crushed чеснок, Готовьте one minute longer.",
-        "Добавьте ½ diced red capsicum, Готовьте and Перемешайте for 2 minutes.",
-        "Pour in ¼ стакана white wine, Готовьте off the alcohol for one minute, then Добавьте:",
+        "Разогрейте large, saucepan over medium heat.",
+        "Добавьте the 1 ст. л. оливкового масла and cook the 1 diced onion until soft.",
+        "Добавьте the 2 cloves измельченный чеснок, cook one minute longer.",
+        "Добавьте ½ diced red capsicum, cook and stir for 2 minutes.",
+        "Pour in ¼ стакана white wine, cook off the alcohol for one minute, then add:",
         "Bring to the boil.",
-        "Добавьте 300g seafood marinara Перемешайте and 6 prawns.",
-        "Накройте крышкой and lower Разогрейте to simmer 10 mins.",
+        "Добавьте 300g seafood marinara mix and 6 prawns.",
+        "Накройте крышкой and lower heat to simmer 10 mins.",
         "Добавьте 6 raw mussels in their shells,",
         "Divide seafood stew between 2 large bowls. Top with  ½ стакана parsley and  ¼ стакана parmesan."
       ],
@@ -2985,7 +2985,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "2 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "2 ст. л. Extra virgin оливковое масло",
+          "ru": "2 ст. л. Extra virgin оливкового масла",
           "en": "2 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/tktdazkw/holding-ingredient.jpg?anchor=center&mode=crop&width=60&upscale=false&rnd=132993713378070000"
@@ -3007,7 +3007,7 @@ export const recipes: Recipe[] = [
       ],
       "ru": [
         "2 Potatoes, unpeeled, cut into wedges",
-        "2 ст. л. Extra virgin оливковое масло",
+        "2 ст. л. Extra virgin оливкового масла",
         "2 ст. л. Dried oregano"
       ],
       "en": [
@@ -3048,8 +3048,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'ying 2 potatoes cut into wedges on tray and Quying 2 osh qoshiq zaytun moyi",
-          "ru": "Выложите 2 potatoes cut into wedges on tray and Сбрызните 2 ст. л. оливковое масло",
+          "uz": "Qo'ying 2 potatoes cut into wedges on tray and drizzle 2 osh qoshiq zaytun moyi",
+          "ru": "Выложите 2 potatoes cut into wedges on tray and drizzle 2 ст. л. оливкового масла",
           "en": "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil"
         },
         "description": {
@@ -3076,8 +3076,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Pechda pishiring in the oven 10 minutes.",
-          "ru": "Выпекайте in the oven 10 minutes.",
+          "uz": "Bake in the oven 10 minutes.",
+          "ru": "Bake in the oven 10 minutes.",
           "en": "Bake in the oven 10 minutes."
         },
         "description": {
@@ -3090,8 +3090,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Turn the potatoes, Pechda pishiring 10 minutes more until crisp.",
-          "ru": "Turn the potatoes, Выпекайте 10 minutes more until crisp.",
+          "uz": "Turn the potatoes, Bake 10 minutes more until crisp.",
+          "ru": "Turn the potatoes, Bake 10 minutes more until crisp.",
           "en": "Turn the potatoes, Bake 10 minutes more until crisp."
         },
         "description": {
@@ -3106,18 +3106,18 @@ export const recipes: Recipe[] = [
       "uz": [
         "Pechni 200°C ga oldindan qizdiring",
         "Line an oven tray with baking paper.",
-        "Qo'ying 2 potatoes cut into wedges on tray and Quying 2 osh qoshiq zaytun moyi",
+        "Qo'ying 2 potatoes cut into wedges on tray and drizzle 2 osh qoshiq zaytun moyi",
         "Seping 2 osh qoshiq dried oregano on top.",
-        "Pechda pishiring in the oven 10 minutes.",
-        "Turn the potatoes, Pechda pishiring 10 minutes more until crisp."
+        "Bake in the oven 10 minutes.",
+        "Turn the potatoes, Bake 10 minutes more until crisp."
       ],
       "ru": [
         "Разогрейте духовку до 200°C",
         "Line an oven tray with baking paper.",
-        "Выложите 2 potatoes cut into wedges on tray and Сбрызните 2 ст. л. оливковое масло",
+        "Выложите 2 potatoes cut into wedges on tray and drizzle 2 ст. л. оливкового масла",
         "Посыпьте 2 ст. л. dried oregano on top.",
-        "Выпекайте in the oven 10 minutes.",
-        "Turn the potatoes, Выпекайте 10 minutes more until crisp."
+        "Bake in the oven 10 minutes.",
+        "Turn the potatoes, Bake 10 minutes more until crisp."
       ],
       "en": [
         "Preheat your oven to 200°C.",
@@ -3169,8 +3169,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "Leftover Bean Burrito Aralashtiring",
-          "ru": "Leftover Bean Burrito Перемешайте",
+          "uz": "Leftover Bean Burrito mix",
+          "ru": "Leftover Bean Burrito mix",
           "en": "Leftover Bean Burrito mix"
         },
         "image": "https://irebound.enableme.org.au/media/gz0gcvh4/beans.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015961212700000"
@@ -3195,13 +3195,13 @@ export const recipes: Recipe[] = [
     "ingredients": {
       "uz": [
         "4 Wholegrain wraps",
-        "Leftover Bean Burrito Aralashtiring",
+        "Leftover Bean Burrito mix",
         "2 cups English spinach",
         "½ stakan grated Tasty Cheese (reduced salt)"
       ],
       "ru": [
         "4 Wholegrain wraps",
-        "Leftover Bean Burrito Перемешайте",
+        "Leftover Bean Burrito mix",
         "2 cups English spinach",
         "½ стакана grated Tasty Cheese (reduced salt)"
       ],
@@ -3216,8 +3216,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "2 ta lavash (wrap)ni stolga yozib qo'ying",
-          "ru": "Выложите 2 лепешки (тортильи) на стол",
+          "uz": "Qo'ying 2 wraps on bench.",
+          "ru": "Выложите 2 wraps on bench.",
           "en": "Place 2 wraps on bench."
         },
         "description": {
@@ -3230,8 +3230,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Spread bean burrito Aralashtiring on top of each.",
-          "ru": "Spread bean burrito Перемешайте on top of each.",
+          "uz": "Spread bean burrito mix on top of each.",
+          "ru": "Spread bean burrito mix on top of each.",
           "en": "Spread bean burrito mix on top of each."
         },
         "description": {
@@ -3277,8 +3277,8 @@ export const recipes: Recipe[] = [
           "en": "Toast in toasted sandwich maker until cooked through."
         },
         "description": {
-          "uz": "**Alternatively, Pishiring in fry pan, turning halfway to Pishiring both sides.",
-          "ru": "**Alternatively, Готовьте in fry pan, turning halfway to Готовьте both sides.",
+          "uz": "**Alternatively, cook in fry pan, turning halfway to cook both sides.",
+          "ru": "**Alternatively, cook in fry pan, turning halfway to cook both sides.",
           "en": "**Alternatively, cook in fry pan, turning halfway to cook both sides."
         },
         "image": "https://irebound.enableme.org.au/media/wlopx1ew/1.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133036706552830000"
@@ -3286,15 +3286,15 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "2 ta lavash (wrap)ni stolga yozib qo'ying",
-        "Spread bean burrito Aralashtiring on top of each.",
+        "Qo'ying 2 wraps on bench.",
+        "Spread bean burrito mix on top of each.",
         "Layer ½ stakan tasty cheese then 2 cups English spinach",
         "Top each wrap with another wrap.",
         "Toast in toasted sandwich maker until cooked through."
       ],
       "ru": [
-        "Выложите 2 лепешки (тортильи) на стол",
-        "Spread bean burrito Перемешайте on top of each.",
+        "Выложите 2 wraps on bench.",
+        "Spread bean burrito mix on top of each.",
         "Layer ½ стакана tasty cheese then 2 cups English spinach",
         "Top each wrap with another wrap.",
         "Toast in toasted sandwich maker until cooked through."
@@ -3348,8 +3348,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "3 cloves sarimsoq",
-          "ru": "3 cloves чеснок",
+          "uz": "3 cloves Garlic",
+          "ru": "3 cloves Garlic",
           "en": "3 cloves Garlic"
         },
         "image": "https://irebound.enableme.org.au/media/tktdazkw/holding-ingredient.jpg?anchor=center&mode=crop&width=60&upscale=false&rnd=132993713378070000"
@@ -3365,7 +3365,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "¼ stakan Extra virgin zaytun moyi",
-          "ru": "¼ стакана Extra virgin оливковое масло",
+          "ru": "¼ стакана Extra virgin оливкового масла",
           "en": "¼ cup Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/tktdazkw/holding-ingredient.jpg?anchor=center&mode=crop&width=60&upscale=false&rnd=132993713378070000"
@@ -3382,16 +3382,16 @@ export const recipes: Recipe[] = [
     "ingredients": {
       "uz": [
         "1 can Chickpeas",
-        "3 cloves sarimsoq",
+        "3 cloves Garlic",
         "1 Lemon",
         "¼ stakan Extra virgin zaytun moyi",
         "½ tsp cumin"
       ],
       "ru": [
         "1 can Chickpeas",
-        "3 cloves чеснок",
+        "3 cloves Garlic",
         "1 Lemon",
-        "¼ стакана Extra virgin оливковое масло",
+        "¼ стакана Extra virgin оливкового масла",
         "½ tsp cumin"
       ],
       "en": [
@@ -3420,13 +3420,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Qo'ying 3 cloves sarimsoq on baking tray.",
-          "ru": "Выложите 3 cloves чеснок on baking tray.",
+          "uz": "Qo'ying 3 cloves garlic on baking tray.",
+          "ru": "Выложите 3 cloves garlic on baking tray.",
           "en": "Place 3 cloves garlic on baking tray."
         },
         "description": {
-          "uz": "Pechda pishiring 10 minutes until soft.",
-          "ru": "Выпекайте 10 minutes until soft.",
+          "uz": "Bake 10 minutes until soft.",
+          "ru": "Bake 10 minutes until soft.",
           "en": "Bake 10 minutes until soft."
         },
         "image": "https://irebound.enableme.org.au/media/1och44n4/h2.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133051511311300000"
@@ -3476,8 +3476,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Squeeze baked sarimsoq out of skin and into the bowl.",
-          "ru": "Squeeze baked чеснок out of skin and into the bowl.",
+          "uz": "Squeeze baked garlic out of skin and into the bowl.",
+          "ru": "Squeeze baked garlic out of skin and into the bowl.",
           "en": "Squeeze baked garlic out of skin and into the bowl."
         },
         "description": {
@@ -3496,7 +3496,7 @@ export const recipes: Recipe[] = [
         },
         "description": {
           "uz": "● 1 lemon (juice), ● ¼ stakan extra virgin zaytun moyi, ● ½ teaspoon cumin.",
-          "ru": "● 1 lemon (juice), ● ¼ стакана extra virgin оливковое масло, ● ½ teaspoon cumin.",
+          "ru": "● 1 lemon (juice), ● ¼ стакана extra virgin оливкового масла, ● ½ teaspoon cumin.",
           "en": "● 1 lemon (juice), ● ¼ cup extra virgin olive oil, ● ½ teaspoon cumin."
         },
         "image": "https://irebound.enableme.org.au/media/dump51ag/h7.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133051514663200000"
@@ -3509,8 +3509,8 @@ export const recipes: Recipe[] = [
           "en": "Blend until smooth with stick blender."
         },
         "description": {
-          "uz": "Dasturxonga torting with vegetable sticks or wholegrain crackers (optional).",
-          "ru": "Подавайте with vegetable sticks or wholegrain crackers (optional).",
+          "uz": "Serve with vegetable sticks or wholegrain crackers (optional).",
+          "ru": "Serve with vegetable sticks or wholegrain crackers (optional).",
           "en": "Serve with vegetable sticks or wholegrain crackers (optional)."
         },
         "image": "https://irebound.enableme.org.au/media/dfplaeps/h1.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133051509038800000"
@@ -3519,21 +3519,21 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Pechni 180°C ga oldindan qizdiring",
-        "Qo'ying 3 cloves sarimsoq on baking tray.",
+        "Qo'ying 3 cloves garlic on baking tray.",
         "Drain 1 can chickpeas in colander,",
         "Rinse chickpeas with water in colander,",
         "Rub chickpeas together with hands to remove skins.",
-        "Squeeze baked sarimsoq out of skin and into the bowl.",
+        "Squeeze baked garlic out of skin and into the bowl.",
         "Qo'shing to bowl:",
         "Blend until smooth with stick blender."
       ],
       "ru": [
         "Разогрейте духовку до 180°C",
-        "Выложите 3 cloves чеснок on baking tray.",
+        "Выложите 3 cloves garlic on baking tray.",
         "Drain 1 can chickpeas in colander,",
         "Rinse chickpeas with water in colander,",
         "Rub chickpeas together with hands to remove skins.",
-        "Squeeze baked чеснок out of skin and into the bowl.",
+        "Squeeze baked garlic out of skin and into the bowl.",
         "Добавьте to bowl:",
         "Blend until smooth with stick blender."
       ],
@@ -3761,8 +3761,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "To Dasturxonga torting, use 2 bowls. Put half the yoghurt in each bowl,",
-          "ru": "To Подавайте, use 2 bowls. Put half the yoghurt in each bowl,",
+          "uz": "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
+          "ru": "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
           "en": "To serve, use 2 bowls. Put half the yoghurt in each bowl,"
         },
         "description": {
@@ -3794,7 +3794,7 @@ export const recipes: Recipe[] = [
         "Cut 3 pears in half, remove stone.",
         "Qo'ying the pears cut side down and grill for 3 minutes.",
         "Turn pears and grill for 3 minutes.",
-        "To Dasturxonga torting, use 2 bowls. Put half the yoghurt in each bowl,",
+        "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
         "Qo'ying half the peaches on top. Seping with nuts and ½ stakan mint leaves."
       ],
       "ru": [
@@ -3803,7 +3803,7 @@ export const recipes: Recipe[] = [
         "Cut 3 pears in half, remove stone.",
         "Выложите the pears cut side down and grill for 3 minutes.",
         "Turn pears and grill for 3 minutes.",
-        "To Подавайте, use 2 bowls. Put half the yoghurt in each bowl,",
+        "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
         "Выложите half the peaches on top. Посыпьте with nuts and ½ стакана mint leaves."
       ],
       "en": [
@@ -3882,7 +3882,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "2 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "2 ст. л. Extra virgin оливковое масло",
+          "ru": "2 ст. л. Extra virgin оливкового масла",
           "en": "2 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/tktdazkw/holding-ingredient.jpg?anchor=center&mode=crop&width=60&upscale=false&rnd=132993713378070000"
@@ -3928,7 +3928,7 @@ export const recipes: Recipe[] = [
         "1 punnet Cherry tomatoes, halved",
         "1 Cucumber, peeled and sliced",
         "100g Feta cheese, crumbled",
-        "2 ст. л. Extra virgin оливковое масло",
+        "2 ст. л. Extra virgin оливкового масла",
         "1⁄2 Lemon",
         "1⁄2 cup of Olives",
         "1 ст. л. Dried oregano"
@@ -3948,8 +3948,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "1 ta salat bargini to'g'rab idishga soling",
-          "ru": "Нарежьте 1 кочан салата и выложите в миску",
+          "uz": "To'g'rang 1 baby cos lettuce",
+          "ru": "Нарежьте 1 baby cos lettuce",
           "en": "Slice 1 baby cos lettuce"
         },
         "description": {
@@ -3962,8 +3962,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "To'g'rang 1 punnet cherry tomatoes into halves",
-          "ru": "Нарежьте 1 punnet cherry tomatoes into halves",
+          "uz": "slice 1 punnet cherry tomatoes into halves",
+          "ru": "slice 1 punnet cherry tomatoes into halves",
           "en": "slice 1 punnet cherry tomatoes into halves"
         },
         "description": {
@@ -3976,8 +3976,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Peel then To'g'rang 1 cucumber",
-          "ru": "Peel then Нарежьте 1 cucumber",
+          "uz": "Peel then slice 1 cucumber",
+          "ru": "Peel then slice 1 cucumber",
           "en": "Peel then slice 1 cucumber"
         },
         "description": {
@@ -3995,8 +3995,8 @@ export const recipes: Recipe[] = [
           "en": "combine into a bowl:"
         },
         "description": {
-          "uz": "1 ta salat bargini to'g'rab idishga soling",
-          "ru": "Нарежьте 1 кочан салата и выложите в миску",
+          "uz": "● cos lettuce, ● cherry tomatos, ● sliced cucumber and ● 100g crumbled feta",
+          "ru": "● cos lettuce, ● cherry tomatos, ● sliced cucumber and ● 100g crumbled feta",
           "en": "● cos lettuce, ● cherry tomatos, ● sliced cucumber and ● 100g crumbled feta"
         },
         "image": "https://irebound.enableme.org.au/media/3qvd32gs/gs5.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133051506025770000"
@@ -4005,7 +4005,7 @@ export const recipes: Recipe[] = [
         "stepNumber": 5,
         "title": {
           "uz": "Quying 2 osh qoshiq zaytun moyi over the top.",
-          "ru": "Сбрызните 2 ст. л. оливковое масло over the top.",
+          "ru": "Сбрызните 2 ст. л. оливкового масла over the top.",
           "en": "Drizzle 2 tablespoons olive oil over the top."
         },
         "description": {
@@ -4018,8 +4018,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Squeeze ½ lemon juice and Seping 1 osh qoshiq oregano ontop, Dasturxonga torting.",
-          "ru": "Squeeze ½ lemon juice and Посыпьте 1 ст. л. oregano ontop, Подавайте.",
+          "uz": "Squeeze ½ lemon juice and sprinkle 1 osh qoshiq oregano ontop, serve.",
+          "ru": "Squeeze ½ lemon juice and sprinkle 1 ст. л. oregano ontop, serve.",
           "en": "Squeeze ½ lemon juice and sprinkle 1 tablespoon oregano ontop, serve."
         },
         "description": {
@@ -4032,20 +4032,20 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "1 ta salat bargini to'g'rab idishga soling",
-        "To'g'rang 1 punnet cherry tomatoes into halves",
-        "Peel then To'g'rang 1 cucumber",
+        "To'g'rang 1 baby cos lettuce",
+        "slice 1 punnet cherry tomatoes into halves",
+        "Peel then slice 1 cucumber",
         "combine into a bowl:",
         "Quying 2 osh qoshiq zaytun moyi over the top.",
-        "Squeeze ½ lemon juice and Seping 1 osh qoshiq oregano ontop, Dasturxonga torting."
+        "Squeeze ½ lemon juice and sprinkle 1 osh qoshiq oregano ontop, serve."
       ],
       "ru": [
-        "Нарежьте 1 кочан салата и выложите в миску",
-        "Нарежьте 1 punnet cherry tomatoes into halves",
-        "Peel then Нарежьте 1 cucumber",
+        "Нарежьте 1 baby cos lettuce",
+        "slice 1 punnet cherry tomatoes into halves",
+        "Peel then slice 1 cucumber",
         "combine into a bowl:",
-        "Сбрызните 2 ст. л. оливковое масло over the top.",
-        "Squeeze ½ lemon juice and Посыпьте 1 ст. л. oregano ontop, Подавайте."
+        "Сбрызните 2 ст. л. оливкового масла over the top.",
+        "Squeeze ½ lemon juice and sprinkle 1 ст. л. oregano ontop, serve."
       ],
       "en": [
         "Slice 1 baby cos lettuce",
@@ -4105,8 +4105,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "1 clove sarimsoq, crushed",
-          "ru": "1 clove чеснок, crushed",
+          "uz": "1 clove Garlic, crushed",
+          "ru": "1 clove Garlic, crushed",
           "en": "1 clove Garlic, crushed"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
@@ -4114,7 +4114,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "3 tablespoon Extra virgin zaytun moyi",
-          "ru": "3 tablespoon Extra virgin оливковое масло",
+          "ru": "3 tablespoon Extra virgin оливкового масла",
           "en": "3 tablespoon Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -4188,7 +4188,7 @@ export const recipes: Recipe[] = [
       "uz": [
         "2 Barramundi fillets, skin on",
         "1 Leek, halved and sliced (white part only)",
-        "1 clove sarimsoq, crushed",
+        "1 clove Garlic, crushed",
         "3 tablespoon Extra virgin zaytun moyi",
         "1 Zucchini, sliced",
         "½ stakan Snow peas, cut into thirds",
@@ -4202,8 +4202,8 @@ export const recipes: Recipe[] = [
       "ru": [
         "2 Barramundi fillets, skin on",
         "1 Leek, halved and sliced (white part only)",
-        "1 clove чеснок, crushed",
-        "3 tablespoon Extra virgin оливковое масло",
+        "1 clove Garlic, crushed",
+        "3 tablespoon Extra virgin оливкового масла",
         "1 Zucchini, sliced",
         "½ стакана Snow peas, cut into thirds",
         "½ стакана frozen peas",
@@ -4232,8 +4232,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Qizdiring fry pan to medium, Qo'shing 1 osh qoshiq zaytun moyi.",
-          "ru": "Разогрейте fry pan to medium, Добавьте 1 ст. л. оливковое масло.",
+          "uz": "Qizdiring fry pan to medium, add 1 osh qoshiq zaytun moyi.",
+          "ru": "Разогрейте fry pan to medium, add 1 ст. л. оливкового масла.",
           "en": "Heat fry pan to medium, add 1 tablespoon olive oil."
         },
         "description": {
@@ -4260,8 +4260,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Turn fillets, Pishiring another 2 minutes.",
-          "ru": "Turn fillets, Готовьте another 2 minutes.",
+          "uz": "Turn fillets, cook another 2 minutes.",
+          "ru": "Turn fillets, cook another 2 minutes.",
           "en": "Turn fillets, cook another 2 minutes."
         },
         "description": {
@@ -4274,13 +4274,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Qizdiring a saucepan to medium. Qo'shing 2 osh qoshiq zaytun moyi and 1 sliced leek (white part only), Pishiring for 2 minutes.",
-          "ru": "Разогрейте a saucepan to medium. Добавьте 2 ст. л. оливковое масло and 1 sliced leek (white part only), Готовьте for 2 minutes.",
+          "uz": "Qizdiring a saucepan to medium. add 2 osh qoshiq zaytun moyi and 1 sliced leek (white part only), cook for 2 minutes.",
+          "ru": "Разогрейте a saucepan to medium. add 2 ст. л. оливкового масла and 1 sliced leek (white part only), cook for 2 minutes.",
           "en": "Heat a saucepan to medium. add 2 tablespoons olive oil and 1 sliced leek (white part only), cook for 2 minutes."
         },
         "description": {
-          "uz": "Qo'shing 2 osh qoshiq zaytun moyi and 1 sliced leek (white part only), Pishiring for 2 minutes.\nQo'shing 1 clove crushed sarimsoq, Pishiring for one minute.",
-          "ru": "Добавьте 2 ст. л. оливковое масло and 1 sliced leek (white part only), Готовьте for 2 minutes.\nДобавьте 1 clove crushed чеснок, Готовьте for one minute.",
+          "uz": "Qo'shing 2 osh qoshiq zaytun moyi and 1 sliced leek (white part only), cook for 2 minutes.\nQo'shing 1 clove ezilgan sarimsoq, cook for one minute.",
+          "ru": "Добавьте 2 ст. л. оливкового масла and 1 sliced leek (white part only), cook for 2 minutes.\nДобавьте 1 clove измельченный чеснок, cook for one minute.",
           "en": "Add 2 tablespoons olive oil and 1 sliced leek (white part only), cook for 2 minutes.\nAdd 1 clove crushed garlic, cook for one minute."
         },
         "image": "https://irebound.enableme.org.au/media/20vlvncg/4.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133047995669330000"
@@ -4293,8 +4293,8 @@ export const recipes: Recipe[] = [
           "en": "Add these vegetables into saucepan:"
         },
         "description": {
-          "uz": "1 Zucchini, sliced\n½ stakan Snow peas, cut into thirds\n½ stakan frozen peas\n½ stakan Chicken Stock (low salt)\n1 bunch broccolini\n\nAralashtiring.",
-          "ru": "1 Zucchini, sliced\n½ стакана Snow peas, cut into thirds\n½ стакана frozen peas\n½ стакана Chicken Stock (low salt)\n1 bunch broccolini\n\nПеремешайте.",
+          "uz": "1 Zucchini, sliced\n½ stakan Snow peas, cut into thirds\n½ stakan frozen peas\n½ stakan Chicken Stock (low salt)\n1 bunch broccolini\n\nStir.",
+          "ru": "1 Zucchini, sliced\n½ стакана Snow peas, cut into thirds\n½ стакана frozen peas\n½ стакана Chicken Stock (low salt)\n1 bunch broccolini\n\nStir.",
           "en": "1 Zucchini, sliced\n½ cup Snow peas, cut into thirds\n½ cup frozen peas\n½ cup Chicken Stock (low salt)\n1 bunch broccolini\n\nStir."
         },
         "image": "https://irebound.enableme.org.au/media/gwpjwusx/6.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133047999481830000"
@@ -4344,8 +4344,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "To Dasturxonga torting, Qo'ying layer of vegetables onto a plate, top with fish and mint yoghurt.",
-          "ru": "To Подавайте, Выложите layer of vegetables onto a plate, top with fish and mint yoghurt.",
+          "uz": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt.",
+          "ru": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt.",
           "en": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt."
         },
         "description": {
@@ -4358,26 +4358,26 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Qizdiring fry pan to medium, Qo'shing 1 osh qoshiq zaytun moyi.",
+        "Qizdiring fry pan to medium, add 1 osh qoshiq zaytun moyi.",
         "Pishiring 2 barramundi fillets skin down for 4 minutes.",
-        "Turn fillets, Pishiring another 2 minutes.",
-        "Qizdiring a saucepan to medium. Qo'shing 2 osh qoshiq zaytun moyi and 1 sliced leek (white part only), Pishiring for 2 minutes.",
+        "Turn fillets, cook another 2 minutes.",
+        "Qizdiring a saucepan to medium. add 2 osh qoshiq zaytun moyi and 1 sliced leek (white part only), cook for 2 minutes.",
         "Qo'shing these vegetables into saucepan:",
         "Qo'shing ½ stakan chicken stock to vegetables, bring to boil.",
         "Then lower temperature and simmer for 3 minutes.",
         "Combine ½ stakan greek yoghurt, ½ a lemon juice and 2 osh qoshiq mint into a small bowl.",
-        "To Dasturxonga torting, Qo'ying layer of vegetables onto a plate, top with fish and mint yoghurt."
+        "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt."
       ],
       "ru": [
-        "Разогрейте fry pan to medium, Добавьте 1 ст. л. оливковое масло.",
+        "Разогрейте fry pan to medium, add 1 ст. л. оливкового масла.",
         "Готовьте 2 barramundi fillets skin down for 4 minutes.",
-        "Turn fillets, Готовьте another 2 minutes.",
-        "Разогрейте a saucepan to medium. Добавьте 2 ст. л. оливковое масло and 1 sliced leek (white part only), Готовьте for 2 minutes.",
+        "Turn fillets, cook another 2 minutes.",
+        "Разогрейте a saucepan to medium. add 2 ст. л. оливкового масла and 1 sliced leek (white part only), cook for 2 minutes.",
         "Добавьте these vegetables into saucepan:",
         "Добавьте ½ стакана chicken stock to vegetables, bring to boil.",
         "Then lower temperature and simmer for 3 minutes.",
         "Combine ½ стакана greek yoghurt, ½ a lemon juice and 2 ст. л. mint into a small bowl.",
-        "To Подавайте, Выложите layer of vegetables onto a plate, top with fish and mint yoghurt."
+        "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt."
       ],
       "en": [
         "Heat fry pan to medium, add 1 tablespoon olive oil.",
@@ -4440,16 +4440,16 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "2 osh qoshiq Extra Virgin zaytun moyi",
-          "ru": "2 ст. л. Extra Virgin оливковое масло",
+          "uz": "2 osh qoshiq Extra Virgin Olive Oil",
+          "ru": "2 ст. л. Extra Virgin Olive Oil",
           "en": "2 tbsp Extra Virgin Olive Oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
       },
       {
         "name": {
-          "uz": "1 clove sarimsoq (crushed)",
-          "ru": "1 clove чеснок (crushed)",
+          "uz": "1 clove garlic (crushed)",
+          "ru": "1 clove garlic (crushed)",
           "en": "1 clove garlic (crushed)"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
@@ -4488,8 +4488,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "sarimsoq crusher",
-          "ru": "чеснок crusher",
+          "uz": "garlic crusher",
+          "ru": "garlic crusher",
           "en": "garlic crusher"
         },
         "image": "https://irebound.enableme.org.au/media/wztlxwab/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019313034100000"
@@ -4507,25 +4507,25 @@ export const recipes: Recipe[] = [
       "uz": [
         "350g Sliced Mushrooms",
         "1 stakan English Spinach",
-        "2 osh qoshiq Extra Virgin zaytun moyi",
-        "1 clove sarimsoq (crushed)",
+        "2 osh qoshiq Extra Virgin Olive Oil",
+        "1 clove garlic (crushed)",
         "1 osh qoshiq Sour cream",
         "4 slices wholegrain or sourdough bread",
         "Frying pan",
         "knife",
-        "sarimsoq crusher",
+        "garlic crusher",
         "chopping board"
       ],
       "ru": [
         "350g Sliced Mushrooms",
         "1 стакан English Spinach",
-        "2 ст. л. Extra Virgin оливковое масло",
-        "1 clove чеснок (crushed)",
+        "2 ст. л. Extra Virgin Olive Oil",
+        "1 clove garlic (crushed)",
         "1 ст. л. Sour cream",
         "4 slices wholegrain or sourdough bread",
         "Frying pan",
         "knife",
-        "чеснок crusher",
+        "garlic crusher",
         "chopping board"
       ],
       "en": [
@@ -4545,8 +4545,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Wipe off 350g mushrooms with a damp cloth, then thickly To'g'rang.",
-          "ru": "Wipe off 350g mushrooms with a damp cloth, then thickly Нарежьте.",
+          "uz": "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
+          "ru": "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
           "en": "Wipe off 350g mushrooms with a damp cloth, then thickly slice."
         },
         "description": {
@@ -4559,8 +4559,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying",
-          "ru": "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла",
+          "uz": "Qizdiring pan to medium heat. Qo'shing 1 osh qoshiq zaytun moyi and 1 clove ezilgan sarimsoq.",
+          "ru": "Разогрейте pan to medium heat. Добавьте 1 ст. л. оливкового масла and 1 clove измельченный чеснок.",
           "en": "Heat pan to medium heat. Add 1 tablespoon olive oil and 1 clove crushed garlic."
         },
         "description": {
@@ -4573,8 +4573,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'shing 350g sliced mushrooms to pan, Pishiring until soft.",
-          "ru": "Добавьте 350g sliced mushrooms to pan, Готовьте until soft.",
+          "uz": "Qo'shing 350g sliced mushrooms to pan, cook until soft.",
+          "ru": "Добавьте 350g sliced mushrooms to pan, cook until soft.",
           "en": "Add 350g sliced mushrooms to pan, cook until soft."
         },
         "description": {
@@ -4587,8 +4587,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Qo'shing 1 stakan spinach and Aralashtiring until the spinach is wilted,",
-          "ru": "Добавьте 1 стакан spinach and Перемешайте until the spinach is wilted,",
+          "uz": "Qo'shing 1 stakan spinach and stir until the spinach is wilted,",
+          "ru": "Добавьте 1 стакан spinach and stir until the spinach is wilted,",
           "en": "Add 1 cup spinach and stir until the spinach is wilted,"
         },
         "description": {
@@ -4601,8 +4601,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Qo'shing 1 osh qoshiq sour cream and Aralashtiring through,",
-          "ru": "Добавьте 1 ст. л. sour cream and Перемешайте through,",
+          "uz": "Qo'shing 1 osh qoshiq sour cream and stir through,",
+          "ru": "Добавьте 1 ст. л. sour cream and stir through,",
           "en": "Add 1 tablespoon sour cream and stir through,"
         },
         "description": {
@@ -4615,8 +4615,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Dasturxonga torting Aralashtiring on top of toasted bread (4 slices).",
-          "ru": "Подавайте Перемешайте on top of toasted bread (4 slices).",
+          "uz": "Serve mix on top of toasted bread (4 slices).",
+          "ru": "Serve mix on top of toasted bread (4 slices).",
           "en": "Serve mix on top of toasted bread (4 slices)."
         },
         "description": {
@@ -4629,20 +4629,20 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Wipe off 350g mushrooms with a damp cloth, then thickly To'g'rang.",
-        "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying",
-        "Qo'shing 350g sliced mushrooms to pan, Pishiring until soft.",
-        "Qo'shing 1 stakan spinach and Aralashtiring until the spinach is wilted,",
-        "Qo'shing 1 osh qoshiq sour cream and Aralashtiring through,",
-        "Dasturxonga torting Aralashtiring on top of toasted bread (4 slices)."
+        "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
+        "Qizdiring pan to medium heat. Qo'shing 1 osh qoshiq zaytun moyi and 1 clove ezilgan sarimsoq.",
+        "Qo'shing 350g sliced mushrooms to pan, cook until soft.",
+        "Qo'shing 1 stakan spinach and stir until the spinach is wilted,",
+        "Qo'shing 1 osh qoshiq sour cream and stir through,",
+        "Serve mix on top of toasted bread (4 slices)."
       ],
       "ru": [
-        "Wipe off 350g mushrooms with a damp cloth, then thickly Нарежьте.",
-        "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла",
-        "Добавьте 350g sliced mushrooms to pan, Готовьте until soft.",
-        "Добавьте 1 стакан spinach and Перемешайте until the spinach is wilted,",
-        "Добавьте 1 ст. л. sour cream and Перемешайте through,",
-        "Подавайте Перемешайте on top of toasted bread (4 slices)."
+        "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
+        "Разогрейте pan to medium heat. Добавьте 1 ст. л. оливкового масла and 1 clove измельченный чеснок.",
+        "Добавьте 350g sliced mushrooms to pan, cook until soft.",
+        "Добавьте 1 стакан spinach and stir until the spinach is wilted,",
+        "Добавьте 1 ст. л. sour cream and stir through,",
+        "Serve mix on top of toasted bread (4 slices)."
       ],
       "en": [
         "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
@@ -4703,7 +4703,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "2 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "2 ст. л. Extra virgin оливковое масло",
+          "ru": "2 ст. л. Extra virgin оливкового масла",
           "en": "2 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -4718,8 +4718,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "2 cloves sarimsoq, crushed",
-          "ru": "2 cloves чеснок, crushed",
+          "uz": "2 cloves Garlic, crushed",
+          "ru": "2 cloves Garlic, crushed",
           "en": "2 cloves Garlic, crushed"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
@@ -4798,8 +4798,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "sarimsoq press",
-          "ru": "чеснок press",
+          "uz": "garlic press",
+          "ru": "garlic press",
           "en": "garlic press"
         },
         "image": "https://irebound.enableme.org.au/media/wztlxwab/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019313034100000"
@@ -4827,7 +4827,7 @@ export const recipes: Recipe[] = [
         "¼ stakan Plain flour",
         "2 osh qoshiq Extra virgin zaytun moyi",
         "1 Leek, sliced, white part only",
-        "2 cloves sarimsoq, crushed",
+        "2 cloves Garlic, crushed",
         "2 cups Chicken Stock",
         "2 Carrots, chopped",
         "1 sheet Puff Pastry, thawed",
@@ -4837,16 +4837,16 @@ export const recipes: Recipe[] = [
         "zip lock bag",
         "bowl",
         "fry pan with lid",
-        "sarimsoq press",
+        "garlic press",
         "ramekins (4)",
         "measuring cup"
       ],
       "ru": [
         "6 Chicken Thighs, trimmed and quartered",
         "¼ стакана Plain flour",
-        "2 ст. л. Extra virgin оливковое масло",
+        "2 ст. л. Extra virgin оливкового масла",
         "1 Leek, sliced, white part only",
-        "2 cloves чеснок, crushed",
+        "2 cloves Garlic, crushed",
         "2 cups Chicken Stock",
         "2 Carrots, chopped",
         "1 sheet Puff Pastry, thawed",
@@ -4856,7 +4856,7 @@ export const recipes: Recipe[] = [
         "zip lock bag",
         "bowl",
         "fry pan with lid",
-        "чеснок press",
+        "garlic press",
         "ramekins (4)",
         "measuring cup"
       ],
@@ -4912,8 +4912,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'ying a heavy bottomed casserole dish over a medium Qizdiring. Qo'shing 1 osh qoshiq of oil.",
-          "ru": "Выложите a heavy bottomed casserole dish over a medium Разогрейте. Добавьте 1 ст. л. of oil.",
+          "uz": "Qo'ying a heavy bottomed casserole dish over a medium heat. Qo'shing 1 osh qoshiq of oil.",
+          "ru": "Выложите a heavy bottomed casserole dish over a medium heat. Добавьте 1 ст. л. of oil.",
           "en": "Place a heavy bottomed casserole dish over a medium heat. Add 1 tbsp of oil."
         },
         "description": {
@@ -4940,8 +4940,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Clean the casserole dish and Qo'ying back on the Qizdiring with another tbsp of oil.",
-          "ru": "Clean the casserole dish and Выложите back on the Разогрейте with another tbsp of oil.",
+          "uz": "Clean the casserole dish and place back on the heat with another tbsp of oil.",
+          "ru": "Clean the casserole dish and place back on the heat with another tbsp of oil.",
           "en": "Clean the casserole dish and place back on the heat with another tbsp of oil."
         },
         "description": {
@@ -4954,8 +4954,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Pishiring the leek until soft then Qo'shing the crushed sarimsoq and Pishiring for a further minute.",
-          "ru": "Готовьте the leek until soft then Добавьте the crushed чеснок and Готовьте for a further minute.",
+          "uz": "Pishiring the leek until soft then add the ezilgan sarimsoq and cook for a further minute.",
+          "ru": "Готовьте the leek until soft then add the измельченный чеснок and cook for a further minute.",
           "en": "Cook the leek until soft then add the crushed garlic and cook for a further minute."
         },
         "description": {
@@ -4982,8 +4982,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Bring the chicken casserole to a boil then lower the Qizdiring. Qopqog'ini yoping and simmer for 30 mins.",
-          "ru": "Bring the chicken casserole to a boil then lower the Разогрейте. Накройте крышкой and simmer for 30 mins.",
+          "uz": "Bring the chicken casserole to a boil then lower the heat. Qopqog'ini yoping and simmer for 30 mins.",
+          "ru": "Bring the chicken casserole to a boil then lower the heat. Накройте крышкой and simmer for 30 mins.",
           "en": "Bring the chicken casserole to a boil then lower the heat. Cover and simmer for 30 mins."
         },
         "description": {
@@ -4996,8 +4996,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Remove the lid and Pishiring for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
-          "ru": "Remove the lid and Готовьте for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
+          "uz": "Remove the lid and cook for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
+          "ru": "Remove the lid and cook for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
           "en": "Remove the lid and cook for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced"
         },
         "description": {
@@ -5038,8 +5038,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 12,
         "title": {
-          "uz": "Use a small sharp knife to To'g'rang a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
-          "ru": "Use a small sharp knife to Нарежьте a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
+          "uz": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
+          "ru": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
           "en": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg."
         },
         "description": {
@@ -5052,13 +5052,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 13,
         "title": {
-          "uz": "Qo'ying the ramekins onto a baking dish and the Pechda pishiring for 10-15 minutes until the pastry is golden brown.",
-          "ru": "Выложите the ramekins onto a baking dish and the Выпекайте for 10-15 minutes until the pastry is golden brown.",
+          "uz": "Qo'ying the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown.",
+          "ru": "Выложите the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown.",
           "en": "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown."
         },
         "description": {
-          "uz": "Dasturxonga torting with a big bowl of steamed vegetables.",
-          "ru": "Подавайте with a big bowl of steamed vegetables.",
+          "uz": "Serve with a big bowl of steamed vegetables.",
+          "ru": "Serve with a big bowl of steamed vegetables.",
           "en": "Serve with a big bowl of steamed vegetables."
         },
         "image": "https://irebound.enableme.org.au/media/adactu5z/cpp12.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050549792130000"
@@ -5068,32 +5068,32 @@ export const recipes: Recipe[] = [
       "uz": [
         "Pechni 200°C ga oldindan qizdiring",
         "Qo'ying flour and chicken thighs into a large zip lock bag. Shake to coat chicken.",
-        "Qo'ying a heavy bottomed casserole dish over a medium Qizdiring. Qo'shing 1 osh qoshiq of oil.",
+        "Qo'ying a heavy bottomed casserole dish over a medium heat. Qo'shing 1 osh qoshiq of oil.",
         "Brown the chicken pieces in batches and set aside",
-        "Clean the casserole dish and Qo'ying back on the Qizdiring with another tbsp of oil.",
-        "Pishiring the leek until soft then Qo'shing the crushed sarimsoq and Pishiring for a further minute.",
+        "Clean the casserole dish and place back on the heat with another tbsp of oil.",
+        "Pishiring the leek until soft then add the ezilgan sarimsoq and cook for a further minute.",
         "Qo'shing chicken, carrots and the stock to the dish.",
-        "Bring the chicken casserole to a boil then lower the Qizdiring. Qopqog'ini yoping and simmer for 30 mins.",
-        "Remove the lid and Pishiring for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
+        "Bring the chicken casserole to a boil then lower the heat. Qopqog'ini yoping and simmer for 30 mins.",
+        "Remove the lid and cook for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
         "Using the top of your ramekins as a template, cut out the puff pastry to make a lid for your pies.",
         "Divide the chicken and leek casserole among 4 x pie ramekins, top with the pastry lids using a fork to press down the edges.",
-        "Use a small sharp knife to To'g'rang a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
-        "Qo'ying the ramekins onto a baking dish and the Pechda pishiring for 10-15 minutes until the pastry is golden brown."
+        "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
+        "Qo'ying the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown."
       ],
       "ru": [
         "Разогрейте духовку до 200°C",
         "Выложите flour and chicken thighs into a large zip lock bag. Shake to coat chicken.",
-        "Выложите a heavy bottomed casserole dish over a medium Разогрейте. Добавьте 1 ст. л. of oil.",
+        "Выложите a heavy bottomed casserole dish over a medium heat. Добавьте 1 ст. л. of oil.",
         "Brown the chicken pieces in batches and set aside",
-        "Clean the casserole dish and Выложите back on the Разогрейте with another tbsp of oil.",
-        "Готовьте the leek until soft then Добавьте the crushed чеснок and Готовьте for a further minute.",
+        "Clean the casserole dish and place back on the heat with another tbsp of oil.",
+        "Готовьте the leek until soft then add the измельченный чеснок and cook for a further minute.",
         "Добавьте chicken, carrots and the stock to the dish.",
-        "Bring the chicken casserole to a boil then lower the Разогрейте. Накройте крышкой and simmer for 30 mins.",
-        "Remove the lid and Готовьте for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
+        "Bring the chicken casserole to a boil then lower the heat. Накройте крышкой and simmer for 30 mins.",
+        "Remove the lid and cook for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
         "Using the top of your ramekins as a template, cut out the puff pastry to make a lid for your pies.",
         "Divide the chicken and leek casserole among 4 x pie ramekins, top with the pastry lids using a fork to press down the edges.",
-        "Use a small sharp knife to Нарежьте a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
-        "Выложите the ramekins onto a baking dish and the Выпекайте for 10-15 minutes until the pastry is golden brown."
+        "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
+        "Выложите the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown."
       ],
       "en": [
         "Preheat oven to 200°C",
@@ -5232,8 +5232,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "2 ta lavash (wrap)ni stolga yozib qo'ying",
-          "ru": "Выложите 2 лепешки (тортильи) на стол",
+          "uz": "Qo'ying 2 wraps on bench.",
+          "ru": "Выложите 2 wraps on bench.",
           "en": "Place 2 wraps on bench."
         },
         "description": {
@@ -5265,8 +5265,8 @@ export const recipes: Recipe[] = [
           "en": "Place another wrap on top and toast in sandwich maker (or pan) 3mins,"
         },
         "description": {
-          "uz": "Dasturxonga torting va rohatlaning",
-          "ru": "Подавайте к столу",
+          "uz": "To'g'rang and serve.",
+          "ru": "Нарежьте and serve.",
           "en": "Slice and serve."
         },
         "image": "https://irebound.enableme.org.au/media/ga2av13f/1.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133036734349970000"
@@ -5274,12 +5274,12 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "2 ta lavash (wrap)ni stolga yozib qo'ying",
+        "Qo'ying 2 wraps on bench.",
         "On each wrap spread:",
         "Qo'ying another wrap on top and toast in sandwich maker (or pan) 3mins,"
       ],
       "ru": [
-        "Выложите 2 лепешки (тортильи) на стол",
+        "Выложите 2 wraps on bench.",
         "On each wrap spread:",
         "Выложите another wrap on top and toast in sandwich maker (or pan) 3mins,"
       ],
@@ -5394,8 +5394,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "zaytun moyi Spray",
-          "ru": "оливковое масло Spray",
+          "uz": "Olive Oil Spray",
+          "ru": "Olive Oil Spray",
           "en": "Olive Oil Spray"
         },
         "image": "https://irebound.enableme.org.au/media/tktdazkw/holding-ingredient.jpg?anchor=center&mode=crop&width=60&upscale=false&rnd=132993713378070000"
@@ -5436,7 +5436,7 @@ export const recipes: Recipe[] = [
         "¼ stakan Parmesan",
         "4 Eggs, lightly beaten",
         "10 sheets Filo Pastry",
-        "zaytun moyi Spray",
+        "Olive Oil Spray",
         "25 x 30 cm baking dish",
         "knife",
         "clean chux cloth"
@@ -5451,7 +5451,7 @@ export const recipes: Recipe[] = [
         "¼ стакана Parmesan",
         "4 Eggs, lightly beaten",
         "10 sheets Filo Pastry",
-        "оливковое масло Spray",
+        "Olive Oil Spray",
         "25 x 30 cm baking dish",
         "knife",
         "clean chux cloth"
@@ -5490,8 +5490,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Rinse 1 bunch shredded silver beet, Qo'ying into pan on medium Qizdiring.",
-          "ru": "Rinse 1 bunch shredded silver beet, Выложите into pan on medium Разогрейте.",
+          "uz": "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
+          "ru": "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
           "en": "Rinse 1 bunch shredded silver beet, place into pan on medium heat."
         },
         "description": {
@@ -5537,8 +5537,8 @@ export const recipes: Recipe[] = [
           "en": "Spray baking dish with oil then line with baking paper."
         },
         "description": {
-          "uz": "Spread 1 filo pastry sheet into tray, spray with oil then Qo'ying another sheet of filo on top.",
-          "ru": "Spread 1 filo pastry sheet into tray, spray with oil then Выложите another sheet of filo on top.",
+          "uz": "Spread 1 filo pastry sheet into tray, spray with oil then place another sheet of filo on top.",
+          "ru": "Spread 1 filo pastry sheet into tray, spray with oil then place another sheet of filo on top.",
           "en": "Spread 1 filo pastry sheet into tray, spray with oil then place another sheet of filo on top."
         },
         "image": "https://irebound.enableme.org.au/media/u3hfmlp1/csp4.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050401242300000"
@@ -5560,8 +5560,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Pechda pishiring 45 minutes until cooked through and brown.",
-          "ru": "Выпекайте 45 minutes until cooked through and brown.",
+          "uz": "Bake 45 minutes until cooked through and brown.",
+          "ru": "Bake 45 minutes until cooked through and brown.",
           "en": "Bake 45 minutes until cooked through and brown."
         },
         "description": {
@@ -5589,22 +5589,22 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Pechni 180°C ga oldindan qizdiring",
-        "Rinse 1 bunch shredded silver beet, Qo'ying into pan on medium Qizdiring.",
+        "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
         "Qopqog'ini yoping and steam until sliver beet is wilted.",
         "In a large bowl, combine:",
         "Spray baking dish with oil then line with baking paper.",
         "Repeat until 5 layers of pastry.",
-        "Pechda pishiring 45 minutes until cooked through and brown.",
+        "Bake 45 minutes until cooked through and brown.",
         "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
         "Разогрейте духовку до 180°C",
-        "Rinse 1 bunch shredded silver beet, Выложите into pan on medium Разогрейте.",
+        "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
         "Накройте крышкой and steam until sliver beet is wilted.",
         "In a large bowl, combine:",
         "Spray baking dish with oil then line with baking paper.",
         "Repeat until 5 layers of pastry.",
-        "Выпекайте 45 minutes until cooked through and brown.",
+        "Bake 45 minutes until cooked through and brown.",
         "Подавайте к столу"
       ],
       "en": [
@@ -5659,8 +5659,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "1 choy qoshiq Cajun Spice Aralashtiring",
-          "ru": "1 ч. л. Cajun Spice Перемешайте",
+          "uz": "1 choy qoshiq Cajun Spice mix",
+          "ru": "1 ч. л. Cajun Spice mix",
           "en": "1 tsp Cajun Spice mix"
         },
         "image": "https://irebound.enableme.org.au/media/doypkedq/powder-2.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133018881196070000"
@@ -5668,7 +5668,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "1 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "1 ст. л. Extra virgin оливковое масло",
+          "ru": "1 ст. л. Extra virgin оливкового масла",
           "en": "1 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -5725,7 +5725,7 @@ export const recipes: Recipe[] = [
     "ingredients": {
       "uz": [
         "2 Salmon Fillets, skin on",
-        "1 choy qoshiq Cajun Spice Aralashtiring",
+        "1 choy qoshiq Cajun Spice mix",
         "1 osh qoshiq Extra virgin zaytun moyi",
         "1 stakan frozen Corn kernels",
         "½ Red capsicum, diced",
@@ -5736,8 +5736,8 @@ export const recipes: Recipe[] = [
       ],
       "ru": [
         "2 Salmon Fillets, skin on",
-        "1 ч. л. Cajun Spice Перемешайте",
-        "1 ст. л. Extra virgin оливковое масло",
+        "1 ч. л. Cajun Spice mix",
+        "1 ст. л. Extra virgin оливкового масла",
         "1 стакан frozen Corn kernels",
         "½ Red capsicum, diced",
         "¼ Pineapple, skin removed and diced",
@@ -5775,8 +5775,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Seping 1 osh qoshiq Cajun spice Aralashtiring over 2 salmon fillets.",
-          "ru": "Посыпьте 1 ст. л. Cajun spice Перемешайте over 2 salmon fillets.",
+          "uz": "Seping 1 osh qoshiq Cajun spice mix over 2 salmon fillets.",
+          "ru": "Посыпьте 1 ст. л. Cajun spice mix over 2 salmon fillets.",
           "en": "Sprinkle 1 tablespoon Cajun spice mix over 2 salmon fillets."
         },
         "description": {
@@ -5789,8 +5789,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qizdiring fry pan to medium, Qo'shing 1 osh qoshiq oil,",
-          "ru": "Разогрейте fry pan to medium, Добавьте 1 ст. л. oil,",
+          "uz": "Qizdiring fry pan to medium, add 1 osh qoshiq oil,",
+          "ru": "Разогрейте fry pan to medium, add 1 ст. л. oil,",
           "en": "Heat fry pan to medium, add 1 tablespoon oil,"
         },
         "description": {
@@ -5817,13 +5817,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Meanwhile, for the salsa put another pan on medium Qizdiring, Qo'shing :",
-          "ru": "Meanwhile, for the salsa put another pan on medium Разогрейте, Добавьте :",
+          "uz": "Meanwhile, for the salsa put another pan on medium heat, add :",
+          "ru": "Meanwhile, for the salsa put another pan on medium heat, add :",
           "en": "Meanwhile, for the salsa put another pan on medium heat, add :"
         },
         "description": {
-          "uz": "1 stakan frozen corn kernels\n½ diced red capsicum\n\nPishiring 2 minutes.",
-          "ru": "1 стакан frozen corn kernels\n½ diced red capsicum\n\nГотовьте 2 minutes.",
+          "uz": "1 stakan frozen corn kernels\n½ diced red capsicum\n\ncook 2 minutes.",
+          "ru": "1 стакан frozen corn kernels\n½ diced red capsicum\n\ncook 2 minutes.",
           "en": "1 cup frozen corn kernels\n½ diced red capsicum\n\ncook 2 minutes."
         },
         "image": "https://irebound.enableme.org.au/media/ggxlknb4/cjs3.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050434084970000"
@@ -5831,8 +5831,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Qo'shing ¼ diced pineapple to salsa Aralashtiring, Pishiring for one minute.",
-          "ru": "Добавьте ¼ diced pineapple to salsa Перемешайте, Готовьте for one minute.",
+          "uz": "Qo'shing ¼ diced pineapple to salsa mix, cook for one minute.",
+          "ru": "Добавьте ¼ diced pineapple to salsa mix, cook for one minute.",
           "en": "Add ¼ diced pineapple to salsa mix, cook for one minute."
         },
         "description": {
@@ -5845,8 +5845,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Remove salsa from Qizdiring, Aralashtiring in:",
-          "ru": "Remove salsa from Разогрейте, Перемешайте in:",
+          "uz": "Remove salsa from heat, stir in:",
+          "ru": "Remove salsa from heat, stir in:",
           "en": "Remove salsa from heat, stir in:"
         },
         "description": {
@@ -5859,8 +5859,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Divide salsa Aralashtiring between 2 plates.",
-          "ru": "Divide salsa Перемешайте between 2 plates.",
+          "uz": "Divide salsa mix between 2 plates.",
+          "ru": "Divide salsa mix between 2 plates.",
           "en": "Divide salsa mix between 2 plates."
         },
         "description": {
@@ -5888,24 +5888,24 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Pechni 180°C ga oldindan qizdiring",
-        "Seping 1 osh qoshiq Cajun spice Aralashtiring over 2 salmon fillets.",
-        "Qizdiring fry pan to medium, Qo'shing 1 osh qoshiq oil,",
+        "Seping 1 osh qoshiq Cajun spice mix over 2 salmon fillets.",
+        "Qizdiring fry pan to medium, add 1 osh qoshiq oil,",
         "Pishiring salmon skin down for 3mins until crispy, turn and transfer to oven:",
-        "Meanwhile, for the salsa put another pan on medium Qizdiring, Qo'shing :",
-        "Qo'shing ¼ diced pineapple to salsa Aralashtiring, Pishiring for one minute.",
-        "Remove salsa from Qizdiring, Aralashtiring in:",
-        "Divide salsa Aralashtiring between 2 plates.",
+        "Meanwhile, for the salsa put another pan on medium heat, add :",
+        "Qo'shing ¼ diced pineapple to salsa mix, cook for one minute.",
+        "Remove salsa from heat, stir in:",
+        "Divide salsa mix between 2 plates.",
         "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
         "Разогрейте духовку до 180°C",
-        "Посыпьте 1 ст. л. Cajun spice Перемешайте over 2 salmon fillets.",
-        "Разогрейте fry pan to medium, Добавьте 1 ст. л. oil,",
+        "Посыпьте 1 ст. л. Cajun spice mix over 2 salmon fillets.",
+        "Разогрейте fry pan to medium, add 1 ст. л. oil,",
         "Готовьте salmon skin down for 3mins until crispy, turn and transfer to oven:",
-        "Meanwhile, for the salsa put another pan on medium Разогрейте, Добавьте :",
-        "Добавьте ¼ diced pineapple to salsa Перемешайте, Готовьте for one minute.",
-        "Remove salsa from Разогрейте, Перемешайте in:",
-        "Divide salsa Перемешайте between 2 plates.",
+        "Meanwhile, for the salsa put another pan on medium heat, add :",
+        "Добавьте ¼ diced pineapple to salsa mix, cook for one minute.",
+        "Remove salsa from heat, stir in:",
+        "Divide salsa mix between 2 plates.",
         "Подавайте к столу"
       ],
       "en": [
@@ -5961,16 +5961,16 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "1 piyoz, finely diced",
-          "ru": "1 лук, finely diced",
+          "uz": "1 Onion, finely diced",
+          "ru": "1 Onion, finely diced",
           "en": "1 Onion, finely diced"
         },
         "image": "https://irebound.enableme.org.au/media/jmlpnxkn/onion.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133018888261170000"
       },
       {
         "name": {
-          "uz": "2 cloves sarimsoq, crushed",
-          "ru": "2 cloves чеснок, crushed",
+          "uz": "2 cloves Garlic, crushed",
+          "ru": "2 cloves Garlic, crushed",
           "en": "2 cloves Garlic, crushed"
         },
         "image": "https://irebound.enableme.org.au/media/wztlxwab/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019313034100000"
@@ -5978,7 +5978,7 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "1 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "1 ст. л. Extra virgin оливковое масло",
+          "ru": "1 ст. л. Extra virgin оливкового масла",
           "en": "1 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -6027,8 +6027,8 @@ export const recipes: Recipe[] = [
     "ingredients": {
       "uz": [
         "1 stakan Brown rice",
-        "1 piyoz, finely diced",
-        "2 cloves sarimsoq, crushed",
+        "1 Onion, finely diced",
+        "2 cloves Garlic, crushed",
         "1 osh qoshiq Extra virgin zaytun moyi",
         "2 cups Broccoli, chopped into florets",
         "2 cups Silver beet, shredded",
@@ -6038,9 +6038,9 @@ export const recipes: Recipe[] = [
       ],
       "ru": [
         "1 стакан Brown rice",
-        "1 лук, finely diced",
-        "2 cloves чеснок, crushed",
-        "1 ст. л. Extra virgin оливковое масло",
+        "1 Onion, finely diced",
+        "2 cloves Garlic, crushed",
+        "1 ст. л. Extra virgin оливкового масла",
         "2 cups Broccoli, chopped into florets",
         "2 cups Silver beet, shredded",
         "100g Feta, crumbled",
@@ -6063,8 +6063,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "1 stakan guruchni o'ramdagi ko'rsatma bo'yicha pishirib oling",
-          "ru": "Приготовьте 1 стакан риса согласно инструкции на упаковке",
+          "uz": "Prepare 1 stakan rice according to directions on pack.",
+          "ru": "Prepare 1 стакан rice according to directions on pack.",
           "en": "Prepare 1 cup rice according to directions on pack."
         },
         "description": {
@@ -6077,8 +6077,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying",
-          "ru": "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла",
+          "uz": "Qizdiring pan to medium, add 1 osh qoshiq zaytun moyi and  1 diced onion,",
+          "ru": "Разогрейте pan to medium, add 1 ст. л. оливкового масла and  1 diced onion,",
           "en": "Heat pan to medium, add 1 tablespoon olive oil and  1 diced onion,"
         },
         "description": {
@@ -6091,8 +6091,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'shing 2 cloves crushed sarimsoq, Pishiring one minute.",
-          "ru": "Добавьте 2 cloves crushed чеснок, Готовьте one minute.",
+          "uz": "Qo'shing 2 cloves ezilgan sarimsoq, cook one minute.",
+          "ru": "Добавьте 2 cloves измельченный чеснок, cook one minute.",
           "en": "Add 2 cloves crushed garlic, cook one minute."
         },
         "description": {
@@ -6105,8 +6105,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Next Qo'shing:",
-          "ru": "Next Добавьте:",
+          "uz": "Next add:",
+          "ru": "Next add:",
           "en": "Next add:"
         },
         "description": {
@@ -6133,8 +6133,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Qo'shing rice, Aralashtiring to combine, and Pishiring a further 5 minutes with lid off.",
-          "ru": "Добавьте rice, Перемешайте to combine, and Готовьте a further 5 minutes with lid off.",
+          "uz": "Qo'shing rice, stir to combine, and cook a further 5 minutes with lid off.",
+          "ru": "Добавьте rice, stir to combine, and cook a further 5 minutes with lid off.",
           "en": "Add rice, stir to combine, and cook a further 5 minutes with lid off."
         },
         "description": {
@@ -6152,8 +6152,8 @@ export const recipes: Recipe[] = [
           "en": "Stir through the:"
         },
         "description": {
-          "uz": "100g Feta, crumbled\n1 Lemon (juice)\n1 osh qoshiq reduced salt Soy Sauce\n\nDasturxonga torting.",
-          "ru": "100g Feta, crumbled\n1 Lemon (juice)\n1 ст. л. reduced salt Soy Sauce\n\nПодавайте.",
+          "uz": "100g Feta, crumbled\n1 Lemon (juice)\n1 osh qoshiq reduced salt Soy Sauce\n\nServe.",
+          "ru": "100g Feta, crumbled\n1 Lemon (juice)\n1 ст. л. reduced salt Soy Sauce\n\nServe.",
           "en": "100g Feta, crumbled\n1 Lemon (juice)\n1 tbsp reduced salt Soy Sauce\n\nServe."
         },
         "image": "https://irebound.enableme.org.au/media/b2ki4rwx/1.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133036770566200000"
@@ -6161,21 +6161,21 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "1 stakan guruchni o'ramdagi ko'rsatma bo'yicha pishirib oling",
-        "Tavani o'rtacha alovda qizdiring va 1 osh qoshiq zaytun moyi quying",
-        "Qo'shing 2 cloves crushed sarimsoq, Pishiring one minute.",
-        "Next Qo'shing:",
+        "Prepare 1 stakan rice according to directions on pack.",
+        "Qizdiring pan to medium, add 1 osh qoshiq zaytun moyi and  1 diced onion,",
+        "Qo'shing 2 cloves ezilgan sarimsoq, cook one minute.",
+        "Next add:",
         "Qopqog'ini yoping with lid and steam vegetables for 5 minutes.",
-        "Qo'shing rice, Aralashtiring to combine, and Pishiring a further 5 minutes with lid off.",
+        "Qo'shing rice, stir to combine, and cook a further 5 minutes with lid off.",
         "Aralashtiring through the:"
       ],
       "ru": [
-        "Приготовьте 1 стакан риса согласно инструкции на упаковке",
-        "Разогрейте сковороду на среднем огне и добавьте 1 ст. л. оливкового масла",
-        "Добавьте 2 cloves crushed чеснок, Готовьте one minute.",
-        "Next Добавьте:",
+        "Prepare 1 стакан rice according to directions on pack.",
+        "Разогрейте pan to medium, add 1 ст. л. оливкового масла and  1 diced onion,",
+        "Добавьте 2 cloves измельченный чеснок, cook one minute.",
+        "Next add:",
         "Накройте крышкой with lid and steam vegetables for 5 minutes.",
-        "Добавьте rice, Перемешайте to combine, and Готовьте a further 5 minutes with lid off.",
+        "Добавьте rice, stir to combine, and cook a further 5 minutes with lid off.",
         "Перемешайте through the:"
       ],
       "en": [
@@ -6353,13 +6353,13 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Ushbu retseptni bir kun oldin boshlang:",
-          "ru": "Начните приготовление накануне:",
+          "uz": "Start this recipe the day before:",
+          "ru": "Start this recipe the day before:",
           "en": "Start this recipe the day before:"
         },
         "description": {
-          "uz": "To'g'rang 2 bananas into chunks,\nQo'ying chunks into a container,\nfreeze overnight.",
-          "ru": "Нарежьте 2 bananas into chunks,\nВыложите chunks into a container,\nfreeze overnight.",
+          "uz": "To'g'rang 2 bananas into chunks,\nplace chunks into a container,\nfreeze overnight.",
+          "ru": "Нарежьте 2 bananas into chunks,\nplace chunks into a container,\nfreeze overnight.",
           "en": "Chop 2 bananas into chunks,\nplace chunks into a container,\nfreeze overnight."
         },
         "image": "https://irebound.enableme.org.au/media/l5cnzrmp/bsb2.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050445652070000"
@@ -6400,8 +6400,8 @@ export const recipes: Recipe[] = [
           "en": "Divide ingredients into the bowls:"
         },
         "description": {
-          "uz": "1⁄2 cup Blueberries\n1⁄2 cup Strawberries, cut into quarters\n1⁄2 cup Almonds, chopped\n2 osh qoshiq desiccated coconut\n1 stakan of Granola\n\nDasturxonga torting.",
-          "ru": "1⁄2 cup Blueberries\n1⁄2 cup Strawberries, cut into quarters\n1⁄2 cup Almonds, chopped\n2 ст. л. desiccated coconut\n1 стакан of Granola\n\nПодавайте.",
+          "uz": "1⁄2 cup Blueberries\n1⁄2 cup Strawberries, cut into quarters\n1⁄2 cup Almonds, chopped\n2 osh qoshiq desiccated coconut\n1 stakan of Granola\n\nServe.",
+          "ru": "1⁄2 cup Blueberries\n1⁄2 cup Strawberries, cut into quarters\n1⁄2 cup Almonds, chopped\n2 ст. л. desiccated coconut\n1 стакан of Granola\n\nServe.",
           "en": "1⁄2 cup Blueberries\n1⁄2 cup Strawberries, cut into quarters\n1⁄2 cup Almonds, chopped\n2 tbsp desiccated coconut\n1 cup of Granola\n\nServe."
         },
         "image": "https://irebound.enableme.org.au/media/dnjdcw1s/bsb.jpg?anchor=center&mode=crop&width=500&upscale=false&rnd=133050444957400000"
@@ -6409,13 +6409,13 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Ushbu retseptni bir kun oldin boshlang:",
+        "Start this recipe the day before:",
         "Allow banana chunks to thaw on the bench for 10 minutes.",
         "Qo'ying in food processor with 1 choy qoshiq vanilla. Blend until smooth.",
         "Divide ingredients into the bowls:"
       ],
       "ru": [
-        "Начните приготовление накануне:",
+        "Start this recipe the day before:",
         "Allow banana chunks to thaw on the bench for 10 minutes.",
         "Выложите in food processor with 1 ч. л. vanilla. Blend until smooth.",
         "Divide ingredients into the bowls:"
@@ -6460,16 +6460,16 @@ export const recipes: Recipe[] = [
     "detailedIngredients": [
       {
         "name": {
-          "uz": "1 piyoz (diced)",
-          "ru": "1 лук (diced)",
+          "uz": "1 Onion (diced)",
+          "ru": "1 Onion (diced)",
           "en": "1 Onion (diced)"
         },
         "image": "https://irebound.enableme.org.au/media/jmlpnxkn/onion.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133018888261170000"
       },
       {
         "name": {
-          "uz": "2 cloves sarimsoq",
-          "ru": "2 cloves чеснок",
+          "uz": "2 cloves Garlic",
+          "ru": "2 cloves Garlic",
           "en": "2 cloves Garlic"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
@@ -6484,8 +6484,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "2 osh qoshiq Extra Virgin zaytun moyi",
-          "ru": "2 ст. л. Extra Virgin оливковое масло",
+          "uz": "2 osh qoshiq Extra Virgin Olive Oil",
+          "ru": "2 ст. л. Extra Virgin Olive Oil",
           "en": "2 tbsp Extra Virgin Olive Oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -6605,10 +6605,10 @@ export const recipes: Recipe[] = [
     ],
     "ingredients": {
       "uz": [
-        "1 piyoz (diced)",
-        "2 cloves sarimsoq",
+        "1 Onion (diced)",
+        "2 cloves Garlic",
         "2 osh qoshiq Parsley (chopped)",
-        "2 osh qoshiq Extra Virgin zaytun moyi",
+        "2 osh qoshiq Extra Virgin Olive Oil",
         "1 can Red kidney beans",
         "1 can Chopped tomatoes",
         "1 Red capsicum (diced)",
@@ -6625,10 +6625,10 @@ export const recipes: Recipe[] = [
         "1 small tub greek yoghurt (optional)"
       ],
       "ru": [
-        "1 лук (diced)",
-        "2 cloves чеснок",
+        "1 Onion (diced)",
+        "2 cloves Garlic",
         "2 ст. л. Parsley (chopped)",
-        "2 ст. л. Extra Virgin оливковое масло",
+        "2 ст. л. Extra Virgin Olive Oil",
         "1 can Red kidney beans",
         "1 can Chopped tomatoes",
         "1 Red capsicum (diced)",
@@ -6669,8 +6669,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Bean Burrito: Qizdiring 1 osh qoshiq zaytun moyi in a pan over medium Qizdiring.",
-          "ru": "Bean Burrito: Разогрейте 1 ст. л. оливковое масло in a pan over medium Разогрейте.",
+          "uz": "Bean Burrito: Qizdiring 1 osh qoshiq zaytun moyi in a pan over medium heat.",
+          "ru": "Bean Burrito: Разогрейте 1 ст. л. оливкового масла in a pan over medium heat.",
           "en": "Bean Burrito: Heat 1 tablespoon olive oil in a pan over medium heat."
         },
         "description": {
@@ -6683,8 +6683,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Pishiring 1 diced piyoz until soft.",
-          "ru": "Готовьте 1 diced лук until soft.",
+          "uz": "Pishiring 1 diced onion until soft.",
+          "ru": "Готовьте 1 diced onion until soft.",
           "en": "Cook 1 diced onion until soft."
         },
         "description": {
@@ -6697,8 +6697,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'shing 2 cloves crushed sarimsoq and Pishiring for 1 minute,",
-          "ru": "Добавьте 2 cloves crushed чеснок and Готовьте for 1 minute,",
+          "uz": "Qo'shing 2 cloves ezilgan sarimsoq and cook for 1 minute,",
+          "ru": "Добавьте 2 cloves измельченный чеснок and cook for 1 minute,",
           "en": "Add 2 cloves crushed garlic and cook for 1 minute,"
         },
         "description": {
@@ -6711,8 +6711,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Qo'shing 1 diced red capsicum, Pishiring until soft.",
-          "ru": "Добавьте 1 diced red capsicum, Готовьте until soft.",
+          "uz": "Qo'shing 1 diced red capsicum, cook until soft.",
+          "ru": "Добавьте 1 diced red capsicum, cook until soft.",
           "en": "Add 1 diced red capsicum, cook until soft."
         },
         "description": {
@@ -6725,8 +6725,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Qo'shing:",
-          "ru": "Добавьте:",
+          "uz": "Add:",
+          "ru": "Add:",
           "en": "Add:"
         },
         "description": {
@@ -6767,8 +6767,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "To Dasturxonga torting Divide 1 chopped cos lettuce between 4 bowls.",
-          "ru": "To Подавайте Divide 1 chopped cos lettuce between 4 bowls.",
+          "uz": "To serve Divide 1 chopped cos lettuce between 4 bowls.",
+          "ru": "To serve Divide 1 chopped cos lettuce between 4 bowls.",
           "en": "To serve Divide 1 chopped cos lettuce between 4 bowls."
         },
         "description": {
@@ -6823,27 +6823,27 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Bean Burrito: Qizdiring 1 osh qoshiq zaytun moyi in a pan over medium Qizdiring.",
-        "Pishiring 1 diced piyoz until soft.",
-        "Qo'shing 2 cloves crushed sarimsoq and Pishiring for 1 minute,",
-        "Qo'shing 1 diced red capsicum, Pishiring until soft.",
-        "Qo'shing:",
+        "Bean Burrito: Qizdiring 1 osh qoshiq zaytun moyi in a pan over medium heat.",
+        "Pishiring 1 diced onion until soft.",
+        "Qo'shing 2 cloves ezilgan sarimsoq and cook for 1 minute,",
+        "Qo'shing 1 diced red capsicum, cook until soft.",
+        "Add:",
         "Guacamole: In a different bowl, mash together",
         "Salsa: In another bowl, combine:",
-        "To Dasturxonga torting Divide 1 chopped cos lettuce between 4 bowls.",
+        "To serve Divide 1 chopped cos lettuce between 4 bowls.",
         "Top with Bean Burrito mixture.",
         "Qo'shing 2 osh qoshiq each of guacamole and salsa.",
         "Top with Greek yoghurt (optional)."
       ],
       "ru": [
-        "Bean Burrito: Разогрейте 1 ст. л. оливковое масло in a pan over medium Разогрейте.",
-        "Готовьте 1 diced лук until soft.",
-        "Добавьте 2 cloves crushed чеснок and Готовьте for 1 minute,",
-        "Добавьте 1 diced red capsicum, Готовьте until soft.",
-        "Добавьте:",
+        "Bean Burrito: Разогрейте 1 ст. л. оливкового масла in a pan over medium heat.",
+        "Готовьте 1 diced onion until soft.",
+        "Добавьте 2 cloves измельченный чеснок and cook for 1 minute,",
+        "Добавьте 1 diced red capsicum, cook until soft.",
+        "Add:",
         "Guacamole: In a different bowl, mash together",
         "Salsa: In another bowl, combine:",
-        "To Подавайте Divide 1 chopped cos lettuce between 4 bowls.",
+        "To serve Divide 1 chopped cos lettuce between 4 bowls.",
         "Top with Bean Burrito mixture.",
         "Добавьте 2 ст. л. each of guacamole and salsa.",
         "Top with Greek yoghurt (optional)."
@@ -6896,23 +6896,23 @@ export const recipes: Recipe[] = [
       {
         "name": {
           "uz": "1 osh qoshiq Extra virgin zaytun moyi",
-          "ru": "1 ст. л. Extra virgin оливковое масло",
+          "ru": "1 ст. л. Extra virgin оливкового масла",
           "en": "1 tbsp Extra virgin olive oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
       },
       {
         "name": {
-          "uz": "1 piyoz, thinly sliced",
-          "ru": "1 лук, thinly sliced",
+          "uz": "1 onion, thinly sliced",
+          "ru": "1 onion, thinly sliced",
           "en": "1 onion, thinly sliced"
         },
         "image": "https://irebound.enableme.org.au/media/ufndppyb/onion.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298308500000"
       },
       {
         "name": {
-          "uz": "2 cloves of sarimsoq, crushed",
-          "ru": "2 cloves of чеснок, crushed",
+          "uz": "2 cloves of garlic, crushed",
+          "ru": "2 cloves of garlic, crushed",
           "en": "2 cloves of garlic, crushed"
         },
         "image": "https://irebound.enableme.org.au/media/rt3ly3cf/garlic.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133015957098130000"
@@ -7033,8 +7033,8 @@ export const recipes: Recipe[] = [
     "ingredients": {
       "uz": [
         "1 osh qoshiq Extra virgin zaytun moyi",
-        "1 piyoz, thinly sliced",
-        "2 cloves of sarimsoq, crushed",
+        "1 onion, thinly sliced",
+        "2 cloves of garlic, crushed",
         "1 red capsicum, thinly sliced",
         "2 cans of chopped tomatoes",
         "1⁄2 tsp cayenne pepper",
@@ -7051,9 +7051,9 @@ export const recipes: Recipe[] = [
         "chopping board"
       ],
       "ru": [
-        "1 ст. л. Extra virgin оливковое масло",
-        "1 лук, thinly sliced",
-        "2 cloves of чеснок, crushed",
+        "1 ст. л. Extra virgin оливкового масла",
+        "1 onion, thinly sliced",
+        "2 cloves of garlic, crushed",
         "1 red capsicum, thinly sliced",
         "2 cans of chopped tomatoes",
         "1⁄2 tsp cayenne pepper",
@@ -7094,7 +7094,7 @@ export const recipes: Recipe[] = [
         "stepNumber": 1,
         "title": {
           "uz": "Qizdiring 1 osh qoshiq of zaytun moyi in a medium pan.",
-          "ru": "Разогрейте 1 ст. л. of оливковое масло in a medium pan.",
+          "ru": "Разогрейте 1 ст. л. of оливкового масла in a medium pan.",
           "en": "Heat 1 tbsp of olive oil in a medium pan."
         },
         "description": {
@@ -7107,8 +7107,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Qo'shing 1 sliced piyoz and fry until soft.",
-          "ru": "Добавьте 1 sliced лук and fry until soft.",
+          "uz": "Qo'shing 1 sliced onion and fry until soft.",
+          "ru": "Добавьте 1 sliced onion and fry until soft.",
           "en": "Add 1 sliced onion and fry until soft."
         },
         "description": {
@@ -7121,8 +7121,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Qo'shing 2 cloves of crushed sarimsoq and Pishiring for a further minute.",
-          "ru": "Добавьте 2 cloves of crushed чеснок and Готовьте for a further minute.",
+          "uz": "Qo'shing 2 cloves of ezilgan sarimsoq and cook for a further minute.",
+          "ru": "Добавьте 2 cloves of измельченный чеснок and cook for a further minute.",
           "en": "Add 2 cloves of crushed garlic and cook for a further minute."
         },
         "description": {
@@ -7135,8 +7135,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Qo'shing the sliced capsicum and Pishiring for 5-7 minutes until soft.",
-          "ru": "Добавьте the sliced capsicum and Готовьте for 5-7 minutes until soft.",
+          "uz": "Qo'shing the sliced capsicum and cook for 5-7 minutes until soft.",
+          "ru": "Добавьте the sliced capsicum and cook for 5-7 minutes until soft.",
           "en": "Add the sliced capsicum and cook for 5-7 minutes until soft."
         },
         "description": {
@@ -7149,8 +7149,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Qo'shing 2 cans of chopped tomatoes, spices and sugar to the pan and Aralashtiring to combine.",
-          "ru": "Добавьте 2 cans of chopped tomatoes, spices and sugar to the pan and Перемешайте to combine.",
+          "uz": "Qo'shing 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
+          "ru": "Добавьте 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
           "en": "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine."
         },
         "description": {
@@ -7205,8 +7205,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Top with parsley and Dasturxonga torting with toast.",
-          "ru": "Top with parsley and Подавайте with toast.",
+          "uz": "Top with parsley and serve with toast.",
+          "ru": "Top with parsley and serve with toast.",
           "en": "Top with parsley and serve with toast."
         },
         "description": {
@@ -7220,25 +7220,25 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Qizdiring 1 osh qoshiq of zaytun moyi in a medium pan.",
-        "Qo'shing 1 sliced piyoz and fry until soft.",
-        "Qo'shing 2 cloves of crushed sarimsoq and Pishiring for a further minute.",
-        "Qo'shing the sliced capsicum and Pishiring for 5-7 minutes until soft.",
-        "Qo'shing 2 cans of chopped tomatoes, spices and sugar to the pan and Aralashtiring to combine.",
+        "Qo'shing 1 sliced onion and fry until soft.",
+        "Qo'shing 2 cloves of ezilgan sarimsoq and cook for a further minute.",
+        "Qo'shing the sliced capsicum and cook for 5-7 minutes until soft.",
+        "Qo'shing 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
         "Bring to a simmer.",
         "Crack the eggs one at a time on top of the tomato mixture making sure to space them evenly around the pan.",
         "Qopqog'ini yoping the pan and allow to simmer for another 10 mins until the eggs are cooked to your liking.",
-        "Top with parsley and Dasturxonga torting with toast."
+        "Top with parsley and serve with toast."
       ],
       "ru": [
-        "Разогрейте 1 ст. л. of оливковое масло in a medium pan.",
-        "Добавьте 1 sliced лук and fry until soft.",
-        "Добавьте 2 cloves of crushed чеснок and Готовьте for a further minute.",
-        "Добавьте the sliced capsicum and Готовьте for 5-7 minutes until soft.",
-        "Добавьте 2 cans of chopped tomatoes, spices and sugar to the pan and Перемешайте to combine.",
+        "Разогрейте 1 ст. л. of оливкового масла in a medium pan.",
+        "Добавьте 1 sliced onion and fry until soft.",
+        "Добавьте 2 cloves of измельченный чеснок and cook for a further minute.",
+        "Добавьте the sliced capsicum and cook for 5-7 minutes until soft.",
+        "Добавьте 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
         "Bring to a simmer.",
         "Crack the eggs one at a time on top of the tomato mixture making sure to space them evenly around the pan.",
         "Накройте крышкой the pan and allow to simmer for another 10 mins until the eggs are cooked to your liking.",
-        "Top with parsley and Подавайте with toast."
+        "Top with parsley and serve with toast."
       ],
       "en": [
         "Heat 1 tbsp of olive oil in a medium pan.",
@@ -7317,8 +7317,8 @@ export const recipes: Recipe[] = [
       },
       {
         "name": {
-          "uz": "Extra Virgin zaytun moyi",
-          "ru": "Extra Virgin оливковое масло",
+          "uz": "Extra Virgin Olive Oil",
+          "ru": "Extra Virgin Olive Oil",
           "en": "Extra Virgin Olive Oil"
         },
         "image": "https://irebound.enableme.org.au/media/upgho5td/olive-oil.png?anchor=center&mode=crop&width=60&upscale=false&rnd=133019298311800000"
@@ -7370,7 +7370,7 @@ export const recipes: Recipe[] = [
         "1 Avocado",
         "1 Lemon (juiced)",
         "100g Hard Feta Cheese",
-        "Extra Virgin zaytun moyi",
+        "Extra Virgin Olive Oil",
         "1⁄2 cup Parsley Leaves, roughly torn (optional)",
         "Toaster",
         "Fork",
@@ -7382,7 +7382,7 @@ export const recipes: Recipe[] = [
         "1 Avocado",
         "1 Lemon (juiced)",
         "100g Hard Feta Cheese",
-        "Extra Virgin оливковое масло",
+        "Extra Virgin Olive Oil",
         "1⁄2 cup Parsley Leaves, roughly torn (optional)",
         "Toaster",
         "Fork",
@@ -7406,8 +7406,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "1 ta avokado mag'zini va 1 ta laym (yoki limon) sharbatini idishga soling",
-          "ru": "Выложите мякоть 1 авокадо и сок 1 лайма (или лимона) в миску",
+          "uz": "Scoop 1 Avocado and 1 lemon’s juice into a small bowl,",
+          "ru": "Scoop 1 Avocado and 1 lemon’s juice into a small bowl,",
           "en": "Scoop 1 Avocado and 1 lemon’s juice into a small bowl,"
         },
         "description": {
@@ -7420,8 +7420,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Avokado aralashmasini vilka yoki kartoshka ezgich bilan yaxshilab ezing",
-          "ru": "Разминайте авокадо вилкой или толкушкой до однородности",
+          "uz": "Mash avocado with a fork.",
+          "ru": "Mash avocado with a fork.",
           "en": "Mash avocado with a fork."
         },
         "description": {
@@ -7448,8 +7448,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Quying the zaytun moyi over the toast,",
-          "ru": "Сбрызните the оливковое масло over the toast,",
+          "uz": "Quying the Olive Oil over the toast,",
+          "ru": "Сбрызните the Olive Oil over the toast,",
           "en": "Drizzle the Olive Oil over the toast,"
         },
         "description": {
@@ -7504,19 +7504,19 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "1 ta avokado mag'zini va 1 ta laym (yoki limon) sharbatini idishga soling",
-        "Avokado aralashmasini vilka yoki kartoshka ezgich bilan yaxshilab ezing",
+        "Scoop 1 Avocado and 1 lemon’s juice into a small bowl,",
+        "Mash avocado with a fork.",
         "Toast the 4 slices of bread,",
-        "Quying the zaytun moyi over the toast,",
+        "Quying the Olive Oil over the toast,",
         "Spread the Avocado mixture on the toast.",
         "Crumble the 100g Feta on top of the avocado.",
         "Seping the ½ stakan Parsley on top (optional)."
       ],
       "ru": [
-        "Выложите мякоть 1 авокадо и сок 1 лайма (или лимона) в миску",
-        "Разминайте авокадо вилкой или толкушкой до однородности",
+        "Scoop 1 Avocado and 1 lemon’s juice into a small bowl,",
+        "Mash avocado with a fork.",
         "Toast the 4 slices of bread,",
-        "Сбрызните the оливковое масло over the toast,",
+        "Сбрызните the Olive Oil over the toast,",
         "Spread the Avocado mixture on the toast.",
         "Crumble the 100g Feta on top of the avocado.",
         "Посыпьте the ½ стакана Parsley on top (optional)."
