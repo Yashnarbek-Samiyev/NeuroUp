@@ -21,7 +21,6 @@ interface HeroSectionProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
   onOpenFastModal: () => void;
-  onOpenAuthModal?: (mode: 'login' | 'signup') => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -29,8 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onSelectTab,
   searchQuery,
   setSearchQuery,
-  onOpenFastModal: _onOpenFastModal,
-  onOpenAuthModal
+  onOpenFastModal: _onOpenFastModal
 }) => {
   const t = translations[language];
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -228,17 +226,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </button>
 
             </div>
-
-            {onOpenAuthModal && (
-              <div className="mt-3 text-center">
-                <button
-                  onClick={() => onOpenAuthModal('signup')}
-                  className="text-xs font-bold text-brand-600 hover:underline"
-                >
-                  {t.whySignUp}
-                </button>
-              </div>
-            )}
 
           </div>
 

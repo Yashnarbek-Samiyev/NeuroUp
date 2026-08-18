@@ -17,7 +17,6 @@ import { HintsSection } from './components/HintsSection';
 import { NeuroTrackerSection } from './components/NeuroTrackerSection';
 import { SavedSection } from './components/SavedSection';
 import { EmergencyFASTModal } from './components/EmergencyFASTModal';
-import { AuthModal, UserProfile } from './components/AuthModal';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
@@ -27,20 +26,6 @@ export const App: React.FC = () => {
   const [savedFavorites, setSavedFavorites] = useState<string[]>(getSavedFavorites);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [showFastModal, setShowFastModal] = useState<boolean>(false);
-  const [authModalState, setAuthModalState] = useState<{ isOpen: boolean; mode: 'login' | 'signup' }>({
-    isOpen: false,
-    mode: 'login'
-  });
-  
-  // User Authentication State
-  const [user, setUser] = useState<UserProfile | null>(() => {
-    try {
-      const saved = localStorage.getItem('neuroup_user');
-      return saved ? JSON.parse(saved) : null;
-    } catch {
-      return null;
-    }
-  });
 
   // Sync accessibility classes with DOM
   useEffect(() => {
@@ -93,18 +78,9 @@ export const App: React.FC = () => {
     // Workout completed
   };
 
-  const handleLogout = () => {
-    setUser(null);
-    try {
-      localStorage.removeItem('neuroup_user');
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-200">
-      {/* Top Navbar with i-REBOUND design and Log in / Sign up */}
+      {/* Top Navbar */}
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -112,9 +88,6 @@ export const App: React.FC = () => {
         setLanguage={handleLanguageChange}
         savedCount={savedFavorites.length}
         onOpenFastModal={() => setShowFastModal(true)}
-        onOpenAuthModal={(mode) => setAuthModalState({ isOpen: true, mode })}
-        user={user}
-        onLogout={handleLogout}
       />
 
       {/* Accessibility Toolbar */}
@@ -134,7 +107,6 @@ export const App: React.FC = () => {
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
               onOpenFastModal={() => setShowFastModal(true)}
-              onOpenAuthModal={(mode) => setAuthModalState({ isOpen: true, mode })}
             />
             <EatWellSection
               language={language}
@@ -146,6 +118,8 @@ export const App: React.FC = () => {
               language={language}
               savedFavorites={savedFavorites}
               onToggleFavorite={handleToggleFavorite}
+              onWorkoutCompleted={handleWorkoutCompleted}
+              onSelectTab={setActiveTab}
               searchQuery={searchQuery}
             />
             <HintsSection
@@ -217,15 +191,6 @@ export const App: React.FC = () => {
           language={language}
         />
       )}
-
-      {/* Auth Modal (Log in / Sign up) */}
-      <AuthModal
-        isOpen={authModalState.isOpen}
-        initialMode={authModalState.mode}
-        onClose={() => setAuthModalState({ isOpen: false, mode: 'login' })}
-        language={language}
-        onLoginSuccess={(loggedUser) => setUser(loggedUser)}
-      />
 
       {/* Footer */}
       <Footer
