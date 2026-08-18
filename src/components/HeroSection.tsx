@@ -227,15 +227,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
               </button>
 
-              {/* Bottom Caption Bar */}
-              <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-black/60 backdrop-blur-md text-white z-10 flex items-center justify-between text-xs">
-                <span className="font-bold truncate max-w-[170px]">
-                  {t.videoOverviewTitle}
-                </span>
-                <span className="text-[11px] text-brand-300 font-semibold">
-                  HD 9:16
-                </span>
-              </div>
             </div>
 
             {onOpenAuthModal && (
