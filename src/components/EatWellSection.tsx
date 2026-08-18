@@ -381,10 +381,10 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
 
 
-      {/* Modal 3: Weekly Meal Planner (Word Document Viewer + Download) */}
+      {/* Modal 3: Weekly Meal Planner (Exact 1:1 Word Document Template + Download) */}
       {showMealPlannerModal && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm p-3 sm:p-6 flex items-center justify-center animate-fadeIn">
-          <div className="relative bg-white dark:bg-slate-900 rounded-3xl max-w-4xl w-full p-5 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 max-h-[92vh] flex flex-col justify-between">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm p-2 sm:p-6 flex items-center justify-center animate-fadeIn">
+          <div className="relative bg-white dark:bg-slate-900 rounded-3xl max-w-5xl w-full p-4 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 max-h-[92vh] flex flex-col justify-between">
             
             {/* Close button */}
             <button
@@ -395,128 +395,76 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               <X className="w-4 h-4" />
             </button>
 
-            {/* Modal Header */}
-            <div className="flex items-center gap-3.5 mb-5 shrink-0 border-b border-slate-100 dark:border-slate-800 pb-4">
-              <div className="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-950 text-purple-600 flex items-center justify-center shrink-0 shadow-sm">
-                <FileText className="w-6 h-6" />
+            {/* Document Header (1:1 with docx) */}
+            <div className="flex items-center gap-3.5 mb-4 shrink-0 border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 flex items-center justify-center shrink-0 shadow-sm">
+                <FileText className="w-5 h-5" />
               </div>
               <div>
-                <div className="flex items-center gap-2">
-                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
-                    haftalik-ovqatlanish-rejasi-neuropath.docx
-                  </span>
-                </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-navy-800 dark:text-white mt-1">
-                  Haftalik Ovqatlanish Rejasi
+                <h3 className="text-xl sm:text-2xl font-extrabold text-navy-800 dark:text-white">
+                  Haftalik ovqatlanish rejasi
                 </h3>
-                <p className="text-xs text-slate-500">O'rta yer dengizi parheziga asoslangan 7 kunlik taomnoma</p>
               </div>
             </div>
 
-            {/* Document Content */}
-            <div className="space-y-4 overflow-y-auto pr-1 text-xs sm:text-sm my-2 flex-grow">
+            {/* Document Body (Exact 1:1 Table from docx) */}
+            <div className="overflow-y-auto overflow-x-auto pr-1 my-2 flex-grow">
               
-              <div className="space-y-3">
-                {[
-                  {
-                    day: "Dushanba",
-                    breakfast: "Pomidor va zaytun moyli javdar tosti, 1 ta qaynatilgan tuxum",
-                    lunch: "Dimlangan oq loviya va pomidorli baliq filesi",
-                    dinner: "Kinoa va kalamata zaytunli yangi sabzavotli salat",
-                    snack: "Yangi olma va 4 dona yong'oq mag'zi"
-                  },
-                  {
-                    day: "Seshanba",
-                    breakfast: "Yong'oq, chia va rezavor mevalar bilan uy myuslisi",
-                    lunch: "Sabzavotli noxatli xumus, javdar tosti va barra bodring",
-                    dinner: "Zarchavali pishirilgan losos va bug'da pishgan brokkoli",
-                    snack: "Shakarsiz yunoncha yogurt va dolchin"
-                  },
-                  {
-                    day: "Chorshanba",
-                    breakfast: "Qovoqcha va pashot tuxumli quymoq, yangi ismaloq",
-                    lunch: "Yasmiq (chechevitsa) va sabzavotli to'yimli sho'rva",
-                    dinner: "Pechda zaytun moyida pishgan kartoshka va yunoncha salat",
-                    snack: "Grilda pishirilgan nok va yalpiz"
-                  },
-                  {
-                    day: "Payshanba",
-                    breakfast: "Avokado va feta pishloqli qarsildoq toast, ko'k choy",
-                    lunch: "Ismaloq va pishloqli pishiriq, barra pomidorlar",
-                    dinner: "Qarsildoq po'stli barramundi va dimlangan sabzavotlar",
-                    snack: "Bir hovuch bodom va 1 dona banan"
-                  },
-                  {
-                    day: "Juma",
-                    breakfast: "Pomidor va ko'katlarda pishirilgan tuxum (shakshuka), to'liq non",
-                    lunch: "Loviya, jo'xori va avokadoli burrito-boul",
-                    dinner: "Zaytun moyida dimlangan sabzavotlar va tovuq filesi",
-                    snack: "Rezavor mevali antioksidant smuzi"
-                  },
-                  {
-                    day: "Shanba",
-                    breakfast: "Rezavor mevali antioksidant smuzi-boul va chia urug'i",
-                    lunch: "O'rta yer dengizi baliq va dengiz mahsulotlari sho'rvasi",
-                    dinner: "Brokkoli, lavlagi bargi va fetali jigarrang guruch",
-                    snack: "Klassik xumus va sabzi bo'laklari"
-                  },
-                  {
-                    day: "Yakshanba",
-                    breakfast: "Qo'ziqorin va ismaloqli kremli javdar tosti",
-                    lunch: "Sabzavotli va tovuqli uy pirogi (pot pie)",
-                    dinner: "Xushbo'y losos va shirin jo'xorili yangi salsa",
-                    snack: "Tabiiy mevalar va qatiq"
-                  }
-                ].map((item, idx) => (
-                  <div key={idx} className="p-3.5 sm:p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 space-y-2">
-                    <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-750 pb-1.5">
-                      <span className="font-extrabold text-purple-700 dark:text-purple-400 text-xs sm:text-sm uppercase tracking-wide">
-                        {item.day}
-                      </span>
-                      <span className="text-[11px] text-slate-500 font-medium">Balanslashgan parhez</span>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs text-slate-700 dark:text-slate-300 pt-1">
-                      <div className="p-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-150 dark:border-slate-700">
-                        <strong className="block text-slate-900 dark:text-white font-bold text-[11px] mb-0.5">🌅 Nonushta:</strong>
-                        <span className="text-slate-600 dark:text-slate-300 leading-tight">{item.breakfast}</span>
-                      </div>
-                      <div className="p-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-150 dark:border-slate-750">
-                        <strong className="block text-slate-900 dark:text-white font-bold text-[11px] mb-0.5">☀️ Tushlik:</strong>
-                        <span className="text-slate-600 dark:text-slate-300 leading-tight">{item.lunch}</span>
-                      </div>
-                      <div className="p-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-150 dark:border-slate-750">
-                        <strong className="block text-slate-900 dark:text-white font-bold text-[11px] mb-0.5">🌙 Kechki ovqat:</strong>
-                        <span className="text-slate-600 dark:text-slate-300 leading-tight">{item.dinner}</span>
-                      </div>
-                      <div className="p-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-150 dark:border-slate-750">
-                        <strong className="block text-slate-900 dark:text-white font-bold text-[11px] mb-0.5">🍎 Yengil tamaddi:</strong>
-                        <span className="text-slate-600 dark:text-slate-300 leading-tight">{item.snack}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              {/* Word Document Table */}
+              <div className="min-w-[700px] border border-slate-300 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-850 shadow-sm">
+                <table className="w-full text-xs sm:text-sm text-left border-collapse">
+                  <thead>
+                    <tr className="bg-slate-100 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-700">
+                      <th className="p-3 border-r border-slate-300 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-200 w-28 text-center">
+                        Kunlar
+                      </th>
+                      {["Dushanba", "Seshanba", "Chorshanba", "Payshanba", "Juma", "Shanba", "Yakshanba"].map((day) => (
+                        <th key={day} className="p-3 border-r border-slate-300 dark:border-slate-700 font-bold text-slate-900 dark:text-white text-center last:border-r-0">
+                          {day}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { meal: "Nonushta" },
+                      { meal: "Tushlik" },
+                      { meal: "Kechki ovqat" },
+                      { meal: "Yengil taomlar" }
+                    ].map((row, rIdx) => (
+                      <tr key={rIdx} className="border-b border-slate-300 dark:border-slate-700 last:border-b-0">
+                        <td className="p-3 font-bold text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-800/60 border-r border-slate-300 dark:border-slate-700 text-center">
+                          {row.meal}
+                        </td>
+                        {[0, 1, 2, 3, 4, 5, 6].map((colIdx) => (
+                          <td key={colIdx} className="p-3 border-r border-slate-300 dark:border-slate-700 h-20 align-top last:border-r-0 bg-white dark:bg-slate-900">
+                            <div className="w-full h-full min-h-[48px] rounded border border-dashed border-slate-200 dark:border-slate-750 p-1 text-[11px] text-slate-400">
+                            </div>
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
 
-              {/* Eslatmalar */}
-              <div className="p-4 rounded-2xl bg-brand-50/70 dark:bg-slate-850 border border-brand-200 dark:border-slate-750 space-y-1.5 mt-3">
-                <strong className="block text-xs font-extrabold uppercase tracking-wider text-brand-800 dark:text-brand-300">
-                  📝 Eslatmalar va Muhim Tavsiyalar:
-                </strong>
-                <ul className="list-disc list-inside text-xs text-slate-600 dark:text-slate-300 space-y-1">
-                  <li>Har kuni kamida 1.5 - 2 litr toza suv ichishni unutmang.</li>
-                  <li>Taom tayyorlashda doimo sovuq siqilgan zaytun moyi (Extra Virgin) ishlating.</li>
-                  <li>Tuz miqdorini cheklang, taomlarga ta'm berish uchun limon va yangi ko'katlardan foydalaning.</li>
-                  <li>Haftada kamida 2 marta baliq va dengiz mahsulotlari iste'mol qiling.</li>
-                </ul>
+              {/* Eslatmalar (Exact from docx) */}
+              <div className="mt-4 p-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850">
+                <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-2">
+                  Eslatmalar:
+                </h4>
+                <div className="space-y-2">
+                  <div className="border-b border-slate-300 dark:border-slate-700 h-4"></div>
+                  <div className="border-b border-slate-300 dark:border-slate-700 h-4"></div>
+                  <div className="border-b border-slate-300 dark:border-slate-700 h-4"></div>
+                </div>
               </div>
 
             </div>
 
-            {/* Modal Actions Footer */}
-            <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+            {/* Modal Actions Footer with direct docx download button */}
+            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
               
-              {/* Direct docx file download button */}
               <a
                 href="/docs/haftalik-ovqatlanish-rejasi-neuropath.docx"
                 download="haftalik-ovqatlanish-rejasi-neuropath.docx"
