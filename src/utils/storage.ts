@@ -70,9 +70,25 @@ export const saveAccessibilitySettings = (settings: AccessibilitySettings) => {
   }
 };
 
+const getCurrentUserKey = (baseKey: string): string => {
+  try {
+    const userStr = localStorage.getItem('neuroup_user');
+    if (userStr) {
+      const user = JSON.parse(userStr);
+      if (user && user.email) {
+        return `${baseKey}_${user.email.toLowerCase().replace(/[^a-z0-9]/g, '_')}`;
+      }
+    }
+  } catch {
+    // fallback to base key
+  }
+  return `${baseKey}_guest`;
+};
+
 export const getDailyLogs = (): Record<string, DailyLog> => {
   try {
-    const data = localStorage.getItem(STORAGE_KEYS.DAILY_LOGS);
+    const key = getCurrentUserKey(STORAGE_KEYS.DAILY_LOGS);
+    const data = localStorage.getItem(key);
     return data ? JSON.parse(data) : {};
   } catch {
     return {};
@@ -81,19 +97,23 @@ export const getDailyLogs = (): Record<string, DailyLog> => {
 
 export const saveLogForDate = (log: DailyLog) => {
   try {
+    const key = getCurrentUserKey(STORAGE_KEYS.DAILY_LOGS);
     const logs = getDailyLogs();
     logs[log.date] = log;
-    localStorage.setItem(STORAGE_KEYS.DAILY_LOGS, JSON.stringify(logs));
+    localStorage.setItem(key, JSON.stringify(logs));
 
     const today = new Date().toISOString().split('T')[0];
     if (log.date === today) {
-      const lastDate = localStorage.getItem(STORAGE_KEYS.LAST_LOG_DATE);
-      let streak = parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '0', 10);
+      const streakKey = getCurrentUserKey(STORAGE_KEYS.STREAK);
+      const lastDateKey = getCurrentUserKey(STORAGE_KEYS.LAST_LOG_DATE);
+
+      const lastDate = localStorage.getItem(lastDateKey);
+      let streak = parseInt(localStorage.getItem(streakKey) || '0', 10);
 
       if (lastDate !== today) {
         streak += 1;
-        localStorage.setItem(STORAGE_KEYS.STREAK, streak.toString());
-        localStorage.setItem(STORAGE_KEYS.LAST_LOG_DATE, today);
+        localStorage.setItem(streakKey, streak.toString());
+        localStorage.setItem(lastDateKey, today);
       }
     }
   } catch (e) {
@@ -107,7 +127,8 @@ export const saveTodayLog = (log: DailyLog) => {
 
 export const getStreakCount = (): number => {
   try {
-    return parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '1', 10);
+    const streakKey = getCurrentUserKey(STORAGE_KEYS.STREAK);
+    return parseInt(localStorage.getItem(streakKey) || '1', 10);
   } catch {
     return 1;
   }
@@ -122,9 +143,10 @@ export const importDailyLogs = (jsonString: string): boolean => {
   try {
     const data = JSON.parse(jsonString);
     if (typeof data === 'object' && data !== null) {
+      const key = getCurrentUserKey(STORAGE_KEYS.DAILY_LOGS);
       const existing = getDailyLogs();
       const merged = { ...existing, ...data };
-      localStorage.setItem(STORAGE_KEYS.DAILY_LOGS, JSON.stringify(merged));
+      localStorage.setItem(key, JSON.stringify(merged));
       return true;
     }
     return false;
