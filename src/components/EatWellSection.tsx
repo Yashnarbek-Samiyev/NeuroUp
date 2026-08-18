@@ -40,17 +40,8 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
   // Interactive Modals matching i-REBOUND
   const [showTipsModal, setShowTipsModal] = useState<boolean>(false);
-  const [showShoppingModal, setShowShoppingModal] = useState<boolean>(false);
   const [showMealPlannerModal, setShowMealPlannerModal] = useState<boolean>(false);
   const [showChecklistModal, setShowChecklistModal] = useState<boolean>(false);
-
-  // Shopping list checked items
-  const [checkedShoppingItems, setCheckedShoppingItems] = useState<string[]>([]);
-  const toggleShoppingItem = (item: string) => {
-    setCheckedShoppingItems(prev =>
-      prev.includes(item) ? prev.filter(i => i !== item) : [...prev, item]
-    );
-  };
 
   const t = translations[language];
 
@@ -129,23 +120,25 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               </div>
             </button>
 
-            {/* 2. Xaridlar Ro'yxati */}
-            <button
-              onClick={() => setShowShoppingModal(true)}
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
+            {/* 2. Xaridlar Ro'yxati (To'g'ridan-to'g'ri .docx yuklab olish) */}
+            <a
+              href="/docs/haftalik-xaridlar-royxati-neuropath.docx"
+              download="haftalik-xaridlar-royxati-neuropath.docx"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-sm"
+              title="Haftalik xaridlar ro'yxatini yuklab olish (.docx)"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center shrink-0">
                   <ShoppingCart className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
-                    Xaridlar Ro'yxati
+                  <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
+                    Haftalik Xaridlar Ro'yxati Andozasi
                   </div>
-                  <div className="text-[11px] text-slate-500">Haftalik xarid andozasi</div>
+                  <div className="text-[11px] text-slate-500">O'rta yer dengizi parhezi uchun zarur mahsulotlar</div>
                 </div>
               </div>
-            </button>
+            </a>
 
             {/* 3. Taomnoma Rejalashtiruvchi */}
             <button
@@ -385,89 +378,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
         </div>
       )}
 
-      {/* Modal 2: Weekly Shopping List Template */}
-      {showShoppingModal && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center animate-fadeIn">
-          <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800">
-            <button
-              onClick={() => setShowShoppingModal(false)}
-              className="absolute top-4 right-4 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200"
-            >
-              <X className="w-4 h-4" />
-            </button>
 
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center">
-                <ShoppingCart className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-navy-800 dark:text-white">
-                  Haftalik Xaridlar Ro'yxati Andozasi
-                </h3>
-                <p className="text-xs text-slate-500">O'rta yer dengizi parhezi uchun zarur mahsulotlar</p>
-              </div>
-            </div>
-
-            <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-1">
-              
-              {/* Category 1 */}
-              <div>
-                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider block mb-2">
-                  Sabzavot va Mevalar:
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  {["Pomidor, bodring, bulg'or qalampiri", "Yangi ismaloq va ko'katlar", "Brokkoli yoki gulkaram", "Olma, banan, nok, rezavor mevalar", "Sabzi, qovoqcha (kabachki)"].map((item) => (
-                    <label key={item} onClick={() => toggleShoppingItem(item)} className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 cursor-pointer">
-                      <input type="checkbox" checked={checkedShoppingItems.includes(item)} onChange={() => {}} className="rounded text-brand-600" />
-                      <span className={checkedShoppingItems.includes(item) ? 'line-through text-slate-400' : 'text-slate-800 dark:text-slate-200'}>{item}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Category 2 */}
-              <div>
-                <span className="text-xs font-bold text-brand-700 dark:text-brand-400 uppercase tracking-wider block mb-2">
-                  Dukkaklilar va Donli Mahsulotlar:
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  {["To'liq donli javdar noni", "Suli yormasi (gerkules)", "Konservalangan yoki quruq oq loviya", "Noxat va yasmiq (chechevitsa)", "Kinoa yoki grechka"].map((item) => (
-                    <label key={item} onClick={() => toggleShoppingItem(item)} className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 cursor-pointer">
-                      <input type="checkbox" checked={checkedShoppingItems.includes(item)} onChange={() => {}} className="rounded text-brand-600" />
-                      <span className={checkedShoppingItems.includes(item) ? 'line-through text-slate-400' : 'text-slate-800 dark:text-slate-200'}>{item}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Category 3 */}
-              <div>
-                <span className="text-xs font-bold text-purple-700 dark:text-purple-400 uppercase tracking-wider block mb-2">
-                  Foydali Yog'lar va Oqsillar:
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  {["Sovuq siqilgan zaytun moyi (Extra Virgin)", "Yong'oq, bodom va chia urug'i", "Yangi losos yoki oq baliq", "Shakarsiz yunoncha yogurt", "Tuxum"].map((item) => (
-                    <label key={item} onClick={() => toggleShoppingItem(item)} className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 cursor-pointer">
-                      <input type="checkbox" checked={checkedShoppingItems.includes(item)} onChange={() => {}} className="rounded text-brand-600" />
-                      <span className={checkedShoppingItems.includes(item) ? 'line-through text-slate-400' : 'text-slate-800 dark:text-slate-200'}>{item}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
-              <button
-                onClick={() => setShowShoppingModal(false)}
-                className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs"
-              >
-                Yopish
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Modal 3: Weekly Meal Planner */}
       {showMealPlannerModal && (
