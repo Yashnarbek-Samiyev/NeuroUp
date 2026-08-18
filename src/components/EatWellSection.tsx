@@ -123,13 +123,23 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
           {/* Main Heading */}
           <h1 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-navy-800 dark:text-white leading-snug tracking-tight">
-            🥗 Insultdan so'ng <br className="hidden sm:inline" />
-            <span className="text-brand-600 dark:text-brand-400">to'g'ri va mazali ovqatlaning</span>
+            {t.eatWellBannerTitle || "🍴 Insultdan keyin to'g'ri ovqatlanish"}
           </h1>
 
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
-            Insultdan keyin miya va tomirlarni qayta tiklash uchun shifokorlar va parhezshunoslar tavsiya etgan 24 ta O'rta yer dengizi retseplari to'plami.
-          </p>
+          <div className="space-y-2 text-sm sm:text-base leading-relaxed max-w-4xl">
+            <p className="font-bold text-slate-900 dark:text-white">
+              {t.eatWellBannerP1 || "O'rtaycha dengiz dietasi insult bilan bog'liq xavf omillarini kamaytirishi ma'lum."}
+            </p>
+            <p className="font-semibold text-brand-700 dark:text-brand-300">
+              {t.eatWellBannerP2 || "Insultdan keyin to'g'ri ovqatlanish bo'yicha amaliy maslahatlar."}
+            </p>
+            <p className="text-slate-600 dark:text-slate-400">
+              {t.eatWellBannerP3 || "Keyingi xaridingizni tashkil qilishga yordam berish uchun ushbu oddiy xaridlar ro'yxatidan foydalaning. Shuningdek, haftalik ovqatlanish rejasi va yo'lda qolish uchun tekshiruv ro'yxatidan ham foydalanishingiz mumkin."}
+            </p>
+            <p className="font-medium text-slate-800 dark:text-slate-200">
+              {t.eatWellBannerP4 || "Ushbu bo'limda O'rtaycha dengiz dietasiga mos retseptlarni topasiz."}
+            </p>
+          </div>
 
           {/* Quick Action Cards Grid (1:1 Word doc downloads & Planner Modals) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
