@@ -79,10 +79,10 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 pb-16">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 pb-16">
       
       {/* Top Breadcrumb Bar */}
-      <div className="bg-white dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800 sticky top-16 z-30 shadow-xs">
+      <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-16 z-30 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
           <button
             onClick={onBack}
@@ -132,7 +132,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         
         {/* Hero Section of Recipe Page */}
-        <div className="bg-white dark:bg-slate-850 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm mb-8">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
             
             {/* Left Info Column */}
@@ -158,7 +158,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
               </div>
 
               {/* Metrics Grid */}
-              <div className="grid grid-cols-4 gap-2 sm:gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+              <div className="grid grid-cols-4 gap-2 sm:gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
                 <div className="space-y-1">
                   <Clock className="w-4 h-4 mx-auto text-brand-600 dark:text-brand-400" />
                   <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">{t.prepTime}</div>
@@ -184,7 +184,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
             </div>
 
             {/* Right Image Column */}
-            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-auto min-h-[320px] overflow-hidden bg-slate-100">
+            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-auto min-h-[320px] overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
                 src={recipe.image}
                 alt={title}
@@ -205,10 +205,10 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
           <div className="lg:col-span-5 space-y-6">
             
             {/* Ingredients Card */}
-            <div className="bg-white dark:bg-slate-850 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+            <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
               <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
                 <h3 className="font-extrabold text-base sm:text-lg text-navy-800 dark:text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-brand-600" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-600 dark:text-brand-400" />
                   <span>{t.whatYouNeed || "Nimalar Kerak (What you need)"}</span>
                 </h3>
                 <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300">
@@ -216,7 +216,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                 </span>
               </div>
 
-              <p className="text-xs text-slate-500">{t.checkIngredientsTip || 'Tayyorlagan masalliqlaringizni belgilab boring:'}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">{t.checkIngredientsTip || 'Tayyorlagan masalliqlaringizni belgilab boring:'}</p>
 
               <div className="space-y-2.5">
                 {rawIngredients.map((ing, idx) => {
@@ -228,8 +228,8 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                       onClick={() => toggleIngredient(idx)}
                       className={`flex items-center gap-3 p-3 rounded-2xl border transition-all cursor-pointer select-none text-xs sm:text-sm ${
                         isChecked
-                          ? 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 line-through text-slate-400'
-                          : 'bg-slate-50/70 dark:bg-slate-900/60 border-slate-200 dark:border-slate-750 text-slate-800 dark:text-slate-200 hover:border-brand-400'
+                          ? 'bg-slate-100 dark:bg-slate-950 border-slate-200 dark:border-slate-800 line-through text-slate-400 dark:text-slate-500'
+                          : 'bg-slate-50/70 dark:bg-slate-800/80 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 hover:border-brand-400'
                       }`}
                     >
                       <input
@@ -260,7 +260,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
             </div>
 
             {/* Stroke Health Benefit Box */}
-            <div className="bg-brand-50 dark:bg-slate-850 rounded-3xl p-6 border border-brand-200 dark:border-slate-750 space-y-3">
+            <div className="bg-brand-50 dark:bg-slate-900 rounded-3xl p-6 border border-brand-200 dark:border-slate-800 space-y-3">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-brand-600 text-white flex items-center justify-center shrink-0 shadow-sm">
                   <Sparkles className="w-4 h-4" />
@@ -269,7 +269,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                   {t.strokeBenefitsTitle || "Insultdan Keyin Sog'liqqa Foydasi"}
                 </h4>
               </div>
-              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-medium">
                 {benefits}
               </p>
             </div>
@@ -279,15 +279,15 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
           {/* Right Column: Step-by-Step Cooking Guide (with i-REBOUND images & instructions) */}
           <div className="lg:col-span-7 space-y-6">
             
-            <div className="bg-white dark:bg-slate-850 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+            <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
               
               <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                 <div>
                   <h3 className="font-extrabold text-lg sm:text-xl text-navy-800 dark:text-white flex items-center gap-2.5">
-                    <ChefHat className="w-5 h-5 text-brand-600" />
+                    <ChefHat className="w-5 h-5 text-brand-600 dark:text-brand-400" />
                     <span>{t.stepByStepGuide || "Bosqichma-bosqich Tayyorlash Yo'riqnomasi"}</span>
                   </h3>
-                  <p className="text-xs text-slate-500 mt-0.5">{t.totalSteps || 'Jami'}: {detailedSteps.length}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{t.totalSteps || 'Jami'}: {detailedSteps.length}</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                       className={`p-5 sm:p-6 rounded-2xl border transition-all cursor-pointer ${
                         isCurrent
                           ? 'bg-brand-50/50 dark:bg-slate-800 border-brand-500 shadow-md ring-1 ring-brand-500'
-                          : 'bg-slate-50/60 dark:bg-slate-900/60 border-slate-200 dark:border-slate-750 hover:border-slate-300'
+                          : 'bg-slate-50/60 dark:bg-slate-950/80 border-slate-200 dark:border-slate-800 hover:border-slate-300'
                       }`}
                     >
                       <div className="space-y-4">
@@ -315,7 +315,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                           <span className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs font-extrabold shrink-0 shadow-sm ${
                             isCurrent
                               ? 'bg-brand-600 text-white'
-                              : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
+                              : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200'
                           }`}>
                             {step.stepNumber}
                           </span>
@@ -374,7 +374,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
               <h3 className="text-xl sm:text-2xl font-extrabold text-navy-800 dark:text-white">
                 {t.otherRecipesTitle || "Boshqa Foydali Retseptlar"}
               </h3>
-              <p className="text-xs text-slate-500 mt-0.5">{t.otherRecipesSub || "O'rta yer dengizi parhezining boshqa taomlari"}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{t.otherRecipesSub || "O'rta yer dengizi parhezining boshqa taomlari"}</p>
             </div>
 
             <button
@@ -394,10 +394,10 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                 <div
                   key={item.id}
                   onClick={() => onSelectRecipe(item.id)}
-                  className="bg-white dark:bg-slate-850 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+                  className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
                 >
                   <div>
-                    <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                    <div className="relative h-44 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
                       <img
                         src={item.image}
                         alt={itemTitle}
@@ -423,10 +423,10 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                   </div>
 
                   <div className="p-4 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-                    <span className="text-slate-500 font-medium">
+                    <span className="text-slate-500 dark:text-slate-400 font-medium">
                       {item.prepTime + item.cookTime} {t.minutesUnit}
                     </span>
-                    <span className="font-bold text-brand-600 flex items-center gap-1">
+                    <span className="font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1">
                       {t.viewDetails || "Ko'rish"} <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>

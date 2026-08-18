@@ -125,7 +125,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             {/* 1. Amaliy Maslahatlar */}
             <button
               onClick={() => setShowTipsModal(true)}
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-brand-100 dark:bg-brand-950 text-brand-600 flex items-center justify-center shrink-0">
@@ -162,7 +162,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             {/* 3. Taomnoma Rejalashtiruvchi */}
             <button
               onClick={() => setShowMealPlannerModal(true)}
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 flex items-center justify-center shrink-0">
@@ -180,7 +180,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             {/* 4. Nazorat Ro'yxati */}
             <button
               onClick={() => setShowChecklistModal(true)}
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 flex items-center justify-center shrink-0">

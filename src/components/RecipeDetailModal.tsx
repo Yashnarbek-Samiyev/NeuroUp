@@ -52,7 +52,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
       <div className="relative bg-white dark:bg-slate-900 rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-800">
         
         {/* Header Image & Actions */}
-        <div className="relative h-64 sm:h-72 w-full overflow-hidden rounded-t-3xl bg-slate-100">
+        <div className="relative h-64 sm:h-72 w-full overflow-hidden rounded-t-3xl bg-slate-100 dark:bg-slate-800">
           <img 
             src={recipe.image} 
             alt={title}
@@ -102,7 +102,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
         <div className="p-5 sm:p-8 space-y-6">
           
           {/* Quick Metrics Bar */}
-          <div className="grid grid-cols-4 gap-2 sm:gap-4 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 text-center shadow-sm">
+          <div className="grid grid-cols-4 gap-2 sm:gap-4 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center shadow-sm">
             <div className="space-y-0.5">
               <Clock className="w-4 h-4 mx-auto text-brand-600 dark:text-brand-400" />
               <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">{t.prepTime}</div>
@@ -131,7 +131,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
           </p>
 
           {/* Stroke & Brain Recovery Benefits Box */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-brand-50/70 dark:bg-slate-850 border border-brand-200 dark:border-slate-750 flex items-start gap-3.5 shadow-sm">
+          <div className="p-4 sm:p-5 rounded-2xl bg-brand-50/70 dark:bg-slate-950 border border-brand-200 dark:border-slate-800 flex items-start gap-3.5 shadow-sm">
             <div className="w-9 h-9 rounded-xl bg-brand-600 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
               <Sparkles className="w-5 h-5" />
             </div>
@@ -147,9 +147,9 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
 
           {/* Equipment Needed (Jihozlar) */}
           {equipment && equipment.length > 0 && (
-            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
               <h3 className="font-bold text-xs sm:text-sm text-navy-800 dark:text-white mb-2.5 flex items-center gap-2">
-                <Wrench className="w-4 h-4 text-brand-600" />
+                <Wrench className="w-4 h-4 text-brand-600 dark:text-brand-400" />
                 <span>Kerakli Oshxona Jihozlari:</span>
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -166,10 +166,10 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
           <div>
             <div className="flex items-center justify-between mb-3">
               <h3 className="font-extrabold text-sm sm:text-base text-navy-800 dark:text-white flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-brand-600" />
+                <CheckCircle2 className="w-4 h-4 text-brand-600 dark:text-brand-400" />
                 <span>{t.ingredients} ({checkedIngredients.length}/{ingredients.length})</span>
               </h3>
-              <span className="text-xs text-slate-500 font-medium">Tayyorlaganingizni belgilang</span>
+              <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Tayyorlaganingizni belgilang</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -181,8 +181,8 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
                     onClick={() => toggleIngredient(idx)}
                     className={`flex items-center gap-3 p-3 rounded-xl border transition-all cursor-pointer select-none text-xs sm:text-sm ${
                       isChecked
-                        ? 'bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 line-through text-slate-400'
-                        : 'bg-white dark:bg-slate-850 border-slate-200 dark:border-slate-750 text-slate-800 dark:text-slate-200 hover:border-brand-400 shadow-sm'
+                        ? 'bg-slate-100 dark:bg-slate-950 border-slate-200 dark:border-slate-800 line-through text-slate-400 dark:text-slate-500'
+                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:border-brand-400 shadow-sm'
                     }`}
                   >
                     <input
@@ -201,7 +201,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
           {/* Step-by-Step Cooking Guide (Bosqichma-bosqich yo'riqnoma) */}
           <div>
             <h3 className="font-extrabold text-sm sm:text-base text-navy-800 dark:text-white mb-3.5 flex items-center gap-2">
-              <ChefHat className="w-5 h-5 text-brand-600" />
+              <ChefHat className="w-5 h-5 text-brand-600 dark:text-brand-400" />
               <span>Bosqichma-bosqich tayyorlash yo'riqnomasi ({steps.length} ta qadam)</span>
             </h3>
 
@@ -215,7 +215,7 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
                     className={`p-4 sm:p-5 rounded-2xl border transition-all cursor-pointer ${
                       isCurrent
                         ? 'bg-brand-50/80 dark:bg-slate-800 border-brand-500 shadow-md ring-1 ring-brand-500'
-                        : 'bg-white dark:bg-slate-850 border-slate-200 dark:border-slate-750 hover:border-slate-300'
+                        : 'bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-slate-300'
                     }`}
                   >
                     <div className="flex items-start gap-3.5">
@@ -250,8 +250,8 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 sm:p-5 bg-slate-50 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800 rounded-b-3xl flex items-center justify-between">
-          <div className="text-xs text-slate-500 font-medium">
+        <div className="p-4 sm:p-5 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 rounded-b-3xl flex items-center justify-between">
+          <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">
             O'rta yer dengizi parhezi retsepti
           </div>
           <button
