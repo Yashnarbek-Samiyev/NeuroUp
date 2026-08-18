@@ -91,26 +91,26 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
             <div className="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center group-hover:bg-brand-50 dark:group-hover:bg-slate-700 transition-colors">
               <ArrowLeft className="w-4 h-4 text-slate-700 dark:text-slate-200 group-hover:text-brand-600" />
             </div>
-            <span>Insultdan so'ng to'g'ri ovqatlanish (Eat Well)</span>
+            <span>{t.backToEatWell || "← Insultdan so'ng to'g'ri ovqatlanish (Eat Well)"}</span>
           </button>
 
           <div className="flex items-center gap-2">
             <button
               onClick={handleShare}
               className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
-              title="Ulashish"
+              title={t.shareBtn || "Ulashish"}
             >
               <Share2 className="w-4 h-4" />
-              <span className="hidden sm:inline">{copiedLink ? 'Nusxalandi!' : 'Ulashish'}</span>
+              <span className="hidden sm:inline">{copiedLink ? (t.copied || 'Nusxalandi!') : (t.shareBtn || 'Ulashish')}</span>
             </button>
 
             <button
               onClick={handlePrint}
               className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors no-print cursor-pointer"
-              title="Chop etish"
+              title={t.printBtn || "Chop etish"}
             >
               <Printer className="w-4 h-4" />
-              <span className="hidden sm:inline">Chop etish</span>
+              <span className="hidden sm:inline">{t.printBtn || "Chop etish"}</span>
             </button>
 
             <button
@@ -144,7 +144,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                     {recipe.category}
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                    O'rta yer dengizi parhezi
+                    {t.mediterraneanDiet || "O'rta yer dengizi parhezi"}
                   </span>
                 </div>
 
@@ -209,14 +209,14 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
               <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
                 <h3 className="font-extrabold text-base sm:text-lg text-navy-800 dark:text-white flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-brand-600" />
-                  <span>Nimalar Kerak (What you need)</span>
+                  <span>{t.whatYouNeed || "Nimalar Kerak (What you need)"}</span>
                 </h3>
                 <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300">
                   {checkedIngredients.length}/{rawIngredients.length}
                 </span>
               </div>
 
-              <p className="text-xs text-slate-500">Tayyorlagan masalliqlaringizni belgilab boring:</p>
+              <p className="text-xs text-slate-500">{t.checkIngredientsTip || 'Tayyorlagan masalliqlaringizni belgilab boring:'}</p>
 
               <div className="space-y-2.5">
                 {rawIngredients.map((ing, idx) => {
@@ -266,7 +266,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <h4 className="font-extrabold text-sm text-brand-900 dark:text-brand-300 uppercase tracking-wide">
-                  Insultdan Keyin Sog'liqqa Foydasi
+                  {t.strokeBenefitsTitle || "Insultdan Keyin Sog'liqqa Foydasi"}
                 </h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
@@ -285,9 +285,9 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                 <div>
                   <h3 className="font-extrabold text-lg sm:text-xl text-navy-800 dark:text-white flex items-center gap-2.5">
                     <ChefHat className="w-5 h-5 text-brand-600" />
-                    <span>Bosqichma-bosqich Tayyorlash Yo'riqnomasi</span>
+                    <span>{t.stepByStepGuide || "Bosqichma-bosqich Tayyorlash Yo'riqnomasi"}</span>
                   </h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Jami {detailedSteps.length} ta qadam</p>
+                  <p className="text-xs text-slate-500 mt-0.5">{t.totalSteps || 'Jami'}: {detailedSteps.length}</p>
                 </div>
               </div>
 
@@ -348,7 +348,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                             <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                             <div className="space-y-0.5">
                               <strong className="text-amber-900 dark:text-amber-300 font-bold block">
-                                Qulaylik & Maslahat:
+                                {t.comfortTip || "Qulaylik & Maslahat:"}
                               </strong>
                               <span className="leading-relaxed">{stepDesc}</span>
                             </div>
@@ -372,16 +372,16 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
           <div className="flex items-center justify-between mb-6">
             <div>
               <h3 className="text-xl sm:text-2xl font-extrabold text-navy-800 dark:text-white">
-                Boshqa Foydali Retseptlar
+                {t.otherRecipesTitle || "Boshqa Foydali Retseptlar"}
               </h3>
-              <p className="text-xs text-slate-500 mt-0.5">O'rta yer dengizi parhezining boshqa taomlari</p>
+              <p className="text-xs text-slate-500 mt-0.5">{t.otherRecipesSub || "O'rta yer dengizi parhezining boshqa taomlari"}</p>
             </div>
 
             <button
               onClick={onBack}
               className="text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1 hover:underline cursor-pointer"
             >
-              Barcha 24 taomni ko'rish <ArrowRight className="w-3.5 h-3.5" />
+              {t.viewAll24Recipes || "Barcha 24 taomni ko'rish"} <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
 
@@ -424,10 +424,10 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
 
                   <div className="p-4 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
                     <span className="text-slate-500 font-medium">
-                      {item.prepTime + item.cookTime} daqiqa
+                      {item.prepTime + item.cookTime} {t.minutesUnit}
                     </span>
                     <span className="font-bold text-brand-600 flex items-center gap-1">
-                      Ko'rish <ArrowRight className="w-3.5 h-3.5" />
+                      {t.viewDetails || "Ko'rish"} <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </div>

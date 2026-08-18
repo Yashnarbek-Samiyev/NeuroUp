@@ -5,12 +5,12 @@ export const recipes: Recipe[] = [
     "id": "mediterranean-style-tomato-on-toast",
     "title": {
       "uz": "Pomidor va Zaytun Yog'li O'rta Yer Dengizi Toasti",
-      "ru": "Pomidor va Zaytun Yog'li O'rta Yer Dengizi Toasti",
+      "ru": "Средиземноморский тост с томатами и оливковым маслом",
       "en": "Mediterranean style Tomato on Toast"
     },
     "description": {
       "uz": "Miyani qon bilan ta'minlashni yaxshilovchi, likopin va antioksidantlarga boy yengil nonushta.",
-      "ru": "Miyani qon bilan ta'minlashni yaxshilovchi, likopin va antioksidantlarga boy yengil nonushta.",
+      "ru": "Легкий завтрак, богатый ликопином и антиоксидантами для поддержки сосудов головного мозга.",
       "en": "Deliciously fresh start to your day with Mediterranean flavours.A filling combination that is a perfect example of the Mediterranean diet with beneficial fats, protein and carbs."
     },
     "category": "breakfast",
@@ -189,8 +189,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Pre-heat oven to 200°",
-          "ru": "Pre-heat oven to 200°",
+          "uz": "Pechni 200°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 200°C",
           "en": "Pre-heat oven to 200°"
         },
         "description": {
@@ -231,8 +231,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Crumble 200g of fetta into a bowl and add ¼ cup of milk",
-          "ru": "Crumble 200g of fetta into a bowl and add ¼ cup of milk",
+          "uz": "Crumble 200g of fetta into a bowl and add ¼ cup of milk (qo'shing va aralashtiring)",
+          "ru": "Crumble 200g of fetta into a bowl and add ¼ cup of milk (добавьте и перемешайте)",
           "en": "Crumble 200g of fetta into a bowl and add ¼ cup of milk"
         },
         "description": {
@@ -259,8 +259,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Slice one garlic clove in half and rub onto each bread piece.",
-          "ru": "Slice one garlic clove in half and rub onto each bread piece.",
+          "uz": "Slice one garlic clove in half and rub onto each bread piece. (to'g'rang)",
+          "ru": "Slice one garlic clove in half and rub onto each bread piece. (нарежьте)",
           "en": "Slice one garlic clove in half and rub onto each bread piece."
         },
         "description": {
@@ -287,8 +287,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread.",
-          "ru": "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread.",
+          "uz": "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread. (to'g'rang)",
+          "ru": "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread. (нарежьте)",
           "en": "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread."
         },
         "description": {
@@ -315,8 +315,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 10,
         "title": {
-          "uz": "Place sliced tomatoes on top of the fetta",
-          "ru": "Place sliced tomatoes on top of the fetta",
+          "uz": "Place sliced tomatoes on top of the fetta (to'g'rang)",
+          "ru": "Place sliced tomatoes on top of the fetta (нарежьте)",
           "en": "Place sliced tomatoes on top of the fetta"
         },
         "description": {
@@ -329,8 +329,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 11,
         "title": {
-          "uz": "Sprinkle torn basil leaves on the sliced tomatoes.",
-          "ru": "Sprinkle torn basil leaves on the sliced tomatoes.",
+          "uz": "Sprinkle torn basil leaves on the sliced tomatoes. (to'g'rang)",
+          "ru": "Sprinkle torn basil leaves on the sliced tomatoes. (нарежьте)",
           "en": "Sprinkle torn basil leaves on the sliced tomatoes."
         },
         "description": {
@@ -343,30 +343,30 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Pre-heat oven to 200°",
+        "Pechni 200°C ga oldindan qizdiring",
         "Scoop 1 Avocado into a small bowl. Squeeze juice and lime zest from 1 lime into the bowl",
         "Mash avocado mixture with a fork or potato masher",
-        "Crumble 200g of fetta into a bowl and add ¼ cup of milk",
+        "Crumble 200g of fetta into a bowl and add ¼ cup of milk (qo'shing va aralashtiring)",
         "Drizzle Olive Oil on bread pieces.",
-        "Slice one garlic clove in half and rub onto each bread piece.",
+        "Slice one garlic clove in half and rub onto each bread piece. (to'g'rang)",
         "Put bread in the oven to toast on both sides.",
-        "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread.",
+        "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread. (to'g'rang)",
         "Spread feta mixture on top of the avocado",
-        "Place sliced tomatoes on top of the fetta",
-        "Sprinkle torn basil leaves on the sliced tomatoes."
+        "Place sliced tomatoes on top of the fetta (to'g'rang)",
+        "Sprinkle torn basil leaves on the sliced tomatoes. (to'g'rang)"
       ],
       "ru": [
-        "Pre-heat oven to 200°",
+        "Разогрейте духовку до 200°C",
         "Scoop 1 Avocado into a small bowl. Squeeze juice and lime zest from 1 lime into the bowl",
         "Mash avocado mixture with a fork or potato masher",
-        "Crumble 200g of fetta into a bowl and add ¼ cup of milk",
+        "Crumble 200g of fetta into a bowl and add ¼ cup of milk (добавьте и перемешайте)",
         "Drizzle Olive Oil on bread pieces.",
-        "Slice one garlic clove in half and rub onto each bread piece.",
+        "Slice one garlic clove in half and rub onto each bread piece. (нарежьте)",
         "Put bread in the oven to toast on both sides.",
-        "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread.",
+        "Remove the bread from oven. Once cooled, spread avocado mixture onto each slice of bread. (нарежьте)",
         "Spread feta mixture on top of the avocado",
-        "Place sliced tomatoes on top of the fetta",
-        "Sprinkle torn basil leaves on the sliced tomatoes."
+        "Place sliced tomatoes on top of the fetta (нарежьте)",
+        "Sprinkle torn basil leaves on the sliced tomatoes. (нарежьте)"
       ],
       "en": [
         "Pre-heat oven to 200°",
@@ -384,7 +384,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Likopin va zaytun moyidagi to'yinmagan yog' kislotalari tomirlar elastikligini mustahkamlaydi va qon bosimini me'yorda ushlaydi.",
-      "ru": "Likopin va zaytun moyidagi to'yinmagan yog' kislotalari tomirlar elastikligini mustahkamlaydi va qon bosimini me'yorda ushlaydi.",
+      "ru": "Ликопин и олеиновая кислота повышают эластичность артерий и нормализуют кровяное давление.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -396,12 +396,12 @@ export const recipes: Recipe[] = [
     "id": "lamb-racks-with-bean-casserole",
     "title": {
       "uz": "Dukkakli Sabzavotlar va Qo'zichoq Go'shti Kassroli",
-      "ru": "Dukkakli Sabzavotlar va Qo'zichoq Go'shti Kassroli",
+      "ru": "Каре ягненка с запеканкой из фасоли",
       "en": "Lamb Racks with Bean Casserole"
     },
     "description": {
       "uz": "Oqsil, temir va magniyga boy, loviya va rozmarinli to'yimli O'rta yer dengizi tushligi.",
-      "ru": "Oqsil, temir va magniyga boy, loviya va rozmarinli to'yimli O'rta yer dengizi tushligi.",
+      "ru": "Сытный средиземноморский обед, богатый белком, железом и магнием.",
       "en": "The perfect meal to treat yourself. This recipe is sure to make you feel like a master chef."
     },
     "category": "lunch",
@@ -635,8 +635,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat oven to 180°C.",
-          "ru": "Preheat oven to 180°C.",
+          "uz": "Pechni 180°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 180°C",
           "en": "Preheat oven to 180°C."
         },
         "description": {
@@ -649,8 +649,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Heat frypan to medium, add 1 tablespoon olive oil.",
-          "ru": "Heat frypan to medium, add 1 tablespoon olive oil.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat frypan to medium, add 1 tablespoon olive oil."
         },
         "description": {
@@ -775,8 +775,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 11,
         "title": {
-          "uz": "Serve lamb on top of bean casserole with a side of vegetables.",
-          "ru": "Serve lamb on top of bean casserole with a side of vegetables.",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "Serve lamb on top of bean casserole with a side of vegetables."
         },
         "description": {
@@ -789,8 +789,8 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat oven to 180°C.",
-        "Heat frypan to medium, add 1 tablespoon olive oil.",
+        "Pechni 180°C ga oldindan qizdiring",
+        "Tavada zaytun moyini qizdiring",
         "Brown 2 lamb racks on all sides in pan.",
         "Transfer lamb to a roasting dish.",
         "In small bowl, combine:",
@@ -799,11 +799,11 @@ export const recipes: Recipe[] = [
         "Bake in oven (15 minutes = rare, 30 minutes = well done)",
         "Drain and rinse the 1 can 4-bean mix in a colander.",
         "For bean casserole, combine ingredients:",
-        "Serve lamb on top of bean casserole with a side of vegetables."
+        "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
-        "Preheat oven to 180°C.",
-        "Heat frypan to medium, add 1 tablespoon olive oil.",
+        "Разогрейте духовку до 180°C",
+        "Разогрейте оливковое масло на сковороде",
         "Brown 2 lamb racks on all sides in pan.",
         "Transfer lamb to a roasting dish.",
         "In small bowl, combine:",
@@ -812,7 +812,7 @@ export const recipes: Recipe[] = [
         "Bake in oven (15 minutes = rare, 30 minutes = well done)",
         "Drain and rinse the 1 can 4-bean mix in a colander.",
         "For bean casserole, combine ingredients:",
-        "Serve lamb on top of bean casserole with a side of vegetables."
+        "Подавайте к столу"
       ],
       "en": [
         "Preheat oven to 180°C.",
@@ -830,7 +830,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Loviya tarkibidagi magniy va kletchatka arterial qon aylanishini yaxshilaydi va xolesterinni tushiradi.",
-      "ru": "Loviya tarkibidagi magniy va kletchatka arterial qon aylanishini yaxshilaydi va xolesterinni tushiradi.",
+      "ru": "Магний и растительная клетчатка улучшают артериальный кровоток и снижают холестерин.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -842,12 +842,12 @@ export const recipes: Recipe[] = [
     "id": "homemade-muesli",
     "title": {
       "uz": "Yong'oq va Mevali Uy Myuslisi",
-      "ru": "Yong'oq va Mevali Uy Myuslisi",
+      "ru": "Домашние мюсли с орехами и фруктами",
       "en": "Homemade Muesli"
     },
     "description": {
       "uz": "Sekin hazm bo'luvchi tola va Omega-3 ga boy, kun davomida barqaror quvvat beruvchi nonushta.",
-      "ru": "Sekin hazm bo'luvchi tola va Omega-3 ga boy, kun davomida barqaror quvvat beruvchi nonushta.",
+      "ru": "Медленные углеводы и омега-3 для отличной памяти и постоянной энергии на весь день.",
       "en": "A simple, nutritious breakfast that you can customise and make your own!source of fibre.\nHint:\nMay wish to pre-prepare dry mix of oats, seeds and bran/puff rice in proportion for convenience and just use a cup measure each time."
     },
     "category": "breakfast",
@@ -993,8 +993,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Place all dry ingredients into a bowl and mix:",
-          "ru": "Place all dry ingredients into a bowl and mix:",
+          "uz": "Place all dry ingredients into a bowl and mix: (qo'shing va aralashtiring)",
+          "ru": "Place all dry ingredients into a bowl and mix: (добавьте и перемешайте)",
           "en": "Place all dry ingredients into a bowl and mix:"
         },
         "description": {
@@ -1021,8 +1021,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Add ½ cup milk",
-          "ru": "Add ½ cup milk",
+          "uz": "Add ½ cup milk (qo'shing va aralashtiring)",
+          "ru": "Add ½ cup milk (добавьте и перемешайте)",
           "en": "Add ½ cup milk"
         },
         "description": {
@@ -1035,8 +1035,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Add yoghurt and serve",
-          "ru": "Add yoghurt and serve",
+          "uz": "Add yoghurt and serve (qo'shing va aralashtiring)",
+          "ru": "Add yoghurt and serve (добавьте и перемешайте)",
           "en": "Add yoghurt and serve"
         },
         "description": {
@@ -1049,16 +1049,16 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Place all dry ingredients into a bowl and mix:",
+        "Place all dry ingredients into a bowl and mix: (qo'shing va aralashtiring)",
         "Sprinkle ¼ teaspoon Cinnamon on top.",
-        "Add ½ cup milk",
-        "Add yoghurt and serve"
+        "Add ½ cup milk (qo'shing va aralashtiring)",
+        "Add yoghurt and serve (qo'shing va aralashtiring)"
       ],
       "ru": [
-        "Place all dry ingredients into a bowl and mix:",
+        "Place all dry ingredients into a bowl and mix: (добавьте и перемешайте)",
         "Sprinkle ¼ teaspoon Cinnamon on top.",
-        "Add ½ cup milk",
-        "Add yoghurt and serve"
+        "Add ½ cup milk (добавьте и перемешайте)",
+        "Add yoghurt and serve (добавьте и перемешайте)"
       ],
       "en": [
         "Place all dry ingredients into a bowl and mix:",
@@ -1069,7 +1069,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Yong'oqdagi Omega-3 va sulidagi beta-glyukan miya neyroplastikligini rag'batlantiradi.",
-      "ru": "Yong'oqdagi Omega-3 va sulidagi beta-glyukan miya neyroplastikligini rag'batlantiradi.",
+      "ru": "Омега-3 жирные кислоты и бета-глюкан способствуют восстановлению нейропластичности мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -1081,12 +1081,12 @@ export const recipes: Recipe[] = [
     "id": "snapper-with-braised-beans-tomatoes",
     "title": {
       "uz": "Dimlangan Loviya va Pomidorli Oq Baliq Filesi",
-      "ru": "Dimlangan Loviya va Pomidorli Oq Baliq Filesi",
+      "ru": "Филе белой рыбы с тушеной фасолью и томатами",
       "en": "Snapper with Braised Beans & Tomatoes"
     },
     "description": {
       "uz": "Oson o'zlashuvchi toza oqsil, kaliy va O'rta yer dengizi sabzavotlariga to'la tushlik.",
-      "ru": "Oson o'zlashuvchi toza oqsil, kaliy va O'rta yer dengizi sabzavotlariga to'la tushlik.",
+      "ru": "Полноценный белок, калий и клетчатка для здоровья сердечно-сосудистой системы.",
       "en": "A hearty and wholesome fish dinner. The tomato sauce pair perfectly with the beans and really fulfils the dish."
     },
     "category": "lunch",
@@ -1210,8 +1210,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium.",
-          "ru": "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium."
         },
         "description": {
@@ -1224,8 +1224,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Place 1 thinly sliced onion in pan, cook until soft.",
-          "ru": "Place 1 thinly sliced onion in pan, cook until soft.",
+          "uz": "Place 1 thinly sliced onion in pan, cook until soft. (to'g'rang)",
+          "ru": "Place 1 thinly sliced onion in pan, cook until soft. (нарежьте)",
           "en": "Place 1 thinly sliced onion in pan, cook until soft."
         },
         "description": {
@@ -1238,8 +1238,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra.",
-          "ru": "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra.",
+          "uz": "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra. (qo'shing va aralashtiring)",
+          "ru": "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra. (добавьте и перемешайте)",
           "en": "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra."
         },
         "description": {
@@ -1252,8 +1252,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid.",
-          "ru": "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid.",
+          "uz": "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid. (qo'shing va aralashtiring)",
+          "ru": "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid. (добавьте и перемешайте)",
           "en": "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid."
         },
         "description": {
@@ -1280,8 +1280,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Meanwhile, heat remaining oil in a fry pan to medium heat.",
-          "ru": "Meanwhile, heat remaining oil in a fry pan to medium heat.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Meanwhile, heat remaining oil in a fry pan to medium heat."
         },
         "description": {
@@ -1294,8 +1294,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy.",
-          "ru": "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy.",
+          "uz": "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy. (qo'shing va aralashtiring)",
+          "ru": "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy. (добавьте и перемешайте)",
           "en": "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy."
         },
         "description": {
@@ -1322,8 +1322,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "To serve, stir ½ cup roughly chopped parsley through the beans mix.",
-          "ru": "To serve, stir ½ cup roughly chopped parsley through the beans mix.",
+          "uz": "To serve, stir ½ cup roughly chopped parsley through the beans mix. (to'g'rang)",
+          "ru": "To serve, stir ½ cup roughly chopped parsley through the beans mix. (нарежьте)",
           "en": "To serve, stir ½ cup roughly chopped parsley through the beans mix."
         },
         "description": {
@@ -1336,26 +1336,26 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium.",
-        "Place 1 thinly sliced onion in pan, cook until soft.",
-        "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra.",
-        "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid.",
+        "Tavada zaytun moyini qizdiring",
+        "Place 1 thinly sliced onion in pan, cook until soft. (to'g'rang)",
+        "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra. (qo'shing va aralashtiring)",
+        "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid. (qo'shing va aralashtiring)",
         "Lower heat to simmer for 10 minutes.",
-        "Meanwhile, heat remaining oil in a fry pan to medium heat.",
-        "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy.",
+        "Tavada zaytun moyini qizdiring",
+        "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy. (qo'shing va aralashtiring)",
         "Turn fillets over and cook further 2 minutes until cooked through.",
-        "To serve, stir ½ cup roughly chopped parsley through the beans mix."
+        "To serve, stir ½ cup roughly chopped parsley through the beans mix. (to'g'rang)"
       ],
       "ru": [
-        "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium.",
-        "Place 1 thinly sliced onion in pan, cook until soft.",
-        "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra.",
-        "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid.",
+        "Разогрейте оливковое масло на сковороде",
+        "Place 1 thinly sliced onion in pan, cook until soft. (нарежьте)",
+        "Add the 2 cloves crushed garlic and 2 tablespoon fennel seeds and cook for one minute extra. (добавьте и перемешайте)",
+        "Add 1 tin crushed tomatoes and 2 cup green beans to pan, stir then cover with lid. (добавьте и перемешайте)",
         "Lower heat to simmer for 10 minutes.",
-        "Meanwhile, heat remaining oil in a fry pan to medium heat.",
-        "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy.",
+        "Разогрейте оливковое масло на сковороде",
+        "Place 2 snapper fillets into the pan, skin down. Cook 4 minutes until skin crispy. (добавьте и перемешайте)",
         "Turn fillets over and cook further 2 minutes until cooked through.",
-        "To serve, stir ½ cup roughly chopped parsley through the beans mix."
+        "To serve, stir ½ cup roughly chopped parsley through the beans mix. (нарежьте)"
       ],
       "en": [
         "Heat 1 tablespoon olive oil in large fry pan (with a lid) to medium.",
@@ -1371,7 +1371,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Baliq oqsili va loviyadagi kaliy arterial bosimni pasaytirishga va tomirlar spazmini yechishga yordam beradi.",
-      "ru": "Baliq oqsili va loviyadagi kaliy arterial bosimni pasaytirishga va tomirlar spazmini yechishga yordam beradi.",
+      "ru": "Легкий белок рыбы и калий нормализуют тонус сосудов и снижают риск повторного инсульта.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -1383,12 +1383,12 @@ export const recipes: Recipe[] = [
     "id": "cheese-and-spinach-triangles",
     "title": {
       "uz": "Ismaloq va Pishloqli Foydali Uchburchak Pishiriq",
-      "ru": "Ismaloq va Pishloqli Foydali Uchburchak Pishiriq",
+      "ru": "Треугольники со шпинатом и сыром фета",
       "en": "Cheese and Spinach Triangles"
     },
     "description": {
       "uz": "Kaliy, temir va foliy kislotasiga to'la ismaloqli xushbo'y yengil tamaddi.",
-      "ru": "Kaliy, temir va foliy kislotasiga to'la ismaloqli xushbo'y yengil tamaddi.",
+      "ru": "Полезная выпечка со шпинатом, богатая фолиевой кислотой и железом.",
       "en": "A quick and easy meal for when you need something fancy. Can be made in advance and frozen for when needed most."
     },
     "category": "snacks",
@@ -1479,8 +1479,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat oven to 190°C.",
-          "ru": "Preheat oven to 190°C.",
+          "uz": "Pechni 190°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 190°C",
           "en": "Preheat oven to 190°C."
         },
         "description": {
@@ -1493,8 +1493,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Place into large bowl:",
-          "ru": "Place into large bowl:",
+          "uz": "Place into large bowl: (qo'shing va aralashtiring)",
+          "ru": "Place into large bowl: (добавьте и перемешайте)",
           "en": "Place into large bowl:"
         },
         "description": {
@@ -1591,8 +1591,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Place triangles on tray 2-3 cm apart.",
-          "ru": "Place triangles on tray 2-3 cm apart.",
+          "uz": "Place triangles on tray 2-3 cm apart. (qo'shing va aralashtiring)",
+          "ru": "Place triangles on tray 2-3 cm apart. (добавьте и перемешайте)",
           "en": "Place triangles on tray 2-3 cm apart."
         },
         "description": {
@@ -1605,8 +1605,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 10,
         "title": {
-          "uz": "Bake 15-20 minutes until golden. Then serve!",
-          "ru": "Bake 15-20 minutes until golden. Then serve!",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "Bake 15-20 minutes until golden. Then serve!"
         },
         "description": {
@@ -1619,28 +1619,28 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat oven to 190°C.",
-        "Place into large bowl:",
+        "Pechni 190°C ga oldindan qizdiring",
+        "Place into large bowl: (qo'shing va aralashtiring)",
         "Cover filo pastry with damp tea towel to keep moist.",
         "Take one sheet filo pastry, fold in half on longest side to make a long rectangle.",
         "Then fold the corner of the filo sheet with the mixture on it over itself to form a triangle.",
         "Press edges of triangle down with fork to seal them,",
         "Repeat process until all mixture used. Makes 10 triangles.",
         "Line baking tray with baking paper.",
-        "Place triangles on tray 2-3 cm apart.",
-        "Bake 15-20 minutes until golden. Then serve!"
+        "Place triangles on tray 2-3 cm apart. (qo'shing va aralashtiring)",
+        "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
-        "Preheat oven to 190°C.",
-        "Place into large bowl:",
+        "Разогрейте духовку до 190°C",
+        "Place into large bowl: (добавьте и перемешайте)",
         "Cover filo pastry with damp tea towel to keep moist.",
         "Take one sheet filo pastry, fold in half on longest side to make a long rectangle.",
         "Then fold the corner of the filo sheet with the mixture on it over itself to form a triangle.",
         "Press edges of triangle down with fork to seal them,",
         "Repeat process until all mixture used. Makes 10 triangles.",
         "Line baking tray with baking paper.",
-        "Place triangles on tray 2-3 cm apart.",
-        "Bake 15-20 minutes until golden. Then serve!"
+        "Place triangles on tray 2-3 cm apart. (добавьте и перемешайте)",
+        "Подавайте к столу"
       ],
       "en": [
         "Preheat oven to 190°C.",
@@ -1657,7 +1657,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Ismaloqdagi foliy kislotasi va magniy qondagi gomotsistein miqdorini kamaytirib, miya tomirlarini himoyalaydi.",
-      "ru": "Ismaloqdagi foliy kislotasi va magniy qondagi gomotsistein miqdorini kamaytirib, miya tomirlarini himoyalaydi.",
+      "ru": "Фолиевая кислота и магний снижают уровень гомоцистеина в крови, защищая сосуды мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -1669,12 +1669,12 @@ export const recipes: Recipe[] = [
     "id": "zucchini-fritters-with-poached-eggs-and-spinach",
     "title": {
       "uz": "Qovoqcha va Pashot Tuxumli Quymoq",
-      "ru": "Qovoqcha va Pashot Tuxumli Quymoq",
+      "ru": "Кабачковые оладьи с яйцом пашот и шпинатом",
       "en": "Zucchini Fritters with Poached eggs and spinach"
     },
     "description": {
       "uz": "Yengil, kletchatkaga boy qovoqcha va xolin moddasi manbai bo'lgan tuxumli nonushta.",
-      "ru": "Yengil, kletchatkaga boy qovoqcha va xolin moddasi manbai bo'lgan tuxumli nonushta.",
+      "ru": "Нежные кабачковые оладьи с яйцом пашот — источник холина для поддержки памяти.",
       "en": "Like a hash brown only with zucchini and so delicious. A filling combination to keep your belly satisfied."
     },
     "category": "breakfast",
@@ -1908,8 +1908,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Start by chopping:",
-          "ru": "Start by chopping:",
+          "uz": "Start by chopping: (to'g'rang)",
+          "ru": "Start by chopping: (нарежьте)",
           "en": "Start by chopping:"
         },
         "description": {
@@ -1936,8 +1936,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Place fry pan on medium heat,",
-          "ru": "Place fry pan on medium heat,",
+          "uz": "Tavani o'rtacha alovda qizdiring",
+          "ru": "Разогрейте сковороду на среднем огне",
           "en": "Place fry pan on medium heat,"
         },
         "description": {
@@ -1950,8 +1950,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Add 1 teaspoon olive oil and diced onion into pan,",
-          "ru": "Add 1 teaspoon olive oil and diced onion into pan,",
+          "uz": "Add 1 teaspoon olive oil and diced onion into pan, (qo'shing va aralashtiring)",
+          "ru": "Add 1 teaspoon olive oil and diced onion into pan, (добавьте и перемешайте)",
           "en": "Add 1 teaspoon olive oil and diced onion into pan,"
         },
         "description": {
@@ -1978,8 +1978,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Place cooked onion into bowl with:",
-          "ru": "Place cooked onion into bowl with:",
+          "uz": "Place cooked onion into bowl with: (qo'shing va aralashtiring)",
+          "ru": "Place cooked onion into bowl with: (добавьте и перемешайте)",
           "en": "Place cooked onion into bowl with:"
         },
         "description": {
@@ -2006,8 +2006,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Turn pan heat to medium,",
-          "ru": "Turn pan heat to medium,",
+          "uz": "Tavani o'rtacha alovda qizdiring",
+          "ru": "Разогрейте сковороду на среднем огне",
           "en": "Turn pan heat to medium,"
         },
         "description": {
@@ -2020,8 +2020,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Add 1 tablespoon olive oil to pan,",
-          "ru": "Add 1 tablespoon olive oil to pan,",
+          "uz": "Add 1 tablespoon olive oil to pan, (qo'shing va aralashtiring)",
+          "ru": "Add 1 tablespoon olive oil to pan, (добавьте и перемешайте)",
           "en": "Add 1 tablespoon olive oil to pan,"
         },
         "description": {
@@ -2062,8 +2062,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 12,
         "title": {
-          "uz": "Heat pan until boiling, then lower heat to simmer. Stir water with spoon to make a whirlpool,",
-          "ru": "Heat pan until boiling, then lower heat to simmer. Stir water with spoon to make a whirlpool,",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat pan until boiling, then lower heat to simmer. Stir water with spoon to make a whirlpool,"
         },
         "description": {
@@ -2090,8 +2090,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 14,
         "title": {
-          "uz": "To serve, divide fritters between 2 plates, top with poached eggs and spinach.",
-          "ru": "To serve, divide fritters between 2 plates, top with poached eggs and spinach.",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "To serve, divide fritters between 2 plates, top with poached eggs and spinach."
         },
         "description": {
@@ -2104,36 +2104,36 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Start by chopping:",
+        "Start by chopping: (to'g'rang)",
         "Grate:",
-        "Place fry pan on medium heat,",
-        "Add 1 teaspoon olive oil and diced onion into pan,",
+        "Tavani o'rtacha alovda qizdiring",
+        "Add 1 teaspoon olive oil and diced onion into pan, (qo'shing va aralashtiring)",
         "Cook onion until soft,",
-        "Place cooked onion into bowl with:",
+        "Place cooked onion into bowl with: (qo'shing va aralashtiring)",
         "Crack 1 egg into a cup, and whisk egg with fork.",
-        "Turn pan heat to medium,",
-        "Add 1 tablespoon olive oil to pan,",
+        "Tavani o'rtacha alovda qizdiring",
+        "Add 1 tablespoon olive oil to pan, (qo'shing va aralashtiring)",
         "Put 2 tablespoons of fritter mix into pan and flatten with back of spoon,",
         "Cook fritters 2 minutes each side until golden,",
-        "Heat pan until boiling, then lower heat to simmer. Stir water with spoon to make a whirlpool,",
+        "Tavada zaytun moyini qizdiring",
         "Crack eggs into the water to cook for 3 minutes, repeat for 4 eggs total.",
-        "To serve, divide fritters between 2 plates, top with poached eggs and spinach."
+        "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
-        "Start by chopping:",
+        "Start by chopping: (нарежьте)",
         "Grate:",
-        "Place fry pan on medium heat,",
-        "Add 1 teaspoon olive oil and diced onion into pan,",
+        "Разогрейте сковороду на среднем огне",
+        "Add 1 teaspoon olive oil and diced onion into pan, (добавьте и перемешайте)",
         "Cook onion until soft,",
-        "Place cooked onion into bowl with:",
+        "Place cooked onion into bowl with: (добавьте и перемешайте)",
         "Crack 1 egg into a cup, and whisk egg with fork.",
-        "Turn pan heat to medium,",
-        "Add 1 tablespoon olive oil to pan,",
+        "Разогрейте сковороду на среднем огне",
+        "Add 1 tablespoon olive oil to pan, (добавьте и перемешайте)",
         "Put 2 tablespoons of fritter mix into pan and flatten with back of spoon,",
         "Cook fritters 2 minutes each side until golden,",
-        "Heat pan until boiling, then lower heat to simmer. Stir water with spoon to make a whirlpool,",
+        "Разогрейте оливковое масло на сковороде",
         "Crack eggs into the water to cook for 3 minutes, repeat for 4 eggs total.",
-        "To serve, divide fritters between 2 plates, top with poached eggs and spinach."
+        "Подавайте к столу"
       ],
       "en": [
         "Start by chopping:",
@@ -2154,7 +2154,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Tuxum sarig'idagi xolin xotira va harakat neyromediatorlari tiklanishi uchun juda muhim.",
-      "ru": "Tuxum sarig'idagi xolin xotira va harakat neyromediatorlari tiklanishi uchun juda muhim.",
+      "ru": "Холин стимулирует синтез ацетилхолина, необходимого для восстановления памяти и речи.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -2166,12 +2166,12 @@ export const recipes: Recipe[] = [
     "id": "southern-fried-chicken-drumsticks",
     "title": {
       "uz": "Ziravorli Pishirilgan Qarsildoq Tovuq Boldirlari",
-      "ru": "Ziravorli Pishirilgan Qarsildoq Tovuq Boldirlari",
+      "ru": "Запеченные куриные голени в хрустящей панировке",
       "en": "Southern-Fried Chicken Drumsticks"
     },
     "description": {
       "uz": "Ortiqcha yog'siz, pechda quritilgan xushbo'y ziravorlar va to'liq donli kepak bilan pishirilgan tovuq.",
-      "ru": "Ortiqcha yog'siz, pechda quritilgan xushbo'y ziravorlar va to'liq donli kepak bilan pishirilgan tovuq.",
+      "ru": "Хрустящие куриные голени, запеченные в духовке без фритюра.",
       "en": "A healthy twist on a kfc takeout classic. These drumsticks have everything you expect from a takeaway meal, just better for you!"
     },
     "category": "dinner",
@@ -2361,8 +2361,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat oven to 180°C",
-          "ru": "Preheat oven to 180°C",
+          "uz": "Pechni 180°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 180°C",
           "en": "Preheat oven to 180°C"
         },
         "description": {
@@ -2375,8 +2375,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Place into zip-lock bag:",
-          "ru": "Place into zip-lock bag:",
+          "uz": "Place into zip-lock bag: (qo'shing va aralashtiring)",
+          "ru": "Place into zip-lock bag: (добавьте и перемешайте)",
           "en": "Place into zip-lock bag:"
         },
         "description": {
@@ -2389,8 +2389,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Spray baking dish with oil and place coated chicken drumsticks in.",
-          "ru": "Spray baking dish with oil and place coated chicken drumsticks in.",
+          "uz": "Spray baking dish with oil and place coated chicken drumsticks in. (qo'shing va aralashtiring)",
+          "ru": "Spray baking dish with oil and place coated chicken drumsticks in. (добавьте и перемешайте)",
           "en": "Spray baking dish with oil and place coated chicken drumsticks in."
         },
         "description": {
@@ -2403,8 +2403,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Heat a saucepan to medium.",
-          "ru": "Heat a saucepan to medium.",
+          "uz": "Tavani o'rtacha alovda qizdiring",
+          "ru": "Разогрейте сковороду на среднем огне",
           "en": "Heat a saucepan to medium."
         },
         "description": {
@@ -2431,8 +2431,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Add to pan:",
-          "ru": "Add to pan:",
+          "uz": "Add to pan: (qo'shing va aralashtiring)",
+          "ru": "Add to pan: (добавьте и перемешайте)",
           "en": "Add to pan:"
         },
         "description": {
@@ -2473,22 +2473,22 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat oven to 180°C",
-        "Place into zip-lock bag:",
-        "Spray baking dish with oil and place coated chicken drumsticks in.",
-        "Heat a saucepan to medium.",
+        "Pechni 180°C ga oldindan qizdiring",
+        "Place into zip-lock bag: (qo'shing va aralashtiring)",
+        "Spray baking dish with oil and place coated chicken drumsticks in. (qo'shing va aralashtiring)",
+        "Tavani o'rtacha alovda qizdiring",
         "Drain and rinse 4-bean mix in a colander",
-        "Add to pan:",
+        "Add to pan: (qo'shing va aralashtiring)",
         "Remove from the heat and stir through the parsley.",
         "Divide the bean casserole mixture between two plates."
       ],
       "ru": [
-        "Preheat oven to 180°C",
-        "Place into zip-lock bag:",
-        "Spray baking dish with oil and place coated chicken drumsticks in.",
-        "Heat a saucepan to medium.",
+        "Разогрейте духовку до 180°C",
+        "Place into zip-lock bag: (добавьте и перемешайте)",
+        "Spray baking dish with oil and place coated chicken drumsticks in. (добавьте и перемешайте)",
+        "Разогрейте сковороду на среднем огне",
         "Drain and rinse 4-bean mix in a colander",
-        "Add to pan:",
+        "Add to pan: (добавьте и перемешайте)",
         "Remove from the heat and stir through the parsley.",
         "Divide the bean casserole mixture between two plates."
       ],
@@ -2505,7 +2505,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Yog'siz tovuq go'shti oqsili insultdan so'ng mushaklar kuchini tiklashga yordam beradi.",
-      "ru": "Yog'siz tovuq go'shti oqsili insultdan so'ng mushaklar kuchini tiklashga yordam beradi.",
+      "ru": "Полноценный белок белого мяса способствует регенерации мышечной ткани.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -2517,12 +2517,12 @@ export const recipes: Recipe[] = [
     "id": "seafood-stew",
     "title": {
       "uz": "O'rta Yer Dengizi Baliq va Dengiz Mahsulotlari Quyuq Sho'rvasi",
-      "ru": "O'rta Yer Dengizi Baliq va Dengiz Mahsulotlari Quyuq Sho'rvasi",
+      "ru": "Средиземноморское рагу из морепродуктов и томатов",
       "en": "Seafood Stew"
     },
     "description": {
       "uz": "Omega-3, yod va minerallarga to'la, pomidor va sarimsoqli xushbo'y sho'rva.",
-      "ru": "Omega-3, yod va minerallarga to'la, pomidor va sarimsoqli xushbo'y sho'rva.",
+      "ru": "Ароматный густой суп с морепродуктами — источник омега-3 и йода.",
       "en": "This versatile Mediterranean stew is perfect year round. The combination of seafood, white wine and a herby broth is just as fitting for a meal on the veranda as it is for a date night."
     },
     "category": "dinner",
@@ -2767,8 +2767,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Heat large, saucepan over medium heat.",
-          "ru": "Heat large, saucepan over medium heat.",
+          "uz": "Tavani o'rtacha alovda qizdiring",
+          "ru": "Разогрейте сковороду на среднем огне",
           "en": "Heat large, saucepan over medium heat."
         },
         "description": {
@@ -2781,8 +2781,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft.",
-          "ru": "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft.",
+          "uz": "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft. (qo'shing va aralashtiring)",
+          "ru": "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft. (добавьте и перемешайте)",
           "en": "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft."
         },
         "description": {
@@ -2795,8 +2795,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Add the 2 cloves crushed garlic, cook one minute longer.",
-          "ru": "Add the 2 cloves crushed garlic, cook one minute longer.",
+          "uz": "Add the 2 cloves crushed garlic, cook one minute longer. (qo'shing va aralashtiring)",
+          "ru": "Add the 2 cloves crushed garlic, cook one minute longer. (добавьте и перемешайте)",
           "en": "Add the 2 cloves crushed garlic, cook one minute longer."
         },
         "description": {
@@ -2809,8 +2809,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Add ½ diced red capsicum, cook and stir for 2 minutes.",
-          "ru": "Add ½ diced red capsicum, cook and stir for 2 minutes.",
+          "uz": "Add ½ diced red capsicum, cook and stir for 2 minutes. (qo'shing va aralashtiring)",
+          "ru": "Add ½ diced red capsicum, cook and stir for 2 minutes. (добавьте и перемешайте)",
           "en": "Add ½ diced red capsicum, cook and stir for 2 minutes."
         },
         "description": {
@@ -2823,8 +2823,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add:",
-          "ru": "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add:",
+          "uz": "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add: (qo'shing va aralashtiring)",
+          "ru": "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add: (добавьте и перемешайте)",
           "en": "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add:"
         },
         "description": {
@@ -2851,8 +2851,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Add 300g seafood marinara mix and 6 prawns.",
-          "ru": "Add 300g seafood marinara mix and 6 prawns.",
+          "uz": "Add 300g seafood marinara mix and 6 prawns. (qo'shing va aralashtiring)",
+          "ru": "Add 300g seafood marinara mix and 6 prawns. (добавьте и перемешайте)",
           "en": "Add 300g seafood marinara mix and 6 prawns."
         },
         "description": {
@@ -2879,8 +2879,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Add 6 raw mussels in their shells,",
-          "ru": "Add 6 raw mussels in their shells,",
+          "uz": "Add 6 raw mussels in their shells, (qo'shing va aralashtiring)",
+          "ru": "Add 6 raw mussels in their shells, (добавьте и перемешайте)",
           "en": "Add 6 raw mussels in their shells,"
         },
         "description": {
@@ -2907,27 +2907,27 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Heat large, saucepan over medium heat.",
-        "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft.",
-        "Add the 2 cloves crushed garlic, cook one minute longer.",
-        "Add ½ diced red capsicum, cook and stir for 2 minutes.",
-        "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add:",
+        "Tavani o'rtacha alovda qizdiring",
+        "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft. (qo'shing va aralashtiring)",
+        "Add the 2 cloves crushed garlic, cook one minute longer. (qo'shing va aralashtiring)",
+        "Add ½ diced red capsicum, cook and stir for 2 minutes. (qo'shing va aralashtiring)",
+        "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add: (qo'shing va aralashtiring)",
         "Bring to the boil.",
-        "Add 300g seafood marinara mix and 6 prawns.",
+        "Add 300g seafood marinara mix and 6 prawns. (qo'shing va aralashtiring)",
         "Cover and lower heat to simmer 10 mins.",
-        "Add 6 raw mussels in their shells,",
+        "Add 6 raw mussels in their shells, (qo'shing va aralashtiring)",
         "Divide seafood stew between 2 large bowls. Top with  ½ cup parsley and  ¼ cup parmesan."
       ],
       "ru": [
-        "Heat large, saucepan over medium heat.",
-        "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft.",
-        "Add the 2 cloves crushed garlic, cook one minute longer.",
-        "Add ½ diced red capsicum, cook and stir for 2 minutes.",
-        "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add:",
+        "Разогрейте сковороду на среднем огне",
+        "Add the 1 tablespoon olive oil and cook the 1 diced onion until soft. (добавьте и перемешайте)",
+        "Add the 2 cloves crushed garlic, cook one minute longer. (добавьте и перемешайте)",
+        "Add ½ diced red capsicum, cook and stir for 2 minutes. (добавьте и перемешайте)",
+        "Pour in ¼ cup white wine, cook off the alcohol for one minute, then add: (добавьте и перемешайте)",
         "Bring to the boil.",
-        "Add 300g seafood marinara mix and 6 prawns.",
+        "Add 300g seafood marinara mix and 6 prawns. (добавьте и перемешайте)",
         "Cover and lower heat to simmer 10 mins.",
-        "Add 6 raw mussels in their shells,",
+        "Add 6 raw mussels in their shells, (добавьте и перемешайте)",
         "Divide seafood stew between 2 large bowls. Top with  ½ cup parsley and  ¼ cup parmesan."
       ],
       "en": [
@@ -2945,7 +2945,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Dengiz mahsulotlaridagi yod va Omega-3 miya qon aylanishini kuchaytiradi.",
-      "ru": "Dengiz mahsulotlaridagi yod va Omega-3 miya qon aylanishini kuchaytiradi.",
+      "ru": "Морские омега-3 жирные кислоты улучшают микроциркуляцию крови в тканях мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -2957,12 +2957,12 @@ export const recipes: Recipe[] = [
     "id": "potato-wedges",
     "title": {
       "uz": "Zaytun Moyida Pishirilgan Qarsildoq Kartoshka",
-      "ru": "Zaytun Moyida Pishirilgan Qarsildoq Kartoshka",
+      "ru": "Запеченный картофель по-деревенски с травами",
       "en": "Potato Wedges"
     },
     "description": {
       "uz": "Zararli yog'larsiz, pechda rozmarin va zaytun moyi bilan pishirilgan foydali garnir.",
-      "ru": "Zararli yog'larsiz, pechda rozmarin va zaytun moyi bilan pishirilgan foydali garnir.",
+      "ru": "Полезный гарнир с оливковым маслом и розмарином вместо зажарки во фритюре.",
       "en": ""
     },
     "category": "sides",
@@ -3020,8 +3020,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat your oven to 200°C.",
-          "ru": "Preheat your oven to 200°C.",
+          "uz": "Pechni 200°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 200°C",
           "en": "Preheat your oven to 200°C."
         },
         "description": {
@@ -3048,8 +3048,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil",
-          "ru": "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil",
+          "uz": "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil (qo'shing va aralashtiring)",
+          "ru": "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil (добавьте и перемешайте)",
           "en": "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil"
         },
         "description": {
@@ -3104,17 +3104,17 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat your oven to 200°C.",
+        "Pechni 200°C ga oldindan qizdiring",
         "Line an oven tray with baking paper.",
-        "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil",
+        "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil (qo'shing va aralashtiring)",
         "Sprinkle 2 tablespoons dried oregano on top.",
         "Bake in the oven 10 minutes.",
         "Turn the potatoes, Bake 10 minutes more until crisp."
       ],
       "ru": [
-        "Preheat your oven to 200°C.",
+        "Разогрейте духовку до 200°C",
         "Line an oven tray with baking paper.",
-        "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil",
+        "Place 2 potatoes cut into wedges on tray and drizzle 2 tablespoons olive oil (добавьте и перемешайте)",
         "Sprinkle 2 tablespoons dried oregano on top.",
         "Bake in the oven 10 minutes.",
         "Turn the potatoes, Bake 10 minutes more until crisp."
@@ -3130,7 +3130,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Po'sti bilan pishirilgan kartoshkadagi yuqori kaliy qon tomirlarni kengaytirib, arterial bosimni tushiradi.",
-      "ru": "Po'sti bilan pishirilgan kartoshkadagi yuqori kaliy qon tomirlarni kengaytirib, arterial bosimni tushiradi.",
+      "ru": "Калий из кожуры картофеля помогает выводить лишний натрий и нормализовать давление.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -3142,12 +3142,12 @@ export const recipes: Recipe[] = [
     "id": "leftover-bean-burrito-quesadillas",
     "title": {
       "uz": "Loviya va Pishloqli Tezkor Kesadilya",
-      "ru": "Loviya va Pishloqli Tezkor Kesadilya",
+      "ru": "Кесадилья с фасолью и расплавленным сыром",
       "en": "Leftover Bean Burrito Quesadillas"
     },
     "description": {
       "uz": "Dukkaklilar va eritilgan pishloq bilan tayyorlanadigan tez va foydali yengil taom.",
-      "ru": "Dukkaklilar va eritilgan pishloq bilan tayyorlanadigan tez va foydali yengil taom.",
+      "ru": "Быстрое питательное блюдо из фасоли и сыра на цельнозерновой лепешке.",
       "en": ""
     },
     "category": "snacks",
@@ -3216,8 +3216,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Place 2 wraps on bench.",
-          "ru": "Place 2 wraps on bench.",
+          "uz": "Place 2 wraps on bench. (qo'shing va aralashtiring)",
+          "ru": "Place 2 wraps on bench. (добавьте и перемешайте)",
           "en": "Place 2 wraps on bench."
         },
         "description": {
@@ -3286,14 +3286,14 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Place 2 wraps on bench.",
+        "Place 2 wraps on bench. (qo'shing va aralashtiring)",
         "Spread bean burrito mix on top of each.",
         "Layer ½ cup tasty cheese then 2 cups English spinach",
         "Top each wrap with another wrap.",
         "Toast in toasted sandwich maker until cooked through."
       ],
       "ru": [
-        "Place 2 wraps on bench.",
+        "Place 2 wraps on bench. (добавьте и перемешайте)",
         "Spread bean burrito mix on top of each.",
         "Layer ½ cup tasty cheese then 2 cups English spinach",
         "Top each wrap with another wrap.",
@@ -3309,7 +3309,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Loviya tolasi qondagi qand miqdorining keskin ko'tarilishini oldini oladi.",
-      "ru": "Loviya tolasi qondagi qand miqdorining keskin ko'tarilishini oldini oladi.",
+      "ru": "Клетчатка фасоли предотвращает скачки уровня сахара в крови.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -3321,12 +3321,12 @@ export const recipes: Recipe[] = [
     "id": "hommus",
     "title": {
       "uz": "Yangi Tayyorlangan Klassik Noxatli Xumus",
-      "ru": "Yangi Tayyorlangan Klassik Noxatli Xumus",
+      "ru": "Домашний классический хумус из нута",
       "en": "Hommus"
     },
     "description": {
       "uz": "O'simlik oqsili, kletchatka va magniy manbai bo'lgan klassik O'rta yer dengizi pastasi.",
-      "ru": "O'simlik oqsili, kletchatka va magniy manbai bo'lgan klassik O'rta yer dengizi pastasi.",
+      "ru": "Питательный хумус из нута и кунжутной пасты — источник растительного белка.",
       "en": "A delicious “goes with anything savoury” snack"
     },
     "category": "snacks",
@@ -3406,8 +3406,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat oven to 180°C",
-          "ru": "Preheat oven to 180°C",
+          "uz": "Pechni 180°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 180°C",
           "en": "Preheat oven to 180°C"
         },
         "description": {
@@ -3420,8 +3420,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Place 3 cloves garlic on baking tray.",
-          "ru": "Place 3 cloves garlic on baking tray.",
+          "uz": "Place 3 cloves garlic on baking tray. (qo'shing va aralashtiring)",
+          "ru": "Place 3 cloves garlic on baking tray. (добавьте и перемешайте)",
           "en": "Place 3 cloves garlic on baking tray."
         },
         "description": {
@@ -3490,8 +3490,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Add to bowl:",
-          "ru": "Add to bowl:",
+          "uz": "Add to bowl: (qo'shing va aralashtiring)",
+          "ru": "Add to bowl: (добавьте и перемешайте)",
           "en": "Add to bowl:"
         },
         "description": {
@@ -3518,23 +3518,23 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat oven to 180°C",
-        "Place 3 cloves garlic on baking tray.",
+        "Pechni 180°C ga oldindan qizdiring",
+        "Place 3 cloves garlic on baking tray. (qo'shing va aralashtiring)",
         "Drain 1 can chickpeas in colander,",
         "Rinse chickpeas with water in colander,",
         "Rub chickpeas together with hands to remove skins.",
         "Squeeze baked garlic out of skin and into the bowl.",
-        "Add to bowl:",
+        "Add to bowl: (qo'shing va aralashtiring)",
         "Blend until smooth with stick blender."
       ],
       "ru": [
-        "Preheat oven to 180°C",
-        "Place 3 cloves garlic on baking tray.",
+        "Разогрейте духовку до 180°C",
+        "Place 3 cloves garlic on baking tray. (добавьте и перемешайте)",
         "Drain 1 can chickpeas in colander,",
         "Rinse chickpeas with water in colander,",
         "Rub chickpeas together with hands to remove skins.",
         "Squeeze baked garlic out of skin and into the bowl.",
-        "Add to bowl:",
+        "Add to bowl: (добавьте и перемешайте)",
         "Blend until smooth with stick blender."
       ],
       "en": [
@@ -3550,7 +3550,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Noxatdagi eriydigan kletchatka qondagi zararli xolesterinni bog'lab organizmdan chiqaradi.",
-      "ru": "Noxatdagi eriydigan kletchatka qondagi zararli xolesterinni bog'lab organizmdan chiqaradi.",
+      "ru": "Растворимая клетчатка нута снижает уровень плохого холестерина.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -3562,12 +3562,12 @@ export const recipes: Recipe[] = [
     "id": "grilled-pears-with-toasted-nuts-yoghurt-mint",
     "title": {
       "uz": "Grilda Pishirilgan Nok, Yong'oq va Yalpizli Desert",
-      "ru": "Grilda Pishirilgan Nok, Yong'oq va Yalpizli Desert",
+      "ru": "Грилованная груша с орехами, йогуртом и мятой",
       "en": "Grilled Pears with Toasted Nuts Yoghurt & Mint"
     },
     "description": {
       "uz": "Shakarsiz, tabiiy shirinlikka ega, pektin va yong'oqli yengil desert.",
-      "ru": "Shakarsiz, tabiiy shirinlikka ega, pektin va yong'oqli yengil desert.",
+      "ru": "Полезный десерт без добавленного сахара с естественной сладостью.",
       "en": "Grilled fruit for a sweetly satisfying morning meal.Get two serves of fruit to start the day!"
     },
     "category": "snacks",
@@ -3705,8 +3705,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Heat a grill pan to medium.",
-          "ru": "Heat a grill pan to medium.",
+          "uz": "Tavani o'rtacha alovda qizdiring",
+          "ru": "Разогрейте сковороду на среднем огне",
           "en": "Heat a grill pan to medium."
         },
         "description": {
@@ -3733,8 +3733,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Place the pears cut side down and grill for 3 minutes.",
-          "ru": "Place the pears cut side down and grill for 3 minutes.",
+          "uz": "Place the pears cut side down and grill for 3 minutes. (qo'shing va aralashtiring)",
+          "ru": "Place the pears cut side down and grill for 3 minutes. (добавьте и перемешайте)",
           "en": "Place the pears cut side down and grill for 3 minutes."
         },
         "description": {
@@ -3761,8 +3761,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
-          "ru": "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "To serve, use 2 bowls. Put half the yoghurt in each bowl,"
         },
         "description": {
@@ -3775,8 +3775,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves.",
-          "ru": "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves.",
+          "uz": "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves. (qo'shing va aralashtiring)",
+          "ru": "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves. (добавьте и перемешайте)",
           "en": "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves."
         },
         "description": {
@@ -3790,21 +3790,21 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Prepare hazelnuts",
-        "Heat a grill pan to medium.",
+        "Tavani o'rtacha alovda qizdiring",
         "Cut 3 pears in half, remove stone.",
-        "Place the pears cut side down and grill for 3 minutes.",
+        "Place the pears cut side down and grill for 3 minutes. (qo'shing va aralashtiring)",
         "Turn pears and grill for 3 minutes.",
-        "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
-        "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves."
+        "Dasturxonga torting va rohatlaning",
+        "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves. (qo'shing va aralashtiring)"
       ],
       "ru": [
         "Prepare hazelnuts",
-        "Heat a grill pan to medium.",
+        "Разогрейте сковороду на среднем огне",
         "Cut 3 pears in half, remove stone.",
-        "Place the pears cut side down and grill for 3 minutes.",
+        "Place the pears cut side down and grill for 3 minutes. (добавьте и перемешайте)",
         "Turn pears and grill for 3 minutes.",
-        "To serve, use 2 bowls. Put half the yoghurt in each bowl,",
-        "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves."
+        "Подавайте к столу",
+        "Place half the peaches on top. Sprinkle with nuts and ½ cup mint leaves. (добавьте и перемешайте)"
       ],
       "en": [
         "Prepare hazelnuts",
@@ -3818,7 +3818,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Nokdagi pektin moddasi qonda qand miqdorini barqarorlashtiradi, yong'oq esa miyani himoyalaydi.",
-      "ru": "Nokdagi pektin moddasi qonda qand miqdorini barqarorlashtiradi, yong'oq esa miyani himoyalaydi.",
+      "ru": "Пектин груши регулирует усвоение сахаров, а орехи питают нервные клетки.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -3830,12 +3830,12 @@ export const recipes: Recipe[] = [
     "id": "greek-salad",
     "title": {
       "uz": "Klassik O'rta Yer Dengizi Yunoncha Salati",
-      "ru": "Klassik O'rta Yer Dengizi Yunoncha Salati",
+      "ru": "Классический средиземноморский греческий салат",
       "en": "Greek Salad"
     },
     "description": {
       "uz": "Yangi sabzavotlar, kalamata zaytunlari va zaytun moyi bilan boyitilgan salat.",
-      "ru": "Yangi sabzavotlar, kalamata zaytunlari va zaytun moyi bilan boyitilgan salat.",
+      "ru": "Хрустящие овощи, маслины и оливковое масло холодного отжима.",
       "en": "A classic, Greek salad. This fresh, vibrant salad embodies the essence of Mediterranean cuisine."
     },
     "category": "salad",
@@ -3948,8 +3948,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Slice 1 baby cos lettuce",
-          "ru": "Slice 1 baby cos lettuce",
+          "uz": "Slice 1 baby cos lettuce (to'g'rang)",
+          "ru": "Slice 1 baby cos lettuce (нарежьте)",
           "en": "Slice 1 baby cos lettuce"
         },
         "description": {
@@ -3962,8 +3962,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "slice 1 punnet cherry tomatoes into halves",
-          "ru": "slice 1 punnet cherry tomatoes into halves",
+          "uz": "slice 1 punnet cherry tomatoes into halves (to'g'rang)",
+          "ru": "slice 1 punnet cherry tomatoes into halves (нарежьте)",
           "en": "slice 1 punnet cherry tomatoes into halves"
         },
         "description": {
@@ -3976,8 +3976,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Peel then slice 1 cucumber",
-          "ru": "Peel then slice 1 cucumber",
+          "uz": "Peel then slice 1 cucumber (to'g'rang)",
+          "ru": "Peel then slice 1 cucumber (нарежьте)",
           "en": "Peel then slice 1 cucumber"
         },
         "description": {
@@ -4018,8 +4018,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Squeeze ½ lemon juice and sprinkle 1 tablespoon oregano ontop, serve.",
-          "ru": "Squeeze ½ lemon juice and sprinkle 1 tablespoon oregano ontop, serve.",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "Squeeze ½ lemon juice and sprinkle 1 tablespoon oregano ontop, serve."
         },
         "description": {
@@ -4032,20 +4032,20 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Slice 1 baby cos lettuce",
-        "slice 1 punnet cherry tomatoes into halves",
-        "Peel then slice 1 cucumber",
+        "Slice 1 baby cos lettuce (to'g'rang)",
+        "slice 1 punnet cherry tomatoes into halves (to'g'rang)",
+        "Peel then slice 1 cucumber (to'g'rang)",
         "combine into a bowl:",
         "Drizzle 2 tablespoons olive oil over the top.",
-        "Squeeze ½ lemon juice and sprinkle 1 tablespoon oregano ontop, serve."
+        "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
-        "Slice 1 baby cos lettuce",
-        "slice 1 punnet cherry tomatoes into halves",
-        "Peel then slice 1 cucumber",
+        "Slice 1 baby cos lettuce (нарежьте)",
+        "slice 1 punnet cherry tomatoes into halves (нарежьте)",
+        "Peel then slice 1 cucumber (нарежьте)",
         "combine into a bowl:",
         "Drizzle 2 tablespoons olive oil over the top.",
-        "Squeeze ½ lemon juice and sprinkle 1 tablespoon oregano ontop, serve."
+        "Подавайте к столу"
       ],
       "en": [
         "Slice 1 baby cos lettuce",
@@ -4058,7 +4058,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Zaytundagi polifenollar qon quyulishini oldini oladi va tomirlar devorini mustahkamlaydi.",
-      "ru": "Zaytundagi polifenollar qon quyulishini oldini oladi va tomirlar devorini mustahkamlaydi.",
+      "ru": "Полифенолы оливкового масла предупреждают образование тромбов.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -4070,12 +4070,12 @@ export const recipes: Recipe[] = [
     "id": "crispy-skinned-barramundi-with-braised-vegetables-mint-yoghurt",
     "title": {
       "uz": "Qarsildoq Po'stli Barramundi va Dimlangan Sabzavotlar",
-      "ru": "Qarsildoq Po'stli Barramundi va Dimlangan Sabzavotlar",
+      "ru": "Хрустящая баррамунди с тушеными овощами и мятным соусом",
       "en": "Crispy Skinned Barramundi with Braised Vegetables & Mint Yoghurt"
     },
     "description": {
       "uz": "Oqsil va Omega-3 ga boy oq dengiz balig'i va yalpizli tetiklashtiruvchi sous.",
-      "ru": "Oqsil va Omega-3 ga boy oq dengiz balig'i va yalpizli tetiklashtiruvchi sous.",
+      "ru": "Нежное филе морской рыбы со свежим мятно-йогуртовым соусом.",
       "en": "Tender fish with a beautifully crispy skin, resting on a fresh and textural mix of greens."
     },
     "category": "dinner",
@@ -4232,8 +4232,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Heat fry pan to medium, add 1 tablespoon olive oil.",
-          "ru": "Heat fry pan to medium, add 1 tablespoon olive oil.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat fry pan to medium, add 1 tablespoon olive oil."
         },
         "description": {
@@ -4274,8 +4274,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Heat a saucepan to medium. add 2 tablespoons olive oil and 1 sliced leek (white part only), cook for 2 minutes.",
-          "ru": "Heat a saucepan to medium. add 2 tablespoons olive oil and 1 sliced leek (white part only), cook for 2 minutes.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat a saucepan to medium. add 2 tablespoons olive oil and 1 sliced leek (white part only), cook for 2 minutes."
         },
         "description": {
@@ -4288,8 +4288,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Add these vegetables into saucepan:",
-          "ru": "Add these vegetables into saucepan:",
+          "uz": "Add these vegetables into saucepan: (qo'shing va aralashtiring)",
+          "ru": "Add these vegetables into saucepan: (добавьте и перемешайте)",
           "en": "Add these vegetables into saucepan:"
         },
         "description": {
@@ -4302,8 +4302,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Add ½ cup chicken stock to vegetables, bring to boil.",
-          "ru": "Add ½ cup chicken stock to vegetables, bring to boil.",
+          "uz": "Add ½ cup chicken stock to vegetables, bring to boil. (qo'shing va aralashtiring)",
+          "ru": "Add ½ cup chicken stock to vegetables, bring to boil. (добавьте и перемешайте)",
           "en": "Add ½ cup chicken stock to vegetables, bring to boil."
         },
         "description": {
@@ -4344,8 +4344,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt.",
-          "ru": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt.",
+          "uz": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt. (qo'shing va aralashtiring)",
+          "ru": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt. (добавьте и перемешайте)",
           "en": "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt."
         },
         "description": {
@@ -4358,26 +4358,26 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Heat fry pan to medium, add 1 tablespoon olive oil.",
+        "Tavada zaytun moyini qizdiring",
         "Cook 2 barramundi fillets skin down for 4 minutes.",
         "Turn fillets, cook another 2 minutes.",
-        "Heat a saucepan to medium. add 2 tablespoons olive oil and 1 sliced leek (white part only), cook for 2 minutes.",
-        "Add these vegetables into saucepan:",
-        "Add ½ cup chicken stock to vegetables, bring to boil.",
+        "Tavada zaytun moyini qizdiring",
+        "Add these vegetables into saucepan: (qo'shing va aralashtiring)",
+        "Add ½ cup chicken stock to vegetables, bring to boil. (qo'shing va aralashtiring)",
         "Then lower temperature and simmer for 3 minutes.",
         "Combine ½ cup greek yoghurt, ½ a lemon juice and 2 tablespoons mint into a small bowl.",
-        "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt."
+        "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt. (qo'shing va aralashtiring)"
       ],
       "ru": [
-        "Heat fry pan to medium, add 1 tablespoon olive oil.",
+        "Разогрейте оливковое масло на сковороде",
         "Cook 2 barramundi fillets skin down for 4 minutes.",
         "Turn fillets, cook another 2 minutes.",
-        "Heat a saucepan to medium. add 2 tablespoons olive oil and 1 sliced leek (white part only), cook for 2 minutes.",
-        "Add these vegetables into saucepan:",
-        "Add ½ cup chicken stock to vegetables, bring to boil.",
+        "Разогрейте оливковое масло на сковороде",
+        "Add these vegetables into saucepan: (добавьте и перемешайте)",
+        "Add ½ cup chicken stock to vegetables, bring to boil. (добавьте и перемешайте)",
         "Then lower temperature and simmer for 3 minutes.",
         "Combine ½ cup greek yoghurt, ½ a lemon juice and 2 tablespoons mint into a small bowl.",
-        "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt."
+        "To serve, place layer of vegetables onto a plate, top with fish and mint yoghurt. (добавьте и перемешайте)"
       ],
       "en": [
         "Heat fry pan to medium, add 1 tablespoon olive oil.",
@@ -4393,7 +4393,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Dengiz balig'idagi toza Omega-3 va oqsil insultdan keyin neyronlar regeneratsiyasini ta'minlaydi.",
-      "ru": "Dengiz balig'idagi toza Omega-3 va oqsil insultdan keyin neyronlar regeneratsiyasini ta'minlaydi.",
+      "ru": "Морская рыбы богата омега-3, стимулирующими восстановление нейронов.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -4405,12 +4405,12 @@ export const recipes: Recipe[] = [
     "id": "creamy-mushroom-spinach-toast",
     "title": {
       "uz": "Qo'ziqorin va Ismaloqli Kremli Toast",
-      "ru": "Qo'ziqorin va Ismaloqli Kremli Toast",
+      "ru": "Тост с кремовыми грибами и шпинатом",
       "en": "Creamy Mushroom & Spinach Toast"
     },
     "description": {
       "uz": "B guruhi vitaminlari va magniyga to'la, xushbo'y qo'ziqorinli nonushta.",
-      "ru": "B guruhi vitaminlari va magniyga to'la, xushbo'y qo'ziqorinli nonushta.",
+      "ru": "Сытный тост с грибами и шпинатом — источник витаминов группы B.",
       "en": "The name says it all! Delectable creamy mushrooms over toast for brekky"
     },
     "category": "breakfast",
@@ -4545,8 +4545,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
-          "ru": "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
+          "uz": "Wipe off 350g mushrooms with a damp cloth, then thickly slice. (to'g'rang)",
+          "ru": "Wipe off 350g mushrooms with a damp cloth, then thickly slice. (нарежьте)",
           "en": "Wipe off 350g mushrooms with a damp cloth, then thickly slice."
         },
         "description": {
@@ -4559,8 +4559,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Heat pan to medium heat. Add 1 tablespoon olive oil and 1 clove crushed garlic.",
-          "ru": "Heat pan to medium heat. Add 1 tablespoon olive oil and 1 clove crushed garlic.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat pan to medium heat. Add 1 tablespoon olive oil and 1 clove crushed garlic."
         },
         "description": {
@@ -4573,8 +4573,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Add 350g sliced mushrooms to pan, cook until soft.",
-          "ru": "Add 350g sliced mushrooms to pan, cook until soft.",
+          "uz": "Add 350g sliced mushrooms to pan, cook until soft. (to'g'rang)",
+          "ru": "Add 350g sliced mushrooms to pan, cook until soft. (нарежьте)",
           "en": "Add 350g sliced mushrooms to pan, cook until soft."
         },
         "description": {
@@ -4587,8 +4587,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Add 1 cup spinach and stir until the spinach is wilted,",
-          "ru": "Add 1 cup spinach and stir until the spinach is wilted,",
+          "uz": "Add 1 cup spinach and stir until the spinach is wilted, (qo'shing va aralashtiring)",
+          "ru": "Add 1 cup spinach and stir until the spinach is wilted, (добавьте и перемешайте)",
           "en": "Add 1 cup spinach and stir until the spinach is wilted,"
         },
         "description": {
@@ -4601,8 +4601,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Add 1 tablespoon sour cream and stir through,",
-          "ru": "Add 1 tablespoon sour cream and stir through,",
+          "uz": "Add 1 tablespoon sour cream and stir through, (qo'shing va aralashtiring)",
+          "ru": "Add 1 tablespoon sour cream and stir through, (добавьте и перемешайте)",
           "en": "Add 1 tablespoon sour cream and stir through,"
         },
         "description": {
@@ -4615,8 +4615,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Serve mix on top of toasted bread (4 slices).",
-          "ru": "Serve mix on top of toasted bread (4 slices).",
+          "uz": "Serve mix on top of toasted bread (4 slices). (to'g'rang)",
+          "ru": "Serve mix on top of toasted bread (4 slices). (нарежьте)",
           "en": "Serve mix on top of toasted bread (4 slices)."
         },
         "description": {
@@ -4629,20 +4629,20 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
-        "Heat pan to medium heat. Add 1 tablespoon olive oil and 1 clove crushed garlic.",
-        "Add 350g sliced mushrooms to pan, cook until soft.",
-        "Add 1 cup spinach and stir until the spinach is wilted,",
-        "Add 1 tablespoon sour cream and stir through,",
-        "Serve mix on top of toasted bread (4 slices)."
+        "Wipe off 350g mushrooms with a damp cloth, then thickly slice. (to'g'rang)",
+        "Tavada zaytun moyini qizdiring",
+        "Add 350g sliced mushrooms to pan, cook until soft. (to'g'rang)",
+        "Add 1 cup spinach and stir until the spinach is wilted, (qo'shing va aralashtiring)",
+        "Add 1 tablespoon sour cream and stir through, (qo'shing va aralashtiring)",
+        "Serve mix on top of toasted bread (4 slices). (to'g'rang)"
       ],
       "ru": [
-        "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
-        "Heat pan to medium heat. Add 1 tablespoon olive oil and 1 clove crushed garlic.",
-        "Add 350g sliced mushrooms to pan, cook until soft.",
-        "Add 1 cup spinach and stir until the spinach is wilted,",
-        "Add 1 tablespoon sour cream and stir through,",
-        "Serve mix on top of toasted bread (4 slices)."
+        "Wipe off 350g mushrooms with a damp cloth, then thickly slice. (нарежьте)",
+        "Разогрейте оливковое масло на сковороде",
+        "Add 350g sliced mushrooms to pan, cook until soft. (нарежьте)",
+        "Add 1 cup spinach and stir until the spinach is wilted, (добавьте и перемешайте)",
+        "Add 1 tablespoon sour cream and stir through, (добавьте и перемешайте)",
+        "Serve mix on top of toasted bread (4 slices). (нарежьте)"
       ],
       "en": [
         "Wipe off 350g mushrooms with a damp cloth, then thickly slice.",
@@ -4655,7 +4655,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Qo'ziqorindagi B guruhi vitaminlari asab tolalari bo'ylab impulslar o'tishini yaxshilaydi.",
-      "ru": "Qo'ziqorindagi B guruhi vitaminlari asab tolalari bo'ylab impulslar o'tishini yaxshilaydi.",
+      "ru": "Витамины группы B улучшают проведение нервных импульсов.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -4667,12 +4667,12 @@ export const recipes: Recipe[] = [
     "id": "chicken-pot-pies",
     "title": {
       "uz": "Sabzavotli va Tovuqli Uy Pirogi",
-      "ru": "Sabzavotli va Tovuqli Uy Pirogi",
+      "ru": "Домашний куриный пирог с овощами",
       "en": "Chicken Pot Pies"
     },
     "description": {
       "uz": "Sabzi, no'xat va tovuq go'shti bilan pechda pishirilgan foydali va to'yimli pirog.",
-      "ru": "Sabzi, no'xat va tovuq go'shti bilan pechda pishirilgan foydali va to'yimli pirog.",
+      "ru": "Ароматный запеченный пирог с филе курицы и сочными овощами.",
       "en": "These hearty pies will be sure to fill those home cooked meal cravings. Flavoursome and perfect for a mid week meal."
     },
     "category": "dinner",
@@ -4884,8 +4884,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat oven to 200°C",
-          "ru": "Preheat oven to 200°C",
+          "uz": "Pechni 200°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 200°C",
           "en": "Preheat oven to 200°C"
         },
         "description": {
@@ -4898,8 +4898,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken.",
-          "ru": "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken.",
+          "uz": "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken. (qo'shing va aralashtiring)",
+          "ru": "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken. (добавьте и перемешайте)",
           "en": "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken."
         },
         "description": {
@@ -4912,8 +4912,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Place a heavy bottomed casserole dish over a medium heat. Add 1 tbsp of oil.",
-          "ru": "Place a heavy bottomed casserole dish over a medium heat. Add 1 tbsp of oil.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Place a heavy bottomed casserole dish over a medium heat. Add 1 tbsp of oil."
         },
         "description": {
@@ -4940,8 +4940,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Clean the casserole dish and place back on the heat with another tbsp of oil.",
-          "ru": "Clean the casserole dish and place back on the heat with another tbsp of oil.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Clean the casserole dish and place back on the heat with another tbsp of oil."
         },
         "description": {
@@ -4954,8 +4954,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Cook the leek until soft then add the crushed garlic and cook for a further minute.",
-          "ru": "Cook the leek until soft then add the crushed garlic and cook for a further minute.",
+          "uz": "Cook the leek until soft then add the crushed garlic and cook for a further minute. (qo'shing va aralashtiring)",
+          "ru": "Cook the leek until soft then add the crushed garlic and cook for a further minute. (добавьте и перемешайте)",
           "en": "Cook the leek until soft then add the crushed garlic and cook for a further minute."
         },
         "description": {
@@ -4968,8 +4968,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 7,
         "title": {
-          "uz": "Add chicken, carrots and the stock to the dish.",
-          "ru": "Add chicken, carrots and the stock to the dish.",
+          "uz": "Add chicken, carrots and the stock to the dish. (qo'shing va aralashtiring)",
+          "ru": "Add chicken, carrots and the stock to the dish. (добавьте и перемешайте)",
           "en": "Add chicken, carrots and the stock to the dish."
         },
         "description": {
@@ -4982,8 +4982,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Bring the chicken casserole to a boil then lower the heat. Cover and simmer for 30 mins.",
-          "ru": "Bring the chicken casserole to a boil then lower the heat. Cover and simmer for 30 mins.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Bring the chicken casserole to a boil then lower the heat. Cover and simmer for 30 mins."
         },
         "description": {
@@ -5038,8 +5038,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 12,
         "title": {
-          "uz": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
-          "ru": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
+          "uz": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg. (to'g'rang)",
+          "ru": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg. (нарежьте)",
           "en": "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg."
         },
         "description": {
@@ -5052,8 +5052,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 13,
         "title": {
-          "uz": "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown.",
-          "ru": "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown.",
+          "uz": "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown. (qo'shing va aralashtiring)",
+          "ru": "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown. (добавьте и перемешайте)",
           "en": "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown."
         },
         "description": {
@@ -5066,34 +5066,34 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat oven to 200°C",
-        "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken.",
-        "Place a heavy bottomed casserole dish over a medium heat. Add 1 tbsp of oil.",
+        "Pechni 200°C ga oldindan qizdiring",
+        "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken. (qo'shing va aralashtiring)",
+        "Tavada zaytun moyini qizdiring",
         "Brown the chicken pieces in batches and set aside",
-        "Clean the casserole dish and place back on the heat with another tbsp of oil.",
-        "Cook the leek until soft then add the crushed garlic and cook for a further minute.",
-        "Add chicken, carrots and the stock to the dish.",
-        "Bring the chicken casserole to a boil then lower the heat. Cover and simmer for 30 mins.",
+        "Tavada zaytun moyini qizdiring",
+        "Cook the leek until soft then add the crushed garlic and cook for a further minute. (qo'shing va aralashtiring)",
+        "Add chicken, carrots and the stock to the dish. (qo'shing va aralashtiring)",
+        "Tavada zaytun moyini qizdiring",
         "Remove the lid and cook for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
         "Using the top of your ramekins as a template, cut out the puff pastry to make a lid for your pies.",
         "Divide the chicken and leek casserole among 4 x pie ramekins, top with the pastry lids using a fork to press down the edges.",
-        "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
-        "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown."
+        "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg. (to'g'rang)",
+        "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown. (qo'shing va aralashtiring)"
       ],
       "ru": [
-        "Preheat oven to 200°C",
-        "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken.",
-        "Place a heavy bottomed casserole dish over a medium heat. Add 1 tbsp of oil.",
+        "Разогрейте духовку до 200°C",
+        "Place flour and chicken thighs into a large zip lock bag. Shake to coat chicken. (добавьте и перемешайте)",
+        "Разогрейте оливковое масло на сковороде",
         "Brown the chicken pieces in batches and set aside",
-        "Clean the casserole dish and place back on the heat with another tbsp of oil.",
-        "Cook the leek until soft then add the crushed garlic and cook for a further minute.",
-        "Add chicken, carrots and the stock to the dish.",
-        "Bring the chicken casserole to a boil then lower the heat. Cover and simmer for 30 mins.",
+        "Разогрейте оливковое масло на сковороде",
+        "Cook the leek until soft then add the crushed garlic and cook for a further minute. (добавьте и перемешайте)",
+        "Add chicken, carrots and the stock to the dish. (добавьте и перемешайте)",
+        "Разогрейте оливковое масло на сковороде",
         "Remove the lid and cook for a further 10-15mins until the chicken is cooked through and the cooking liquid has reduced",
         "Using the top of your ramekins as a template, cut out the puff pastry to make a lid for your pies.",
         "Divide the chicken and leek casserole among 4 x pie ramekins, top with the pastry lids using a fork to press down the edges.",
-        "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg.",
-        "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown."
+        "Use a small sharp knife to slice a cross into the middle of the pastry to allow steam to escape during cooking and then brush the top with the lightly whisked egg. (нарежьте)",
+        "Place the ramekins onto a baking dish and the bake for 10-15 minutes until the pastry is golden brown. (добавьте и перемешайте)"
       ],
       "en": [
         "Preheat oven to 200°C",
@@ -5113,7 +5113,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Yog'siz tovuq oqsili va sabzavotli karotinoidlar to'qimalar yangilanishiga yordam beradi.",
-      "ru": "Yog'siz tovuq oqsili va sabzavotli karotinoidlar to'qimalar yangilanishiga yordam beradi.",
+      "ru": "Легкий белок птицы и каротиноиды овощей укрепляют общий тонус.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -5125,12 +5125,12 @@ export const recipes: Recipe[] = [
     "id": "cheese-spinach-quesadillas",
     "title": {
       "uz": "Ismaloq va Pishloqli Tezkor Kesadilya",
-      "ru": "Ismaloq va Pishloqli Tezkor Kesadilya",
+      "ru": "Быстрая кесадилья со шпинатом и сыром",
       "en": "Cheese & Spinach Quesadillas"
     },
     "description": {
       "uz": "3 qadamda tayyor bo'ladigan, kaltsiy va foliy kislotasiga boy qarsildoq tamaddi.",
-      "ru": "3 qadamda tayyor bo'ladigan, kaltsiy va foliy kislotasiga boy qarsildoq tamaddi.",
+      "ru": "Хрустящая кесадилья со шпинатом всего за 3 простых шага.",
       "en": ""
     },
     "category": "snacks",
@@ -5232,8 +5232,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Place 2 wraps on bench.",
-          "ru": "Place 2 wraps on bench.",
+          "uz": "Place 2 wraps on bench. (qo'shing va aralashtiring)",
+          "ru": "Place 2 wraps on bench. (добавьте и перемешайте)",
           "en": "Place 2 wraps on bench."
         },
         "description": {
@@ -5260,8 +5260,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Place another wrap on top and toast in sandwich maker (or pan) 3mins,",
-          "ru": "Place another wrap on top and toast in sandwich maker (or pan) 3mins,",
+          "uz": "Place another wrap on top and toast in sandwich maker (or pan) 3mins, (qo'shing va aralashtiring)",
+          "ru": "Place another wrap on top and toast in sandwich maker (or pan) 3mins, (добавьте и перемешайте)",
           "en": "Place another wrap on top and toast in sandwich maker (or pan) 3mins,"
         },
         "description": {
@@ -5274,14 +5274,14 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Place 2 wraps on bench.",
+        "Place 2 wraps on bench. (qo'shing va aralashtiring)",
         "On each wrap spread:",
-        "Place another wrap on top and toast in sandwich maker (or pan) 3mins,"
+        "Place another wrap on top and toast in sandwich maker (or pan) 3mins, (qo'shing va aralashtiring)"
       ],
       "ru": [
-        "Place 2 wraps on bench.",
+        "Place 2 wraps on bench. (добавьте и перемешайте)",
         "On each wrap spread:",
-        "Place another wrap on top and toast in sandwich maker (or pan) 3mins,"
+        "Place another wrap on top and toast in sandwich maker (or pan) 3mins, (добавьте и перемешайте)"
       ],
       "en": [
         "Place 2 wraps on bench.",
@@ -5291,7 +5291,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Ismaloq tarkibidagi K vitamini va magniy qon tomirlar egiluvchanligini ta'minlaydi.",
-      "ru": "Ismaloq tarkibidagi K vitamini va magniy qon tomirlar egiluvchanligini ta'minlaydi.",
+      "ru": "Витамин K и магний шпината поддерживают эластичность сосудистой стенки.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -5303,12 +5303,12 @@ export const recipes: Recipe[] = [
     "id": "cheese-spinach-pie-with-salad",
     "title": {
       "uz": "Ismaloqli Pirog va Yangi Yashil Salat",
-      "ru": "Ismaloqli Pirog va Yangi Yashil Salat",
+      "ru": "Пирог со шпинатом и свежий зеленый салат",
       "en": "Cheese & Spinach Pie with Salad"
     },
     "description": {
       "uz": "O'rta yer dengizi uslubida pishirilgan pirog va zaytun moyli barra salat.",
-      "ru": "O'rta yer dengizi uslubida pishirilgan pirog va zaytun moyli barra salat.",
+      "ru": "Традиционный греческий пирог со шпинатом и хрустящим салатом.",
       "en": "A cheesy, vegetable pie loaded with eggs. Crispy and light, perfect for a summer’s day."
     },
     "category": "lunch",
@@ -5476,8 +5476,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat oven to 180°C",
-          "ru": "Preheat oven to 180°C",
+          "uz": "Pechni 180°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 180°C",
           "en": "Preheat oven to 180°C"
         },
         "description": {
@@ -5490,8 +5490,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
-          "ru": "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
+          "uz": "Tavani o'rtacha alovda qizdiring",
+          "ru": "Разогрейте сковороду на среднем огне",
           "en": "Rinse 1 bunch shredded silver beet, place into pan on medium heat."
         },
         "description": {
@@ -5574,8 +5574,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "Serve with side salad.",
-          "ru": "Serve with side salad.",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "Serve with side salad."
         },
         "description": {
@@ -5588,24 +5588,24 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat oven to 180°C",
-        "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
+        "Pechni 180°C ga oldindan qizdiring",
+        "Tavani o'rtacha alovda qizdiring",
         "Cover and steam until sliver beet is wilted.",
         "In a large bowl, combine:",
         "Spray baking dish with oil then line with baking paper.",
         "Repeat until 5 layers of pastry.",
         "Bake 45 minutes until cooked through and brown.",
-        "Serve with side salad."
+        "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
-        "Preheat oven to 180°C",
-        "Rinse 1 bunch shredded silver beet, place into pan on medium heat.",
+        "Разогрейте духовку до 180°C",
+        "Разогрейте сковороду на среднем огне",
         "Cover and steam until sliver beet is wilted.",
         "In a large bowl, combine:",
         "Spray baking dish with oil then line with baking paper.",
         "Repeat until 5 layers of pastry.",
         "Bake 45 minutes until cooked through and brown.",
-        "Serve with side salad."
+        "Подавайте к столу"
       ],
       "en": [
         "Preheat oven to 180°C",
@@ -5620,7 +5620,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Ismaloqdagi antioksidantlar va magniy tomir tonusini me'yorlashtiradi.",
-      "ru": "Ismaloqdagi antioksidantlar va magniy tomir tonusini me'yorlashtiradi.",
+      "ru": "Антиоксиданты шпината снижают окислительный стресс в клетках мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -5632,12 +5632,12 @@ export const recipes: Recipe[] = [
     "id": "cajun-salmon-with-corn-salsa",
     "title": {
       "uz": "Xushbo'y Losos va Shirin Jo'xorili Salsa",
-      "ru": "Xushbo'y Losos va Shirin Jo'xorili Salsa",
+      "ru": "Лосось по-каджунски со свежей кукурузной сальсой",
       "en": "Cajun Salmon with Corn Salsa"
     },
     "description": {
       "uz": "Omega-3 yog' kislotalariga boy losos va shirin jo'xori, limonli yangi salsa.",
-      "ru": "Omega-3 yog' kislotalariga boy losos va shirin jo'xori, limonli yangi salsa.",
+      "ru": "Запеченный лосось со специями и освежающей кукурузной сальсой.",
       "en": "A light and refreshing meal that can be made as spicy as you like. The flaky fish pairs perfectly with the sweet and flavoursome salsa beneath."
     },
     "category": "dinner",
@@ -5761,8 +5761,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Preheat oven to 180°C.",
-          "ru": "Preheat oven to 180°C.",
+          "uz": "Pechni 180°C ga oldindan qizdiring",
+          "ru": "Разогрейте духовку до 180°C",
           "en": "Preheat oven to 180°C."
         },
         "description": {
@@ -5789,8 +5789,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Heat fry pan to medium, add 1 tablespoon oil,",
-          "ru": "Heat fry pan to medium, add 1 tablespoon oil,",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat fry pan to medium, add 1 tablespoon oil,"
         },
         "description": {
@@ -5817,8 +5817,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Meanwhile, for the salsa put another pan on medium heat, add :",
-          "ru": "Meanwhile, for the salsa put another pan on medium heat, add :",
+          "uz": "Tavani o'rtacha alovda qizdiring",
+          "ru": "Разогрейте сковороду на среднем огне",
           "en": "Meanwhile, for the salsa put another pan on medium heat, add :"
         },
         "description": {
@@ -5831,8 +5831,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Add ¼ diced pineapple to salsa mix, cook for one minute.",
-          "ru": "Add ¼ diced pineapple to salsa mix, cook for one minute.",
+          "uz": "Add ¼ diced pineapple to salsa mix, cook for one minute. (qo'shing va aralashtiring)",
+          "ru": "Add ¼ diced pineapple to salsa mix, cook for one minute. (добавьте и перемешайте)",
           "en": "Add ¼ diced pineapple to salsa mix, cook for one minute."
         },
         "description": {
@@ -5873,8 +5873,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Serve Salmon on top of salsa.",
-          "ru": "Serve Salmon on top of salsa.",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "Serve Salmon on top of salsa."
         },
         "description": {
@@ -5887,26 +5887,26 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Preheat oven to 180°C.",
+        "Pechni 180°C ga oldindan qizdiring",
         "Sprinkle 1 tablespoon Cajun spice mix over 2 salmon fillets.",
-        "Heat fry pan to medium, add 1 tablespoon oil,",
+        "Tavada zaytun moyini qizdiring",
         "Cook salmon skin down for 3mins until crispy, turn and transfer to oven:",
-        "Meanwhile, for the salsa put another pan on medium heat, add :",
-        "Add ¼ diced pineapple to salsa mix, cook for one minute.",
+        "Tavani o'rtacha alovda qizdiring",
+        "Add ¼ diced pineapple to salsa mix, cook for one minute. (qo'shing va aralashtiring)",
         "Remove salsa from heat, stir in:",
         "Divide salsa mix between 2 plates.",
-        "Serve Salmon on top of salsa."
+        "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
-        "Preheat oven to 180°C.",
+        "Разогрейте духовку до 180°C",
         "Sprinkle 1 tablespoon Cajun spice mix over 2 salmon fillets.",
-        "Heat fry pan to medium, add 1 tablespoon oil,",
+        "Разогрейте оливковое масло на сковороде",
         "Cook salmon skin down for 3mins until crispy, turn and transfer to oven:",
-        "Meanwhile, for the salsa put another pan on medium heat, add :",
-        "Add ¼ diced pineapple to salsa mix, cook for one minute.",
+        "Разогрейте сковороду на среднем огне",
+        "Add ¼ diced pineapple to salsa mix, cook for one minute. (добавьте и перемешайте)",
         "Remove salsa from heat, stir in:",
         "Divide salsa mix between 2 plates.",
-        "Serve Salmon on top of salsa."
+        "Подавайте к столу"
       ],
       "en": [
         "Preheat oven to 180°C.",
@@ -5922,7 +5922,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Lososdagi DHA kislotasi miyadagi neyroyallig'lanishni kamaytiradi.",
-      "ru": "Lososdagi DHA kislotasi miyadagi neyroyallig'lanishni kamaytiradi.",
+      "ru": "ДГК жирные кислоты лосося снимают нейровоспаление и ускоряют реабилитацию.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -5934,12 +5934,12 @@ export const recipes: Recipe[] = [
     "id": "broccoli-silver-beet-feta-rice",
     "title": {
       "uz": "Brokkoli, Lavlagi Bargi va Fetali Guruch",
-      "ru": "Brokkoli, Lavlagi Bargi va Fetali Guruch",
+      "ru": "Рис с брокколи, мангольдом и сыром фета",
       "en": "Broccoli, Silver Beet & Feta Rice"
     },
     "description": {
       "uz": "To'liq donli guruch, yashil sabzavotlar va limon sharbati bilan boyitilgan taom.",
-      "ru": "To'liq donli guruch, yashil sabzavotlar va limon sharbati bilan boyitilgan taom.",
+      "ru": "Полезный рис с зелеными овощами и ломтиками сыра фета.",
       "en": ""
     },
     "category": "sides",
@@ -6077,8 +6077,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Heat pan to medium, add 1 tablespoon olive oil and  1 diced onion,",
-          "ru": "Heat pan to medium, add 1 tablespoon olive oil and  1 diced onion,",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat pan to medium, add 1 tablespoon olive oil and  1 diced onion,"
         },
         "description": {
@@ -6091,8 +6091,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Add 2 cloves crushed garlic, cook one minute.",
-          "ru": "Add 2 cloves crushed garlic, cook one minute.",
+          "uz": "Add 2 cloves crushed garlic, cook one minute. (qo'shing va aralashtiring)",
+          "ru": "Add 2 cloves crushed garlic, cook one minute. (добавьте и перемешайте)",
           "en": "Add 2 cloves crushed garlic, cook one minute."
         },
         "description": {
@@ -6105,8 +6105,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Next add:",
-          "ru": "Next add:",
+          "uz": "Next add: (qo'shing va aralashtiring)",
+          "ru": "Next add: (добавьте и перемешайте)",
           "en": "Next add:"
         },
         "description": {
@@ -6133,8 +6133,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 6,
         "title": {
-          "uz": "Add rice, stir to combine, and cook a further 5 minutes with lid off.",
-          "ru": "Add rice, stir to combine, and cook a further 5 minutes with lid off.",
+          "uz": "Add rice, stir to combine, and cook a further 5 minutes with lid off. (qo'shing va aralashtiring)",
+          "ru": "Add rice, stir to combine, and cook a further 5 minutes with lid off. (добавьте и перемешайте)",
           "en": "Add rice, stir to combine, and cook a further 5 minutes with lid off."
         },
         "description": {
@@ -6162,20 +6162,20 @@ export const recipes: Recipe[] = [
     "steps": {
       "uz": [
         "Prepare 1 cup rice according to directions on pack.",
-        "Heat pan to medium, add 1 tablespoon olive oil and  1 diced onion,",
-        "Add 2 cloves crushed garlic, cook one minute.",
-        "Next add:",
+        "Tavada zaytun moyini qizdiring",
+        "Add 2 cloves crushed garlic, cook one minute. (qo'shing va aralashtiring)",
+        "Next add: (qo'shing va aralashtiring)",
         "Cover with lid and steam vegetables for 5 minutes.",
-        "Add rice, stir to combine, and cook a further 5 minutes with lid off.",
+        "Add rice, stir to combine, and cook a further 5 minutes with lid off. (qo'shing va aralashtiring)",
         "Stir through the:"
       ],
       "ru": [
         "Prepare 1 cup rice according to directions on pack.",
-        "Heat pan to medium, add 1 tablespoon olive oil and  1 diced onion,",
-        "Add 2 cloves crushed garlic, cook one minute.",
-        "Next add:",
+        "Разогрейте оливковое масло на сковороде",
+        "Add 2 cloves crushed garlic, cook one minute. (добавьте и перемешайте)",
+        "Next add: (добавьте и перемешайте)",
         "Cover with lid and steam vegetables for 5 minutes.",
-        "Add rice, stir to combine, and cook a further 5 minutes with lid off.",
+        "Add rice, stir to combine, and cook a further 5 minutes with lid off. (добавьте и перемешайте)",
         "Stir through the:"
       ],
       "en": [
@@ -6190,7 +6190,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Brokkolidagi sulforafan va kletchatka qon tomir devorlarini himoya qiladi.",
-      "ru": "Brokkolidagi sulforafan va kletchatka qon tomir devorlarini himoya qiladi.",
+      "ru": "Сульфорафан брокколи защищает эндотелий сосудов головного мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -6202,12 +6202,12 @@ export const recipes: Recipe[] = [
     "id": "breakfast-smoothie-bowl",
     "title": {
       "uz": "Rezavor Mevali Antioksidant Smuzi-Boul",
-      "ru": "Rezavor Mevali Antioksidant Smuzi-Boul",
+      "ru": "Смузи-боул с ягодами и семенами чиа",
       "en": "Breakfast Smoothie Bowl"
     },
     "description": {
       "uz": "Qulupnay, qoraqarag'ay va bananli, miya xotirasini kuchaytiruvchi ajoyib nonushta.",
-      "ru": "Qulupnay, qoraqarag'ay va bananli, miya xotirasini kuchaytiruvchi ajoyib nonushta.",
+      "ru": "Ягодный смузи-боул — природный заряд антиоксидантов для головного мозга.",
       "en": "A deconstructed healthy fruit smoothie with plenty of fruit\nGood serving of fruit to get your energy for the morning with a significant amount of fibre!"
     },
     "category": "breakfast",
@@ -6381,8 +6381,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Place in food processor with 1 teaspoon vanilla. Blend until smooth.",
-          "ru": "Place in food processor with 1 teaspoon vanilla. Blend until smooth.",
+          "uz": "Place in food processor with 1 teaspoon vanilla. Blend until smooth. (qo'shing va aralashtiring)",
+          "ru": "Place in food processor with 1 teaspoon vanilla. Blend until smooth. (добавьте и перемешайте)",
           "en": "Place in food processor with 1 teaspoon vanilla. Blend until smooth."
         },
         "description": {
@@ -6411,13 +6411,13 @@ export const recipes: Recipe[] = [
       "uz": [
         "Start this recipe the day before:",
         "Allow banana chunks to thaw on the bench for 10 minutes.",
-        "Place in food processor with 1 teaspoon vanilla. Blend until smooth.",
+        "Place in food processor with 1 teaspoon vanilla. Blend until smooth. (qo'shing va aralashtiring)",
         "Divide ingredients into the bowls:"
       ],
       "ru": [
         "Start this recipe the day before:",
         "Allow banana chunks to thaw on the bench for 10 minutes.",
-        "Place in food processor with 1 teaspoon vanilla. Blend until smooth.",
+        "Place in food processor with 1 teaspoon vanilla. Blend until smooth. (добавьте и перемешайте)",
         "Divide ingredients into the bowls:"
       ],
       "en": [
@@ -6429,7 +6429,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Antotsianlar gematoensefalik to'siqdan o'tib, miya hujayralarini oksidlanishdan himoyalaydi.",
-      "ru": "Antotsianlar gematoensefalik to'siqdan o'tib, miya hujayralarini oksidlanishdan himoyalaydi.",
+      "ru": "Антоцианы ягод защищают нейроны мозга от повреждения свободными радикалами.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -6441,12 +6441,12 @@ export const recipes: Recipe[] = [
     "id": "bean-burrito-bowl",
     "title": {
       "uz": "Loviya, Jo'xori va Avokadoli Burrito-Boul",
-      "ru": "Loviya, Jo'xori va Avokadoli Burrito-Boul",
+      "ru": "Боул с черной фасолью, кукурузой и авокадо",
       "en": "Bean Burrito Bowl"
     },
     "description": {
       "uz": "To'liq donli guruch, qora loviya, shirin jo'xori va laymli to'yimli O'rta yer dengizi salat-bouli.",
-      "ru": "To'liq donli guruch, qora loviya, shirin jo'xori va laymli to'yimli O'rta yer dengizi salat-bouli.",
+      "ru": "Питательный боул с фасолью, кукурузой, рисом и ломтиками авокадо.",
       "en": ""
     },
     "category": "lunch",
@@ -6669,8 +6669,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Bean Burrito: Heat 1 tablespoon olive oil in a pan over medium heat.",
-          "ru": "Bean Burrito: Heat 1 tablespoon olive oil in a pan over medium heat.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Bean Burrito: Heat 1 tablespoon olive oil in a pan over medium heat."
         },
         "description": {
@@ -6697,8 +6697,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Add 2 cloves crushed garlic and cook for 1 minute,",
-          "ru": "Add 2 cloves crushed garlic and cook for 1 minute,",
+          "uz": "Add 2 cloves crushed garlic and cook for 1 minute, (qo'shing va aralashtiring)",
+          "ru": "Add 2 cloves crushed garlic and cook for 1 minute, (добавьте и перемешайте)",
           "en": "Add 2 cloves crushed garlic and cook for 1 minute,"
         },
         "description": {
@@ -6711,8 +6711,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Add 1 diced red capsicum, cook until soft.",
-          "ru": "Add 1 diced red capsicum, cook until soft.",
+          "uz": "Add 1 diced red capsicum, cook until soft. (qo'shing va aralashtiring)",
+          "ru": "Add 1 diced red capsicum, cook until soft. (добавьте и перемешайте)",
           "en": "Add 1 diced red capsicum, cook until soft."
         },
         "description": {
@@ -6725,8 +6725,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Add:",
-          "ru": "Add:",
+          "uz": "Add: (qo'shing va aralashtiring)",
+          "ru": "Add: (добавьте и перемешайте)",
           "en": "Add:"
         },
         "description": {
@@ -6767,8 +6767,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 8,
         "title": {
-          "uz": "To serve Divide 1 chopped cos lettuce between 4 bowls.",
-          "ru": "To serve Divide 1 chopped cos lettuce between 4 bowls.",
+          "uz": "To serve Divide 1 chopped cos lettuce between 4 bowls. (to'g'rang)",
+          "ru": "To serve Divide 1 chopped cos lettuce between 4 bowls. (нарежьте)",
           "en": "To serve Divide 1 chopped cos lettuce between 4 bowls."
         },
         "description": {
@@ -6795,8 +6795,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 10,
         "title": {
-          "uz": "Add 2 tablespoons each of guacamole and salsa.",
-          "ru": "Add 2 tablespoons each of guacamole and salsa.",
+          "uz": "Add 2 tablespoons each of guacamole and salsa. (qo'shing va aralashtiring)",
+          "ru": "Add 2 tablespoons each of guacamole and salsa. (добавьте и перемешайте)",
           "en": "Add 2 tablespoons each of guacamole and salsa."
         },
         "description": {
@@ -6823,29 +6823,29 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Bean Burrito: Heat 1 tablespoon olive oil in a pan over medium heat.",
+        "Tavada zaytun moyini qizdiring",
         "Cook 1 diced onion until soft.",
-        "Add 2 cloves crushed garlic and cook for 1 minute,",
-        "Add 1 diced red capsicum, cook until soft.",
-        "Add:",
+        "Add 2 cloves crushed garlic and cook for 1 minute, (qo'shing va aralashtiring)",
+        "Add 1 diced red capsicum, cook until soft. (qo'shing va aralashtiring)",
+        "Add: (qo'shing va aralashtiring)",
         "Guacamole: In a different bowl, mash together",
         "Salsa: In another bowl, combine:",
-        "To serve Divide 1 chopped cos lettuce between 4 bowls.",
+        "To serve Divide 1 chopped cos lettuce between 4 bowls. (to'g'rang)",
         "Top with Bean Burrito mixture.",
-        "Add 2 tablespoons each of guacamole and salsa.",
+        "Add 2 tablespoons each of guacamole and salsa. (qo'shing va aralashtiring)",
         "Top with Greek yoghurt (optional)."
       ],
       "ru": [
-        "Bean Burrito: Heat 1 tablespoon olive oil in a pan over medium heat.",
+        "Разогрейте оливковое масло на сковороде",
         "Cook 1 diced onion until soft.",
-        "Add 2 cloves crushed garlic and cook for 1 minute,",
-        "Add 1 diced red capsicum, cook until soft.",
-        "Add:",
+        "Add 2 cloves crushed garlic and cook for 1 minute, (добавьте и перемешайте)",
+        "Add 1 diced red capsicum, cook until soft. (добавьте и перемешайте)",
+        "Add: (добавьте и перемешайте)",
         "Guacamole: In a different bowl, mash together",
         "Salsa: In another bowl, combine:",
-        "To serve Divide 1 chopped cos lettuce between 4 bowls.",
+        "To serve Divide 1 chopped cos lettuce between 4 bowls. (нарежьте)",
         "Top with Bean Burrito mixture.",
-        "Add 2 tablespoons each of guacamole and salsa.",
+        "Add 2 tablespoons each of guacamole and salsa. (добавьте и перемешайте)",
         "Top with Greek yoghurt (optional)."
       ],
       "en": [
@@ -6864,7 +6864,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Eriydigan kletchatka va to'yinmagan yog'lar lipidlar balansini saqlaydi.",
-      "ru": "Eriydigan kletchatka va to'yinmagan yog'lar lipidlar balansini saqlaydi.",
+      "ru": "Клетчатка и полезные жиры стабилизируют уровень липидов в крови.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -6876,13 +6876,13 @@ export const recipes: Recipe[] = [
     "id": "baked-eggs-with-tomatoes",
     "title": {
       "uz": "Pomidor va Ko'katlarda Pishirilgan Tuxum (Shakshuka uslubi)",
-      "ru": "Pomidor va Ko'katlarda Pishirilgan Tuxum (Shakshuka uslubi)",
+      "ru": "Яйца, запеченные с томатами и зеленью",
       "en": "Baked Eggs with Tomatoes"
     },
     "description": {
       "uz": "Xolin va likopinga boy, issiq va to'yimli O'rta yer dengizi nonushtasi.",
-      "ru": "Xolin va likopinga boy, issiq va to'yimli O'rta yer dengizi nonushtasi.",
-      "en": "Scrumptious baked eggs with chopped tomatoes for breakfast!A filling, high protein start to the day"
+      "ru": "Горячий завтрак с томатами и зеленью, богатый холином.",
+      "en": "Scrumptious baked eggs with chopped tomatoes for breakfast!A filling, high protein start to the day\n "
     },
     "category": "breakfast",
     "dietType": "mediterranean",
@@ -7093,8 +7093,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 1,
         "title": {
-          "uz": "Heat 1 tbsp of olive oil in a medium pan.",
-          "ru": "Heat 1 tbsp of olive oil in a medium pan.",
+          "uz": "Tavada zaytun moyini qizdiring",
+          "ru": "Разогрейте оливковое масло на сковороде",
           "en": "Heat 1 tbsp of olive oil in a medium pan."
         },
         "description": {
@@ -7107,8 +7107,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 2,
         "title": {
-          "uz": "Add 1 sliced onion and fry until soft.",
-          "ru": "Add 1 sliced onion and fry until soft.",
+          "uz": "Add 1 sliced onion and fry until soft. (to'g'rang)",
+          "ru": "Add 1 sliced onion and fry until soft. (нарежьте)",
           "en": "Add 1 sliced onion and fry until soft."
         },
         "description": {
@@ -7121,8 +7121,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Add 2 cloves of crushed garlic and cook for a further minute.",
-          "ru": "Add 2 cloves of crushed garlic and cook for a further minute.",
+          "uz": "Add 2 cloves of crushed garlic and cook for a further minute. (qo'shing va aralashtiring)",
+          "ru": "Add 2 cloves of crushed garlic and cook for a further minute. (добавьте и перемешайте)",
           "en": "Add 2 cloves of crushed garlic and cook for a further minute."
         },
         "description": {
@@ -7135,8 +7135,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 4,
         "title": {
-          "uz": "Add the sliced capsicum and cook for 5-7 minutes until soft.",
-          "ru": "Add the sliced capsicum and cook for 5-7 minutes until soft.",
+          "uz": "Add the sliced capsicum and cook for 5-7 minutes until soft. (to'g'rang)",
+          "ru": "Add the sliced capsicum and cook for 5-7 minutes until soft. (нарежьте)",
           "en": "Add the sliced capsicum and cook for 5-7 minutes until soft."
         },
         "description": {
@@ -7149,8 +7149,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 5,
         "title": {
-          "uz": "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
-          "ru": "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
+          "uz": "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine. (to'g'rang)",
+          "ru": "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine. (нарежьте)",
           "en": "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine."
         },
         "description": {
@@ -7205,8 +7205,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 9,
         "title": {
-          "uz": "Top with parsley and serve with toast.",
-          "ru": "Top with parsley and serve with toast.",
+          "uz": "Dasturxonga torting va rohatlaning",
+          "ru": "Подавайте к столу",
           "en": "Top with parsley and serve with toast."
         },
         "description": {
@@ -7219,26 +7219,26 @@ export const recipes: Recipe[] = [
     ],
     "steps": {
       "uz": [
-        "Heat 1 tbsp of olive oil in a medium pan.",
-        "Add 1 sliced onion and fry until soft.",
-        "Add 2 cloves of crushed garlic and cook for a further minute.",
-        "Add the sliced capsicum and cook for 5-7 minutes until soft.",
-        "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
+        "Tavada zaytun moyini qizdiring",
+        "Add 1 sliced onion and fry until soft. (to'g'rang)",
+        "Add 2 cloves of crushed garlic and cook for a further minute. (qo'shing va aralashtiring)",
+        "Add the sliced capsicum and cook for 5-7 minutes until soft. (to'g'rang)",
+        "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine. (to'g'rang)",
         "Bring to a simmer.",
         "Crack the eggs one at a time on top of the tomato mixture making sure to space them evenly around the pan.",
         "Cover the pan and allow to simmer for another 10 mins until the eggs are cooked to your liking.",
-        "Top with parsley and serve with toast."
+        "Dasturxonga torting va rohatlaning"
       ],
       "ru": [
-        "Heat 1 tbsp of olive oil in a medium pan.",
-        "Add 1 sliced onion and fry until soft.",
-        "Add 2 cloves of crushed garlic and cook for a further minute.",
-        "Add the sliced capsicum and cook for 5-7 minutes until soft.",
-        "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine.",
+        "Разогрейте оливковое масло на сковороде",
+        "Add 1 sliced onion and fry until soft. (нарежьте)",
+        "Add 2 cloves of crushed garlic and cook for a further minute. (добавьте и перемешайте)",
+        "Add the sliced capsicum and cook for 5-7 minutes until soft. (нарежьте)",
+        "Add 2 cans of chopped tomatoes, spices and sugar to the pan and stir to combine. (нарежьте)",
         "Bring to a simmer.",
         "Crack the eggs one at a time on top of the tomato mixture making sure to space them evenly around the pan.",
         "Cover the pan and allow to simmer for another 10 mins until the eggs are cooked to your liking.",
-        "Top with parsley and serve with toast."
+        "Подавайте к столу"
       ],
       "en": [
         "Heat 1 tbsp of olive oil in a medium pan.",
@@ -7254,7 +7254,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Tuxum sarig'idagi xolin neyromediatorlar hosil bo'lishiga bevosita yordam beradi.",
-      "ru": "Tuxum sarig'idagi xolin neyromediatorlar hosil bo'lishiga bevosita yordam beradi.",
+      "ru": "Холин способствует синтезу медиаторов для поддержки работы мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
@@ -7266,12 +7266,12 @@ export const recipes: Recipe[] = [
     "id": "avocado-and-feta-cheese-on-toast",
     "title": {
       "uz": "Avokado va Feta Pishloqli Qarsildoq Toast",
-      "ru": "Avokado va Feta Pishloqli Qarsildoq Toast",
+      "ru": "Тост с авокадо, сыром фета и лимонным соком",
       "en": "Avocado and Feta Cheese on Toast "
     },
     "description": {
       "uz": "Kaliy, to'yinmagan yog'lar va kaltsiyga boy, tez tayyorlanadigan ajoyib nonushta.",
-      "ru": "Kaliy, to'yinmagan yog'lar va kaltsiyga boy, tez tayyorlanadigan ajoyib nonushta.",
+      "ru": "Быстрый тост с авокадо и нежной фетой — источник полезных жиров.",
       "en": "A tasty spin on morning toast with avocado and feta cheese.Contains healthy fats and some carbs to get your day started."
     },
     "category": "breakfast",
@@ -7434,8 +7434,8 @@ export const recipes: Recipe[] = [
       {
         "stepNumber": 3,
         "title": {
-          "uz": "Toast the 4 slices of bread,",
-          "ru": "Toast the 4 slices of bread,",
+          "uz": "Toast the 4 slices of bread, (to'g'rang)",
+          "ru": "Toast the 4 slices of bread, (нарежьте)",
           "en": "Toast the 4 slices of bread,"
         },
         "description": {
@@ -7506,7 +7506,7 @@ export const recipes: Recipe[] = [
       "uz": [
         "Scoop 1 Avocado and 1 lemon’s juice into a small bowl,",
         "Mash avocado with a fork.",
-        "Toast the 4 slices of bread,",
+        "Toast the 4 slices of bread, (to'g'rang)",
         "Drizzle the Olive Oil over the toast,",
         "Spread the Avocado mixture on the toast.",
         "Crumble the 100g Feta on top of the avocado.",
@@ -7515,7 +7515,7 @@ export const recipes: Recipe[] = [
       "ru": [
         "Scoop 1 Avocado and 1 lemon’s juice into a small bowl,",
         "Mash avocado with a fork.",
-        "Toast the 4 slices of bread,",
+        "Toast the 4 slices of bread, (нарежьте)",
         "Drizzle the Olive Oil over the toast,",
         "Spread the Avocado mixture on the toast.",
         "Crumble the 100g Feta on top of the avocado.",
@@ -7533,7 +7533,7 @@ export const recipes: Recipe[] = [
     },
     "strokeBenefits": {
       "uz": "Avokadodagi to'yinmagan yog'lar miya qon aylanishini rag'batlantiradi.",
-      "ru": "Avokadodagi to'yinmagan yog'lar miya qon aylanishini rag'batlantiradi.",
+      "ru": "Полезные жиры авокадо стимулируют нормальное мозговое кровообращение.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
     "tags": [
