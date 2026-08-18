@@ -135,7 +135,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
                     Amaliy Maslahatlar
                   </div>
-                  <div className="text-[11px] text-slate-500">To'g'ri ovqatlanish qoidalari</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">To'g'ri ovqatlanish qoidalari</div>
                 </div>
               </div>
             </button>
@@ -172,7 +172,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
                     Taomnoma Rejasi
                   </div>
-                  <div className="text-[11px] text-slate-500">7 kunlik taomlar jadvali</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">7 kunlik taomlar jadvali</div>
                 </div>
               </div>
             </button>
@@ -190,7 +190,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
                     Nazorat Ro'yxati
                   </div>
-                  <div className="text-[11px] text-slate-500">Haftalik checklist</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">Haftalik checklist</div>
                 </div>
               </div>
             </button>

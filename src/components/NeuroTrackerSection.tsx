@@ -212,7 +212,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
 
       {/* 7-Day Interactive Quick Day Strip */}
       <div className="mb-6 bg-white dark:bg-slate-850 p-3 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
-        <div className="flex items-center justify-between mb-3 text-xs font-bold text-slate-500">
+        <div className="flex items-center justify-between mb-3 text-xs font-bold text-slate-500 dark:text-slate-400">
           <span>Haftalik Kunlar Strip:</span>
           <span>{totalLoggedDays} ta kun saqlangan</span>
         </div>
@@ -507,21 +507,21 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
             
             <div className="space-y-2 text-xs">
               <div className="flex justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-900">
-                <span className="text-slate-500">Suv iste'moli:</span>
+                <span className="text-slate-500 dark:text-slate-400">Suv iste'moli:</span>
                 <span className="font-bold text-navy-800 dark:text-white">{waterGlasses * 250} ml ({waterGlasses} stakan)</span>
               </div>
               <div className="flex justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-900">
-                <span className="text-slate-500">Mashq davomiyligi:</span>
+                <span className="text-slate-500 dark:text-slate-400">Mashq davomiyligi:</span>
                 <span className="font-bold text-navy-800 dark:text-white">{exerciseMinutes} daqiqa</span>
               </div>
               <div className="flex justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-900">
-                <span className="text-slate-500">Uyqu:</span>
+                <span className="text-slate-500 dark:text-slate-400">Uyqu:</span>
                 <span className="font-bold text-navy-800 dark:text-white">{sleepHours} soat</span>
               </div>
               {bloodPressure && (
                 <div className="flex justify-between p-2 rounded-xl bg-slate-50 dark:bg-slate-900">
-                  <span className="text-slate-500">Qon bosimi:</span>
-                  <span className="font-bold text-brand-600">{bloodPressure}</span>
+                  <span className="text-slate-500 dark:text-slate-400">Qon bosimi:</span>
+                  <span className="font-bold text-brand-600 dark:text-brand-400">{bloodPressure}</span>
                 </div>
               )}
             </div>
