@@ -4,7 +4,6 @@ import { translations } from '../data/translations';
 import { 
   Play, 
   Pause,
-  Search, 
   Volume2, 
   VolumeX,
   ArrowRight, 
@@ -18,16 +17,12 @@ import {
 interface HeroSectionProps {
   language: Language;
   onSelectTab: (tab: CategoryTab) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
   onOpenFastModal: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   language,
   onSelectTab,
-  searchQuery,
-  setSearchQuery,
   onOpenFastModal: _onOpenFastModal
 }) => {
   const t = translations[language];
@@ -101,28 +96,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </p>
             </div>
 
-            {/* Search Input */}
-            <div className="relative max-w-xl w-full">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                <Search className="h-4 w-4 text-slate-400" />
-              </div>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder={t.searchPlaceholder}
-                className="w-full pl-10 pr-16 py-2.5 sm:py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 text-xs sm:text-sm shadow-sm"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-600"
-                >
-                  {t.clearSearch}
-                </button>
-              )}
-            </div>
-
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-1">
               <button
@@ -180,7 +153,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           </div>
 
-          {/* Right Column: Clean Video Player (Without phone mockup frame) */}
+          {/* Right Column: Clean Video Player */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center mt-4 lg:mt-0">
             
             {/* Clean Video Container */}
@@ -224,7 +197,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5 fill-white" />}
                 </div>
               </button>
-
             </div>
 
           </div>

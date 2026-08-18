@@ -104,8 +104,6 @@ export const App: React.FC = () => {
             <HeroSection
               language={language}
               onSelectTab={setActiveTab}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
               onOpenFastModal={() => setShowFastModal(true)}
             />
             <EatWellSection
