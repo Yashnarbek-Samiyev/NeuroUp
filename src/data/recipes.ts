@@ -387,10 +387,7 @@ export const recipes: Recipe[] = [
       "ru": "Ликопин и олеиновая кислота повышают эластичность артерий и нормализуют кровяное давление.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["breakfast","vegetarian","mediterranean"]
   },
   {
     "id": "lamb-racks-with-bean-casserole",
@@ -833,10 +830,7 @@ export const recipes: Recipe[] = [
       "ru": "Магний и растительная клетчатка улучшают артериальный кровоток и снижают холестерин.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["lunch","dinner","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "homemade-muesli",
@@ -1072,10 +1066,7 @@ export const recipes: Recipe[] = [
       "ru": "Омега-3 жирные кислоты и бета-глюкан способствуют восстановлению нейропластичности мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["breakfast","snacks","vegetarian","vegan","dairy-free","mediterranean"]
   },
   {
     "id": "snapper-with-braised-beans-tomatoes",
@@ -1374,10 +1365,7 @@ export const recipes: Recipe[] = [
       "ru": "Легкий белок рыбы и калий нормализуют тонус сосудов и снижают риск повторного инсульта.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["lunch","dinner","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "cheese-and-spinach-triangles",
@@ -1660,10 +1648,7 @@ export const recipes: Recipe[] = [
       "ru": "Фолиевая кислота и магний снижают уровень гомоцистеина в крови, защищая сосуды мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["snacks","vegetarian","mediterranean"]
   },
   {
     "id": "zucchini-fritters-with-poached-eggs-and-spinach",
@@ -2157,10 +2142,7 @@ export const recipes: Recipe[] = [
       "ru": "Холин стимулирует синтез ацетилхолина, необходимого для восстановления памяти и речи.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["breakfast","vegetarian","gluten-free","mediterranean"]
   },
   {
     "id": "southern-fried-chicken-drumsticks",
@@ -2508,10 +2490,7 @@ export const recipes: Recipe[] = [
       "ru": "Полноценный белок белого мяса способствует регенерации мышечной ткани.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["dinner","dairy-free","mediterranean"]
   },
   {
     "id": "seafood-stew",
@@ -2948,10 +2927,7 @@ export const recipes: Recipe[] = [
       "ru": "Морские омега-3 жирные кислоты улучшают микроциркуляцию крови в тканях мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["dinner","lunch","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "potato-wedges",
@@ -3133,10 +3109,7 @@ export const recipes: Recipe[] = [
       "ru": "Калий из кожуры картофеля помогает выводить лишний натрий и нормализовать давление.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["sides","snacks","vegan","vegetarian","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "leftover-bean-burrito-quesadillas",
@@ -3312,10 +3285,7 @@ export const recipes: Recipe[] = [
       "ru": "Клетчатка фасоли предотвращает скачки уровня сахара в крови.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["snacks","lunch","vegetarian","mediterranean"]
   },
   {
     "id": "hommus",
@@ -3553,10 +3523,7 @@ export const recipes: Recipe[] = [
       "ru": "Растворимая клетчатка нута снижает уровень плохого холестерина.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["snacks","sides","vegan","vegetarian","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "grilled-pears-with-toasted-nuts-yoghurt-mint",
@@ -3821,10 +3788,7 @@ export const recipes: Recipe[] = [
       "ru": "Пектин груши регулирует усвоение сахаров, а орехи питают нервные клетки.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["snacks","vegetarian","gluten-free","mediterranean"]
   },
   {
     "id": "greek-salad",
@@ -4061,10 +4025,7 @@ export const recipes: Recipe[] = [
       "ru": "Полифенолы оливкового масла предупреждают образование тромбов.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["salad","sides","vegetarian","gluten-free","mediterranean"]
   },
   {
     "id": "crispy-skinned-barramundi-with-braised-vegetables-mint-yoghurt",
@@ -4396,10 +4357,7 @@ export const recipes: Recipe[] = [
       "ru": "Морская рыбы богата омега-3, стимулирующими восстановление нейронов.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["dinner","gluten-free","mediterranean"]
   },
   {
     "id": "creamy-mushroom-spinach-toast",
@@ -4658,10 +4616,7 @@ export const recipes: Recipe[] = [
       "ru": "Витамины группы B улучшают проведение нервных импульсов.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["breakfast","snacks","vegetarian","mediterranean"]
   },
   {
     "id": "chicken-pot-pies",
@@ -5116,10 +5071,7 @@ export const recipes: Recipe[] = [
       "ru": "Легкий белок птицы и каротиноиды овощей укрепляют общий тонус.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["dinner","lunch","mediterranean"]
   },
   {
     "id": "cheese-spinach-quesadillas",
@@ -5294,10 +5246,7 @@ export const recipes: Recipe[] = [
       "ru": "Витамин K и магний шпината поддерживают эластичность сосудистой стенки.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["snacks","lunch","vegetarian","mediterranean"]
   },
   {
     "id": "cheese-spinach-pie-with-salad",
@@ -5623,10 +5572,7 @@ export const recipes: Recipe[] = [
       "ru": "Антиоксиданты шпината снижают окислительный стресс в клетках мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["lunch","dinner","vegetarian","mediterranean"]
   },
   {
     "id": "cajun-salmon-with-corn-salsa",
@@ -5925,10 +5871,7 @@ export const recipes: Recipe[] = [
       "ru": "ДГК жирные кислоты лосося снимают нейровоспаление и ускоряют реабилитацию.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["dinner","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "broccoli-silver-beet-feta-rice",
@@ -6193,10 +6136,7 @@ export const recipes: Recipe[] = [
       "ru": "Сульфорафан брокколи защищает эндотелий сосудов головного мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["sides","lunch","vegetarian","gluten-free","mediterranean"]
   },
   {
     "id": "breakfast-smoothie-bowl",
@@ -6432,10 +6372,7 @@ export const recipes: Recipe[] = [
       "ru": "Антоцианы ягод защищают нейроны мозга от повреждения свободными радикалами.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["breakfast","snacks","vegetarian","gluten-free","mediterranean"]
   },
   {
     "id": "bean-burrito-bowl",
@@ -6867,10 +6804,7 @@ export const recipes: Recipe[] = [
       "ru": "Клетчатка и полезные жиры стабилизируют уровень липидов в крови.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["lunch","dinner","vegan","vegetarian","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "baked-eggs-with-tomatoes",
@@ -7257,10 +7191,7 @@ export const recipes: Recipe[] = [
       "ru": "Холин способствует синтезу медиаторов для поддержки работы мозга.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["breakfast","vegetarian","gluten-free","dairy-free","mediterranean"]
   },
   {
     "id": "avocado-and-feta-cheese-on-toast",
@@ -7536,9 +7467,6 @@ export const recipes: Recipe[] = [
       "ru": "Полезные жиры авокадо стимулируют нормальное мозговое кровообращение.",
       "en": "Rich in Mediterranean cardioprotective and neuroprotective nutrients."
     },
-    "tags": [
-      "O'rta yer dengizi",
-      "Insult profilaktikasi"
-    ]
+    "tags": ["breakfast","vegetarian","mediterranean"]
   }
 ];

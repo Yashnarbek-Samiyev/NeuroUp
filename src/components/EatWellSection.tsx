@@ -49,15 +49,27 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
   const t = translations[language];
 
-  const categories = [
-    { id: 'all', label: t.filterAll },
-    { id: 'breakfast', label: t.filterBreakfast },
-    { id: 'lunch', label: t.filterLunch },
-    { id: 'dinner', label: t.filterDinner },
-    { id: 'snacks', label: t.filterSnacks },
-    { id: 'salad', label: t.filterSalad },
-    { id: 'sides', label: t.filterSides },
+  const mealTypeCategories = [
+    { id: 'all', label: t.filterAll || 'Barchasi', icon: '🍽️' },
+    { id: 'breakfast', label: t.filterBreakfast || 'Nonushta', icon: '🌅' },
+    { id: 'lunch', label: t.filterLunch || 'Tushlik', icon: '☀️' },
+    { id: 'dinner', label: t.filterDinner || 'Kechki ovqat', icon: '🌙' },
+    { id: 'snacks', label: t.filterSnacks || 'Yengil tamaddi', icon: '🍎' },
+    { id: 'salad', label: t.filterSalad || 'Salatlar', icon: '🥗' },
+    { id: 'sides', label: t.filterSides || 'Garnirlar', icon: '🥔' },
   ];
+
+  const dietaryCategories = [
+    { id: 'vegetarian', label: t.filterVegetarian || 'Vegetarian', icon: '🌱' },
+    { id: 'vegan', label: t.filterVegan || 'Vegan', icon: '🌿' },
+    { id: 'dairy-free', label: t.filterDairyFree || 'Sutsiz', icon: '🥛' },
+    { id: 'gluten-free', label: t.filterGlutenFree || 'Glyutensiz', icon: '🌾' },
+  ];
+
+  const getRecipeCount = (catId: string) => {
+    if (catId === 'all') return recipes.length;
+    return recipes.filter(r => r.category === catId || r.tags.includes(catId)).length;
+  };
 
   const filteredRecipes = recipes.filter(recipe => {
     const title = recipe.title[language] || recipe.title.en;
@@ -67,7 +79,9 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
       desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
       recipe.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    const matchesCategory = selectedCategory === 'all' || recipe.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || 
+      recipe.category === selectedCategory ||
+      recipe.tags.includes(selectedCategory);
 
     return matchesSearch && matchesCategory;
   });
@@ -100,32 +114,30 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
           <div className="flex flex-wrap items-center gap-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 text-xs font-bold border border-brand-200 dark:border-slate-700 shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-brand-600" />
-              <span>Eat Well • O'rta Yer Dengizi Parhezi</span>
+              <span>Eat Well • Insultdan So'ng To'g'ri Ovqatlanish</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
+              <span>O'rta Yer Dengizi Parhezi</span>
             </div>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-navy-800 dark:text-white leading-snug tracking-tight">
-            🥗 Insultdan keyin to'g'ri ovqatlaning
+            🥗 Insultdan so'ng <br className="hidden sm:inline" />
+            <span className="text-brand-600 dark:text-brand-400">to'g'ri va mazali ovqatlaning</span>
           </h1>
 
-          {/* Paragraph 1 */}
-          <p className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 leading-relaxed">
-            O'rta yer dengizi (Mediteran) parhezi insult bilan bog'liq xavf omillarini sezilarli darajada kamaytirishi isbotlangan.
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+            Insultdan keyin miya va tomirlarni qayta tiklash uchun shifokorlar va parhezshunoslar tavsiya etgan 24 ta O'rta yer dengizi retseplari to'plami.
           </p>
 
-          {/* Paragraph 2 */}
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-            Ushbu bo'limda siz insultdan keyin tiklanishga yordam beradigan, qon tomirlarni mustahkamlovchi va miya faoliyatini qo'llab-quvvatlovchi sog'lom retseptlar hamda amaliy rejalashtirish vositalarini topasiz.
-          </p>
-
-          {/* Interactive Tools Cards */}
+          {/* Quick Action Cards Grid (1:1 Word doc downloads & Planner Modals) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
             
             {/* 1. Amaliy Maslahatlar */}
             <button
               onClick={() => setShowTipsModal(true)}
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-xs"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-brand-100 dark:bg-brand-950 text-brand-600 flex items-center justify-center shrink-0">
@@ -140,11 +152,11 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               </div>
             </button>
 
-            {/* 2. Xaridlar Ro'yxati (To'g'ridan-to'g'ri .docx yuklab olish) */}
+            {/* 2. Xaridlar Ro'yxati (.docx yuklab olish) */}
             <a
               href="/docs/haftalik-xaridlar-royxati-neuropath.docx"
               download="haftalik-xaridlar-royxati-neuropath.docx"
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-sm"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-xs"
               title="Haftalik xaridlar ro'yxati (.docx)"
             >
               <div className="flex items-center gap-2.5">
@@ -155,6 +167,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
                     Haftalik Xaridlar Ro'yxati
                   </div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">.docx yuklab olish</div>
                 </div>
               </div>
             </a>
@@ -162,7 +175,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             {/* 3. Taomnoma Rejalashtiruvchi */}
             <button
               onClick={() => setShowMealPlannerModal(true)}
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-xs"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 flex items-center justify-center shrink-0">
@@ -180,7 +193,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             {/* 4. Nazorat Ro'yxati */}
             <button
               onClick={() => setShowChecklistModal(true)}
-              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between"
+              className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-xs"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 flex items-center justify-center shrink-0">
@@ -200,38 +213,114 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
         </div>
       </div>
 
-      {/* 2. Header & Category Filters */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
-        <div>
-          <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
-            <Utensils className="w-4 h-4" />
-            <span>{t.eatWell}</span>
+      {/* 2. Title & Expanded Recipe Filter Box */}
+      <div className="mb-8">
+        <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
+          <Utensils className="w-4 h-4" />
+          <span>{t.eatWell}</span>
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white mb-2">
+          {t.eatWellSectionTitle}
+        </h2>
+        <p className="text-slate-600 dark:text-slate-400 text-sm max-w-2xl mb-6">
+          {t.eatWellSectionDesc}
+        </p>
+
+        {/* Structured Filter Card Box */}
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+          
+          {/* Header Bar of Filter Box */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-xl bg-brand-100 dark:bg-brand-950 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold shrink-0">
+                <Filter className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="font-extrabold text-sm sm:text-base text-navy-800 dark:text-white">
+                  {t.filterRecipesTitle || "Retseptlarni filtrlash"}
+                </h3>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                  Taom turini yoki parhez toifasini tanlab kerakli retseptni tezda toping:
+                </p>
+              </div>
+            </div>
+
+            <div className="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3.5 py-1.5 rounded-full self-start sm:self-auto border border-slate-200 dark:border-slate-700">
+              <span className="font-bold text-brand-600 dark:text-brand-400">{filteredRecipes.length}</span> {t.showingRecipesCount || "ta retsept topildi"}
+            </div>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
-            {t.eatWellSectionTitle}
-          </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
-            {t.eatWellSectionDesc}
-          </p>
+
+          {/* Filter Categories Box */}
+          <div className="space-y-3">
+            
+            {/* Group 1: Meal Types */}
+            <div>
+              <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+                {t.mealTypesLabel || "Taom turi"}:
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                {mealTypeCategories.map((cat) => {
+                  const isActive = selectedCategory === cat.id;
+                  const count = getRecipeCount(cat.id);
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => setSelectedCategory(cat.id)}
+                      className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                        isActive
+                          ? 'bg-brand-600 text-white shadow-md shadow-brand-500/20 scale-[1.02]'
+                          : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-750'
+                      }`}
+                    >
+                      <span className="text-sm">{cat.icon}</span>
+                      <span>{cat.label}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-0.5 ${
+                        isActive ? 'bg-white/25 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
+                      }`}>
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Group 2: Dietary Preferences */}
+            <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
+              <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+                {t.dietaryLabel || "Parhez va Maxsus toifa"}:
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                {dietaryCategories.map((cat) => {
+                  const isActive = selectedCategory === cat.id;
+                  const count = getRecipeCount(cat.id);
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => setSelectedCategory(cat.id)}
+                      className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                        isActive
+                          ? 'bg-emerald-600 text-white shadow-md shadow-emerald-500/20 scale-[1.02]'
+                          : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-750'
+                      }`}
+                    >
+                      <span className="text-sm">{cat.icon}</span>
+                      <span>{cat.label}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-0.5 ${
+                        isActive ? 'bg-white/25 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
+                      }`}>
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg border border-slate-200 dark:border-slate-700">
-          <Filter className="w-3.5 h-3.5 text-slate-400 ml-2 mr-1 hidden sm:inline" />
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setSelectedCategory(cat.id)}
-              className={`px-3 py-1.5 rounded text-xs font-bold transition-colors ${
-                selectedCategory === cat.id
-                  ? 'bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-300 shadow-sm'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* 3. Recipe Cards Grid */}
