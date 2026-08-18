@@ -11,8 +11,7 @@ import {
   AlertCircle, 
   Globe, 
   Menu, 
-  X, 
-  ExternalLink 
+  X
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -56,32 +55,12 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="bg-slate-100 dark:bg-slate-950 text-slate-600 dark:text-slate-400 text-xs py-1.5 px-3 sm:px-6 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
           
-          <div className="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs truncate">
-            <span className="font-medium hidden md:inline text-slate-500">{t.platformsLabel}</span>
-            <div className="flex items-center gap-2 sm:gap-3 truncate">
-              <a 
-                href="https://irebound.enableme.org.au" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1 font-medium truncate"
-              >
-                <span>i-REBOUND</span>
-                <ExternalLink className="w-3 h-3 text-slate-400 shrink-0" />
-              </a>
-              <span className="text-slate-300 dark:text-slate-700">|</span>
-              <a 
-                href="https://enableme.org.au" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="hover:text-slate-900 dark:hover:text-white transition-colors font-medium truncate"
-              >
-                EnableMe
-              </a>
-              <span className="text-slate-300 dark:text-slate-700 hidden sm:inline">|</span>
-              <span className="text-brand-600 dark:text-brand-400 font-bold hidden sm:inline">
-                NeuroUp
-              </span>
-            </div>
+          <div className="flex items-center gap-2 text-[11px] sm:text-xs">
+            <span className="text-brand-600 dark:text-brand-400 font-bold">
+              NeuroUp
+            </span>
+            <span className="text-slate-400 hidden sm:inline">•</span>
+            <span className="text-slate-500 font-medium hidden sm:inline">{t.heroTagline}</span>
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
@@ -131,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Right Action Buttons: Language Switch & Mobile Toggle */}
+          {/* Right Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             
             {/* Language switch */}
