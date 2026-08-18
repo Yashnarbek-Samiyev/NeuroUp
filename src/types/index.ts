@@ -10,6 +10,14 @@ export interface AccessibilitySettings {
   dyslexicFont: boolean;
 }
 
+export interface DetailedStep {
+  stepNumber: number;
+  title: Record<Language, string>;
+  description?: Record<Language, string>;
+  image?: string;
+  adaptiveTip?: Record<Language, string>;
+}
+
 export interface Recipe {
   id: string;
   title: Record<Language, string>;
@@ -22,8 +30,10 @@ export interface Recipe {
   servings: number;
   difficulty: 'easy' | 'medium' | 'hard';
   image: string;
+  equipment?: Record<Language, string[]>;
   ingredients: Record<Language, string[]>;
   steps: Record<Language, string[]>;
+  detailedSteps?: DetailedStep[];
   strokeBenefits: Record<Language, string>;
   tags: string[];
 }
