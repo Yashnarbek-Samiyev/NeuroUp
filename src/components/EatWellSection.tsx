@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Language, Recipe } from '../types';
 import { translations } from '../data/translations';
 import { recipes } from '../data/recipes';
-import { RecipeDetailModal } from './RecipeDetailModal';
+import { RecipeDetailPage } from './RecipeDetailPage';
 import { 
   Utensils, 
   Clock, 
@@ -29,16 +29,18 @@ interface EatWellSectionProps {
   savedFavorites: string[];
   onToggleFavorite: (id: string) => void;
   searchQuery?: string;
+  onSelectRecipe?: (id: string) => void;
 }
 
 export const EatWellSection: React.FC<EatWellSectionProps> = ({
   language,
   savedFavorites,
   onToggleFavorite,
-  searchQuery = ''
+  searchQuery = '',
+  onSelectRecipe
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [activeRecipe, setActiveRecipe] = useState<Recipe | null>(null);
+  const [selectedRecipeId, setSelectedRecipeId] = useState<string | null>(null);
 
   // Interactive Modals matching i-REBOUND
   const [showTipsModal, setShowTipsModal] = useState<boolean>(false);
@@ -69,6 +71,22 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
 
     return matchesSearch && matchesCategory;
   });
+
+  if (selectedRecipeId) {
+    return (
+      <RecipeDetailPage
+        recipeId={selectedRecipeId}
+        onBack={() => {
+          setSelectedRecipeId(null);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        language={language}
+        savedFavorites={savedFavorites}
+        onToggleFavorite={onToggleFavorite}
+        onSelectRecipe={(id) => setSelectedRecipeId(id)}
+      />
+    );
+  }
 
   return (
     <section className="pt-2 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="eat-well">
@@ -234,7 +252,13 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             return (
               <div
                 key={recipe.id}
-                onClick={() => setActiveRecipe(recipe)}
+                onClick={() => {
+                  if (onSelectRecipe) {
+                    onSelectRecipe(recipe.id);
+                  } else {
+                    setSelectedRecipeId(recipe.id);
+                  }
+                }}
                 className="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
               >
                 {/* Image */}
@@ -629,16 +653,6 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
         </div>
       )}
 
-      {/* Recipe Detail Modal */}
-      {activeRecipe && (
-        <RecipeDetailModal
-          recipe={activeRecipe}
-          onClose={() => setActiveRecipe(null)}
-          language={language}
-          isSaved={savedFavorites.includes(activeRecipe.id)}
-          onToggleSaved={onToggleFavorite}
-        />
-      )}
     </section>
   );
 };
