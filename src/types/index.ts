@@ -14,7 +14,7 @@ export interface Recipe {
   id: string;
   title: Record<Language, string>;
   description: Record<Language, string>;
-  category: 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'smoothie';
+  category: 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'snacks' | 'smoothie' | 'salad' | 'sides';
   dietType: 'mediterranean' | 'low-sodium' | 'easy-chew' | 'heart-healthy';
   prepTime: number; // in minutes
   cookTime: number;
