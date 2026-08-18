@@ -17,7 +17,6 @@ import { HintsSection } from './components/HintsSection';
 import { NeuroTrackerSection } from './components/NeuroTrackerSection';
 import { SavedSection } from './components/SavedSection';
 import { EmergencyFASTModal } from './components/EmergencyFASTModal';
-import { AuthModal, UserProfile } from './components/AuthModal';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
@@ -27,18 +26,6 @@ export const App: React.FC = () => {
   const [savedFavorites, setSavedFavorites] = useState<string[]>(getSavedFavorites);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [showFastModal, setShowFastModal] = useState<boolean>(false);
-
-  // Auth State
-  const [currentUser, setCurrentUser] = useState<UserProfile | null>(() => {
-    try {
-      const data = localStorage.getItem('neuroup_user');
-      return data ? JSON.parse(data) : null;
-    } catch {
-      return null;
-    }
-  });
-  const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
-  const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
 
   // Sync accessibility classes with DOM
   useEffect(() => {
@@ -91,28 +78,9 @@ export const App: React.FC = () => {
     // Workout completed
   };
 
-  const handleOpenAuthModal = (mode: 'login' | 'signup') => {
-    setAuthMode(mode);
-    setShowAuthModal(true);
-  };
-
-  const handleLoginSuccess = (user: UserProfile) => {
-    setCurrentUser(user);
-    setShowAuthModal(false);
-  };
-
-  const handleLogout = () => {
-    try {
-      localStorage.removeItem('neuroup_user');
-    } catch (e) {
-      console.error(e);
-    }
-    setCurrentUser(null);
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-200">
-      {/* Top Navbar with Auth & Language */}
+      {/* Top Navbar */}
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -120,9 +88,6 @@ export const App: React.FC = () => {
         setLanguage={handleLanguageChange}
         savedCount={savedFavorites.length}
         onOpenFastModal={() => setShowFastModal(true)}
-        user={currentUser}
-        onOpenAuthModal={handleOpenAuthModal}
-        onLogout={handleLogout}
       />
 
       {/* Accessibility Toolbar */}
@@ -222,17 +187,6 @@ export const App: React.FC = () => {
         <EmergencyFASTModal
           onClose={() => setShowFastModal(false)}
           language={language}
-        />
-      )}
-
-      {/* Auth Modal (Log in / Sign up) */}
-      {showAuthModal && (
-        <AuthModal
-          isOpen={showAuthModal}
-          onClose={() => setShowAuthModal(false)}
-          initialMode={authMode}
-          language={language}
-          onLoginSuccess={handleLoginSuccess}
         />
       )}
 
