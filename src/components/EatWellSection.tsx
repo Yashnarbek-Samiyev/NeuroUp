@@ -486,51 +486,143 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
         </div>
       )}
 
-      {/* Modal 4: Weekly Checklist */}
+      {/* Modal 4: Weekly Checklist (Exact 1:1 Word Document Template + Download) */}
       {showChecklistModal && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center animate-fadeIn">
-          <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm p-2 sm:p-6 flex items-center justify-center animate-fadeIn">
+          <div className="relative bg-white dark:bg-slate-900 rounded-3xl max-w-5xl w-full p-4 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 max-h-[92vh] flex flex-col justify-between">
+            
+            {/* Close button */}
             <button
               onClick={() => setShowChecklistModal(false)}
-              className="absolute top-4 right-4 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200"
+              className="absolute top-4 right-4 p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors z-10"
+              aria-label="Yopish"
             >
               <X className="w-4 h-4" />
             </button>
 
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 flex items-center justify-center">
-                <ListChecks className="w-6 h-6" />
+            {/* Document Header (1:1 with docx) */}
+            <div className="flex items-center gap-3.5 mb-4 shrink-0 border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 flex items-center justify-center shrink-0 shadow-sm">
+                <FileText className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-bold text-navy-800 dark:text-white">
-                  Haftalik Nazorat Ro'yxati (Checklist)
+                <h3 className="text-xl sm:text-2xl font-extrabold text-navy-800 dark:text-white">
+                  Sog'lig'ingiz uchun ovqatlaning – Haftalik nazorat ro'yxati
                 </h3>
-                <p className="text-xs text-slate-500">Sog'lom ovqatlanish odatlari tekshiruvi</p>
               </div>
             </div>
 
-            <div className="space-y-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-              {[
-                "Har kuni kamida 1.5 - 2 litr toza suv ichdimmi?",
-                "Kunlik ratsionimda 5 xil rangdagi sabzavot/meva bo'ldimi?",
-                "Pishirishda sariyog' o'rniga zaytun moyi ishlatdimmi?",
-                "Bu hafta kamida 2 marta baliq iste'mol qildimmi?",
-                "Tuz miqdorini kamaytirib, tabiiy ziravorlar qo'lladimmi?",
-                "Qayta ishlangan shirinliklar o'rniga yong'oq va mevalar tanladimmi?"
-              ].map((question, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750">
-                  <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                  <span>{question}</span>
-                </div>
-              ))}
+            {/* Document Body (Exact 1:1 Table from docx) */}
+            <div className="overflow-y-auto overflow-x-auto pr-1 my-2 flex-grow">
+              
+              <div className="min-w-[720px] border border-slate-300 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-850 shadow-sm">
+                <table className="w-full text-xs sm:text-sm text-left border-collapse">
+                  <thead>
+                    <tr className="bg-slate-100 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-750">
+                      <th className="p-3 border-r border-slate-300 dark:border-slate-750 font-bold text-slate-900 dark:text-white w-64">
+                        <div>Oziq-ovqat guruhi</div>
+                        <div className="text-[11px] font-normal text-slate-500">Porsiyalar soni (Dastur kitobingizni tekshiring)</div>
+                      </th>
+                      <th colSpan={7} className="p-3 font-bold text-slate-900 dark:text-white text-center">
+                        <div>HAR KUNI iste'mol qilishingiz kerak bo'lgan miqdor</div>
+                        <div className="text-[11px] font-normal text-slate-500">Hisobni yuritish va nazorat qilishga yordam berish uchun katakchalardan foydalaning</div>
+                      </th>
+                    </tr>
+                    <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-300 dark:border-slate-750 text-center font-bold text-slate-700 dark:text-slate-300 text-xs">
+                      <th className="p-2 border-r border-slate-300 dark:border-slate-750"></th>
+                      {["1-kun", "2-kun", "3-kun", "4-kun", "5-kun", "6-kun", "7-kun"].map((day) => (
+                        <th key={day} className="p-2 border-r border-slate-300 dark:border-slate-750 last:border-r-0 w-16">
+                          {day}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* Daily Items */}
+                    {[
+                      { name: "Don mahsulotlari", portion: "3-6 porsiya" },
+                      { name: "Sabzavotlar", portion: "5-6 porsiya" },
+                      { name: "Mevalar", portion: "2-3 porsiya" },
+                      { name: "Zaytun moyi", portion: "4 osh qoshiq" },
+                      { name: "Yong'oqlar", portion: "30 g" },
+                      { name: "Suv", portion: "1.5-2 L" },
+                      { name: "Sut mahsulotlari", portion: "2-3 porsiya" },
+                    ].map((row, idx) => (
+                      <tr key={idx} className="border-b border-slate-300 dark:border-slate-750">
+                        <td className="p-2.5 font-semibold text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-800/40 border-r border-slate-300 dark:border-slate-750">
+                          <div>{row.name}</div>
+                          <div className="text-[11px] text-amber-700 dark:text-amber-400 font-normal">{row.portion}</div>
+                        </td>
+                        {[0, 1, 2, 3, 4, 5, 6].map((d) => (
+                          <td key={d} className="p-2 text-center border-r border-slate-300 dark:border-slate-750 last:border-r-0 bg-white dark:bg-slate-900">
+                            <input
+                              type="checkbox"
+                              className="rounded text-amber-600 focus:ring-amber-500 w-4 h-4 cursor-pointer"
+                            />
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+
+                    {/* Weekly Header Row */}
+                    <tr className="bg-amber-50 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-750 font-bold text-amber-900 dark:text-amber-300 text-xs">
+                      <td colSpan={8} className="p-2.5 uppercase tracking-wide">
+                        HAR HAFTA iste'mol qilishingiz kerak bo'lgan miqdor
+                      </td>
+                    </tr>
+
+                    {/* Weekly Items */}
+                    {[
+                      { name: "Dukkaklilar", portion: "3-4 porsiya" },
+                      { name: "Baliq", portion: "3-4 porsiya" },
+                      { name: "Yog'siz qizil go'sht", portion: "Faqat 1-2 porsiya" },
+                    ].map((row, idx) => (
+                      <tr key={idx} className="border-b border-slate-300 dark:border-slate-750">
+                        <td className="p-2.5 font-semibold text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-800/40 border-r border-slate-300 dark:border-slate-750">
+                          <div>{row.name}</div>
+                          <div className="text-[11px] text-amber-700 dark:text-amber-400 font-normal">{row.portion}</div>
+                        </td>
+                        {[0, 1, 2, 3, 4, 5, 6].map((d) => (
+                          <td key={d} className="p-2 text-center border-r border-slate-300 dark:border-slate-750 last:border-r-0 bg-white dark:bg-slate-900">
+                            <input
+                              type="checkbox"
+                              className="rounded text-amber-600 focus:ring-amber-500 w-4 h-4 cursor-pointer"
+                            />
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+
+                    {/* Footer Row */}
+                    <tr className="bg-slate-50 dark:bg-slate-800/80 font-medium text-slate-700 dark:text-slate-300 text-xs">
+                      <td colSpan={8} className="p-3 text-center italic">
+                        <strong>Xilma-xillikka intiling:</strong> Ko'plab xil ranglar, ham xom, ham pishirilgan holda
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+            {/* Modal Actions Footer with direct docx download button */}
+            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+              
+              <a
+                href="/docs/haftalik-nazorat-royxati-neuropath.docx"
+                download="haftalik-nazorat-royxati-neuropath.docx"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition-colors"
+                title="Haftalik nazorat ro'yxatini yuklab olish (.docx)"
+              >
+                <Download className="w-4 h-4" />
+                <span>Faylni yuklab olish (.docx)</span>
+              </a>
+
               <button
                 onClick={() => setShowChecklistModal(false)}
-                className="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-750 text-slate-800 dark:text-white font-bold text-xs transition-colors"
               >
-                Barchasiga Amal Qilindi
+                Yopish
               </button>
             </div>
           </div>
