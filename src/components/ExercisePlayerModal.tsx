@@ -84,13 +84,33 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
+  const getYouTubeEmbedUrl = (url?: string, youtubeId?: string) => {
+    if (youtubeId) return `https://www.youtube.com/embed/${youtubeId}?rel=0&autoplay=1`;
+    if (!url) return null;
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+    if (match && match[1]) {
+      return `https://www.youtube.com/embed/${match[1]}?rel=0&autoplay=1`;
+    }
+    return null;
+  };
+
+  const youtubeEmbedUrl = getYouTubeEmbedUrl(exercise.videoUrl, exercise.youtubeId);
+
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/75 backdrop-blur-sm p-4 sm:p-6 flex items-center justify-center animate-fadeIn">
       <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-xl border border-slate-200 dark:border-slate-800">
         
         {/* Top Video Header */}
         <div className="relative aspect-video w-full bg-black rounded-t-2xl overflow-hidden">
-          {exercise.videoUrl ? (
+          {youtubeEmbedUrl ? (
+            <iframe
+              className="w-full h-full"
+              src={youtubeEmbedUrl}
+              title={title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : exercise.videoUrl ? (
             <video
               className="w-full h-full object-contain bg-black"
               src={exercise.videoUrl}
@@ -101,13 +121,9 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
               controlsList="nodownload"
             />
           ) : (
-            <iframe
-              className="w-full h-full"
-              src={`https://www.youtube.com/embed/${exercise.youtubeId}?rel=0&enablejsapi=1`}
-              title={title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <div className="w-full h-full flex items-center justify-center text-slate-500 text-sm">
+              Video mavjud emas
+            </div>
           )}
 
           <button
