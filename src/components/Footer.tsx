@@ -2,6 +2,7 @@ import React from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
 import { BrandLogo } from './BrandLogo';
+import { useUser } from '../context/UserContext';
 import { ShieldCheck, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
@@ -12,6 +13,15 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFastModal }) => {
   const t = translations[language];
+  const { user, openAuthModal } = useUser();
+
+  const handleTabClick = (tab: CategoryTab) => {
+    if (tab === 'saved' && !user) {
+      openAuthModal();
+      return;
+    }
+    onSelectTab(tab);
+  };
 
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-12 sm:pt-14 pb-8 sm:pb-10">
@@ -37,27 +47,27 @@ export const Footer: React.FC<FooterProps> = ({ language, onSelectTab, onOpenFas
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <button onClick={() => onSelectTab('eat-well')} className="hover:text-white transition-colors">
+                <button onClick={() => handleTabClick('eat-well')} className="hover:text-white transition-colors cursor-pointer">
                   {t.eatWell}
                 </button>
               </li>
               <li>
-                <button onClick={() => onSelectTab('move-more')} className="hover:text-white transition-colors">
+                <button onClick={() => handleTabClick('move-more')} className="hover:text-white transition-colors cursor-pointer">
                   {t.moveMore}
                 </button>
               </li>
               <li>
-                <button onClick={() => onSelectTab('hints-hacks')} className="hover:text-white transition-colors">
+                <button onClick={() => handleTabClick('hints-hacks')} className="hover:text-white transition-colors cursor-pointer">
                   {t.hintsHacks}
                 </button>
               </li>
               <li>
-                <button onClick={() => onSelectTab('tracker')} className="hover:text-white transition-colors">
+                <button onClick={() => handleTabClick('tracker')} className="hover:text-white transition-colors cursor-pointer">
                   {t.tracker}
                 </button>
               </li>
               <li>
-                <button onClick={() => onSelectTab('saved')} className="hover:text-white transition-colors">
+                <button onClick={() => handleTabClick('saved')} className="hover:text-white transition-colors cursor-pointer">
                   {t.saved}
                 </button>
               </li>

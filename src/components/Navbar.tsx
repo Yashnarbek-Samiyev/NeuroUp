@@ -55,6 +55,15 @@ export const Navbar: React.FC<NavbarProps> = ({
     { code: 'en', label: 'EN' }
   ];
 
+  const handleNavClick = (tabId: CategoryTab) => {
+    if (tabId === 'saved' && !user) {
+      if (onOpenAuthModal) onOpenAuthModal();
+      return;
+    }
+    setActiveTab(tabId);
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors shadow-xs">
       
@@ -114,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               return (
                 <button
                   key={item.id}
-                  onClick={() => setActiveTab(item.id)}
+                  onClick={() => handleNavClick(item.id)}
                   className={`flex items-center gap-2 px-3 xl:px-4 py-2 rounded-xl text-xs xl:text-sm font-bold transition-all cursor-pointer ${
                     isActive
                       ? 'bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300 shadow-sm'
@@ -204,10 +213,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               return (
                 <button
                   key={item.id}
-                  onClick={() => {
-                    setActiveTab(item.id);
-                    setMobileMenuOpen(false);
-                  }}
+                  onClick={() => handleNavClick(item.id)}
                   className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
                     isActive
                       ? 'bg-brand-50 text-brand-700 dark:bg-slate-800 dark:text-brand-300 shadow-sm'
