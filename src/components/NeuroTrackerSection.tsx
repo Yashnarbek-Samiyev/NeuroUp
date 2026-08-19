@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { DailyLog, Language } from '../types';
 import { translations } from '../data/translations';
-import { getDailyLogs, getStreakCount, saveLogForDate, exportDailyLogs, importDailyLogs } from '../utils/storage';
+import { useUser } from '../context/UserContext';
+import { exportDailyLogs, importDailyLogs } from '../utils/storage';
 import confetti from 'canvas-confetti';
 import { 
   HeartPulse, 
@@ -47,13 +48,13 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
   const [streak, setStreak] = useState<number>(1);
   const [savedSuccess, setSavedSuccess] = useState<boolean>(false);
   const [showHistoryModal, setShowHistoryModal] = useState<boolean>(false);
-  const [allLogs, setAllLogs] = useState<Record<string, DailyLog>>({});
+
+  const { user, openAuthModal, dailyLogs, streak: userStreak, saveLog } = useUser();
+  const allLogs = dailyLogs as Record<string, DailyLog>;
 
   // Load log whenever selectedDate changes
   useEffect(() => {
-    const logs = getDailyLogs();
-    setAllLogs(logs);
-    const dateLog = logs[selectedDate];
+    const dateLog = allLogs[selectedDate];
 
     if (dateLog) {
       setWaterGlasses(dateLog.waterGlasses);
@@ -64,7 +65,6 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
       setPulse(dateLog.pulse ? String(dateLog.pulse) : '');
       setNotes(dateLog.notes || '');
     } else {
-      // Default initial state for a new unrecorded date
       setWaterGlasses(4);
       setExerciseMinutes(15);
       setSleepHours(7);
@@ -74,10 +74,15 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
       setNotes('');
     }
 
-    setStreak(getStreakCount());
-  }, [selectedDate]);
+    setStreak(user ? userStreak : 0);
+  }, [selectedDate, allLogs, userStreak, user]);
 
-  const handleSave = () => {
+  const handleSave = async () => {
+    if (!user) {
+      openAuthModal();
+      return;
+    }
+
     const log: DailyLog = {
       date: selectedDate,
       waterGlasses,
@@ -91,10 +96,9 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
       pulse: pulse.trim() ? Number(pulse) : undefined
     };
 
-    saveLogForDate(log);
-    const updatedLogs = getDailyLogs();
-    setAllLogs(updatedLogs);
-    setStreak(getStreakCount());
+    const ok = await saveLog(selectedDate, log);
+    if (!ok) return;
+
     setSavedSuccess(true);
 
     if (selectedDate === todayStr) {
@@ -158,9 +162,7 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
       reader.onload = (event) => {
         const text = event.target?.result as string;
         if (text && importDailyLogs(text)) {
-          const logs = getDailyLogs();
-          setAllLogs(logs);
-          alert(language === 'uz' ? "Ma'lumotlar muvaffaqiyatli tiklandi!" : "Данные успешно восстановлены!");
+          alert(language === 'uz' ? "Ma'lumotlar muvaffaqiyatli tiklandi! Sahifani yangilang." : "Данные успешно восстановлены! Обновите страницу.");
         } else {
           alert(language === 'uz' ? "Fayl formati noto'g'ri!" : "Неверный формат файла!");
         }
@@ -209,6 +211,22 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
           </div>
         </div>
       </div>
+
+      {/* Guest Login Banner */}
+      {!user && (
+        <div className="mb-5 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 rounded-2xl p-3.5 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs shadow-xs">
+          <div className="flex items-center gap-2.5 text-blue-900 dark:text-blue-200 text-center sm:text-left">
+            <HeartPulse className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 hidden sm:block" />
+            <span>{language === 'uz' ? 'Kunlik tiklanish natijalaringizni doimiy saqlab borish uchun shaxsiy profilingizga kiring.' : 'Войдите в профиль, чтобы сохранять ваши ежедневные результаты.'}</span>
+          </div>
+          <button
+            onClick={openAuthModal}
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shrink-0 transition-colors cursor-pointer"
+          >
+            {language === 'uz' ? 'Telegram orqali kirish' : 'Войти'}
+          </button>
+        </div>
+      )}
 
       {/* 7-Day Interactive Quick Day Strip */}
       <div className="mb-6 bg-white dark:bg-slate-850 p-3 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">

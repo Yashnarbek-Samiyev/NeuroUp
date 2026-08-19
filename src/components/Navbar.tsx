@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CategoryTab, Language } from '../types';
 import { translations } from '../data/translations';
 import { BrandLogo } from './BrandLogo';
+import { useUser } from '../context/UserContext';
 import { 
   Utensils, 
   Dumbbell, 
@@ -12,7 +13,9 @@ import {
   Globe, 
   Menu, 
   X,
-  ExternalLink
+  ExternalLink,
+  LogOut,
+  LogIn
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -22,6 +25,7 @@ interface NavbarProps {
   setLanguage: (lang: Language) => void;
   savedCount: number;
   onOpenFastModal: () => void;
+  onOpenAuthModal?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -30,10 +34,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   language,
   setLanguage,
   savedCount,
-  onOpenFastModal
+  onOpenFastModal,
+  onOpenAuthModal
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[language];
+  const { user, logout } = useUser();
 
   const navItems = [
     { id: 'eat-well' as CategoryTab, label: t.eatWell, icon: Utensils },
@@ -124,7 +130,38 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Right Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            
+
+            {/* User Profile */}
+            {user ? (
+              <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-xl px-2.5 py-1.5 border border-slate-200 dark:border-slate-700">
+                {user.photo_url ? (
+                  <img src={user.photo_url} alt={user.first_name} className="w-7 h-7 rounded-full object-cover" />
+                ) : (
+                  <div className="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-bold">
+                    {user.first_name[0]}
+                  </div>
+                )}
+                <span className="text-xs font-semibold text-slate-700 dark:text-slate-200 hidden sm:inline max-w-[90px] truncate">
+                  {user.first_name}
+                </span>
+                <button
+                  onClick={logout}
+                  title="Chiqish"
+                  className="ml-1 text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
+                >
+                  <LogOut className="w-4 h-4" />
+                </button>
+              </div>
+            ) : onOpenAuthModal ? (
+              <button
+                onClick={onOpenAuthModal}
+                className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 text-white rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer"
+              >
+                <LogIn className="w-3.5 h-3.5" />
+                <span>{language === 'uz' ? 'Kirish' : language === 'ru' ? 'Войти' : 'Sign In'}</span>
+              </button>
+            ) : null}
+
             {/* Language switch */}
             <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-0.5 sm:p-1 rounded-xl border border-slate-200 dark:border-slate-700">
               <Globe className="w-3.5 h-3.5 text-slate-400 ml-1 mr-1 hidden sm:inline" />

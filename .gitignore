@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.MOV
+videolar/
+public/videolar/movemore/
+public/videolar/movemore/*

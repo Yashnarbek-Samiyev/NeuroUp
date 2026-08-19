@@ -4,6 +4,7 @@ import { translations } from '../data/translations';
 import { recipes } from '../data/recipes';
 import { exercises } from '../data/exercises';
 import { hints } from '../data/hints';
+import { useUser } from '../context/UserContext';
 import { RecipeDetailModal } from './RecipeDetailModal';
 import { ExercisePlayerModal } from './ExercisePlayerModal';
 import { 
@@ -30,6 +31,7 @@ export const SavedSection: React.FC<SavedSectionProps> = ({
   const [activeExercise, setActiveExercise] = useState<Exercise | null>(null);
   const t = translations[language];
 
+  const { user, openAuthModal } = useUser();
   const savedRecipeItems = recipes.filter(r => savedFavorites.includes(r.id));
   const savedExerciseItems = exercises.filter(e => savedFavorites.includes(e.id));
   const savedHintItems = hints.filter(h => savedFavorites.includes(h.id));
@@ -42,7 +44,7 @@ export const SavedSection: React.FC<SavedSectionProps> = ({
       <div className="mb-8 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div className="flex items-center gap-2 text-brand-600 dark:text-brand-400 font-bold text-xs uppercase tracking-wider mb-1">
           <Bookmark className="w-4 h-4" />
-          <span>{t.saved} ({totalSaved})</span>
+          <span>{t.saved} ({user ? totalSaved : 0})</span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-800 dark:text-white">
           {t.savedSectionTitle}
@@ -52,7 +54,27 @@ export const SavedSection: React.FC<SavedSectionProps> = ({
         </p>
       </div>
 
-      {totalSaved === 0 ? (
+      {!user ? (
+        <div className="text-center py-16 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 max-w-md mx-auto shadow-sm">
+          <div className="w-12 h-12 mx-auto rounded-xl bg-brand-50 dark:bg-brand-950/50 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4">
+            <Bookmark className="w-6 h-6" />
+          </div>
+          <h3 className="text-base font-bold text-slate-900 dark:text-white mb-1.5">
+            {language === 'uz' ? 'Profilingizga kiring' : 'Войдите в профиль'}
+          </h3>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mb-5 leading-relaxed">
+            {language === 'uz' 
+              ? 'Sevimli taomlar va mashqlarni saqlab borish uchun avval tizimga kiring.' 
+              : 'Для сохранения избранных упражнений и рецептов, пожалуйста, войдите в систему.'}
+          </p>
+          <button
+            onClick={openAuthModal}
+            className="inline-flex items-center justify-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 text-white rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer"
+          >
+            {language === 'uz' ? 'Telegram orqali kirish' : 'Войти через Telegram'}
+          </button>
+        </div>
+      ) : totalSaved === 0 ? (
         <div className="text-center py-20 bg-white dark:bg-slate-900 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 p-8">
           <Bookmark className="w-10 h-10 mx-auto text-slate-400 mb-2" />
           <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">

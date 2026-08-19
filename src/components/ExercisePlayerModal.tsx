@@ -90,17 +90,29 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
         
         {/* Top Video Header */}
         <div className="relative aspect-video w-full bg-black rounded-t-2xl overflow-hidden">
-          <iframe
-            className="w-full h-full"
-            src={`https://www.youtube.com/embed/${exercise.youtubeId}?rel=0&enablejsapi=1`}
-            title={title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {exercise.videoUrl ? (
+            <video
+              className="w-full h-full object-contain bg-black"
+              src={exercise.videoUrl}
+              controls
+              autoPlay
+              playsInline
+              preload="metadata"
+              controlsList="nodownload"
+            />
+          ) : (
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${exercise.youtubeId}?rel=0&enablejsapi=1`}
+              title={title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
 
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 hover:bg-black/80 text-white flex items-center justify-center transition-colors"
+            className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 hover:bg-black/80 text-white flex items-center justify-center transition-colors cursor-pointer"
           >
             <X className="w-4 h-4" />
           </button>

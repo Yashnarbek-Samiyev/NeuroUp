@@ -49,14 +49,17 @@ export interface Exercise {
   title: Record<Language, string>;
   description: Record<Language, string>;
   category: 'seated' | 'balance' | 'upper-body' | 'lower-body' | 'full-body' | 'fine-motor';
+  executionType?: 'independent' | 'caregiver' | 'active';
   difficulty: 'gentle' | 'moderate' | 'advanced';
   durationMinutes: number;
-  youtubeId: string;
-  thumbnail: string;
+  videoUrl?: string;
+  youtubeId?: string;
+  thumbnail?: string;
   targetArea: Record<Language, string>;
   equipment: Record<Language, string[]>;
   steps: Record<Language, string[]>;
   safetyTips: Record<Language, string[]>;
+  tags?: string[];
 }
 
 export interface Hint {
