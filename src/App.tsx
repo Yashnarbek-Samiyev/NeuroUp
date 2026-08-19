@@ -7,6 +7,7 @@ import {
   setSavedLanguage,
 } from './utils/storage';
 import { UserProvider, useUser } from './context/UserContext';
+import { supabase } from './lib/supabase';
 import { Navbar } from './components/Navbar';
 import { AccessibilityBar } from './components/AccessibilityBar';
 import { HeroSection } from './components/HeroSection';
@@ -20,12 +21,50 @@ import { TelegramAuthModal } from './components/TelegramAuthModal';
 import { Footer } from './components/Footer';
 
 const AppInner: React.FC = () => {
-  const { savedFavorites, toggleFavorite, isAuthModalOpen, openAuthModal, closeAuthModal } = useUser();
+  const { login, savedFavorites, toggleFavorite, isAuthModalOpen, openAuthModal, closeAuthModal } = useUser();
   const [activeTab, setActiveTab] = useState<CategoryTab>('all');
   const [language, setLanguage] = useState<Language>(getSavedLanguage);
   const [accessibility, setAccessibility] = useState<AccessibilitySettings>(getAccessibilitySettings);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [showFastModal, setShowFastModal] = useState<boolean>(false);
+
+  // Auto-login if opened with ?code=XXXXXX from Telegram Bot link
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const codeParam = urlParams.get('code');
+
+    if (codeParam && codeParam.length === 6) {
+      const verifyUrlCode = async () => {
+        try {
+          const { data } = await supabase
+            .from('auth_codes')
+            .select('*')
+            .eq('code', codeParam)
+            .order('created_at', { ascending: false })
+            .limit(1)
+            .maybeSingle();
+
+          if (data && !data.is_used && new Date(data.expires_at).getTime() > Date.now()) {
+            await supabase.from('auth_codes').update({ is_used: true }).eq('id', data.id);
+            await login({
+              id: data.user_id,
+              first_name: data.first_name || 'Foydalanuvchi',
+              last_name: data.last_name || undefined,
+              username: data.username || undefined,
+              photo_url: data.photo_url || undefined,
+            });
+            window.history.replaceState({}, document.title, window.location.pathname);
+          } else if (data && new Date(data.expires_at).getTime() <= Date.now()) {
+            openAuthModal();
+            window.history.replaceState({}, document.title, window.location.pathname);
+          }
+        } catch (e) {
+          console.error('URL code auth error:', e);
+        }
+      };
+      verifyUrlCode();
+    }
+  }, [login, openAuthModal]);
 
   // Sync accessibility classes with DOM
   useEffect(() => {

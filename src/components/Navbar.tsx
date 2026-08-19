@@ -133,21 +133,24 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* User Profile */}
             {user ? (
-              <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-xl px-2.5 py-1.5 border border-slate-200 dark:border-slate-700">
+              <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-xl px-2.5 py-1.5 border border-slate-200 dark:border-slate-700 shadow-xs">
                 {user.photo_url ? (
-                  <img src={user.photo_url} alt={user.first_name} className="w-7 h-7 rounded-full object-cover" />
+                  <img src={user.photo_url} alt={user.first_name} className="w-7 h-7 rounded-full object-cover shrink-0" />
                 ) : (
-                  <div className="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-bold">
-                    {user.first_name[0]}
+                  <div className="w-7 h-7 rounded-full bg-brand-600 text-white flex items-center justify-center text-xs font-bold shrink-0">
+                    {user.first_name?.[0] || 'U'}
                   </div>
                 )}
-                <span className="text-xs font-semibold text-slate-700 dark:text-slate-200 hidden sm:inline max-w-[90px] truncate">
-                  {user.first_name}
+                <span 
+                  className="text-xs font-bold text-slate-800 dark:text-slate-100 hidden sm:inline max-w-[140px] truncate"
+                  title={[user.first_name, user.last_name].filter(Boolean).join(' ')}
+                >
+                  {[user.first_name, user.last_name].filter(Boolean).join(' ')}
                 </span>
                 <button
                   onClick={logout}
                   title="Chiqish"
-                  className="ml-1 text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
+                  className="ml-1 text-slate-400 hover:text-red-500 transition-colors cursor-pointer p-0.5"
                 >
                   <LogOut className="w-4 h-4" />
                 </button>

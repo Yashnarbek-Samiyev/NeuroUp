@@ -27,14 +27,56 @@ async function sendTelegramMessage(chatId, text, replyMarkup) {
 }
 
 async function handleUser(fromUser, chatId) {
+  const firstName = fromUser.first_name || '';
+  const lastName = fromUser.last_name || '';
+  const fullName = [firstName, lastName].filter(Boolean).join(' ') || 'Foydalanuvchi';
+
+  // 1. Check if user already has an ACTIVE unused code within 2 minutes
+  const { data: existingCode } = await supabase
+    .from('auth_codes')
+    .select('*')
+    .eq('user_id', fromUser.id)
+    .eq('is_used', false)
+    .gt('expires_at', new Date().toISOString())
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  if (existingCode) {
+    const remainingSeconds = Math.max(1, Math.round((new Date(existingCode.expires_at).getTime() - Date.now()) / 1000));
+    const directLoginUrl = `https://neuro-up-one.vercel.app/?code=${existingCode.code}`;
+
+    const messageText = `⏳ <b>Amaldagi kodingiz hali faol!</b>\n\n` +
+      `Sizning tasdiqlash kodingiz:\n` +
+      `👉 <code>${existingCode.code}</code> 👈\n\n` +
+      `⏱ Kod yana <b>${remainingSeconds} soniya</b> davomida amal qiladi. 2 daqiqa o'tgach yangi kod olishingiz mumkin.\n\n` +
+      `Pastdagi tugma orqali saytga to'g'ridan-to'g'ri kiring:`;
+
+    const keyboard = {
+      inline_keyboard: [
+        [
+          { text: "🚀 Saytga o'tish (kod bilan)", url: directLoginUrl }
+        ],
+        [
+          { text: "🔄 Kodni yangilash", callback_data: "refresh_code" }
+        ]
+      ]
+    };
+
+    await sendTelegramMessage(chatId, messageText, keyboard);
+    console.log(`[BOT] Active code ${existingCode.code} returned for user ${fullName} (${fromUser.id}) - ${remainingSeconds}s remaining`);
+    return;
+  }
+
+  // 2. Generate a fresh 6-digit code (since no active code or > 2 minutes passed)
   const code = Math.floor(100000 + Math.random() * 900000).toString();
   const expiresAt = new Date(Date.now() + 2 * 60 * 1000).toISOString();
 
   await supabase.from('auth_codes').insert({
     code,
     user_id: fromUser.id,
-    first_name: fromUser.first_name || 'Foydalanuvchi',
-    last_name: fromUser.last_name || null,
+    first_name: firstName || 'Foydalanuvchi',
+    last_name: lastName || null,
     username: fromUser.username || null,
     expires_at: expiresAt,
     is_used: false
@@ -42,28 +84,32 @@ async function handleUser(fromUser, chatId) {
 
   await supabase.from('users').upsert({
     id: fromUser.id,
-    first_name: fromUser.first_name || 'Foydalanuvchi',
-    last_name: fromUser.last_name || null,
+    first_name: firstName || 'Foydalanuvchi',
+    last_name: lastName || null,
     username: fromUser.username || null,
   }, { onConflict: 'id' });
 
-  const messageText = `🧠 <b>NeuroUP platformasiga xush kelibsiz!</b>\n\n` +
-    `Sizning tizimga kirish kodingiz:\n\n` +
+  const directLoginUrl = `https://neuro-up-one.vercel.app/?code=${code}`;
+
+  const messageText = `🧠 <b>Assalomu alaykum, ${fullName}!</b>\n\n` +
+    `NeuroUP platformasiga kirish uchun kodingiz:\n\n` +
     `👉 <code>${code}</code> 👈\n\n` +
-    `⏳ <i>Ushbu kod <b>2 daqiqa</b> davomida amal qiladi. Kodni saytga kiriting:</i>\n` +
-    `🌐 https://neuro-up-one.vercel.app/`;
+    `⏳ <i>Ushbu kod <b>2 daqiqa</b> davomida amal qiladi.</i>\n\n` +
+    `Quyidagi tugma orqali to'g'ridan-to'g'ri tizimga kirishingiz mumkin:`;
 
   const keyboard = {
     inline_keyboard: [
       [
-        { text: "🔄 Kodni yangilash", callback_data: "refresh_code" },
-        { text: "🌐 Saytga o'tish", url: "https://neuro-up-one.vercel.app/" }
+        { text: "🚀 Saytga o'tish (kod bilan)", url: directLoginUrl }
+      ],
+      [
+        { text: "🔄 Kodni yangilash", callback_data: "refresh_code" }
       ]
     ]
   };
 
   await sendTelegramMessage(chatId, messageText, keyboard);
-  console.log(`[BOT] Generated code ${code} for user ${fromUser.first_name} (${fromUser.id})`);
+  console.log(`[BOT] Generated fresh code ${code} for user ${fullName} (${fromUser.id})`);
 }
 
 async function pollUpdates() {
@@ -85,8 +131,8 @@ async function pollUpdates() {
   } catch (e) {
     console.error('Polling error:', e.message);
   }
-  setTimeout(pollUpdates, 800);
+  setTimeout(pollUpdates, 600);
 }
 
-console.log('🤖 NeuroUP Telegram Bot polling started for @neuroupsbot...');
+console.log('🤖 NeuroUP Telegram Bot polling started for @neuroupsbot with 2-minute rate-limiting...');
 pollUpdates();
