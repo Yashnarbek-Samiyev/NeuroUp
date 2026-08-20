@@ -101,7 +101,7 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
       <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-xl border border-slate-200 dark:border-slate-800">
         
         {/* Top Video Header */}
-        <div className="relative aspect-video w-full bg-black rounded-t-2xl overflow-hidden">
+        <div className="relative aspect-video w-full bg-slate-900 rounded-t-2xl overflow-hidden">
           {youtubeEmbedUrl ? (
             <iframe
               className="w-full h-full"
@@ -110,7 +110,7 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
-          ) : exercise.videoUrl ? (
+          ) : exercise.videoUrl && exercise.videoUrl.startsWith('http') ? (
             <video
               className="w-full h-full object-contain bg-black"
               src={exercise.videoUrl}
@@ -121,8 +121,23 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
               controlsList="nodownload"
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center text-slate-500 text-sm">
-              Video mavjud emas
+            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-850 to-brand-950 p-6 text-center text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+              <div className="relative z-10 max-w-md flex flex-col items-center">
+                <div className="w-14 h-14 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 mb-3 shadow-lg shadow-brand-500/10">
+                  <Play className="w-6 h-6 ml-0.5" />
+                </div>
+                <h3 className="text-base font-bold text-white mb-1">
+                  {title}
+                </h3>
+                <p className="text-xs text-slate-400 mb-3 max-w-sm">
+                  {targetArea} • {exercise.durationMinutes} {t.minutesUnit}
+                </p>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Video darslik YouTube pleylistga yuklanmoqda
+                </div>
+              </div>
             </div>
           )}
 
