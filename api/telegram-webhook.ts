@@ -5,6 +5,8 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL || 'https://ywezcvfbdjpidillx
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZXpjdmZiZGpwaWRpbGx4dGVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcxNTcyMDcsImV4cCI6MjEwMjczMzIwN30.mWMv3Zoepdpv79_0qV2un2bV6xWto4CTqhQ_pUyBZXQ';
 const BOT_TOKEN = '8803570835:AAEwNFE66mK0bVkdMzeMjhqEOqg6mZ2ex-w';
 
+const ADMIN_IDS = [5693570276];
+
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 async function sendTelegramMessage(chatId: number, text: string, replyMarkup?: any) {
@@ -21,6 +23,88 @@ async function sendTelegramMessage(chatId: number, text: string, replyMarkup?: a
   });
 }
 
+async function getAdminStatsMessage(): Promise<string> {
+  try {
+    const [usersRes, logsRes] = await Promise.all([
+      supabase.from('users').select('*'),
+      supabase.from('daily_logs').select('*')
+    ]);
+
+    const totalUsers = usersRes.data?.length || 0;
+    const logs = logsRes.data || [];
+    const totalLogs = logs.length;
+
+    const userIdsWithLogs = new Set(logs.map(l => l.user_id));
+    const activeTrackerUsers = userIdsWithLogs.size;
+
+    let totalWater = 0;
+    let totalExercise = 0;
+    let totalSleep = 0;
+    let totalPulse = 0;
+    let pulseCount = 0;
+    let bpCount = 0;
+    const moodCounts: Record<string, number> = { great: 0, good: 0, okay: 0, low: 0 };
+
+    logs.forEach(item => {
+      const data = item.log_data || {};
+      if (typeof data.waterGlasses === 'number') totalWater += data.waterGlasses;
+      if (typeof data.exerciseMinutes === 'number') totalExercise += data.exerciseMinutes;
+      if (typeof data.sleepHours === 'number') totalSleep += data.sleepHours;
+      if (data.pulse && !isNaN(Number(data.pulse))) {
+        totalPulse += Number(data.pulse);
+        pulseCount++;
+      }
+      if (data.bloodPressure) bpCount++;
+      if (data.mood && moodCounts[data.mood] !== undefined) {
+        moodCounts[data.mood]++;
+      }
+    });
+
+    const avgWater = totalLogs > 0 ? (totalWater / totalLogs).toFixed(1) : '0';
+    const avgWaterLiters = totalLogs > 0 ? ((totalWater / totalLogs) * 0.25).toFixed(2) : '0';
+    const avgExercise = totalLogs > 0 ? (totalExercise / totalLogs).toFixed(1) : '0';
+    const avgSleep = totalLogs > 0 ? (totalSleep / totalLogs).toFixed(1) : '0';
+    const avgPulse = pulseCount > 0 ? `${Math.round(totalPulse / pulseCount)} bpm` : "Kiritilmagan";
+
+    const moodNames: Record<string, string> = {
+      great: "🤩 A'lo",
+      good: "😊 Yaxshi",
+      okay: "😐 O'rtacha",
+      low: "😔 Past"
+    };
+
+    const moodLines = Object.entries(moodCounts)
+      .filter(([_, count]) => count > 0)
+      .map(([k, count]) => {
+        const pct = Math.round((count / (totalLogs || 1)) * 100);
+        return `• ${moodNames[k] || k}: <b>${pct}%</b> (${count} kun)`;
+      })
+      .join('\n');
+
+    const now = new Date().toLocaleString('uz-UZ', { timeZone: 'Asia/Tashkent' });
+
+    return `📊 <b>NEUROUP ADMIN STATISTIKA MARKAZI</b>\n` +
+      `━━━━━━━━━━━━━━━━━━━━━\n` +
+      `👥 <b>Foydalanuvchilar:</b>\n` +
+      `• Jami ro'yxatdan o'tganlar: <b>${totalUsers} nafar</b>\n` +
+      `• Trekerdan foydalanganlar: <b>${activeTrackerUsers} nafar</b>\n` +
+      `• Jami kiritilgan kunlik jurnallar: <b>${totalLogs} ta</b>\n\n` +
+      `📈 <b>Trekerdagi o'rtacha ko'rsatkichlar:</b>\n` +
+      `💧 <b>O'rtacha suv iste'moli:</b> <code>${avgWater} stakan (~${avgWaterLiters} L/kun)</code>\n` +
+      `🏃‍♂️ <b>O'rtacha mashq davomiyligi:</b> <code>${avgExercise} daqiqa/kun</code>\n` +
+      `😴 <b>O'rtacha uyqu davomiyligi:</b> <code>${avgSleep} soat/kun</code>\n` +
+      `❤️ <b>O'rtacha yurak urishi (puls):</b> <code>${avgPulse}</code>\n` +
+      `🩺 <b>Qon bosimi qayd etilgan:</b> <code>${bpCount} marta</code>\n\n` +
+      `🧠 <b>Umumiy kayfiyat taqsimoti:</b>\n` +
+      `${moodLines || "• Hali ma'lumot kiritilmagan"}\n` +
+      `━━━━━━━━━━━━━━━━━━━━━\n` +
+      `🕒 <i>Yangilangan vaqt: ${now}</i>`;
+  } catch (err: any) {
+    console.error('Stats error:', err);
+    return `⚠️ Statistikani yuklashda xatolik: ${err.message}`;
+  }
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
     return res.status(200).json({ ok: true, message: 'NeuroUP Telegram Webhook running' });
@@ -30,20 +114,41 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const update = req.body;
     let fromUser: any = null;
     let chatId: number | null = null;
-    let isStart = false;
-    let isRefresh = false;
+    let callbackData: string | null = null;
+    let messageText: string = '';
 
     if (update.message) {
       fromUser = update.message.from;
       chatId = update.message.chat.id;
-      isStart = true;
+      messageText = (update.message.text || '').trim();
     } else if (update.callback_query) {
       fromUser = update.callback_query.from;
       chatId = update.callback_query.message?.chat?.id || update.callback_query.from?.id;
-      isRefresh = true;
+      callbackData = update.callback_query.data;
     }
 
     if (fromUser && chatId) {
+      const userId = Number(fromUser.id);
+      const isAdmin = ADMIN_IDS.includes(userId);
+
+      // Handle Admin Stats Request
+      if (isAdmin && (callbackData === 'admin_stats' || messageText === '/admin' || messageText === '/stats')) {
+        const statsMessage = await getAdminStatsMessage();
+        const statsKeyboard = {
+          inline_keyboard: [
+            [
+              { text: "🔄 Statistikani yangilash", callback_data: "admin_stats" }
+            ],
+            [
+              { text: "🔑 Kirish kodini olish", callback_data: "refresh_code" },
+              { text: "🚀 Saytga o'tish", url: "https://neuro-up-one.vercel.app/" }
+            ]
+          ]
+        };
+        await sendTelegramMessage(chatId, statsMessage, statsKeyboard);
+        return res.status(200).json({ ok: true });
+      }
+
       const firstName = fromUser.first_name || '';
       const lastName = fromUser.last_name || '';
       const fullName = [firstName, lastName].filter(Boolean).join(' ') || 'Foydalanuvchi';
@@ -63,24 +168,28 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const remainingSeconds = Math.max(1, Math.round((new Date(existingCode.expires_at).getTime() - Date.now()) / 1000));
         const directLoginUrl = `https://neuro-up-one.vercel.app/?code=${existingCode.code}`;
 
-        const messageText = `⏳ <b>Amaldagi kodingiz hali faol!</b>\n\n` +
+        const msg = `⏳ <b>Amaldagi kodingiz hali faol!</b>\n\n` +
           `Sizning tasdiqlash kodingiz:\n` +
           `👉 <code>${existingCode.code}</code> 👈\n\n` +
           `⏱ Kod yana <b>${remainingSeconds} soniya</b> davomida amal qiladi. 2 daqiqa o'tgach yangi kod olishingiz mumkin.\n\n` +
           `Pastdagi tugma orqali saytga to'g'ridan-to'g'ri kiring:`;
 
-        const keyboard = {
-          inline_keyboard: [
-            [
-              { text: "🚀 Saytga o'tish (kod bilan)", url: directLoginUrl }
-            ],
-            [
-              { text: "🔄 Kodni yangilash", callback_data: "refresh_code" }
-            ]
+        const keyboardButtons: any[][] = [
+          [
+            { text: "🚀 Saytga o'tish (kod bilan)", url: directLoginUrl }
+          ],
+          [
+            { text: "🔄 Kodni yangilash", callback_data: "refresh_code" }
           ]
-        };
+        ];
 
-        await sendTelegramMessage(chatId, messageText, keyboard);
+        if (isAdmin) {
+          keyboardButtons.push([
+            { text: "📊 Admin Statistika", callback_data: "admin_stats" }
+          ]);
+        }
+
+        await sendTelegramMessage(chatId, msg, { inline_keyboard: keyboardButtons });
         return res.status(200).json({ ok: true });
       }
 
@@ -107,24 +216,28 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       const directLoginUrl = `https://neuro-up-one.vercel.app/?code=${code}`;
 
-      const messageText = `🧠 <b>Assalomu alaykum, ${fullName}!</b>\n\n` +
+      const welcomeMsg = `🧠 <b>Assalomu alaykum, ${fullName}!</b>\n\n` +
         `NeuroUP platformasiga kirish uchun kodingiz:\n\n` +
         `👉 <code>${code}</code> 👈\n\n` +
         `⏳ <i>Ushbu kod <b>2 daqiqa</b> davomida amal qiladi.</i>\n\n` +
         `Quyidagi tugma orqali to'g'ridan-to'g'ri tizimga kirishingiz mumkin:`;
 
-      const keyboard = {
-        inline_keyboard: [
-          [
-            { text: "🚀 Saytga o'tish (kod bilan)", url: directLoginUrl }
-          ],
-          [
-            { text: "🔄 Kodni yangilash", callback_data: "refresh_code" }
-          ]
+      const keyboardButtons: any[][] = [
+        [
+          { text: "🚀 Saytga o'tish (kod bilan)", url: directLoginUrl }
+        ],
+        [
+          { text: "🔄 Kodni yangilash", callback_data: "refresh_code" }
         ]
-      };
+      ];
 
-      await sendTelegramMessage(chatId, messageText, keyboard);
+      if (isAdmin) {
+        keyboardButtons.push([
+          { text: "📊 Admin Statistika", callback_data: "admin_stats" }
+        ]);
+      }
+
+      await sendTelegramMessage(chatId, welcomeMsg, { inline_keyboard: keyboardButtons });
     }
 
     return res.status(200).json({ ok: true });
