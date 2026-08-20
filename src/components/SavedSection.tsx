@@ -60,18 +60,20 @@ export const SavedSection: React.FC<SavedSectionProps> = ({
             <Bookmark className="w-6 h-6" />
           </div>
           <h3 className="text-base font-bold text-slate-900 dark:text-white mb-1.5">
-            {language === 'uz' ? 'Profilingizga kiring' : 'Войдите в профиль'}
+            {language === 'uz' ? 'Profilingizga kiring' : language === 'ru' ? 'Войдите в профиль' : 'Sign In to Your Profile'}
           </h3>
           <p className="text-xs text-slate-500 dark:text-slate-400 mb-5 leading-relaxed">
             {language === 'uz' 
               ? 'Sevimli taomlar va mashqlarni saqlab borish uchun avval tizimga kiring.' 
-              : 'Для сохранения избранных упражнений и рецептов, пожалуйста, войдите в систему.'}
+              : language === 'ru'
+              ? 'Для сохранения избранных упражнений и рецептов, пожалуйста, войдите в систему.'
+              : 'Sign in to save and sync your favorite recovery exercises and nutrition plans across devices.'}
           </p>
           <button
             onClick={openAuthModal}
             className="inline-flex items-center justify-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-500 text-white rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer"
           >
-            {language === 'uz' ? 'Telegram orqali kirish' : 'Войти через Telegram'}
+            {language === 'uz' ? 'Telegram orqali kirish' : language === 'ru' ? 'Войти через Telegram' : 'Sign In with Telegram'}
           </button>
         </div>
       ) : totalSaved === 0 ? (

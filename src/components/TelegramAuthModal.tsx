@@ -82,7 +82,13 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
 
   const verifyCode = async (codeToVerify: string) => {
     if (codeToVerify.length !== 6) {
-      setError(language === 'uz' ? "Iltimos, 6 xonali kodni to'liq kiriting" : "Пожалуйста, введите полный 6-значный код");
+      setError(
+        language === 'uz' 
+          ? "Iltimos, 6 xonali kodni to'liq kiriting" 
+          : language === 'ru' 
+          ? "Пожалуйста, введите полный 6-значный код" 
+          : "Please enter the complete 6-digit code"
+      );
       return;
     }
 
@@ -103,7 +109,9 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
         setError(
           language === 'uz' 
             ? "Kiritilgan kod noto'g'ri. Botdan yangi kod oling." 
-            : "Неверный код. Получите новый код в боте."
+            : language === 'ru'
+            ? "Неверный код. Получите новый код в боте."
+            : "Invalid code. Please request a new code from the bot."
         );
         setIsLoading(false);
         return;
@@ -114,7 +122,9 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
         setError(
           language === 'uz'
             ? "Ushbu kod allaqachon ishlatilgan. Botdan yangi kod oling."
-            : "Этот код уже использован. Получите новый код в боте."
+            : language === 'ru'
+            ? "Этот код уже использован. Получите новый код в боте."
+            : "This code has already been used. Please request a new code from the bot."
         );
         setIsLoading(false);
         return;
@@ -128,7 +138,9 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
         setError(
           language === 'uz'
             ? "Kodni amal qilish muddati tugagan (2 daqiqa o'tib ketgan). Botdan yangi kod oling."
-            : "Срок действия кода истек (прошло 2 минуты). Получите новый код в боте."
+            : language === 'ru'
+            ? "Срок действия кода истек (прошло 2 минуты). Получите новый код в боте."
+            : "Code expired (2 minutes limit exceeded). Please request a new code from the bot."
         );
         setIsLoading(false);
         return;
@@ -156,7 +168,13 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
 
     } catch (err: any) {
       console.error('Verification error:', err);
-      setError(language === 'uz' ? "Tekshirishda xatolik yuz berdi" : "Ошибка при проверке");
+      setError(
+        language === 'uz' 
+          ? "Tekshirishda xatolik yuz berdi" 
+          : language === 'ru' 
+          ? "Ошибка при проверке" 
+          : "An error occurred during verification"
+      );
     } finally {
       setIsLoading(false);
     }
@@ -175,7 +193,7 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-          aria-label="Yopish"
+          aria-label="Close"
         >
           <X className="w-5 h-5" />
         </button>
@@ -191,7 +209,9 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-xs leading-relaxed">
             {language === 'uz' 
               ? 'Telegram botimiz yuborgan 6 xonali tasdiqlash kodini kiriting' 
-              : 'Введите 6-значный код подтверждения из Telegram бота'}
+              : language === 'ru'
+              ? 'Введите 6-значный код подтверждения из Telegram бота'
+              : 'Enter the 6-digit verification code from our Telegram bot'}
           </p>
         </div>
 
@@ -223,7 +243,7 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
 
           {/* Expiration Note */}
           <p className="text-center text-[11px] text-slate-400 dark:text-slate-500 mt-2">
-            ⏳ {language === 'uz' ? 'Kod 2 daqiqa davomida amal qiladi' : 'Код действителен в течение 2 минут'}
+            ⏳ {language === 'uz' ? 'Kod 2 daqiqa davomida amal qiladi' : language === 'ru' ? 'Код действителен в течение 2 минут' : 'Code valid for 2 minutes'}
           </p>
         </div>
 
@@ -238,7 +258,7 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
         {isSuccess && (
           <div className="mb-5 flex items-center justify-center gap-2 p-3 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 rounded-xl text-xs font-semibold text-emerald-600 dark:text-emerald-300">
             <CheckCircle2 className="w-4 h-4" />
-            <span>{language === 'uz' ? 'Muvaffaqiyatli kirdingiz!' : 'Успешный вход!'}</span>
+            <span>{language === 'uz' ? 'Muvaffaqiyatli kirdingiz!' : language === 'ru' ? 'Успешный вход!' : 'Successfully signed in!'}</span>
           </div>
         )}
 
@@ -255,11 +275,11 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
           {isLoading ? (
             <>
               <Loader2 className="w-4 h-4 animate-spin" />
-              <span>{language === 'uz' ? 'Tekshirilmoqda...' : 'Проверка...'}</span>
+              <span>{language === 'uz' ? 'Tekshirilmoqda...' : language === 'ru' ? 'Проверка...' : 'Verifying...'}</span>
             </>
           ) : (
             <>
-              <span>{language === 'uz' ? 'Tasdiqlash va Kirish' : 'Подтвердить и войти'}</span>
+              <span>{language === 'uz' ? 'Tasdiqlash va Kirish' : language === 'ru' ? 'Подтвердить и войти' : 'Verify & Sign In'}</span>
               <ArrowRight className="w-4 h-4" />
             </>
           )}
@@ -269,7 +289,7 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
         <div className="relative flex items-center justify-center my-4">
           <div className="border-t border-slate-200 dark:border-slate-800 w-full" />
           <span className="bg-white dark:bg-slate-900 px-3 text-[11px] text-slate-400 uppercase tracking-wider font-medium">
-            {language === 'uz' ? 'kodni olish' : 'получить код'}
+            {language === 'uz' ? 'kodni olish' : language === 'ru' ? 'получить код' : 'get the code'}
           </span>
         </div>
 
@@ -278,23 +298,22 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
           href="https://t.me/neuroupsbot"
           target="_blank"
           rel="noreferrer"
-          className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#24A1DE] hover:bg-[#1E8BC1] text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+          className="w-full py-3 px-4 rounded-xl border border-sky-500/30 bg-sky-50 dark:bg-sky-950/40 hover:bg-sky-100 dark:hover:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-bold transition-all flex items-center justify-center gap-2"
         >
           <Send className="w-4 h-4" />
-          <span>{language === 'uz' ? "Botga o'tish (@neuroupsbot)" : "Перейти в бот (@neuroupsbot)"}</span>
+          <span>{language === 'uz' ? "Telegram Botga o'tish (@neuroupsbot)" : language === 'ru' ? "Перейти в Telegram бот (@neuroupsbot)" : "Open Telegram Bot (@neuroupsbot)"}</span>
         </a>
 
-        {/* Simple Step guide */}
-        <div className="mt-4 p-3 bg-slate-50 dark:bg-slate-850 border border-slate-100 dark:border-slate-800 rounded-xl text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
-          <p>1. <strong>Botga o'ting</strong> va <code>/start</code> tugmasini bosing.</p>
-          <p>2. Bot sizga <strong>6 xonali kod</strong> yuboradi.</p>
-          <p>3. Kodni yuqoridagi maydonga kiriting.</p>
-        </div>
-
         {/* Footer info */}
-        <div className="mt-4 text-center flex items-center justify-center gap-1.5 text-[11px] text-slate-400">
+        <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-center gap-2 text-[11px] text-slate-400 dark:text-slate-500">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-          <span>100% xavfsiz Telegram avtorizatsiyasi</span>
+          <span>
+            {language === 'uz' 
+              ? "100% xavfsiz Telegram avtorizatsiyasi" 
+              : language === 'ru' 
+              ? "100% безопасная Telegram авторизация" 
+              : "100% Secure Telegram Authorization"}
+          </span>
         </div>
       </div>
     </div>

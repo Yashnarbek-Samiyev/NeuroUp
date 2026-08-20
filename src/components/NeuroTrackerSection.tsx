@@ -217,13 +217,19 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
         <div className="mb-5 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 rounded-2xl p-3.5 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs shadow-xs">
           <div className="flex items-center gap-2.5 text-blue-900 dark:text-blue-200 text-center sm:text-left">
             <HeartPulse className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 hidden sm:block" />
-            <span>{language === 'uz' ? 'Kunlik tiklanish natijalaringizni doimiy saqlab borish uchun shaxsiy profilingizga kiring.' : 'Войдите в профиль, чтобы сохранять ваши ежедневные результаты.'}</span>
+            <span>
+              {language === 'uz' 
+                ? 'Kunlik tiklanish natijalaringizni doimiy saqlab borish uchun shaxsiy profilingizga kiring.' 
+                : language === 'ru'
+                ? 'Войдите в профиль, чтобы сохранять ваши ежедневные результаты.'
+                : 'Sign in to permanently track and sync your daily recovery metrics in the cloud.'}
+            </span>
           </div>
           <button
             onClick={openAuthModal}
             className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shrink-0 transition-colors cursor-pointer"
           >
-            {language === 'uz' ? 'Telegram orqali kirish' : 'Войти'}
+            {language === 'uz' ? 'Telegram orqali kirish' : language === 'ru' ? 'Войти' : 'Sign In with Telegram'}
           </button>
         </div>
       )}
@@ -231,8 +237,10 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
       {/* 7-Day Interactive Quick Day Strip */}
       <div className="mb-6 bg-white dark:bg-slate-850 p-3 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
         <div className="flex items-center justify-between mb-3 text-xs font-bold text-slate-500 dark:text-slate-400">
-          <span>Haftalik Kunlar Strip:</span>
-          <span>{totalLoggedDays} ta kun saqlangan</span>
+          <span>{language === 'uz' ? 'Haftalik Kunlar Strip:' : language === 'ru' ? 'Недельная шкала:' : '7-Day Quick Strip:'}</span>
+          <span>
+            {totalLoggedDays} {language === 'uz' ? 'ta kun saqlangan' : language === 'ru' ? 'дней записано' : 'days logged'}
+          </span>
         </div>
 
         <div className="grid grid-cols-7 gap-1.5 sm:gap-3">
