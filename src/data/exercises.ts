@@ -457,7 +457,8 @@ export const exercises: Exercise[] = [
     executionType: "caregiver",
     difficulty: "gentle",
     durationMinutes: 5,
-    videoUrl: "/videolar/movemore/bemor-qarovchisi-uchun-qul-mashqlari-2.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=toppKOkHI2k",
+    youtubeId: "toppKOkHI2k",
     
     targetArea: {
       uz: "Kaft va bilak mushaklari",
@@ -510,7 +511,8 @@ export const exercises: Exercise[] = [
     executionType: "active",
     difficulty: "moderate",
     durationMinutes: 7,
-    videoUrl: "/videolar/movemore/insult-bemorni-uzi-aktiv-qilishi-uchun-oyoq-mashqlari.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=kNsjG8xdkgU",
+    youtubeId: "kNsjG8xdkgU",
     
     targetArea: {
       uz: "Son, tizza va to'piq mushaklari",
@@ -566,7 +568,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "gentle",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-mashqlar-1-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=qvMVm-i04m4",
+    youtubeId: "qvMVm-i04m4",
     
     targetArea: {
       uz: "Omurtqa pog'onasi va gavda",
@@ -619,7 +622,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "gentle",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-mashqlar-2-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=YzuVn8MAKOI",
+    youtubeId: "YzuVn8MAKOI",
     
     targetArea: {
       uz: "Yelka va ko'krak qafasi",
@@ -672,7 +676,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "gentle",
     durationMinutes: 3,
-    videoUrl: "/videolar/movemore/mustaqil-mashqlar-3-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=UlUUjnSNj-w",
+    youtubeId: "UlUUjnSNj-w",
     
     targetArea: {
       uz: "Yon bel mushaklari va muvozanat",
