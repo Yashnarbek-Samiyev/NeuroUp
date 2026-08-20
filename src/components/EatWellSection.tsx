@@ -114,10 +114,22 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
           <div className="flex flex-wrap items-center gap-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 text-xs font-bold border border-brand-200 dark:border-slate-700 shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-brand-600" />
-              <span>Eat Well • Insultdan So'ng To'g'ri Ovqatlanish</span>
+              <span>
+                {language === 'uz' 
+                  ? "Eat Well • Insultdan So'ng To'g'ri Ovqatlanish" 
+                  : language === 'ru' 
+                  ? "Eat Well • Правильное питание после инсульта" 
+                  : "Eat Well • Healthy Nutrition After Stroke"}
+              </span>
             </div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
-              <span>O'rta Yer Dengizi Parhezi</span>
+              <span>
+                {language === 'uz' 
+                  ? "O'rta Yer Dengizi Parhezi" 
+                  : language === 'ru' 
+                  ? "Средиземноморская диета" 
+                  : "Mediterranean Diet"}
+              </span>
             </div>
           </div>
 
@@ -255,16 +267,21 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               </div>
               <div>
                 <h3 className="font-extrabold text-sm sm:text-base text-navy-800 dark:text-white">
-                  {t.filterRecipesTitle || "Retseptlarni filtrlash"}
+                  {language === 'uz' ? "Retseptlarni filtrlash" : language === 'ru' ? "Фильтрация рецептов" : "Filter Recipes"}
                 </h3>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                  Taom turini yoki parhez toifasini tanlab kerakli retseptni tezda toping:
+                  {language === 'uz' 
+                    ? "Taom turini yoki parhez toifasini tanlab kerakli retseptni tezda toping:" 
+                    : language === 'ru' 
+                    ? "Выберите тип блюда или диетическую категорию для быстрого поиска:" 
+                    : "Filter by meal type or dietary preference to find recipes quickly:"}
                 </p>
               </div>
             </div>
 
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3.5 py-1.5 rounded-full self-start sm:self-auto border border-slate-200 dark:border-slate-700">
-              <span className="font-bold text-brand-600 dark:text-brand-400">{filteredRecipes.length}</span> {t.showingRecipesCount || "ta retsept topildi"}
+              <span className="font-bold text-brand-600 dark:text-brand-400">{filteredRecipes.length}</span>{" "}
+              {language === 'uz' ? "ta retsept topildi" : language === 'ru' ? "рецептов найдено" : "recipes found"}
             </div>
           </div>
 
@@ -274,7 +291,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             {/* Group 1: Meal Types */}
             <div>
               <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
-                {t.mealTypesLabel || "Taom turi"}:
+                {language === 'uz' ? "Taom turi" : language === 'ru' ? "Тип блюда" : "Meal Type"}:
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {mealTypeCategories.map((cat) => {
@@ -306,7 +323,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             {/* Group 2: Dietary Preferences */}
             <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
               <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
-                {t.dietaryLabel || "Parhez va Maxsus toifa"}:
+                {language === 'uz' ? "Parhez va Maxsus toifa" : language === 'ru' ? "Диетическая категория" : "Dietary Preferences"}:
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {dietaryCategories.map((cat) => {

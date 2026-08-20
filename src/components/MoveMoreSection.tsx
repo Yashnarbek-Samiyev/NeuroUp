@@ -102,10 +102,16 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
             <div className="flex flex-wrap items-center gap-2">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 text-xs font-bold border border-brand-200 dark:border-slate-700 shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-brand-600" />
-                <span>Move More • Qayta Tiklanish Dasturi</span>
+                <span>
+                  {language === 'uz' 
+                    ? 'Move More • Qayta Tiklanish Dasturi' 
+                    : language === 'ru' 
+                    ? 'Программа двигательной реабилитации' 
+                    : 'Move More • Stroke Recovery Program'}
+                </span>
               </div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
-                <span>Rebuild Your Path</span>
+                <span>{language === 'uz' ? 'Rebuild Your Path' : language === 'ru' ? 'Путь восстановления' : 'Rebuild Your Path'}</span>
               </div>
             </div>
 
@@ -214,16 +220,21 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
               </div>
               <div>
                 <h3 className="font-extrabold text-sm sm:text-base text-navy-800 dark:text-white">
-                  {t.filterExercisesTitle || "Video mashqlarni filtrlash"}
+                  {language === 'uz' ? "Video mashqlarni filtrlash" : language === 'ru' ? "Фильтрация видео-тренировок" : "Filter Exercise Videos"}
                 </h3>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                  Tana sohasi va bajarish rejimini tanlang (ikki xil filtr birdaniga ishlaydi):
+                  {language === 'uz' 
+                    ? "Tana sohasi va bajarish rejimini tanlang (ikki xil filtr birdaniga ishlaydi):" 
+                    : language === 'ru' 
+                    ? "Выберите зону тела и уровень необходимой помощи для подбора упражнений:" 
+                    : "Select target body area and assistance mode to filter videos:"}
                 </p>
               </div>
             </div>
 
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3.5 py-1.5 rounded-full self-start sm:self-auto border border-slate-200 dark:border-slate-700">
-              <span className="font-bold text-brand-600 dark:text-brand-400">{filteredExercises.length}</span> ta mashq ko'rsatilmoqda
+              <span className="font-bold text-brand-600 dark:text-brand-400">{filteredExercises.length}</span>{" "}
+              {language === 'uz' ? "ta mashq ko'rsatilmoqda" : language === 'ru' ? "упражнений показано" : "exercises shown"}
             </div>
           </div>
 
@@ -233,7 +244,7 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
             {/* Filter 1: Body Area / Movement */}
             <div>
               <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
-                {t.bodyAreaLabel || "Tana sohasi va Harakat turi"}:
+                {language === 'uz' ? "Tana sohasi va Harakat turi" : language === 'ru' ? "Зона тела и тип движения" : "Body Area & Movement"}:
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {bodyAreaCategories.map((cat) => {
@@ -265,7 +276,7 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
             {/* Filter 2: Execution Mode / Assistance */}
             <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
               <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
-                {t.executionModeLabel || "Bajarish rejimi va Yordam turi"}:
+                {language === 'uz' ? "Bajarish rejimi va Yordam turi" : language === 'ru' ? "Режим выполнения и помощь" : "Execution Mode & Assistance"}:
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {executionCategories.map((cat) => {

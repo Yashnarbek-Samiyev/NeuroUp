@@ -158,7 +158,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
                 <button
                   onClick={logout}
-                  title="Chiqish"
+                  title={t.logOut || (language === 'uz' ? 'Chiqish' : language === 'ru' ? 'Выйти' : 'Log out')}
                   className="ml-1 text-slate-400 hover:text-red-500 transition-colors cursor-pointer p-0.5"
                 >
                   <LogOut className="w-4 h-4" />
