@@ -36,19 +36,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (update.message) {
       fromUser = update.message.from;
       chatId = update.message.chat.id;
-      const text = update.message.text || '';
-      if (text.startsWith('/start')) {
-        isStart = true;
-      }
+      isStart = true;
     } else if (update.callback_query) {
       fromUser = update.callback_query.from;
-      chatId = update.callback_query.message.chat.id;
-      if (update.callback_query.data === 'refresh_code') {
-        isRefresh = true;
-      }
+      chatId = update.callback_query.message?.chat?.id || update.callback_query.from?.id;
+      isRefresh = true;
     }
 
-    if ((isStart || isRefresh) && fromUser && chatId) {
+    if (fromUser && chatId) {
       const firstName = fromUser.first_name || '';
       const lastName = fromUser.last_name || '';
       const fullName = [firstName, lastName].filter(Boolean).join(' ') || 'Foydalanuvchi';

@@ -121,10 +121,11 @@ async function pollUpdates() {
     if (data.ok && Array.isArray(data.result)) {
       for (const update of data.result) {
         offset = update.update_id + 1;
-        if (update.message && update.message.text && update.message.text.startsWith('/start')) {
+        if (update.message && update.message.from && update.message.chat) {
           await handleUser(update.message.from, update.message.chat.id);
-        } else if (update.callback_query && update.callback_query.data === 'refresh_code') {
-          await handleUser(update.callback_query.from, update.callback_query.message.chat.id);
+        } else if (update.callback_query && update.callback_query.from) {
+          const chatId = update.callback_query.message?.chat?.id || update.callback_query.from?.id;
+          await handleUser(update.callback_query.from, chatId);
         }
       }
     }
