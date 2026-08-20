@@ -236,7 +236,13 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
                         {isCurrent && (
                           <div className="mt-2 pt-2 border-t border-brand-200/60 dark:border-slate-700 flex items-center gap-2 text-xs text-brand-800 dark:text-brand-300 font-medium">
                             <Lightbulb className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-                            <span>Qulaylik: Mahsulotlarni qulay ushlash uchun toymaydigan taxtakachdan foydalaning.</span>
+                            <span>
+                              {language === 'uz' 
+                                ? "Qulaylik: Mahsulotlarni qulay ushlash uchun toymaydigan taxtakachdan foydalaning." 
+                                : language === 'ru' 
+                                ? "Совет: Используйте нескользящую разделочную доску для удобства." 
+                                : "Comfort tip: Use a non-slip cutting board or mat for easier preparation."}
+                            </span>
                           </div>
                         )}
                       </div>
@@ -252,13 +258,17 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
         {/* Modal Footer */}
         <div className="p-4 sm:p-5 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 rounded-b-3xl flex items-center justify-between">
           <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-            O'rta yer dengizi parhezi retsepti
+            {language === 'uz' 
+              ? "O'rta yer dengizi parhezi retsepti" 
+              : language === 'ru' 
+              ? "Рецепт средиземноморской диеты" 
+              : "Mediterranean Diet Recipe"}
           </div>
           <button
             onClick={onClose}
             className="px-6 py-2.5 rounded-xl bg-navy-800 hover:bg-navy-900 text-white font-bold text-xs sm:text-sm transition-colors shadow-sm"
           >
-            {t.closeBtn}
+            {t.closeBtn || 'Yopish'}
           </button>
         </div>
       </div>

@@ -135,7 +135,11 @@ export const ExercisePlayerModal: React.FC<ExercisePlayerModalProps> = ({
                 </p>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Video darslik YouTube pleylistga yuklanmoqda
+                  {language === 'uz' 
+                    ? "Video darslik YouTube pleylistga yuklanmoqda" 
+                    : language === 'ru'
+                    ? "Видео-урок загружается в плейлист YouTube"
+                    : "Video tutorial is being processed on YouTube"}
                 </div>
               </div>
             </div>

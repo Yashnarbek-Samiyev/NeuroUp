@@ -155,9 +155,11 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
-                    Amaliy Maslahatlar
+                    {language === 'uz' ? 'Amaliy Maslahatlar' : language === 'ru' ? 'Практические советы' : 'Practical Tips'}
                   </div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">To'g'ri ovqatlanish qoidalari</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                    {language === 'uz' ? "To'g'ri ovqatlanish qoidalari" : language === 'ru' ? 'Правила питания' : 'Nutrition guidelines'}
+                  </div>
                 </div>
               </div>
             </button>
@@ -167,7 +169,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               href="/docs/haftalik-xaridlar-royxati-neuropath.docx"
               download="haftalik-xaridlar-royxati-neuropath.docx"
               className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 text-left transition-all group flex items-center justify-between cursor-pointer shadow-xs"
-              title="Haftalik xaridlar ro'yxati (.docx)"
+              title={language === 'uz' ? "Haftalik xaridlar ro'yxati (.docx)" : language === 'ru' ? "Список покупок (.docx)" : "Weekly shopping list (.docx)"}
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center shrink-0">
@@ -175,9 +177,11 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
-                    Haftalik Xaridlar Ro'yxati
+                    {language === 'uz' ? "Haftalik Xaridlar Ro'yxati" : language === 'ru' ? 'Список покупок' : 'Weekly Shopping List'}
                   </div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">.docx yuklab olish</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                    {language === 'uz' ? '.docx yuklab olish' : language === 'ru' ? 'Скачать .docx' : 'Download .docx'}
+                  </div>
                 </div>
               </div>
             </a>
@@ -193,9 +197,11 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
-                    Taomnoma Rejasi
+                    {language === 'uz' ? 'Taomnoma Rejasi' : language === 'ru' ? 'План питания' : 'Meal Planner'}
                   </div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">7 kunlik taomlar jadvali</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                    {language === 'uz' ? '7 kunlik taomlar jadvali' : language === 'ru' ? '7-дневный рацион' : '7-day meal schedule'}
+                  </div>
                 </div>
               </div>
             </button>
@@ -211,9 +217,11 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
-                    Nazorat Ro'yxati
+                    {language === 'uz' ? 'Nazorat Ro\'yxati' : language === 'ru' ? 'Контрольный список' : 'Weekly Checklist'}
                   </div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">Haftalik checklist</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                    {language === 'uz' ? 'Haftalik checklist' : language === 'ru' ? 'Чек-лист привычек' : 'Stay on track'}
+                  </div>
                 </div>
               </div>
             </button>
@@ -446,46 +454,68 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold text-navy-800 dark:text-white">
-                  Insultdan Keyin To'g'ri Ovqatlanish Maslahatlari
+                  {language === 'uz' 
+                    ? "Insultdan Keyin To'g'ri Ovqatlanish Maslahatlari" 
+                    : language === 'ru' 
+                    ? "Советы по питанию после инсульта" 
+                    : "Nutrition Tips After Stroke"}
                 </h3>
-                <p className="text-xs text-slate-500">O'rta yer dengizi parhezi tamoyillari</p>
+                <p className="text-xs text-slate-500">
+                  {language === 'uz' ? "O'rta yer dengizi parhezi tamoyillari" : language === 'ru' ? "Принципы средиземноморской диеты" : "Principles of the Mediterranean diet"}
+                </p>
               </div>
             </div>
 
             <div className="space-y-3.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300 max-h-[60vh] overflow-y-auto pr-1">
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 space-y-1">
                 <strong className="block text-navy-800 dark:text-white text-xs font-bold uppercase tracking-wider">
-                  1. Ko'proq sabzavot va mevalar
+                  {language === 'uz' ? "1. Ko'proq sabzavot va mevalar" : language === 'ru' ? "1. Больше овощей и фруктов" : "1. Abundant Vegetables & Fruits"}
                 </strong>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Har kuni kamida 5 porsiya turli rangdagi sabzavotlar va mevalar iste'mol qiling. Ular qon tomirlarni himoya qiluvchi antioksidantlar va kletchatkaga boy.
+                  {language === 'uz' 
+                    ? "Har kuni kamida 5 porsiya turli rangdagi sabzavotlar va mevalar iste'mol qiling. Ular qon tomirlarni himoya qiluvchi antioksidantlar va kletchatkaga boy." 
+                    : language === 'ru'
+                    ? "Ешьте не менее 5 порций разноцветных овощей и фруктов в день. Они богаты антиоксидантами и клетчаткой для защиты сосудов."
+                    : "Aim for at least 5 servings of colorful vegetables and fruits every day. They are rich in vascular-protective antioxidants and dietary fiber."}
                 </p>
               </div>
 
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 space-y-1">
                 <strong className="block text-navy-800 dark:text-white text-xs font-bold uppercase tracking-wider">
-                  2. Zaytun moyini asosiy yog' sifatida ishlating
+                  {language === 'uz' ? "2. Zaytun moyini asosiy yog' sifatida ishlating" : language === 'ru' ? "2. Оливковое масло как основной жир" : "2. Extra Virgin Olive Oil as Primary Fat"}
                 </strong>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Sariyog' va margarin o'rniga sovuq siqilgan zaytun moyi (Extra Virgin) ishlating. U yomon xolesterinni kamaytiradi va yurak-qon tomir tizimini asraydi.
+                  {language === 'uz' 
+                    ? "Sariyog' va margarin o'rniga sovuq siqilgan zaytun moyi (Extra Virgin) ishlating. U yomon xolesterinni kamaytiradi va yurak-qon tomir tizimini asraydi." 
+                    : language === 'ru'
+                    ? "Используйте оливковое масло первого отжима вместо сливочного масла и маргарина для защиты сердечно-сосудистой системы."
+                    : "Use extra virgin olive oil in place of butter and margarine. It lowers LDL cholesterol and protects cardiovascular health."}
                 </p>
               </div>
 
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 space-y-1">
                 <strong className="block text-navy-800 dark:text-white text-xs font-bold uppercase tracking-wider">
-                  3. Haftada 2 marta baliq iste'mol qiling
+                  {language === 'uz' ? "3. Haftada 2 marta baliq iste'mol qiling" : language === 'ru' ? "3. Рыба дважды в неделю" : "3. Fish Twice a Week"}
                 </strong>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Yog'li dengiz baliqlari (losos, skumbriya, seld) Omega-3 yog' kislotalariga boy bo'lib, miya neyronlari faoliyatini tiklaydi.
+                  {language === 'uz' 
+                    ? "Yog'li dengiz baliqlari (losos, skumbriya, seld) Omega-3 yog' kislotalariga boy bo'lib, miya neyronlari faoliyatini tiklaydi." 
+                    : language === 'ru'
+                    ? "Морская рыба (лосось, скумбрия) богата жирными кислотами Омега-3, способствующими восстановлению нейронов."
+                    : "Fatty fish (salmon, mackerel, sardines) are rich in Omega-3 fatty acids that support neuronal brain recovery."}
                 </p>
               </div>
 
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 space-y-1">
                 <strong className="block text-navy-800 dark:text-white text-xs font-bold uppercase tracking-wider">
-                  4. Tuz miqdorini kamaytiring
+                  {language === 'uz' ? "4. Tuz miqdorini kamaytiring" : language === 'ru' ? "4. Сокращение соли" : "4. Reduce Sodium Intake"}
                 </strong>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Ortiqcha tuz qon bosimini oshiradi. Taomlarga lazzat berish uchun tuz o'rniga limon sharbati, sarimsoq va yangi ko'katlardan foydalaning.
+                  {language === 'uz' 
+                    ? "Ortiqcha tuz qon bosimini oshiradi. Taomlarga lazzat berish uchun tuz o'rniga limon sharbati, sarimsoq va yangi ko'katlardan foydalaning." 
+                    : language === 'ru'
+                    ? "Избыток соли повышает артериальное давление. Используйте лимонный сок, чеснок и свежие травы вместо соли."
+                    : "Excess salt elevates blood pressure. Enhance flavors with lemon juice, garlic, and fresh herbs instead."}
                 </p>
               </div>
             </div>
@@ -495,7 +525,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 onClick={() => setShowTipsModal(false)}
                 className="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs"
               >
-                Tushunarli, Retseptlarga O'tish
+                {language === 'uz' ? "Tushunarli, Retseptlarga O'tish" : language === 'ru' ? "Понятно, к рецептам" : "Got it, View Recipes"}
               </button>
             </div>
           </div>
@@ -525,7 +555,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-navy-800 dark:text-white">
-                  Haftalik ovqatlanish rejasi
+                  {language === 'uz' ? 'Haftalik ovqatlanish rejasi' : language === 'ru' ? 'Еженедельный план питания' : 'Weekly Meal Planner'}
                 </h3>
               </div>
             </div>
@@ -539,9 +569,14 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   <thead>
                     <tr className="bg-slate-100 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-700">
                       <th className="p-3 border-r border-slate-300 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-200 w-28 text-center">
-                        Kunlar
+                        {language === 'uz' ? 'Kunlar' : language === 'ru' ? 'Дни' : 'Days'}
                       </th>
-                      {["Dushanba", "Seshanba", "Chorshanba", "Payshanba", "Juma", "Shanba", "Yakshanba"].map((day) => (
+                      {(language === 'uz' 
+                        ? ["Dushanba", "Seshanba", "Chorshanba", "Payshanba", "Juma", "Shanba", "Yakshanba"]
+                        : language === 'ru'
+                        ? ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+                        : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+                      ).map((day) => (
                         <th key={day} className="p-3 border-r border-slate-300 dark:border-slate-700 font-bold text-slate-900 dark:text-white text-center last:border-r-0">
                           {day}
                         </th>
@@ -550,10 +585,18 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   </thead>
                   <tbody>
                     {[
-                      { meal: "Nonushta" },
-                      { meal: "Tushlik" },
-                      { meal: "Kechki ovqat" },
-                      { meal: "Yengil taomlar" }
+                      { 
+                        meal: language === 'uz' ? "Nonushta" : language === 'ru' ? "Завтрак" : "Breakfast" 
+                      },
+                      { 
+                        meal: language === 'uz' ? "Tushlik" : language === 'ru' ? "Обед" : "Lunch" 
+                      },
+                      { 
+                        meal: language === 'uz' ? "Kechki ovqat" : language === 'ru' ? "Ужин" : "Dinner" 
+                      },
+                      { 
+                        meal: language === 'uz' ? "Yengil taomlar" : language === 'ru' ? "Перекусы" : "Snacks" 
+                      }
                     ].map((row, rIdx) => (
                       <tr key={rIdx} className="border-b border-slate-300 dark:border-slate-700 last:border-b-0">
                         <td className="p-3 font-bold text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-800/60 border-r border-slate-300 dark:border-slate-700 text-center">
@@ -571,10 +614,10 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 </table>
               </div>
 
-              {/* Eslatmalar (Exact from docx) */}
+              {/* Notes */}
               <div className="mt-4 p-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850">
                 <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-2">
-                  Eslatmalar:
+                  {language === 'uz' ? 'Eslatmalar:' : language === 'ru' ? 'Заметки:' : 'Notes:'}
                 </h4>
                 <div className="space-y-2">
                   <div className="border-b border-slate-300 dark:border-slate-700 h-4"></div>
@@ -592,17 +635,17 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 href="/docs/haftalik-ovqatlanish-rejasi-neuropath.docx"
                 download="haftalik-ovqatlanish-rejasi-neuropath.docx"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition-colors"
-                title="Haftalik ovqatlanish rejasini yuklab olish (.docx)"
+                title={language === 'uz' ? "Haftalik ovqatlanish rejasini yuklab olish (.docx)" : language === 'ru' ? "Скачать план питания (.docx)" : "Download meal planner (.docx)"}
               >
                 <Download className="w-4 h-4" />
-                <span>Faylni yuklab olish (.docx)</span>
+                <span>{language === 'uz' ? "Faylni yuklab olish (.docx)" : language === 'ru' ? "Скачать файл (.docx)" : "Download File (.docx)"}</span>
               </a>
 
               <button
                 onClick={() => setShowMealPlannerModal(false)}
                 className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-750 text-slate-800 dark:text-white font-bold text-xs transition-colors"
               >
-                Yopish
+                {t.closeBtn || 'Yopish'}
               </button>
             </div>
           </div>
@@ -618,7 +661,7 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
             <button
               onClick={() => setShowChecklistModal(false)}
               className="absolute top-4 right-4 p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors z-10"
-              aria-label="Yopish"
+              aria-label="Close"
             >
               <X className="w-4 h-4" />
             </button>
@@ -630,7 +673,11 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-navy-800 dark:text-white">
-                  Sog'lig'ingiz uchun ovqatlaning – Haftalik nazorat ro'yxati
+                  {language === 'uz' 
+                    ? "Sog'lig'ingiz uchun ovqatlaning – Haftalik nazorat ro'yxati" 
+                    : language === 'ru' 
+                    ? "Питание для здоровья – Еженедельный чек-лист" 
+                    : "Eating for Your Health – Weekly Habit Checklist"}
                 </h3>
               </div>
             </div>
@@ -643,17 +690,28 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   <thead>
                     <tr className="bg-slate-100 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-750">
                       <th className="p-3 border-r border-slate-300 dark:border-slate-750 font-bold text-slate-900 dark:text-white w-64">
-                        <div>Oziq-ovqat guruhi</div>
-                        <div className="text-[11px] font-normal text-slate-500">Porsiyalar soni (Dastur kitobingizni tekshiring)</div>
+                        <div>{language === 'uz' ? "Oziq-ovqat guruhi" : language === 'ru' ? "Группа продуктов" : "Food Group"}</div>
+                        <div className="text-[11px] font-normal text-slate-500">
+                          {language === 'uz' ? "Porsiyalar soni" : language === 'ru' ? "Количество порций" : "Serving Guidelines"}
+                        </div>
                       </th>
                       <th colSpan={7} className="p-3 font-bold text-slate-900 dark:text-white text-center">
-                        <div>HAR KUNI iste'mol qilishingiz kerak bo'lgan miqdor</div>
-                        <div className="text-[11px] font-normal text-slate-500">Hisobni yuritish va nazorat qilishga yordam berish uchun katakchalardan foydalaning</div>
+                        <div>
+                          {language === 'uz' ? "HAR KUNI iste'mol qilishingiz kerak bo'lgan miqdor" : language === 'ru' ? "ЕЖЕДНЕВНЫЙ рекомендуемый рацион" : "DAILY Recommended Servings"}
+                        </div>
+                        <div className="text-[11px] font-normal text-slate-500">
+                          {language === 'uz' ? "Hisobni yuritish uchun katakchalardan foydalaning" : language === 'ru' ? "Используйте флажки для ежедневного контроля" : "Check the boxes to monitor your daily intake"}
+                        </div>
                       </th>
                     </tr>
                     <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-300 dark:border-slate-750 text-center font-bold text-slate-700 dark:text-slate-300 text-xs">
                       <th className="p-2 border-r border-slate-300 dark:border-slate-750"></th>
-                      {["1-kun", "2-kun", "3-kun", "4-kun", "5-kun", "6-kun", "7-kun"].map((day) => (
+                      {(language === 'uz'
+                        ? ["1-kun", "2-kun", "3-kun", "4-kun", "5-kun", "6-kun", "7-kun"]
+                        : language === 'ru'
+                        ? ["День 1", "День 2", "День 3", "День 4", "День 5", "День 6", "День 7"]
+                        : ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"]
+                      ).map((day) => (
                         <th key={day} className="p-2 border-r border-slate-300 dark:border-slate-750 last:border-r-0 w-16">
                           {day}
                         </th>
@@ -663,13 +721,34 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                   <tbody>
                     {/* Daily Items */}
                     {[
-                      { name: "Don mahsulotlari", portion: "3-6 porsiya" },
-                      { name: "Sabzavotlar", portion: "5-6 porsiya" },
-                      { name: "Mevalar", portion: "2-3 porsiya" },
-                      { name: "Zaytun moyi", portion: "4 osh qoshiq" },
-                      { name: "Yong'oqlar", portion: "30 g" },
-                      { name: "Suv", portion: "1.5-2 L" },
-                      { name: "Sut mahsulotlari", portion: "2-3 porsiya" },
+                      { 
+                        name: language === 'uz' ? "Don mahsulotlari" : language === 'ru' ? "Зерновые продукты" : "Whole Grains & Cereals", 
+                        portion: language === 'uz' ? "3-6 porsiya" : language === 'ru' ? "3-6 порций" : "3–6 servings" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Sabzavotlar" : language === 'ru' ? "Овощи" : "Vegetables", 
+                        portion: language === 'uz' ? "5-6 porsiya" : language === 'ru' ? "5-6 порций" : "5–6 servings" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Mevalar" : language === 'ru' ? "Фрукты" : "Fruits", 
+                        portion: language === 'uz' ? "2-3 porsiya" : language === 'ru' ? "2-3 порции" : "2–3 servings" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Zaytun moyi" : language === 'ru' ? "Оливковое масло" : "Extra Virgin Olive Oil", 
+                        portion: language === 'uz' ? "4 osh qoshiq" : language === 'ru' ? "4 ст. ложки" : "4 tablespoons" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Yong'oqlar" : language === 'ru' ? "Орехи и семена" : "Nuts & Seeds", 
+                        portion: language === 'uz' ? "30 g" : language === 'ru' ? "30 г" : "30 g" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Suv" : language === 'ru' ? "Вода" : "Water Hydration", 
+                        portion: language === 'uz' ? "1.5-2 L" : language === 'ru' ? "1.5–2 л" : "1.5–2 Liters" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Sut mahsulotlari" : language === 'ru' ? "Молочные продукты" : "Dairy / Low-Fat Alternatives", 
+                        portion: language === 'uz' ? "2-3 porsiya" : language === 'ru' ? "2-3 порции" : "2–3 servings" 
+                      },
                     ].map((row, idx) => (
                       <tr key={idx} className="border-b border-slate-300 dark:border-slate-750">
                         <td className="p-2.5 font-semibold text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-800/40 border-r border-slate-300 dark:border-slate-750">
@@ -690,15 +769,24 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                     {/* Weekly Header Row */}
                     <tr className="bg-amber-50 dark:bg-slate-800 border-b border-slate-300 dark:border-slate-750 font-bold text-amber-900 dark:text-amber-300 text-xs">
                       <td colSpan={8} className="p-2.5 uppercase tracking-wide">
-                        HAR HAFTA iste'mol qilishingiz kerak bo'lgan miqdor
+                        {language === 'uz' ? "HAR HAFTA iste'mol qilishingiz kerak bo'lgan miqdor" : language === 'ru' ? "ЕЖЕНЕДЕЛЬНЫЙ рекомендуемый рацион" : "WEEKLY Recommended Servings"}
                       </td>
                     </tr>
 
                     {/* Weekly Items */}
                     {[
-                      { name: "Dukkaklilar", portion: "3-4 porsiya" },
-                      { name: "Baliq", portion: "3-4 porsiya" },
-                      { name: "Yog'siz qizil go'sht", portion: "Faqat 1-2 porsiya" },
+                      { 
+                        name: language === 'uz' ? "Dukkaklilar" : language === 'ru' ? "Бобовые (фасоль, чечевица)" : "Legumes & Pulses", 
+                        portion: language === 'uz' ? "3-4 porsiya" : language === 'ru' ? "3-4 порции" : "3–4 servings" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Baliq" : language === 'ru' ? "Рыба и морепродукты" : "Fish & Seafood", 
+                        portion: language === 'uz' ? "3-4 porsiya" : language === 'ru' ? "3-4 порции" : "3–4 servings" 
+                      },
+                      { 
+                        name: language === 'uz' ? "Yog'siz qizil go'sht" : language === 'ru' ? "Нежирное красное мясо" : "Lean Red Meat", 
+                        portion: language === 'uz' ? "Faqat 1-2 porsiya" : language === 'ru' ? "1-2 порции" : "Limit to 1–2 servings" 
+                      },
                     ].map((row, idx) => (
                       <tr key={idx} className="border-b border-slate-300 dark:border-slate-750">
                         <td className="p-2.5 font-semibold text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-800/40 border-r border-slate-300 dark:border-slate-750">
@@ -719,7 +807,12 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                     {/* Footer Row */}
                     <tr className="bg-slate-50 dark:bg-slate-800/80 font-medium text-slate-700 dark:text-slate-300 text-xs">
                       <td colSpan={8} className="p-3 text-center italic">
-                        <strong>Xilma-xillikka intiling:</strong> Ko'plab xil ranglar, ham xom, ham pishirilgan holda
+                        <strong>{language === 'uz' ? "Xilma-xillikka intiling:" : language === 'ru' ? "Стремитесь к разнообразию:" : "Aim for colorful variety:"}</strong>{" "}
+                        {language === 'uz' 
+                          ? "Ko'plab xil ranglar, ham xom, ham pishirilgan holda" 
+                          : language === 'ru' 
+                          ? "Множество цветов, как в сыром, так и в приготовленном виде" 
+                          : "Include a rich spectrum of colors, both raw and cooked"}
                       </td>
                     </tr>
                   </tbody>
@@ -735,17 +828,17 @@ export const EatWellSection: React.FC<EatWellSectionProps> = ({
                 href="/docs/haftalik-nazorat-royxati-neuropath.docx"
                 download="haftalik-nazorat-royxati-neuropath.docx"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition-colors"
-                title="Haftalik nazorat ro'yxatini yuklab olish (.docx)"
+                title={language === 'uz' ? "Haftalik nazorat ro'yxatini yuklab olish (.docx)" : language === 'ru' ? "Скачать чек-лист (.docx)" : "Download checklist (.docx)"}
               >
                 <Download className="w-4 h-4" />
-                <span>Faylni yuklab olish (.docx)</span>
+                <span>{language === 'uz' ? "Faylni yuklab olish (.docx)" : language === 'ru' ? "Скачать файл (.docx)" : "Download File (.docx)"}</span>
               </a>
 
               <button
                 onClick={() => setShowChecklistModal(false)}
                 className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-750 text-slate-800 dark:text-white font-bold text-xs transition-colors"
               >
-                Yopish
+                {t.closeBtn || 'Yopish'}
               </button>
             </div>
           </div>

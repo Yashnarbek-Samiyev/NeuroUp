@@ -332,7 +332,7 @@ export const RecipeDetailPage: React.FC<RecipeDetailPageProps> = ({
                           <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-xs max-h-80 flex items-center justify-center">
                             <img
                               src={step.image}
-                              alt={`Qadam ${step.stepNumber}`}
+                              alt={`${language === 'uz' ? 'Qadam' : language === 'ru' ? 'Шаг' : 'Step'} ${step.stepNumber}`}
                               className="w-full h-auto max-h-72 object-contain"
                               loading="lazy"
                               onError={(e) => {

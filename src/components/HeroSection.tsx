@@ -178,7 +178,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   type="button"
                   onClick={(e) => { e.stopPropagation(); toggleMute(); }}
                   className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-black/80 transition-colors shadow-sm"
-                  title={isMuted ? "Ovozni yoqish" : "Ovozni o'chirish"}
+                  title={
+                    isMuted 
+                      ? (language === 'uz' ? "Ovozni yoqish" : language === 'ru' ? "Включить звук" : "Unmute") 
+                      : (language === 'uz' ? "Ovozni o'chirish" : language === 'ru' ? "Выключить звук" : "Mute")
+                  }
                 >
                   {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-brand-400" />}
                 </button>

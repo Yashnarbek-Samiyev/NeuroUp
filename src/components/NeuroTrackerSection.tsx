@@ -591,7 +591,8 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                   <span>{t.historyTitle || "Tiklanish Tarixi va Statistikalar"}</span>
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  Jami saqlangan kunlar: <strong className="text-brand-600">{totalLoggedDays} ta</strong>
+                  {language === 'uz' ? 'Jami saqlangan kunlar:' : language === 'ru' ? 'Всего записей:' : 'Total recorded days:'}{" "}
+                  <strong className="text-brand-600">{totalLoggedDays} {language === 'uz' ? 'ta' : language === 'ru' ? 'дней' : 'days'}</strong>
                 </p>
               </div>
               <button
@@ -605,7 +606,11 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
             {/* Print / Export Report Header Bar */}
             <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-2xl bg-brand-50 dark:bg-slate-850 border border-brand-200 dark:border-slate-750">
               <div className="text-xs text-brand-900 dark:text-brand-300 font-medium">
-                Shifokoringizga ko'rsatish uchun natijalarni chop eting yoki yuklab oling:
+                {language === 'uz' 
+                  ? "Shifokoringizga ko'rsatish uchun natijalarni chop eting yoki yuklab oling:" 
+                  : language === 'ru' 
+                  ? "Распечатайте или скачайте отчет для вашего врача:" 
+                  : "Print or export your progress report for your healthcare team:"}
               </div>
               <div className="flex items-center gap-2">
                 <button
@@ -662,14 +667,14 @@ export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) =
                               <span>{dStr}</span>
                               {dStr === todayStr && (
                                 <span className="px-2 py-0.5 rounded-full text-[10px] bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300 font-extrabold">
-                                  Bugun
+                                  {language === 'uz' ? 'Bugun' : language === 'ru' ? 'Сегодня' : 'Today'}
                                 </span>
                               )}
                             </div>
                             <div className="text-xs text-slate-500 flex items-center gap-3 mt-0.5">
                               <span>💧 {logItem.waterGlasses * 250} ml</span>
-                              <span>🏃 {logItem.exerciseMinutes} daq</span>
-                              <span>🌙 {logItem.sleepHours} soat</span>
+                              <span>🏃 {logItem.exerciseMinutes} {language === 'en' ? 'min' : language === 'ru' ? 'мин' : 'daq'}</span>
+                              <span>🌙 {logItem.sleepHours} {language === 'en' ? 'hrs' : language === 'ru' ? 'ч' : 'soat'}</span>
                               {logItem.bloodPressure && <span>❤️ {logItem.bloodPressure}</span>}
                             </div>
                           </div>

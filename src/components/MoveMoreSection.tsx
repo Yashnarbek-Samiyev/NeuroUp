@@ -111,18 +111,28 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
 
             {/* Main Heading: Moderate & Balanced */}
             <h1 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-navy-800 dark:text-white leading-snug tracking-tight">
-              🏃 Insultdan keyin <br className="hidden sm:inline" />
-              <span className="text-brand-600 dark:text-brand-400">ko'proq harakat qiling</span>
+              🏃 {language === 'uz' ? "Insultdan keyin " : language === 'ru' ? "После инсульта " : "After Stroke "}
+              <span className="text-brand-600 dark:text-brand-400">
+                {language === 'uz' ? "ko'proq harakat qiling" : language === 'ru' ? "двигайтесь больше" : "Move More"}
+              </span>
             </h1>
 
             {/* Paragraph 1 */}
             <p className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-100 leading-relaxed">
-              Insultdan keyin ko'proq harakat qilish qayta insult xavfini kamaytirishi mumkin.
+              {language === 'uz' 
+                ? "Insultdan keyin ko'proq harakat qilish qayta insult xavfini kamaytirishi mumkin."
+                : language === 'ru'
+                ? "Физическая активность после инсульта снижает риск повторного инсульта."
+                : "Moving more after stroke reduces complications and lowers the risk of secondary stroke."}
             </p>
 
             {/* Paragraph 2 */}
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              Ushbu sahifada siz insult o'tkazgan bemorlar bilan birgalikda ishlab chiqilgan 20 ta rasmiy video mashqlar to'plamini topasiz. Ko'pchilik mashqlar qo'l yoki oyog'i shikastlangan insult bemorlari uchun mos.
+              {language === 'uz'
+                ? "Ushbu sahifada siz insult o'tkazgan bemorlar bilan birgalikda ishlab chiqilgan 20 ta rasmiy video mashqlar to'plamini topasiz. Ko'pchilik mashqlar qo'l yoki oyog'i shikastlangan insult bemorlari uchun mos."
+                : language === 'ru'
+                ? "Здесь вы найдете 20 адаптивных видео-упражнений, разработанных специалистами. Упражнения подходят для пациентов с парезом руки или ноги."
+                : "Explore our collection of 20 clinician-approved video exercises tailored for stroke recovery. Many routines are adapted for varying degrees of upper or lower limb mobility."}
             </p>
 
             {/* Paragraph 3: Interactive Guideline Box */}
@@ -137,7 +147,7 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
                   <div className="flex items-center gap-2">
                     <HelpCircle className="w-4 h-4 text-brand-600 shrink-0" />
                     <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600">
-                      Mashqdan oldin nimalarni bilish kerak?
+                      {language === 'uz' ? 'Mashqdan oldin nimalarni bilish kerak?' : language === 'ru' ? 'Что нужно знать перед тренировкой?' : 'What to know before exercising?'}
                     </span>
                   </div>
                   <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:translate-x-0.5 transition-transform shrink-0" />
@@ -150,7 +160,7 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
                   <div className="flex items-center gap-2">
                     <ShieldAlert className="w-4 h-4 text-red-600 shrink-0" />
                     <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-red-600">
-                      Qachon mashq qilmaslik kerak?
+                      {language === 'uz' ? 'Qachon mashq qilmaslik kerak?' : language === 'ru' ? 'Когда нельзя тренироваться?' : 'When NOT to exercise?'}
                     </span>
                   </div>
                   <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-red-600 group-hover:translate-x-0.5 transition-transform shrink-0" />
@@ -161,13 +171,15 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
               <div className="pt-2 flex items-center justify-between border-t border-slate-200/80 dark:border-slate-700">
                 <span className="text-xs font-medium text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
                   <HeartPulse className="w-3.5 h-3.5 text-brand-600 shrink-0" />
-                  <span>Faoliyatingizni kunlik kuzatib boring:</span>
+                  <span>
+                    {language === 'uz' ? 'Faoliyatingizni kunlik kuzatib boring:' : language === 'ru' ? 'Отслеживайте активность каждый день:' : 'Track your daily recovery progress:'}
+                  </span>
                 </span>
                 <button
                   onClick={() => onSelectTab && onSelectTab('tracker')}
                   className="px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center gap-1 transition-colors shadow-sm cursor-pointer"
                 >
-                  <span>Kuzatuv jadvali</span>
+                  <span>{language === 'uz' ? 'Kuzatuv jadvali' : language === 'ru' ? 'Трекер' : 'View Tracker'}</span>
                   <ArrowRight className="w-3 h-3" />
                 </button>
               </div>
@@ -413,9 +425,15 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold text-navy-800 dark:text-white">
-                  Mashq qilishdan oldin nimalarni bilish kerak?
+                  {language === 'uz' 
+                    ? 'Mashq qilishdan oldin nimalarni bilish kerak?' 
+                    : language === 'ru' 
+                    ? 'Что нужно знать перед тренировкой?' 
+                    : 'What to Know Before Exercising?'}
                 </h3>
-                <p className="text-xs text-slate-500">Xavfsiz va samarali mashg'ulot qoidalari</p>
+                <p className="text-xs text-slate-500">
+                  {language === 'uz' ? "Xavfsiz va samarali mashg'ulot qoidalari" : language === 'ru' ? 'Правила безопасных занятий' : 'Guidelines for safe and effective recovery'}
+                </p>
               </div>
             </div>
 
@@ -423,32 +441,56 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750">
                 <CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="block text-navy-800 dark:text-white mb-0.5">1. Shifokor bilan maslahatlashing</strong>
-                  Mashqlarni boshlashdan oldin reabilitolog yoki nevrologingiz ruxsat bergan harakat turidan boshlang.
+                  <strong className="block text-navy-800 dark:text-white mb-0.5">
+                    {language === 'uz' ? '1. Shifokor bilan maslahatlashing' : language === 'ru' ? '1. Проконсультируйтесь с врачом' : '1. Consult Your Healthcare Team'}
+                  </strong>
+                  {language === 'uz' 
+                    ? 'Mashqlarni boshlashdan oldin reabilitolog yoki nevrologingiz ruxsat bergan harakat turidan boshlang.' 
+                    : language === 'ru' 
+                    ? 'Перед началом тренировок убедитесь, что лечащий врач или реабилитолог одобрил выбранный уровень нагрузки.' 
+                    : 'Begin with routines approved by your neurologist or physical therapist based on your recovery stage.'}
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750">
                 <CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="block text-navy-800 dark:text-white mb-0.5">2. Xavfsiz muhit tayyorlang</strong>
-                  Mustahkam suyanchiqqa ega stul tanlang, sirg'anmaydigan poyabzal kiying va atrofingizdagi to'siqlarni olib tashlang.
+                  <strong className="block text-navy-800 dark:text-white mb-0.5">
+                    {language === 'uz' ? '2. Xavfsiz muhit tayyorlang' : language === 'ru' ? '2. Подготовьте безопасное пространство' : '2. Prepare a Safe Environment'}
+                  </strong>
+                  {language === 'uz' 
+                    ? "Mustahkam suyanchiqqa ega stul tanlang, sirg'anmaydigan poyabzal kiying va atrofingizdagi to'siqlarni olib tashlang." 
+                    : language === 'ru' 
+                    ? 'Используйте устойчивый стул со спинкой, нескользящую обувь и освободите пространство от лишних предметов.' 
+                    : 'Use a sturdy chair with back support, non-slip footwear, and ensure your exercise area is clear of tripping hazards.'}
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750">
                 <CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="block text-navy-800 dark:text-white mb-0.5">3. Kichik qadamlar bilan boshlang</strong>
-                  Kuniga 5–10 daqiqadan boshlab, vaqtni sekin-asta 15–30 daqiqagacha oshirib boring.
+                  <strong className="block text-navy-800 dark:text-white mb-0.5">
+                    {language === 'uz' ? '3. Kichik qadamlar bilan boshlang' : language === 'ru' ? '3. Начинайте с малых шагов' : '3. Start Gradually'}
+                  </strong>
+                  {language === 'uz' 
+                    ? 'Kuniga 5–10 daqiqadan boshlab, vaqtni sekin-asta 15–30 daqiqagacha oshirib boring.' 
+                    : language === 'ru' 
+                    ? 'Начинайте с 5–10 минут в день, постепенно увеличивая продолжительность до 15–30 минут.' 
+                    : 'Start with 5–10 minutes daily, progressively increasing duration to 15–30 minutes as stamina builds.'}
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750">
                 <CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="block text-navy-800 dark:text-white mb-0.5">4. Suv iching va nafasni rostlang</strong>
-                  Mashq davomida nafasni ushlab turmang, bir tekis chuqur nafas oling.
+                  <strong className="block text-navy-800 dark:text-white mb-0.5">
+                    {language === 'uz' ? '4. Suv iching va nafasni rostlang' : language === 'ru' ? '4. Пейте воду и дышите ровно' : '4. Stay Hydrated & Breathe Evenly'}
+                  </strong>
+                  {language === 'uz' 
+                    ? 'Mashq davomida nafasni ushlab turmang, bir tekis chuqur nafas oling.' 
+                    : language === 'ru' 
+                    ? 'Не задерживайте дыхание во время выполнения движений, дышите глубоко и равномерно.' 
+                    : 'Avoid holding your breath during exertion; maintain rhythmic, steady breathing and stay well-hydrated.'}
                 </div>
               </div>
             </div>
@@ -456,9 +498,9 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
             <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
               <button
                 onClick={() => setShowPreExerciseModal(false)}
-                className="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs"
+                className="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs cursor-pointer"
               >
-                Tushunarli, Mashqlarga O'tish
+                {language === 'uz' ? "Tushunarli, Mashqlarga O'tish" : language === 'ru' ? "Понятно, к упражнениям" : "Got it, View Exercises"}
               </button>
             </div>
           </div>
@@ -471,7 +513,7 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
           <div className="relative bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-red-500/20">
             <button
               onClick={() => setShowWhenNotToExerciseModal(false)}
-              className="absolute top-4 right-4 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200"
+              className="absolute top-4 right-4 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
@@ -482,38 +524,74 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold text-navy-800 dark:text-white">
-                  Qachon mashq qilmaslik kerak?
+                  {language === 'uz' 
+                    ? 'Qachon mashq qilmaslik kerak?' 
+                    : language === 'ru' 
+                    ? 'Когда нельзя тренироваться?' 
+                    : 'When NOT to Exercise?'}
                 </h3>
-                <p className="text-xs text-red-500 font-semibold">Qarshi ko'rsatmalar va muhim ogohlantirishlar</p>
+                <p className="text-xs text-red-500 font-semibold">
+                  {language === 'uz' ? "Qarshi ko'rsatmalar va muhim ogohlantirishlar" : language === 'ru' ? 'Противопоказания и важные предупреждения' : 'Contraindications & safety warnings'}
+                </p>
               </div>
             </div>
 
             <div className="space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
               <div className="p-3 rounded-xl bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900/40 space-y-2">
                 <strong className="block text-red-800 dark:text-red-300 text-xs uppercase tracking-wider font-bold">
-                  Quyidagi alomatlar paydo bo'lganda mashqni darhol to'xtating:
+                  {language === 'uz' 
+                    ? "Quyidagi alomatlar paydo bo'lganda mashqni darhol to'xtating:" 
+                    : language === 'ru' 
+                    ? "Немедленно прекратите тренировку при появлении следующих симптомов:" 
+                    : "Stop exercising immediately if you experience any of the following:"}
                 </strong>
                 <ul className="space-y-1.5 list-disc list-inside text-slate-700 dark:text-slate-300">
-                  <li>Ko'krakda qisilish, og'riq yoki yurakning qattiq urishi sezilsa</li>
-                  <li>Bosh aylanishi, ko'z qorong'ilashishi yoki muvozanat yo'qolsa</li>
-                  <li>Qon bosimi me'yordan ancha yuqori bo'lsa (&gt;160/100 mmHg)</li>
-                  <li>Kutilmagan kuchli bo'g'im yoki mushak og'rig'i yuzaga kelsa</li>
-                  <li>Kuchli nafas qisishi yoki havo yetishmasligi bo'lsa</li>
-                  <li>Tana harorati yuqori yoki holsizlik bo'lsa</li>
+                  {language === 'uz' ? (
+                    <>
+                      <li>Ko'krakda qisilish, og'riq yoki yurakning qattiq urishi sezilsa</li>
+                      <li>Bosh aylanishi, ko'z qorong'ilashishi yoki muvozanat yo'qolsa</li>
+                      <li>Qon bosimi me'yordan ancha yuqori bo'lsa (&gt;160/100 mmHg)</li>
+                      <li>Kutilmagan kuchli bo'g'im yoki mushak og'rig'i yuzaga kelsa</li>
+                      <li>Kuchli nafas qisishi yoki havo yetishmasligi bo'lsa</li>
+                      <li>Tana harorati yuqori yoki holsizlik bo'lsa</li>
+                    </>
+                  ) : language === 'ru' ? (
+                    <>
+                      <li>Боль, стеснение в груди или учащенное сердцебиение</li>
+                      <li>Головокружение, потемнение в глазах или потеря равновесия</li>
+                      <li>Артериальное давление значительно выше нормы (&gt;160/100 мм рт. ст.)</li>
+                      <li>Внезапная острая боль в суставах или мышцах</li>
+                      <li>Сильная одышка или нехватка воздуха</li>
+                      <li>Повышенная температура тела или выраженная слабость</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Chest tightness, chest pain, or palpitations</li>
+                      <li>Dizziness, lightheadedness, blurred vision, or loss of balance</li>
+                      <li>Significantly elevated blood pressure (&gt;160/100 mmHg)</li>
+                      <li>Sudden sharp joint or muscle pain</li>
+                      <li>Severe shortness of breath or breathlessness</li>
+                      <li>Fever, acute illness, or excessive fatigue</li>
+                    </>
+                  )}
                 </ul>
               </div>
 
               <p className="text-xs text-slate-500 italic">
-                Agar mashqdan keyin o'zingizni noqulay his qilsangiz, darhol dam oling va zarurat tug'ilganda shifokoringizga xabar bering.
+                {language === 'uz' 
+                  ? "Agar mashqdan keyin o'zingizni noqulay his qilsangiz, darhol dam oling va zarurat tug'ilganda shifokoringizga xabar bering."
+                  : language === 'ru'
+                  ? "Если после упражнений вы почувствовали себя плохо, отдохните и при необходимости обратитесь к врачу."
+                  : "If you feel unwell after exercising, rest immediately and contact your healthcare provider if symptoms persist."}
               </p>
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
               <button
                 onClick={() => setShowWhenNotToExerciseModal(false)}
-                className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs"
+                className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs cursor-pointer"
               >
-                Yopish
+                {t.closeBtn || 'Yopish'}
               </button>
             </div>
           </div>
