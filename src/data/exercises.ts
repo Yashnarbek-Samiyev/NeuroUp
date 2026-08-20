@@ -17,7 +17,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "gentle",
     durationMinutes: 3,
-    videoUrl: "/videolar/movemore/barmoq-nozik-harakatlar-va-1-karta-bilan-mashqlar.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=HHre9rvkqOE",
+    youtubeId: "HHre9rvkqOE",
     
     targetArea: {
       uz: "Barmoqlar va kaft nozik motorikasi",
@@ -73,7 +74,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "gentle",
     durationMinutes: 3,
-    videoUrl: "/videolar/movemore/barmoq-nozik-harakatlar-2-koptopcha-bilan-mashqlar.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=LaGgrc4q5dA",
+    youtubeId: "LaGgrc4q5dA",
     
     targetArea: {
       uz: "Kaft kuchi va barmoq bo'g'imlari",
@@ -129,7 +131,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/barmoq-nozik-harakatlar-3-rezina-bilan-mashqlar.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=46YOYZm8Oiw",
+    youtubeId: "46YOYZm8Oiw",
     
     targetArea: {
       uz: "Barmoq yozuvchi mushaklar",
@@ -149,19 +152,19 @@ export const exercises: Exercise[] = [
       ],
       ru: [
         "Наденьте резинку на кончики пальцев.",
-        "Раскрывайте пальцы в стороны преодолевая сопротивление.",
-        "Удерживайте 3 секунды и медленно сводите."
+        "Медленно раскрывайте пальцы в стороны, преодолевая сопротивление.",
+        "Удерживайте 3 секунды и медленно сомкните пальцы."
       ],
       en: [
-        "Place the rubber band around your fingertips.",
-        "Spread your fingers outward against resistance.",
-        "Hold for 3 seconds and slowly close."
+        "Loop the rubber band around your fingertips.",
+        "Slowly spread fingers outwards against the resistance.",
+        "Hold for 3 seconds, then gently bring them together."
       ]
     },
     safetyTips: {
-      uz: ["Juda qattiq rezinka ishlatmang."],
+      uz: ["Kuchli taranglikdagi rezinka ishlatmang."],
       ru: ["Не используйте слишком тугую резинку."],
-      en: ["Avoid overly tight rubber bands."]
+      en: ["Do not use an overly tight rubber band."]
     },
     tags: ["fine-motor", "independent", "moderate", "upper-body"]
   },
@@ -169,52 +172,56 @@ export const exercises: Exercise[] = [
   {
     id: "fine-motor-coins",
     title: {
-      uz: "Barmoq nozik motorikasi: 4-tangalar bilan mashq",
+      uz: "Barmoq nozik motorikasi: 4-tangalar bilan mashqlar",
       ru: "Мелкая моторика: упражнения с монетами",
-      en: "Fine Motor: Coin Picking & Sorting"
+      en: "Fine Motor: Coin Manipulation"
     },
     description: {
-      uz: "Tangalarni stoldan terish va barmoq uchi bilan ushlash orqali sezgirlik hamda aniqlikni oshirish.",
-      ru: "Повышение чувствительности и точности пальцев путем поднятия и сортировки монет со стола.",
-      en: "Improving fingertip tactile sensitivity and precision by picking up coins."
+      uz: "Stoldagi tangalarni birma-bir bosh va boshqa barmoqlar yordamida ko'tarish va idishga solish orqali chimdim ushlashni tiklash.",
+      ru: "Упражнение на развитие щипкового захвата путем сбора монет со стола.",
+      en: "Precision pincer grip training by picking up coins from a flat surface."
     },
     category: "fine-motor",
     executionType: "independent",
     difficulty: "moderate",
-    durationMinutes: 3,
-    videoUrl: "/videolar/movemore/barmoq-nozik-harakatlar-4-tangalar.mp4",
+    durationMinutes: 4,
+    videoUrl: "https://www.youtube.com/watch?v=jiAxKO2TGfQ",
+    youtubeId: "jiAxKO2TGfQ",
     
     targetArea: {
-      uz: "Barmoq uchlari sezgirligi",
-      ru: "Чувствительность подушечек пальцев",
-      en: "Fingertip Tactile Control"
+      uz: "Bosh barmoq va chimdim ushlash (pincer grasp)",
+      ru: "Щипковый захват и большой палец",
+      en: "Pincer Grasp & Thumb Opposition"
     },
     equipment: {
-      uz: ["3-5 dona har xil kattalikdagi tangalar"],
-      ru: ["3-5 монет разного размера"],
-      en: ["3–5 coins of various sizes"]
+      uz: ["5-6 dona tanga", "Kichik idish"],
+      ru: ["5-6 монет", "Небольшая емкость"],
+      en: ["5-6 coins", "Small bowl"]
     },
     steps: {
       uz: [
-        "Tangalarni stol ustiga qo'ying.",
-        "Bosh va ko'rsatkich barmog'ingiz bilan bittalab ko'taring.",
-        "Tangani kaftingiz ichiga yashiring."
+        "Tangalarni stol ustiga yoying.",
+        "Ko'rsatkich va bosh barmog'ingiz bilan birinchi tangani ehtiyotkorlik bilan oling.",
+        "Uni idishga tashlang.",
+        "Barcha barmoqlar bilan navbatma-navbat takrorlang."
       ],
       ru: [
-        "Разложите монеты на столе.",
-        "Поднимайте по одной монете большим и указательным пальцами.",
-        "Перемещайте монету в ладонь."
+        "Разложите монеты на ровной поверхности стола.",
+        "Аккуратно поднимите монету указательным и большим пальцами.",
+        "Опустите её в емкость.",
+        "Повторите поочередно другими пальцами."
       ],
       en: [
-        "Place coins flat on a table.",
-        "Pick up each coin using your thumb and index finger.",
-        "Move the coin into your palm."
+        "Scatter coins across a flat table surface.",
+        "Carefully pick up each coin using your thumb and index finger.",
+        "Drop it gently into the small bowl.",
+        "Alternate with middle and ring fingers."
       ]
     },
     safetyTips: {
-      uz: ["Tekis stol ustida bajaring."],
-      ru: ["Выполняйте на ровной поверхности."],
-      en: ["Perform on a smooth flat table."]
+      uz: ["Tangalar sirpanib ketmasligi uchun shoshilmang."],
+      ru: ["Не спешите, чтобы монеты не выскальзывали."],
+      en: ["Take your time to ensure secure grip."]
     },
     tags: ["fine-motor", "independent", "moderate", "upper-body"]
   },
@@ -235,7 +242,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "gentle",
     durationMinutes: 3,
-    videoUrl: "/videolar/movemore/barmoq-nozik-harakatlar-5-qalam-bilan.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=_7UH8Pd58Mw",
+    youtubeId: "_7UH8Pd58Mw",
     
     targetArea: {
       uz: "Yozuv va ushlash ko'nikmalari",
@@ -288,7 +296,8 @@ export const exercises: Exercise[] = [
     executionType: "caregiver",
     difficulty: "gentle",
     durationMinutes: 6,
-    videoUrl: "/videolar/movemore/bemor-qarovchisi-uchun-oyoq-mashqlari-1-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=K7coghKicR8",
+    youtubeId: "K7coghKicR8",
     
     targetArea: {
       uz: "Tizza va to'piq bo'g'imlari",
@@ -341,7 +350,8 @@ export const exercises: Exercise[] = [
     executionType: "caregiver",
     difficulty: "gentle",
     durationMinutes: 6,
-    videoUrl: "/videolar/movemore/bemor-qarovchisi-uchun-oyoq-mashqlari-2-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=pnwxyTnn5TE",
+    youtubeId: "pnwxyTnn5TE",
     
     targetArea: {
       uz: "Son mushaklari va chanoq-son bo'g me",
@@ -768,7 +778,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-mashqlar-5-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=02ePQpH0H3U",
+    youtubeId: "02ePQpH0H3U",
     
     targetArea: {
       uz: "To'piq va boldir mushaklari",
