@@ -404,7 +404,8 @@ export const exercises: Exercise[] = [
     executionType: "caregiver",
     difficulty: "gentle",
     durationMinutes: 5,
-    videoUrl: "/videolar/movemore/bemor-qarovchisi-uchun-qul-mashqlari-1.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=toppKOkHI2k",
+    youtubeId: "toppKOkHI2k",
     
     targetArea: {
       uz: "Yelka va tirsak bo'g me",
@@ -730,7 +731,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-mashqlar-4-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=qQfa6RZeQfM",
+    youtubeId: "qQfa6RZeQfM",
     
     targetArea: {
       uz: "Muvozanat va oyoq tayanchi",
@@ -783,8 +785,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "https://www.youtube.com/watch?v=02ePQpH0H3U",
-    youtubeId: "02ePQpH0H3U",
+    videoUrl: "https://www.youtube.com/watch?v=BAT2bHgibPU",
+    youtubeId: "BAT2bHgibPU",
     
     targetArea: {
       uz: "To'piq va boldir mushaklari",
@@ -837,7 +839,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-mashqlar-6-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=eWWyp8iPe0g",
+    youtubeId: "eWWyp8iPe0g",
     
     targetArea: {
       uz: "Qadam tashlash va muvozanat",
@@ -890,7 +893,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-oyoq-mashqlari-1-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=KzgZgkSVNvc",
+    youtubeId: "KzgZgkSVNvc",
     
     targetArea: {
       uz: "Son to'rt boshli mushaklari",
@@ -943,7 +947,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-oyoq-mashqlari-2-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=AnBmW4MOd5U",
+    youtubeId: "AnBmW4MOd5U",
     
     targetArea: {
       uz: "To'piq va tovon mushaklari",
@@ -996,7 +1001,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "gentle",
     durationMinutes: 3,
-    videoUrl: "/videolar/movemore/mustaqil-qul-mashqlari-1-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=6WgK6E6hYQk",
+    youtubeId: "6WgK6E6hYQk",
     
     targetArea: {
       uz: "Tirsak va bilak bo'g me",
@@ -1049,7 +1055,8 @@ export const exercises: Exercise[] = [
     executionType: "independent",
     difficulty: "moderate",
     durationMinutes: 4,
-    videoUrl: "/videolar/movemore/mustaqil-qul-mashqlari-2-qism.mp4",
+    videoUrl: "https://www.youtube.com/watch?v=V-smGhe2Mi0",
+    youtubeId: "V-smGhe2Mi0",
     
     targetArea: {
       uz: "Kaft va barmoq bukkuvchi mushaklar",
