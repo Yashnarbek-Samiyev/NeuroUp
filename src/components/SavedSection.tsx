@@ -13,7 +13,8 @@ import {
   Dumbbell, 
   Lightbulb, 
   Trash2, 
-  ArrowRight
+  ArrowRight,
+  Play
 } from 'lucide-react';
 
 interface SavedSectionProps {
@@ -142,16 +143,28 @@ export const SavedSection: React.FC<SavedSectionProps> = ({
                   <div
                     key={exercise.id}
                     onClick={() => setActiveExercise(exercise)}
-                    className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md cursor-pointer flex flex-col justify-between"
+                    className="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md cursor-pointer flex flex-col justify-between"
                   >
-                    <div className="relative h-40 bg-slate-100">
-                      <img src={exercise.thumbnail} alt={exercise.title[language] || exercise.title.en} className="w-full h-full object-cover" />
+                    <div className="relative h-40 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-950 flex items-center justify-center overflow-hidden">
+                      <img 
+                        src="/logo-white.png" 
+                        alt="NeuroUp" 
+                        className="h-12 w-auto object-contain opacity-90 group-hover:scale-105 transition-transform" 
+                      />
+                      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+                      
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <Play className="w-4 h-4 ml-0.5 fill-white" />
+                        </div>
+                      </div>
+
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           onToggleFavorite(exercise.id);
                         }}
-                        className="absolute top-2 right-2 p-1.5 rounded-md bg-black/60 text-white hover:bg-black/80"
+                        className="absolute top-2 right-2 p-1.5 rounded-md bg-black/60 text-white hover:bg-black/80 z-10 cursor-pointer"
                         title={t.savedToFav}
                       >
                         <Trash2 className="w-3.5 h-3.5" />

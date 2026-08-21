@@ -334,21 +334,20 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
               >
                 {/* Video Card Preview */}
                 <div>
-                  <div className="relative h-48 w-full overflow-hidden bg-slate-950">
-                    {exercise.videoUrl ? (
-                      <video
-                        src={exercise.videoUrl}
-                        preload="metadata"
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 pointer-events-none"
+                  <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-brand-950 flex items-center justify-center">
+                    {/* NeuroUp Branded Logo Background */}
+                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                      <img 
+                        src="/logo-white.png" 
+                        alt="NeuroUp" 
+                        className="h-16 sm:h-20 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 drop-shadow-lg" 
                       />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center">
-                        <Dumbbell className="w-10 h-10 text-slate-600" />
-                      </div>
-                    )}
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-extrabold tracking-wider bg-navy-900/90 text-white backdrop-blur-sm border border-white/20 flex items-center gap-1 shadow-sm">
+                    </div>
+
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none" />
+
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-extrabold tracking-wider bg-navy-900/90 text-white backdrop-blur-sm border border-white/20 flex items-center gap-1 shadow-sm z-10">
                       {exercise.category === 'fine-motor' && '✋ '}
                       {exercise.category === 'upper-body' && '💪 '}
                       {exercise.category === 'lower-body' && '🦵 '}
@@ -357,7 +356,7 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
                       {exercise.category}
                     </span>
 
-                    <div className="absolute top-3 right-3 flex items-center gap-1">
+                    <div className="absolute top-3 right-3 flex items-center gap-1 z-10">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
@@ -372,14 +371,14 @@ export const MoveMoreSection: React.FC<MoveMoreSectionProps> = ({
                       </button>
                     </div>
 
-                    {/* Centered Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform border border-white/30">
+                    {/* Centered Play Button with Ring Glow */}
+                    <div className="absolute inset-0 flex items-center justify-center z-10">
+                      <div className="w-12 h-12 rounded-full bg-brand-600/90 group-hover:bg-brand-500 text-white flex items-center justify-center shadow-2xl group-hover:scale-115 transition-all border border-white/40 ring-4 ring-brand-500/30">
                         <Play className="w-5 h-5 ml-0.5 fill-white" />
                       </div>
                     </div>
 
-                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold">
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs font-semibold z-10">
                       <span className="flex items-center gap-1 bg-black/70 backdrop-blur-xs px-2.5 py-0.5 rounded-md border border-white/10">
                         <Clock className="w-3 h-3 text-brand-400" />
                         {exercise.durationMinutes} {t.minutesUnit}
