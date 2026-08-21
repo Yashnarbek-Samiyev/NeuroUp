@@ -7,8 +7,11 @@ import {
   getDailyLogs as getDailyLogsDb, 
   saveLogForDateDb, 
   getUserStats as getUserStatsDb, 
-  updateStreak as updateStreakDb 
+  updateStreak as updateStreakDb,
+  addFavorite as addFavoriteDb
 } from '../lib/supabase';
+import { getTodayDateStr, calculateNewStreak } from '../utils/date';
+import { getDailyLogs as getLocalDailyLogs, getSavedFavorites as getLocalFavorites } from '../utils/storage';
 
 interface UserContextType {
   user: AppUser | null;
@@ -48,13 +51,34 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const loadUserData = useCallback(async (u: AppUser) => {
     try {
-      const [favs, logs, stats] = await Promise.all([
-        getFavoritesDb(u.id).catch(() => []),
-        getDailyLogsDb(u.id).catch(() => ({})),
-        getUserStatsDb(u.id).catch(() => ({ streak: 1, last_log_date: null })),
-      ]);
-      setSavedFavorites(favs);
-      setDailyLogs(logs);
+      const favs: string[] = await getFavoritesDb(u.id).catch(() => []);
+      const cloudLogs: Record<string, any> = await getDailyLogsDb(u.id).catch(() => ({}));
+      const stats = await getUserStatsDb(u.id).catch(() => ({ streak: 1, last_log_date: null }));
+
+      // Merge local guest logs if any exist
+      const localLogs = getLocalDailyLogs();
+      const mergedLogs: Record<string, any> = { ...localLogs, ...cloudLogs };
+
+      // Push any local-only logs to cloud
+      for (const [date, log] of Object.entries(localLogs)) {
+        if (!cloudLogs[date]) {
+          await saveLogForDateDb(u.id, date, log).catch(console.error);
+        }
+      }
+
+      // Merge local favorites if any exist
+      const localFavs = getLocalFavorites();
+      const combinedFavsSet = new Set<string>([...favs, ...localFavs]);
+      const mergedFavs = Array.from(combinedFavsSet);
+      
+      for (const favId of localFavs) {
+        if (!favs.includes(favId)) {
+          await addFavoriteDb(u.id, favId).catch(console.error);
+        }
+      }
+
+      setSavedFavorites(mergedFavs);
+      setDailyLogs(mergedLogs);
       setStreak(stats.streak || 1);
     } catch (e) {
       console.error('Error loading user data from cloud:', e);
@@ -72,8 +96,9 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setLoading(false);
       }
     } else {
-      setSavedFavorites([]);
-      setDailyLogs({});
+      // Guest mode - load local storage
+      setSavedFavorites(getLocalFavorites());
+      setDailyLogs(getLocalDailyLogs());
       setStreak(1);
       setLoading(false);
     }
@@ -95,15 +120,19 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const logout = () => {
     localStorage.removeItem(USER_KEY);
     setUser(null);
-    setSavedFavorites([]);
-    setDailyLogs({});
+    setSavedFavorites(getLocalFavorites());
+    setDailyLogs(getLocalDailyLogs());
     setStreak(1);
   };
 
   const toggleFavorite = async (itemId: string): Promise<boolean> => {
     if (!user) {
-      openAuthModal();
-      return false;
+      // Local favorite toggle for guests
+      const isSaved = savedFavorites.includes(itemId);
+      const updated = isSaved ? savedFavorites.filter(id => id !== itemId) : [...savedFavorites, itemId];
+      setSavedFavorites(updated);
+      localStorage.setItem('neuroup_favorites', JSON.stringify(updated));
+      return true;
     }
     try {
       const updated = await toggleFavoriteDb(user.id, itemId, savedFavorites);
@@ -124,13 +153,13 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
       await saveLogForDateDb(user.id, date, log);
       setDailyLogs(prev => ({ ...prev, [date]: log }));
 
-      const today = new Date().toISOString().split('T')[0];
+      const today = getTodayDateStr();
       if (date === today) {
         const stats = await getUserStatsDb(user.id);
         const lastDate = stats.last_log_date;
-        let newStreak = stats.streak;
-        if (lastDate !== today) {
-          newStreak += 1;
+        const newStreak = calculateNewStreak(lastDate, stats.streak);
+
+        if (lastDate !== today || newStreak !== stats.streak) {
           await updateStreakDb(user.id, newStreak, today);
           setStreak(newStreak);
         }

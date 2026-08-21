@@ -8,6 +8,7 @@ import {
 } from './utils/storage';
 import { UserProvider, useUser } from './context/UserContext';
 import { supabase } from './lib/supabase';
+import { verifyAuthCode } from './utils/auth';
 import { Navbar } from './components/Navbar';
 import { AccessibilityBar } from './components/AccessibilityBar';
 import { HeroSection } from './components/HeroSection';
@@ -36,28 +37,13 @@ const AppInner: React.FC = () => {
     if (codeParam && codeParam.length === 6) {
       const verifyUrlCode = async () => {
         try {
-          const { data } = await supabase
-            .from('auth_codes')
-            .select('*')
-            .eq('code', codeParam)
-            .order('created_at', { ascending: false })
-            .limit(1)
-            .maybeSingle();
-
-          if (data && !data.is_used && new Date(data.expires_at).getTime() > Date.now()) {
-            await supabase.from('auth_codes').update({ is_used: true }).eq('id', data.id);
-            await login({
-              id: data.user_id,
-              first_name: data.first_name || 'Foydalanuvchi',
-              last_name: data.last_name || undefined,
-              username: data.username || undefined,
-              photo_url: data.photo_url || undefined,
-            });
-            window.history.replaceState({}, document.title, window.location.pathname);
-          } else if (data && new Date(data.expires_at).getTime() <= Date.now()) {
+          const result = await verifyAuthCode(codeParam);
+          if (result.success && result.user) {
+            await login(result.user);
+          } else {
             openAuthModal();
-            window.history.replaceState({}, document.title, window.location.pathname);
           }
+          window.history.replaceState({}, document.title, window.location.pathname);
         } catch (e) {
           console.error('URL code auth error:', e);
         }

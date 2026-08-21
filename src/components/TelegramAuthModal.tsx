@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useUser } from '../context/UserContext';
 import { supabase } from '../lib/supabase';
+import { verifyAuthCode } from '../utils/auth';
 import { BrandLogo } from './BrandLogo';
 import { X, Send, ShieldCheck, AlertCircle, CheckCircle2, Loader2, ArrowRight } from 'lucide-react';
 import { Language } from '../types';
@@ -96,75 +97,28 @@ export const TelegramAuthModal: React.FC<TelegramAuthModalProps> = ({
     setError('');
 
     try {
-      // Query auth_codes table in Supabase
-      const { data, error: dbError } = await supabase
-        .from('auth_codes')
-        .select('*')
-        .eq('code', codeToVerify)
-        .order('created_at', { ascending: false })
-        .limit(1)
-        .single();
+      const result = await verifyAuthCode(codeToVerify);
 
-      if (dbError || !data) {
+      if (!result.success || !result.user) {
         setError(
-          language === 'uz' 
+          result.error ||
+          (language === 'uz' 
             ? "Kiritilgan kod noto'g'ri. Botdan yangi kod oling." 
             : language === 'ru'
             ? "Неверный код. Получите новый код в боте."
-            : "Invalid code. Please request a new code from the bot."
+            : "Invalid code. Please request a new code from the bot.")
         );
         setIsLoading(false);
         return;
       }
-
-      // Check if already used
-      if (data.is_used) {
-        setError(
-          language === 'uz'
-            ? "Ushbu kod allaqachon ishlatilgan. Botdan yangi kod oling."
-            : language === 'ru'
-            ? "Этот код уже использован. Получите новый код в боте."
-            : "This code has already been used. Please request a new code from the bot."
-        );
-        setIsLoading(false);
-        return;
-      }
-
-      // Check 2-minute expiration
-      const expiresAtTime = new Date(data.expires_at).getTime();
-      const nowTime = Date.now();
-
-      if (nowTime > expiresAtTime) {
-        setError(
-          language === 'uz'
-            ? "Kodni amal qilish muddati tugagan (2 daqiqa o'tib ketgan). Botdan yangi kod oling."
-            : language === 'ru'
-            ? "Срок действия кода истек (прошло 2 минуты). Получите новый код в боте."
-            : "Code expired (2 minutes limit exceeded). Please request a new code from the bot."
-        );
-        setIsLoading(false);
-        return;
-      }
-
-      // Mark code as used
-      await supabase
-        .from('auth_codes')
-        .update({ is_used: true })
-        .eq('id', data.id);
 
       // Perform user login
-      await login({
-        id: data.user_id,
-        first_name: data.first_name || 'Foydalanuvchi',
-        last_name: data.last_name || undefined,
-        username: data.username || undefined,
-        photo_url: data.photo_url || undefined,
-      });
+      await login(result.user);
 
       setIsSuccess(true);
       setTimeout(() => {
         onClose();
-      }, 900);
+      }, 800);
 
     } catch (err: any) {
       console.error('Verification error:', err);

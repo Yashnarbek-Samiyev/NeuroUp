@@ -27,13 +27,14 @@ import {
   Clock
 } from 'lucide-react';
 
+import { getTodayDateStr } from '../utils/date';
+
 interface NeuroTrackerProps {
   language: Language;
 }
 
 export const NeuroTrackerSection: React.FC<NeuroTrackerProps> = ({ language }) => {
-  const getTodayStr = () => new Date().toISOString().split('T')[0];
-  const todayStr = getTodayStr();
+  const todayStr = getTodayDateStr();
   const t = translations[language];
 
   const [selectedDate, setSelectedDate] = useState<string>(todayStr);

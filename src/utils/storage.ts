@@ -1,4 +1,5 @@
 import { AccessibilitySettings, DailyLog, Language } from '../types';
+import { getTodayDateStr, calculateNewStreak } from './date';
 
 const STORAGE_KEYS = {
   FAVORITES: 'neuroup_favorites',
@@ -85,16 +86,13 @@ export const saveLogForDate = (log: DailyLog) => {
     logs[log.date] = log;
     localStorage.setItem(STORAGE_KEYS.DAILY_LOGS, JSON.stringify(logs));
 
-    const today = new Date().toISOString().split('T')[0];
+    const today = getTodayDateStr();
     if (log.date === today) {
       const lastDate = localStorage.getItem(STORAGE_KEYS.LAST_LOG_DATE);
-      let streak = parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '0', 10);
-
-      if (lastDate !== today) {
-        streak += 1;
-        localStorage.setItem(STORAGE_KEYS.STREAK, streak.toString());
-        localStorage.setItem(STORAGE_KEYS.LAST_LOG_DATE, today);
-      }
+      const currentStreak = parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '1', 10);
+      const newStreak = calculateNewStreak(lastDate, currentStreak);
+      localStorage.setItem(STORAGE_KEYS.STREAK, newStreak.toString());
+      localStorage.setItem(STORAGE_KEYS.LAST_LOG_DATE, today);
     }
   } catch (e) {
     console.error(e);
